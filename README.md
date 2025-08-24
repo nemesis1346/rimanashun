@@ -40,7 +40,7 @@ A Duolingo-like mobile application for learning Kichwa (Quechua) from Ecuador, b
 
    ```bash
    git clone <repository-url>
-   cd kichwa-learning-app
+   cd rimanashun
    ```
 
 2. **Install dependencies**
@@ -63,7 +63,7 @@ A Duolingo-like mobile application for learning Kichwa (Quechua) from Ecuador, b
 ## Project Structure
 
 ```
-kichwa-learning-app/
+rimanashun/
 ├── src/
 │   ├── components/          # Reusable UI components
 │   ├── screens/            # Main app screens
@@ -79,16 +79,21 @@ kichwa-learning-app/
 │   └── utils/              # Utility functions
 │       └── dataLoader.ts
 ├── assets/
-│   └── data.json           # Kichwa vocabulary data
-├── App.tsx                 # Main app component
-└── package.json
+│   ├── data.json           # Kichwa vocabulary data (~3,000 words)
+│   ├── icon.png            # App icon
+│   ├── splash-icon.png     # Splash screen icon
+│   └── favicon.png         # Favicon
+├── App.tsx                 # Main app component with navigation
+├── tsconfig.json           # TypeScript configuration
+├── package.json            # Dependencies and scripts
+└── app.json               # Expo configuration
 ```
 
 ## Vocabulary Data
 
 The app includes a comprehensive Kichwa-Spanish dictionary with:
 
-- **2,985 vocabulary entries**
+- **~3,000 vocabulary entries**
 - **10 organized categories**:
   - Numbers (shuk, ishkay, kimsa, etc.)
   - Colors (yurak, yana, puka, etc.)
@@ -151,7 +156,7 @@ The app includes a comprehensive Kichwa-Spanish dictionary with:
 
 ### Data Management
 
-- Vocabulary data is stored in `assets/data.json`
+- Vocabulary data is stored in `assets/data.json` (~3,000 Kichwa-Spanish word pairs)
 - Categories are defined in `src/data/categories.ts`
 - Data loading utilities are in `src/utils/dataLoader.ts`
 
