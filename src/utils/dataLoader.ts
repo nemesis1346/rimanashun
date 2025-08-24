@@ -40,7 +40,7 @@ export const getWordsByCategory = (
   // Filter words that match the category
   const result = words.filter((word) => wordMatchesCategory(word, category));
 
-  console.log("filtered result", result);
+  // console.log("filtered result", result);
   return result;
 };
 
