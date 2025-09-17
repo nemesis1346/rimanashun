@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { loadVocabularyData, getCategoryStats } from "../utils/dataLoader";
+import { colors } from "../constants/colors";
 
 export default function ProgressScreen() {
   const [totalWords, setTotalWords] = useState(0);
@@ -62,7 +63,7 @@ export default function ProgressScreen() {
   }) => (
     <View style={styles.statCard}>
       <LinearGradient
-        colors={[color, color + "80"]}
+        colors={[colors.primary, colors.secondary]}
         style={styles.statGradient}
       >
         <View style={styles.statHeader}>
@@ -106,7 +107,7 @@ export default function ProgressScreen() {
             value={`${progress.learnedWords}/${progress.totalWords}`}
             subtitle={`${getProgressPercentage()}% complete`}
             icon="book"
-            color="#4CAF50"
+            color={colors.primary}
           />
 
           <StatCard
@@ -116,7 +117,7 @@ export default function ProgressScreen() {
             )}`}
             subtitle="Keep it up!"
             icon="flame"
-            color="#FF6B6B"
+            color={colors.secondary}
           />
         </View>
 
@@ -154,7 +155,7 @@ export default function ProgressScreen() {
                     <View
                       style={[
                         styles.categoryIcon,
-                        { backgroundColor: category.color },
+                        { backgroundColor: colors.primary },
                       ]}
                     >
                       <Ionicons
@@ -178,7 +179,7 @@ export default function ProgressScreen() {
                       <Ionicons
                         name="checkmark-circle"
                         size={24}
-                        color="#4CAF50"
+                        color={colors.primary}
                       />
                     )}
                   </View>
@@ -190,8 +191,8 @@ export default function ProgressScreen() {
                       {
                         width: `${progressPercentage}%`,
                         backgroundColor: isCompleted
-                          ? "#4CAF50"
-                          : category.color,
+                          ? colors.primary
+                          : colors.secondary,
                       },
                     ]}
                   />
@@ -283,7 +284,7 @@ export default function ProgressScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: colors.background,
   },
   loadingContainer: {
     flex: 1,

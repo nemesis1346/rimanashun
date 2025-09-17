@@ -9,6 +9,12 @@ import {
   NativeStackNavigationProp,
 } from "@react-navigation/native-stack";
 import { Ionicons } from "@expo/vector-icons";
+import {
+  HouseIcon,
+  BasketIcon,
+  PlantIcon,
+} from "./src/components/icons/AndeanIcons";
+import { colors } from "./src/constants/colors";
 import { StatusBar } from "expo-status-bar";
 
 // Screens
@@ -39,22 +45,33 @@ function TabNavigator() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          let iconName: keyof typeof Ionicons.glyphMap;
-
           if (route.name === "Home") {
-            iconName = focused ? "home" : "home-outline";
+            return (
+              <HouseIcon
+                size={size}
+                color={focused ? colors.primary : colors.textSecondary}
+              />
+            );
           } else if (route.name === "Categories") {
-            iconName = focused ? "grid" : "grid-outline";
+            return (
+              <BasketIcon
+                size={size}
+                color={focused ? colors.primary : colors.textSecondary}
+              />
+            );
           } else if (route.name === "Progress") {
-            iconName = focused ? "stats-chart" : "stats-chart-outline";
+            return (
+              <PlantIcon
+                size={size}
+                color={focused ? colors.primary : colors.textSecondary}
+              />
+            );
           } else {
-            iconName = "help-outline";
+            return <Ionicons name="help-outline" size={size} color={color} />;
           }
-
-          return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "#4CAF50",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.textSecondary,
         headerShown: false,
       })}
     >

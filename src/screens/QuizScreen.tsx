@@ -13,13 +13,14 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../../kichwa-learning-app/App";
+import { RootStackParamList } from "../../App";
 import {
   loadVocabularyData,
   getWordsByCategory,
   generateQuizQuestions,
 } from "../utils/dataLoader";
 import { QuizQuestion } from "../types";
+import { colors } from "../constants/colors";
 
 type QuizRouteProp = RouteProp<RootStackParamList, "Quiz">;
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -179,7 +180,7 @@ export default function QuizScreen() {
     return (
       <SafeAreaView style={styles.container}>
         <LinearGradient
-          colors={isGoodScore ? ["#4CAF50", "#45B7D1"] : ["#FF6B6B", "#FF8E8E"]}
+          colors={isGoodScore ? colors.primaryGradient : colors.accentGradient}
           style={styles.resultsContainer}
         >
           <View style={styles.resultsContent}>
@@ -314,7 +315,7 @@ export default function QuizScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: colors.background,
   },
   loadingContainer: {
     flex: 1,

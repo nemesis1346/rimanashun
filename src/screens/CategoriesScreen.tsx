@@ -19,6 +19,7 @@ import {
 } from "../../kichwa-learning-app/App";
 import { categories } from "../data/categories";
 import { loadVocabularyData, getCategoryStats } from "../utils/dataLoader";
+import { colors } from "../constants/colors";
 
 type NavigationProp = CompositeNavigationProp<
   BottomTabNavigationProp<TabParamList>,
@@ -65,7 +66,7 @@ export default function CategoriesScreen() {
   }) => (
     <View style={styles.categoryCard}>
       <LinearGradient
-        colors={[category.color, category.color + "80"]}
+        colors={[colors.primary, colors.secondary]}
         style={styles.categoryGradient}
       >
         <View style={styles.categoryHeader}>
@@ -191,7 +192,7 @@ export default function CategoriesScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: colors.background,
   },
   loadingContainer: {
     flex: 1,

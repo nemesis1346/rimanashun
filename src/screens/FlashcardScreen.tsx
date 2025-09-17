@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { colors } from "../constants/colors";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -44,10 +45,7 @@ export default function FlashcardScreen() {
       const filteredWords = category
         ? getWordsByCategory(allWords, category)
         : allWords;
-      console.log(
-        "Filtered words by category in flashcard screen",
-        filteredWords
-      );
+
       setWords(filteredWords);
     } catch (error) {
       console.error("Error loading data:", error);
@@ -211,7 +209,7 @@ export default function FlashcardScreen() {
               /* Front of card */
               <View style={[styles.cardSide, styles.cardFront]}>
                 <LinearGradient
-                  colors={["#4CAF50", "#45B7D1"]}
+                  colors={colors.primaryGradient}
                   style={styles.cardGradient}
                 >
                   <Text style={styles.cardText}>{currentWord.kichwa}</Text>
@@ -222,7 +220,7 @@ export default function FlashcardScreen() {
               /* Back of card */
               <View style={[styles.cardSide, styles.cardBack]}>
                 <LinearGradient
-                  colors={["#FF6B6B", "#FF8E8E"]}
+                  colors={colors.accentGradient}
                   style={styles.cardGradient}
                 >
                   <Text style={styles.cardText}>{currentWord.spanish}</Text>
@@ -284,7 +282,7 @@ export default function FlashcardScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: colors.background,
   },
   loadingContainer: {
     flex: 1,
@@ -330,13 +328,13 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     height: 8,
-    backgroundColor: "#e0e0e0",
+    backgroundColor: colors.border,
     borderRadius: 4,
     overflow: "hidden",
   },
   progressFill: {
     height: "100%",
-    backgroundColor: "#4CAF50",
+    backgroundColor: colors.primary,
   },
   cardContainer: {
     flex: 1,
@@ -405,10 +403,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   dontKnowButton: {
-    backgroundColor: "#FF6B6B",
+    backgroundColor: colors.accent,
   },
   knowButton: {
-    backgroundColor: "#4CAF50",
+    backgroundColor: colors.primary,
   },
   actionButtonText: {
     color: "white",

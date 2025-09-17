@@ -19,6 +19,7 @@ import {
 } from "../../kichwa-learning-app/App";
 import { loadVocabularyData } from "../utils/dataLoader";
 import { KichwaWord } from "../types";
+import { colors } from "../constants/colors";
 
 type NavigationProp = CompositeNavigationProp<
   BottomTabNavigationProp<TabParamList>,
@@ -84,7 +85,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         {/* Header */}
-        <LinearGradient colors={["#4CAF50", "#45B7D1"]} style={styles.header}>
+        <LinearGradient colors={colors.primaryGradient} style={styles.header}>
           <Text style={styles.welcomeText}>¡Alli puncha!</Text>
           <Text style={styles.subtitleText}>Welcome to Kichwa Learning</Text>
           <Text style={styles.statsText}>{totalWords} words available</Text>
@@ -99,7 +100,7 @@ export default function HomeScreen() {
               title="Flashcards"
               subtitle="Learn with cards"
               icon="card"
-              color="#4CAF50"
+              color={colors.primary}
               onPress={() => navigation.navigate("Flashcard", {})}
             />
 
@@ -107,7 +108,7 @@ export default function HomeScreen() {
               title="Quiz"
               subtitle="Test your knowledge"
               icon="help-circle"
-              color="#FF6B6B"
+              color={colors.secondary}
               onPress={() => navigation.navigate("Quiz", {})}
             />
 
@@ -115,7 +116,7 @@ export default function HomeScreen() {
               title="Categories"
               subtitle="Browse by topic"
               icon="grid"
-              color="#45B7D1"
+              color={colors.accent}
               onPress={() => navigation.navigate("Categories")}
             />
 
@@ -123,7 +124,7 @@ export default function HomeScreen() {
               title="Progress"
               subtitle="Track your learning"
               icon="stats-chart"
-              color="#FFEAA7"
+              color={colors.primary}
               onPress={() => navigation.navigate("Progress")}
             />
           </View>
@@ -137,7 +138,7 @@ export default function HomeScreen() {
             onPress={() => navigation.navigate("Quiz", {})}
           >
             <LinearGradient
-              colors={["#FF6B6B", "#FF8E8E"]}
+              colors={colors.accentGradient}
               style={styles.dailyChallengeGradient}
             >
               <Ionicons name="trophy" size={24} color="white" />
@@ -152,19 +153,19 @@ export default function HomeScreen() {
         <View style={styles.tipsContainer}>
           <Text style={styles.sectionTitle}>Learning Tips</Text>
           <View style={styles.tipItem}>
-            <Ionicons name="bulb" size={20} color="#4CAF50" />
+            <Ionicons name="bulb" size={20} color={colors.primary} />
             <Text style={styles.tipText}>
               Practice flashcards daily to reinforce your memory
             </Text>
           </View>
           <View style={styles.tipItem}>
-            <Ionicons name="time" size={20} color="#4CAF50" />
+            <Ionicons name="time" size={20} color={colors.primary} />
             <Text style={styles.tipText}>
               Take short 5-minute sessions for better retention
             </Text>
           </View>
           <View style={styles.tipItem}>
-            <Ionicons name="repeat" size={20} color="#4CAF50" />
+            <Ionicons name="repeat" size={20} color={colors.primary} />
             <Text style={styles.tipText}>
               Review difficult words more frequently
             </Text>
@@ -178,7 +179,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: colors.background,
   },
   scrollView: {
     flex: 1,
@@ -190,7 +191,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     fontSize: 18,
-    color: "#666",
+    color: colors.textSecondary,
   },
   header: {
     padding: 20,
