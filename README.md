@@ -106,6 +106,38 @@ The app includes a comprehensive Kichwa-Spanish dictionary with:
   - Actions (rina, shamuna, rikuna, etc.)
   - Greetings (alli puncha, alli chishi, etc.)
 
+### Sentence Puzzle Dataset (New)
+
+- File: `assets/sentence_puzzles_kichwa.json`
+- Purpose: Basic subject–verb–object sentences for a Duolingo-style puzzle game
+- Format per item:
+
+```json
+{
+  "id": "sp1",
+  "language": "Kichwa (Otavalo)",
+  "type": "SOV-basic",
+  "surface": "Ñuka yaku upini.",
+  "translation_en": "I drink water.",
+  "pieces": ["Ñuka", "yaku", "upini"],
+  "correct_order": [0, 1, 2],
+  "distractors": ["-ta", "kay", "kan"]
+}
+```
+
+Notes:
+
+- Word order is generally SOV. Case suffixes like `-ta` (object) and `-man` (to) attach to nouns.
+- `pieces` are the draggable tiles. `correct_order` is the zero-based order.
+- `distractors` are optional extra tiles to increase difficulty.
+
+Loading example (to be used in a sentence puzzle screen):
+
+```ts
+const data = require("./assets/sentence_puzzles_kichwa.json");
+// data is an array of puzzle items
+```
+
 ## Learning Features
 
 ### Flashcards

@@ -13,10 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 import { CompositeNavigationProp } from "@react-navigation/native";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import {
-  RootStackParamList,
-  TabParamList,
-} from "../../kichwa-learning-app/App";
+import { RootStackParamList, TabParamList } from "../../App";
 import { loadVocabularyData } from "../utils/dataLoader";
 import { KichwaWord } from "../types";
 import { colors } from "../constants/colors";
@@ -118,6 +115,14 @@ export default function HomeScreen() {
               icon="grid"
               color={colors.accent}
               onPress={() => navigation.navigate("Categories")}
+            />
+
+            <QuickActionButton
+              title="Sentence Puzzle"
+              subtitle="Arrange sentences"
+              icon="construct"
+              color={colors.primary}
+              onPress={() => navigation.navigate("SentencePuzzle")}
             />
 
             <QuickActionButton

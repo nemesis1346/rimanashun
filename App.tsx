@@ -23,12 +23,14 @@ import FlashcardScreen from "./src/screens/FlashcardScreen";
 import QuizScreen from "./src/screens/QuizScreen";
 import CategoriesScreen from "./src/screens/CategoriesScreen";
 import ProgressScreen from "./src/screens/ProgressScreen";
+import SentencePuzzleScreen from "./src/screens/SentencePuzzleScreen";
 
 // Types
 export type RootStackParamList = {
   MainTabs: undefined;
   Flashcard: { category?: string };
   Quiz: { category?: string };
+  SentencePuzzle: undefined;
 };
 
 export type TabParamList = {
@@ -101,6 +103,11 @@ export default function App() {
           name="Quiz"
           component={QuizScreen}
           options={{ title: "Quiz" }}
+        />
+        <Stack.Screen
+          name="SentencePuzzle"
+          component={SentencePuzzleScreen}
+          options={{ title: "Sentence Puzzle" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
