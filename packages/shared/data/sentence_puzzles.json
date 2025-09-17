@@ -1,0 +1,302 @@
+[
+  {
+    "id": "sp1",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Ñuka yaku upini.",
+    "translation_en": "I drink water.",
+    "pieces": ["Ñuka", "yaku", "upini"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-ta", "kay", "kan"]
+  },
+  {
+    "id": "sp2",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Kanki mikhuna mikunki.",
+    "translation_en": "You eat food.",
+    "pieces": ["Kanki", "mikhuna", "mikunki"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-ta", "chay", "pay"]
+  },
+  {
+    "id": "sp3",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Pay warmi-ta rikun.",
+    "translation_en": "He/She sees the woman.",
+    "pieces": ["Pay", "warmi-ta", "rikun"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-man", "ñuka", "kay"]
+  },
+  {
+    "id": "sp4",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Kay wawa puñan.",
+    "translation_en": "This child sleeps.",
+    "pieces": ["Kay", "wawa", "puñan"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-ta", "yaku", "mikuni"]
+  },
+  {
+    "id": "sp5",
+    "language": "Kichwa (Otavalo)",
+    "type": "S(Obl)V-motion",
+    "surface": "Ñukaka wasi-man rini.",
+    "translation_en": "I go to the house.",
+    "pieces": ["Ñukaka", "wasi-man", "rini"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-ta", "payka", "chay"]
+  },
+  {
+    "id": "sp6",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Ñuka aswa upini.",
+    "translation_en": "I drink chicha.",
+    "pieces": ["Ñuka", "aswa", "upini"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["allku", "mikunki", "-man"]
+  },
+  {
+    "id": "sp7",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Kanki tanta mikunki.",
+    "translation_en": "You eat bread.",
+    "pieces": ["Kanki", "tanta", "mikunki"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-ta", "puka", "rini"]
+  },
+  {
+    "id": "sp8",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Pay purin.",
+    "translation_en": "He/She walks.",
+    "pieces": ["Pay", "purin"],
+    "correct_order": [0, 1],
+    "distractors": ["rikun", "mikunki", "-ta"]
+  },
+  {
+    "id": "sp9",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Ñuka kallpanani.",
+    "translation_en": "I run.",
+    "pieces": ["Ñuka", "kallpanani"],
+    "correct_order": [0, 1],
+    "distractors": ["rini", "mikuni", "-man"]
+  },
+  {
+    "id": "sp10",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Pay panka-ta killpan.",
+    "translation_en": "He/She writes the page.",
+    "pieces": ["Pay", "panka-ta", "killpan"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-man", "kawsan", "kay"]
+  },
+  {
+    "id": "sp11",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Kanki kamuti-ta killkan.",
+    "translation_en": "You write the book.",
+    "pieces": ["Kanki", "kamuti-ta", "killkan"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["rikun", "mikuni", "-ta"]
+  },
+  {
+    "id": "sp12",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Ñuka kamuti-ta ñawinchani.",
+    "translation_en": "I read the book.",
+    "pieces": ["Ñuka", "kamuti-ta", "ñawinchani"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["killpan", "-man", "kay"]
+  },
+  {
+    "id": "sp13",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Pay taksha-ta rikun.",
+    "translation_en": "He/She watches the laundry.",
+    "pieces": ["Pay", "taksha-ta", "rikun"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["mikuni", "purin", "-ta"]
+  },
+  {
+    "id": "sp14",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Ñuka rimanini.",
+    "translation_en": "I speak.",
+    "pieces": ["Ñuka", "rimanini"],
+    "correct_order": [0, 1],
+    "distractors": ["riksini", "mikunki", "-man"]
+  },
+  {
+    "id": "sp15",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Kanki puñanki.",
+    "translation_en": "You sleep.",
+    "pieces": ["Kanki", "puñanki"],
+    "correct_order": [0, 1],
+    "distractors": ["mikuni", "rini", "-ta"]
+  },
+  {
+    "id": "sp16",
+    "language": "Kichwa (Otavalo)",
+    "type": "S(Obl)V-motion",
+    "surface": "Pay yachana wasi-man riku-n.",
+    "translation_en": "He/She goes to the school.",
+    "pieces": ["Pay", "yachana", "wasi-man", "riku-n"],
+    "correct_order": [0, 1, 2, 3],
+    "distractors": ["-ta", "kay", "ñuka"]
+  },
+  {
+    "id": "sp17",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Ñuka misi-ta riksini.",
+    "translation_en": "I see the cat.",
+    "pieces": ["Ñuka", "misi-ta", "riksini"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["mikuni", "-man", "kay"]
+  },
+  {
+    "id": "sp18",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Kanki pishku-ta uyanki.",
+    "translation_en": "You listen to the bird.",
+    "pieces": ["Kanki", "pishku-ta", "uyanki"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["rikun", "-ta", "yaku"]
+  },
+  {
+    "id": "sp19",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Pay kawsan.",
+    "translation_en": "He/She lives.",
+    "pieces": ["Pay", "kawsan"],
+    "correct_order": [0, 1],
+    "distractors": ["rini", "mikun", "-man"]
+  },
+  {
+    "id": "sp20",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Ñuka yachakuni.",
+    "translation_en": "I study.",
+    "pieces": ["Ñuka", "yachakuni"],
+    "correct_order": [0, 1],
+    "distractors": ["mikuni", "rini", "-ta"]
+  },
+  {
+    "id": "sp21",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Ñuka yanuna mikuni.",
+    "translation_en": "I cook food.",
+    "pieces": ["Ñuka", "yanuna", "mikuni"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-ta", "rini", "kay"]
+  },
+  {
+    "id": "sp22",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Kanki yanta-ta apanki.",
+    "translation_en": "You bring firewood.",
+    "pieces": ["Kanki", "yanta-ta", "apanki"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["mikuni", "-man", "ñuka"]
+  },
+  {
+    "id": "sp23",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Pay yaku-ta upin.",
+    "translation_en": "He/She drinks water.",
+    "pieces": ["Pay", "yaku-ta", "upin"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["mikuni", "-man", "kay"]
+  },
+  {
+    "id": "sp24",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Kanki tushunki.",
+    "translation_en": "You dance.",
+    "pieces": ["Kanki", "tushunki"],
+    "correct_order": [0, 1],
+    "distractors": ["mikunki", "rikun", "-ta"]
+  },
+  {
+    "id": "sp25",
+    "language": "Kichwa (Otavalo)",
+    "type": "S(Obl)V-motion",
+    "surface": "Ñuka llakta-man shamuni.",
+    "translation_en": "I come to the town.",
+    "pieces": ["Ñuka", "llakta-man", "shamuni"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-ta", "kay", "pay"]
+  },
+  {
+    "id": "sp26",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Ñuka allku-ta rikuni.",
+    "translation_en": "I see the dog.",
+    "pieces": ["Ñuka", "allku-ta", "rikuni"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["mikunki", "-man", "chay"]
+  },
+  {
+    "id": "sp27",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Pay shayan.",
+    "translation_en": "He/She stands.",
+    "pieces": ["Pay", "shayan"],
+    "correct_order": [0, 1],
+    "distractors": ["tiyani", "mikuni", "-ta"]
+  },
+  {
+    "id": "sp28",
+    "language": "Kichwa (Otavalo)",
+    "type": "SV-intransitive",
+    "surface": "Ñuka tiyanini.",
+    "translation_en": "I sit.",
+    "pieces": ["Ñuka", "tiyanini"],
+    "correct_order": [0, 1],
+    "distractors": ["shayan", "mikuni", "-man"]
+  },
+  {
+    "id": "sp29",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Kanki punku-ta paskanki.",
+    "translation_en": "You open the door.",
+    "pieces": ["Kanki", "punku-ta", "paskanki"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["wichana", "-man", "kay"]
+  },
+  {
+    "id": "sp30",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Pay punku-ta wichin.",
+    "translation_en": "He/She closes the door.",
+    "pieces": ["Pay", "punku-ta", "wichin"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["paskanki", "-ta", "ñuka"]
+  }
+]

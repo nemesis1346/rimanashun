@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "declaration": true,
+    "composite": true,
+    "module": "ESNext",
+    "target": "ES2019",
+    "moduleResolution": "Node"
+  },
+  "include": ["src/**/*"]
+}

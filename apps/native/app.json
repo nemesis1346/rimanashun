@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Kichwa Learning",
+    "slug": "kichwa-learning",
+    "version": "1.0.0",
+    "sdkVersion": "53.0.0",
+    "main": "./index.js",
+    "platforms": ["ios", "android", "web"],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"]
+  }
+}
