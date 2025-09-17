@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "sp1",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Ñuka yaku upini.",
+    "translation_en": "I drink water.",
+    "pieces": ["Ñuka", "yaku", "upini"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["-ta", "kay", "kan"]
+  },
+  {
+    "id": "sp2",
+    "language": "Kichwa (Otavalo)",
+    "type": "SOV-basic",
+    "surface": "Pay mikuta mikun.",
+    "translation_en": "He/She eats food.",
+    "pieces": ["Pay", "mikuta", "mikun"],
+    "correct_order": [0, 1, 2],
+    "distractors": ["ñuka", "ri", "shamu"]
+  }
+]

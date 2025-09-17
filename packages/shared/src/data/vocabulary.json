@@ -1,1 +1,12 @@
-[]
+[
+  { "kichwa": "ñuka", "spanish": "yo", "category": "pronouns" },
+  { "kichwa": "kan", "spanish": "tú", "category": "pronouns" },
+  { "kichwa": "pay", "spanish": "él/ella", "category": "pronouns" },
+  { "kichwa": "yaku", "spanish": "agua", "category": "nature" },
+  { "kichwa": "mikuna", "spanish": "comida", "category": "food" },
+  { "kichwa": "wasi", "spanish": "casa", "category": "home" },
+  { "kichwa": "shamu", "spanish": "venir", "category": "verbs" },
+  { "kichwa": "ri", "spanish": "ir", "category": "verbs" },
+  { "kichwa": "upina", "spanish": "beber", "category": "verbs" },
+  { "kichwa": "rikuna", "spanish": "ver", "category": "verbs" }
+]

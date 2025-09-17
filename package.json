@@ -10,7 +10,9 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "web": "npm --workspace apps/web run dev",
+    "native": "npm --workspace apps/native run start"
   },
   "devDependencies": {
     "turbo": "^2.1.3",
