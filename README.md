@@ -13,6 +13,18 @@ rimanashun/
     └── shared/                # Shared types and datasets
 ```
 
+## Requirements
+
+- **Node.js**: 20 LTS (>= 20.9.0). Use the latest 20.x for best compatibility.
+- **npm**: >= 10
+
+Recommended with nvm:
+
+```bash
+nvm install 20
+nvm use 20
+```
+
 ## Quick Start
 
 - Install all: `npm install`
