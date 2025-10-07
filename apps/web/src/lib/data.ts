@@ -1,5 +1,6 @@
 // Data utilities for the web app
-// Import shared data from the monorepo packages
+// Unified: re-export data from the shared package
+import { vocabularyData as sharedVocabularyData, sentencePuzzles as sharedSentencePuzzles } from "@rimanashun/shared";
 
 export interface KichwaWord {
   kichwa: string;
@@ -15,81 +16,12 @@ export interface SentencePuzzleItem {
   translation_en: string;
   pieces: string[];
   correct_order: number[];
-  distractors: string[];
+  distractors?: string[];
 }
 
-// Sample vocabulary data (in a real app, this would be loaded from the shared package)
-export const vocabularyData: KichwaWord[] = [
-  { kichwa: "ñuka", spanish: "yo", category: "pronouns" },
-  { kichwa: "kan", spanish: "tú", category: "pronouns" },
-  { kichwa: "pay", spanish: "él/ella", category: "pronouns" },
-  { kichwa: "yaku", spanish: "agua", category: "nature" },
-  { kichwa: "mikuna", spanish: "comida", category: "food" },
-  { kichwa: "wasi", spanish: "casa", category: "home" },
-  { kichwa: "shamu", spanish: "venir", category: "verbs" },
-  { kichwa: "ri", spanish: "ir", category: "verbs" },
-  { kichwa: "upina", spanish: "beber", category: "verbs" },
-  { kichwa: "rikuna", spanish: "ver", category: "verbs" },
-  { kichwa: "alli", spanish: "bueno", category: "adjectives" },
-  { kichwa: "mana", spanish: "no", category: "adverbs" },
-  { kichwa: "puncha", spanish: "día", category: "time" },
-  { kichwa: "tuta", spanish: "noche", category: "time" },
-  { kichwa: "inti", spanish: "sol", category: "nature" },
-];
+export const vocabularyData: KichwaWord[] = sharedVocabularyData as unknown as KichwaWord[];
 
-// Sample sentence puzzle data
-export const sentencePuzzleData: SentencePuzzleItem[] = [
-  {
-    id: "sp1",
-    language: "Kichwa (Otavalo)",
-    type: "SOV-basic",
-    surface: "Ñuka yaku upini.",
-    translation_en: "I drink water.",
-    pieces: ["Ñuka", "yaku", "upini"],
-    correct_order: [0, 1, 2],
-    distractors: ["-ta", "kay", "kan"],
-  },
-  {
-    id: "sp2",
-    language: "Kichwa (Otavalo)",
-    type: "SOV-basic",
-    surface: "Pay mikuta mikun.",
-    translation_en: "He/She eats food.",
-    pieces: ["Pay", "mikuta", "mikun"],
-    correct_order: [0, 1, 2],
-    distractors: ["ñuka", "ri", "shamu"],
-  },
-  {
-    id: "sp3",
-    language: "Kichwa (Otavalo)",
-    type: "SOV-basic",
-    surface: "Kan wasi rikuna.",
-    translation_en: "You see the house.",
-    pieces: ["Kan", "wasi", "rikuna"],
-    correct_order: [0, 1, 2],
-    distractors: ["pay", "yaku", "alli"],
-  },
-  {
-    id: "sp4",
-    language: "Kichwa (Otavalo)",
-    type: "SOV-basic",
-    surface: "Ñuka puncha alli.",
-    translation_en: "I have a good day.",
-    pieces: ["Ñuka", "puncha", "alli"],
-    correct_order: [0, 1, 2],
-    distractors: ["kan", "tuta", "mana"],
-  },
-  {
-    id: "sp5",
-    language: "Kichwa (Otavalo)",
-    type: "SOV-basic",
-    surface: "Pay inti rikuna.",
-    translation_en: "He/She sees the sun.",
-    pieces: ["Pay", "inti", "rikuna"],
-    correct_order: [0, 1, 2],
-    distractors: ["ñuka", "yaku", "wasi"],
-  },
-];
+export const sentencePuzzleData: SentencePuzzleItem[] = sharedSentencePuzzles as unknown as SentencePuzzleItem[];
 
 // Utility functions
 export const getWordsByCategory = (

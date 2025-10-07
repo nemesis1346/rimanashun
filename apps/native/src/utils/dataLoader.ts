@@ -1,13 +1,13 @@
 import { KichwaWord } from "../types";
-import { categories } from "../data/categories";
+import { categories } from "@rimanashun/shared";
 
 // Temporary direct imports from monorepo shared data
 // Metro is configured to watch the monorepo root so these JSON files are loadable
 // If you prefer package imports, switch back to @rimanashun/shared after setting up Metro/Yarn resolutions
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const vocabularyData = require("../../../../packages/shared/src/data/vocabulary.json");
+const vocabularyData = require("../../../../packages/shared/data/vocabulary.json");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const sentencePuzzles = require("../../../../packages/shared/src/data/sentence_puzzles.json");
+const sentencePuzzles = require("../../../../packages/shared/data/sentence_puzzles.json");
 
 // Load the vocabulary data
 export const loadVocabularyData = async (): Promise<KichwaWord[]> => {

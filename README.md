@@ -72,13 +72,13 @@ cd packages/shared && npm run build
 
 ### Vocabulary Data
 
-- **File**: `packages/shared/src/data/vocabulary.json`
+- **File**: `packages/shared/data/vocabulary.json`
 - **Format**: Array of Kichwa words with Spanish translations
 - **Fields**: `kichwa`, `spanish`, `category`, `difficulty`
 
 ### Sentence Puzzles
 
-- **File**: `packages/shared/src/data/sentence_puzzles.json`
+- **File**: `packages/shared/data/sentence_puzzles.json`
 - **Format**: Array of sentence building exercises
 - **Fields**: `sentence`, `pieces`, `correct_order`, `distractors`
 
@@ -133,9 +133,10 @@ Both apps include:
 
 ### Data Sharing
 
-- **Shared Types**: Common interfaces across apps
-- **JSON Data**: Centralized vocabulary and puzzle data
-- **Import Strategy**: Direct JSON imports for native, package imports for web
+- **Source of Truth**: All datasets live in `packages/shared/data/`
+- **Exports**: Re-exported via `@rimanashun/shared` (`vocabularyData`, `sentencePuzzles`, `categories`)
+- **Web**: Imports from the package (Next.js transpiles `@rimanashun/shared`)
+- **Native**: Imports from the package for `categories` and `sentencePuzzles`, direct JSON require for vocabulary/puzzles is also supported
 
 ## Development Notes
 

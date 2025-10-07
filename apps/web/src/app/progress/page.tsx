@@ -11,6 +11,8 @@ interface ProgressStats {
   categoriesStudied: number;
   studyStreak: number;
   lastStudyDate: string;
+  learnedWords: number;
+  learnedPuzzles: number;
 }
 
 export default function ProgressPage() {
@@ -22,6 +24,8 @@ export default function ProgressPage() {
     categoriesStudied: 0,
     studyStreak: 0,
     lastStudyDate: "",
+    learnedWords: 0,
+    learnedPuzzles: 0,
   });
   const [isLoading, setIsLoading] = useState(true);
 
@@ -39,13 +43,32 @@ export default function ProgressPage() {
           vocabData.map((word) => word.category || "general")
         );
 
-        // Mock progress data (in a real app, this would come from localStorage or a backend)
+        // Read learned progress from localStorage if present
+        const getLearnedCount = (key: string) => {
+          try {
+            const raw = localStorage.getItem(key);
+            if (!raw) return 0;
+            const parsed = JSON.parse(raw);
+            if (Array.isArray(parsed)) return parsed.length;
+            const n = parseInt(String(parsed), 10);
+            return Number.isFinite(n) ? n : 0;
+          } catch {
+            return 0;
+          }
+        };
+
+        const learnedWords = getLearnedCount("learnedWords");
+        const learnedPuzzles = getLearnedCount("learnedPuzzles");
+
+        // Mock remaining stats (e.g. streak)
         const mockStats: ProgressStats = {
           totalWords: vocabData.length,
           totalPuzzles: puzzleData.length,
           categoriesStudied: uniqueCategories.size,
           studyStreak: 7, // Mock streak
           lastStudyDate: new Date().toLocaleDateString(),
+          learnedWords,
+          learnedPuzzles,
         };
 
         setStats(mockStats);
@@ -114,7 +137,7 @@ export default function ProgressPage() {
           >
             <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>📚</div>
             <h3 style={{ color: colors.textPrimary, margin: "0 0 0.5rem 0" }}>
-              {stats.totalWords}
+              {stats.learnedWords} / {stats.totalWords}
             </h3>
             <p
               style={{
@@ -138,7 +161,7 @@ export default function ProgressPage() {
           >
             <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>🧩</div>
             <h3 style={{ color: colors.textPrimary, margin: "0 0 0.5rem 0" }}>
-              {stats.totalPuzzles}
+              {stats.learnedPuzzles} / {stats.totalPuzzles}
             </h3>
             <p
               style={{

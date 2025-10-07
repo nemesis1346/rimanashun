@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { colors } from "../constants/colors";
+import { sentencePuzzles as sharedSentencePuzzles } from "@rimanashun/shared";
 
 type PuzzleItem = {
   id: string;
@@ -21,7 +22,7 @@ type PuzzleItem = {
   distractors?: string[];
 };
 
-const ALL_PUZZLES: PuzzleItem[] = require("../../assets/sentence_puzzles_kichwa.json");
+const ALL_PUZZLES: PuzzleItem[] = sharedSentencePuzzles as unknown as PuzzleItem[];
 
 function shuffle<T>(array: T[]): T[] {
   const copy = [...array];
@@ -144,10 +145,15 @@ export default function SentencePuzzleScreen() {
 
   return (
     <View style={styles.container}>
-      <LinearGradient colors={colors.primaryGradient} style={styles.header}>
-        <Text style={styles.title}>Sentence Puzzle</Text>
-        <Text style={styles.subtitle}>Arrange the Kichwa sentence</Text>
-      </LinearGradient>
+      {/* Cast to any to satisfy React Native JSX typing for expo-linear-gradient */}
+      {(
+        LinearGradient as any
+      )({ colors: colors.primaryGradient, style: styles.header, children: (
+        <>
+          <Text style={styles.title}>Sentence Puzzle</Text>
+          <Text style={styles.subtitle}>Arrange the Kichwa sentence</Text>
+        </>
+      ) })}
 
       <View style={styles.card}>
         <Text style={styles.promptLabel}>English</Text>
