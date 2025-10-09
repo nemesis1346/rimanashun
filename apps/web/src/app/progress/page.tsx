@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
-import { vocabularyData, sentencePuzzleData, KichwaWord } from "@/lib/data";
+import { fetchVocabulary, fetchPuzzles, KichwaWord } from "@/lib/data";
 
 interface ProgressStats {
   totalWords: number;
@@ -30,10 +30,12 @@ export default function ProgressPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const loadData = () => {
+    const loadData = async () => {
       try {
-        const vocabData = vocabularyData;
-        const puzzleData = sentencePuzzleData;
+        const [vocabData, puzzleData] = await Promise.all([
+          fetchVocabulary(),
+          fetchPuzzles(),
+        ]);
 
         setWords(vocabData);
         setPuzzles(puzzleData);

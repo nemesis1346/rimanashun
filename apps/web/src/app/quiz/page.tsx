@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
-import { vocabularyData, KichwaWord, generateQuizQuestions } from "@/lib/data";
+import { fetchVocabulary, KichwaWord, generateQuizQuestions } from "@/lib/data";
 
 interface QuizQuestion {
   question: string;
@@ -23,9 +23,12 @@ export default function QuizPage() {
   const [quizCompleted, setQuizCompleted] = useState(false);
 
   useEffect(() => {
-    setWords(vocabularyData);
-    generateQuiz(vocabularyData);
-    setIsLoading(false);
+    (async () => {
+      const data = await fetchVocabulary();
+      setWords(data);
+      generateQuiz(data);
+      setIsLoading(false);
+    })();
   }, []);
 
   const generateQuiz = (vocabData: KichwaWord[]) => {
@@ -70,7 +73,7 @@ export default function QuizPage() {
     setIsAnswered(false);
     setScore(0);
     setQuizCompleted(false);
-    generateQuiz(vocabularyData);
+    generateQuiz(words);
   };
 
   if (isLoading) {

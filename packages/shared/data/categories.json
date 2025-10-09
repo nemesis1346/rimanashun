@@ -1,0 +1,187 @@
+[
+  {
+    "id": "numbers",
+    "name": "Numbers",
+    "description": "Learn to count in Kichwa",
+    "icon": "calculator",
+    "color": "#FF6B6B",
+    "keywords": [
+      "shuk",
+      "ishkay",
+      "kimsa",
+      "chusku",
+      "pichka",
+      "sukta",
+      "kanchis",
+      "pusak",
+      "iskun",
+      "chunka",
+      "patsak",
+      "waranka"
+    ]
+  },
+  {
+    "id": "colors",
+    "name": "Colors",
+    "description": "Learn colors in Kichwa",
+    "icon": "color-palette",
+    "color": "#4ECDC4",
+    "keywords": [
+      "yurak",
+      "yana",
+      "puka",
+      "killu",
+      "waylla",
+      "ankas",
+      "chiri",
+      "kunuk"
+    ]
+  },
+  {
+    "id": "family",
+    "name": "Family",
+    "description": "Family members and relationships",
+    "icon": "people",
+    "color": "#45B7D1",
+    "keywords": [
+      "mama",
+      "tayta",
+      "wawa",
+      "warmi",
+      "kari",
+      "ayllu",
+      "hatun mama",
+      "hatun tayta",
+      "churi",
+      "ushushi"
+    ]
+  },
+  {
+    "id": "food",
+    "name": "Food & Drinks",
+    "description": "Food, drinks, and cooking",
+    "icon": "restaurant",
+    "color": "#96CEB4",
+    "keywords": [
+      "mikuna",
+      "yaku",
+      "tanta",
+      "aycha",
+      "challwa",
+      "manka",
+      "kallana",
+      "yanuna",
+      "mallina"
+    ]
+  },
+  {
+    "id": "animals",
+    "name": "Animals",
+    "description": "Animals and pets",
+    "icon": "paw",
+    "color": "#FFEAA7",
+    "keywords": [
+      "allku",
+      "kuchi",
+      "wakra",
+      "llama",
+      "misi",
+      "pishku",
+      "uksha",
+      "ukucha",
+      "wallinku"
+    ]
+  },
+  {
+    "id": "body",
+    "name": "Body Parts",
+    "description": "Parts of the body",
+    "icon": "body",
+    "color": "#DDA0DD",
+    "keywords": [
+      "uma",
+      "ñawi",
+      "rinri",
+      "maki",
+      "chaki",
+      "rikra",
+      "shunku",
+      "hallu",
+      "ruka",
+      "tunkuri"
+    ]
+  },
+  {
+    "id": "nature",
+    "name": "Nature",
+    "description": "Natural elements and weather",
+    "icon": "leaf",
+    "color": "#98D8C8",
+    "keywords": [
+      "allpa",
+      "mayu",
+      "kucha",
+      "urku",
+      "wayra",
+      "rasu",
+      "puyu",
+      "hawa pacha",
+      "yaku"
+    ]
+  },
+  {
+    "id": "house",
+    "name": "House & Objects",
+    "description": "Household items and furniture",
+    "icon": "home",
+    "color": "#F7DC6F",
+    "keywords": [
+      "wasi",
+      "uku",
+      "mesa",
+      "tiyarina",
+      "manka",
+      "kallana",
+      "puku",
+      "shila",
+      "shikra"
+    ]
+  },
+  {
+    "id": "actions",
+    "name": "Actions",
+    "description": "Common verbs and actions",
+    "icon": "walk",
+    "color": "#BB8FCE",
+    "keywords": [
+      "rina",
+      "shamuna",
+      "rikuna",
+      "nina",
+      "yanuna",
+      "mikuna",
+      "upyana",
+      "puñuna",
+      "kawsana"
+    ]
+  },
+  {
+    "id": "greetings",
+    "name": "Greetings",
+    "description": "Common greetings and expressions",
+    "icon": "chatbubbles",
+    "color": "#85C1E9",
+    "keywords": [
+      "alli puncha",
+      "alli chishi",
+      "alli tuta",
+      "kayakaman",
+      "ashtakashkaman",
+      "yupaychini",
+      "pay"
+    ]
+  }
+]
+
+
+

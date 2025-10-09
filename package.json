@@ -12,7 +12,8 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "web": "npm --workspace apps/web run dev",
-    "native": "npm --workspace apps/native run start"
+    "native": "npm --workspace apps/native run start",
+    "backend": "npm --workspace apps/backend run start"
   },
   "devDependencies": {
     "turbo": "^2.1.3",

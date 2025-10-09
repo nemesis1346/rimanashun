@@ -1,13 +1,21 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
-import { vocabularyData, sentencePuzzleData } from "@/lib/data";
+import { fetchVocabulary, fetchPuzzles } from "@/lib/data";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 
 export default function HomePage() {
-  const vocabCount = vocabularyData.length;
-  const puzzleCount = sentencePuzzleData.length;
+  const [vocabCount, setVocabCount] = React.useState<number>(0);
+  const [puzzleCount, setPuzzleCount] = React.useState<number>(0);
+  React.useEffect(() => {
+    (async () => {
+      const [v, p] = await Promise.all([fetchVocabulary(), fetchPuzzles()]);
+      setVocabCount(v.length);
+      setPuzzleCount(p.length);
+    })();
+  }, []);
 
   const quickActions = [
     {

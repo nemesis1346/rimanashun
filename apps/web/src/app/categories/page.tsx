@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
-import { vocabularyData, KichwaWord } from "@/lib/data";
+import { fetchVocabulary, KichwaWord } from "@/lib/data";
 
 interface Category {
   id: string;
@@ -21,9 +21,9 @@ export default function CategoriesPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const loadData = () => {
+    const loadData = async () => {
       try {
-        const vocabData = vocabularyData;
+        const vocabData = await fetchVocabulary();
         setWords(vocabData);
 
         // Create categories based on available data

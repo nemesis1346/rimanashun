@@ -1,6 +1,7 @@
 // Data utilities for the web app
-// Unified: re-export data from the shared package
-import { vocabularyData as sharedVocabularyData, sentencePuzzles as sharedSentencePuzzles } from "@rimanashun/shared";
+// Unified: fetch from backend API (served by packages/backend)
+import axios from "axios";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export interface KichwaWord {
   kichwa: string;
@@ -19,9 +20,27 @@ export interface SentencePuzzleItem {
   distractors?: string[];
 }
 
-export const vocabularyData: KichwaWord[] = sharedVocabularyData as unknown as KichwaWord[];
+// Static fallbacks kept empty; use fetchers below at runtime
+export const vocabularyData: KichwaWord[] = [];
+export const sentencePuzzleData: SentencePuzzleItem[] = [];
 
-export const sentencePuzzleData: SentencePuzzleItem[] = sharedSentencePuzzles as unknown as SentencePuzzleItem[];
+export async function fetchVocabulary(): Promise<KichwaWord[]> {
+  try {
+    const res = await axios.get(`${API_BASE}/v1/vocabulary`, { withCredentials: false });
+    return res.data as KichwaWord[];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchPuzzles(): Promise<SentencePuzzleItem[]> {
+  try {
+    const res = await axios.get(`${API_BASE}/v1/puzzles`, { withCredentials: false });
+    return res.data as SentencePuzzleItem[];
+  } catch {
+    return [];
+  }
+}
 
 // Utility functions
 export const getWordsByCategory = (

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
-import { sentencePuzzleData, SentencePuzzleItem } from "@/lib/data";
+import { fetchPuzzles, SentencePuzzleItem } from "@/lib/data";
 
 export default function SentencePuzzlePage() {
   const [puzzles, setPuzzles] = useState<SentencePuzzleItem[]>([]);
@@ -15,16 +15,19 @@ export default function SentencePuzzlePage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setPuzzles(sentencePuzzleData);
-    if (sentencePuzzleData.length > 0) {
-      loadPuzzle(sentencePuzzleData[0]);
-    }
-    setIsLoading(false);
+    (async () => {
+      const data = await fetchPuzzles();
+      setPuzzles(data);
+      if (data.length > 0) {
+        loadPuzzle(data[0]);
+      }
+      setIsLoading(false);
+    })();
   }, []);
 
   const loadPuzzle = (puzzle: SentencePuzzleItem) => {
     // Shuffle pieces with distractors
-    const allPieces = [...puzzle.pieces, ...puzzle.distractors];
+    const allPieces = [...puzzle.pieces, ...(puzzle.distractors || [])];
     const shuffledPieces = allPieces.sort(() => 0.5 - Math.random());
 
     setPieces(shuffledPieces);

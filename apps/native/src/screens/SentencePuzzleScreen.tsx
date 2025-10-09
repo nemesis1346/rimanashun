@@ -11,6 +11,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import { colors } from "../constants/colors";
 import { sentencePuzzles as sharedSentencePuzzles } from "@rimanashun/shared";
 
+const API_BASE = process.env.EXPO_PUBLIC_API_URL || "http://localhost:4000";
+
 type PuzzleItem = {
   id: string;
   language: string;
@@ -22,7 +24,18 @@ type PuzzleItem = {
   distractors?: string[];
 };
 
-const ALL_PUZZLES: PuzzleItem[] = sharedSentencePuzzles as unknown as PuzzleItem[];
+let ALL_PUZZLES: PuzzleItem[] = sharedSentencePuzzles as unknown as PuzzleItem[];
+
+async function ensurePuzzlesLoaded() {
+  try {
+    const res = await fetch(`${API_BASE}/v1/puzzles`);
+    if (res.ok) {
+      ALL_PUZZLES = (await res.json()) as PuzzleItem[];
+    }
+  } catch (_) {
+    // ignore and keep shared fallback
+  }
+}
 
 function shuffle<T>(array: T[]): T[] {
   const copy = [...array];
@@ -35,6 +48,11 @@ function shuffle<T>(array: T[]): T[] {
 
 export default function SentencePuzzleScreen() {
   const [index, setIndex] = useState(0);
+  const _ = useMemo(() => {
+    // fire and forget; load latest from backend if available
+    ensurePuzzlesLoaded();
+    return null;
+  }, []);
 
   const item = useMemo(() => ALL_PUZZLES[index % ALL_PUZZLES.length], [index]);
   const [pool, setPool] = useState<string[]>(() =>

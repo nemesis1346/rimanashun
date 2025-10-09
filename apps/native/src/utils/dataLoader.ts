@@ -1,5 +1,8 @@
 import { KichwaWord } from "../types";
 import { categories } from "@rimanashun/shared";
+import axios from "axios";
+
+const API_BASE = process.env.EXPO_PUBLIC_API_URL || "http://localhost:4000";
 
 // Temporary direct imports from monorepo shared data
 // Metro is configured to watch the monorepo root so these JSON files are loadable
@@ -11,6 +14,12 @@ const sentencePuzzles = require("../../../../packages/shared/data/sentence_puzzl
 
 // Load the vocabulary data
 export const loadVocabularyData = async (): Promise<KichwaWord[]> => {
+  try {
+    const res = await axios.get(`${API_BASE}/v1/vocabulary`, { withCredentials: false });
+    return res.data as KichwaWord[];
+  } catch (e) {
+    // network failure – fall back to bundled shared data
+  }
   try {
     return vocabularyData as KichwaWord[];
   } catch (error) {

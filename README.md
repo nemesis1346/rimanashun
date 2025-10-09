@@ -135,13 +135,15 @@ Both apps include:
 
 - **Source of Truth**: All datasets live in `packages/shared/data/`
 - **Exports**: Re-exported via `@rimanashun/shared` (`vocabularyData`, `sentencePuzzles`, `categories`)
-- **Web**: Imports from the package (Next.js transpiles `@rimanashun/shared`)
-- **Native**: Imports from the package for `categories` and `sentencePuzzles`, direct JSON require for vocabulary/puzzles is also supported
+- **Backend**: Simple REST server at `packages/backend` serving JSON
+- **Web**: Fetches from backend. Configure `NEXT_PUBLIC_API_URL` (default `http://localhost:4000`)
+- **Native**: Fetches from backend via `EXPO_PUBLIC_API_URL` with shared JSON fallback
 
 ## Development Notes
 
-- **Native App**: Uses direct JSON imports due to Metro bundler limitations
-- **Web App**: Uses package imports from `@rimanashun/shared`
+- **Backend**: `npm run backend` (serves on `http://localhost:4000` by default)
+- **Web App**: `NEXT_PUBLIC_API_URL` can point to your backend URL
+- **Native App**: `EXPO_PUBLIC_API_URL` can point to your backend URL
 - **Responsive**: Mobile-first design with progressive enhancement
 - **Performance**: Optimized for both native and web environments
 

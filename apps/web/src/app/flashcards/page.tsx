@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
-import { vocabularyData, KichwaWord } from "@/lib/data";
+import { fetchVocabulary, KichwaWord } from "@/lib/data";
 
 export default function FlashcardsPage() {
   const [words, setWords] = useState<KichwaWord[]>([]);
@@ -12,8 +12,11 @@ export default function FlashcardsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setWords(vocabularyData);
-    setIsLoading(false);
+    (async () => {
+      const data = await fetchVocabulary();
+      setWords(data);
+      setIsLoading(false);
+    })();
   }, []);
 
   const currentWord = words[currentIndex];
