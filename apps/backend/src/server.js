@@ -42,11 +42,10 @@ const server = http.createServer((req, res) => {
   if (req.method === "GET" && pathname === "/v1/vocabulary/by-category") {
     const category = (query.category || "").toString();
     if (!category) {
-      console.log(`[${new Date().toISOString()}] No category filter, returning all ${vocabularyData.length} vocabulary items`);
       return sendJson(res, 200, vocabularyData);
     }
-    const filtered = (vocabularyData || []).filter((w) => (w.category || "").toLowerCase() === category.toLowerCase());
-    console.log(`[${new Date().toISOString()}] Filtering by category "${category}", returning ${filtered.length} items`);
+    const filtered = vocabularyData.filter((w) => w.categoryId === category);
+    console.log(`[${new Date().toISOString()}] Filter by "${category}", returning ${filtered.length} items`);
     return sendJson(res, 200, filtered);
   }
 

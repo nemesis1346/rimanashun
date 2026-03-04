@@ -6,7 +6,7 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 export interface KichwaWord {
   kichwa: string;
   spanish: string;
-  category?: string;
+  categoryId: string;
 }
 
 export interface SentencePuzzleItem {
@@ -48,7 +48,7 @@ export const getWordsByCategory = (
   categoryId?: string
 ): KichwaWord[] => {
   if (!categoryId) return words;
-  return words.filter((word) => (word.category || "general") === categoryId);
+  return words.filter((word) => word.categoryId === categoryId);
 };
 
 export const getRandomWords = (

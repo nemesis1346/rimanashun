@@ -1,2984 +1,3732 @@
 [
   {
     "kichwa": "achi mama",
-    "spanish": "madrina"
+    "spanish": "madrina",
+    "categoryId": "family"
   },
   {
     "kichwa": "achi tayta",
-    "spanish": "padrino"
+    "spanish": "padrino",
+    "categoryId": "family"
   },
   {
     "kichwa": "achikta japichipay",
-    "spanish": "enciende la luz porfavor"
+    "spanish": "enciende la luz porfavor",
+    "categoryId": "general"
   },
   {
     "kichwa": "akcha",
-    "spanish": "pelo"
+    "spanish": "pelo",
+    "categoryId": "body"
   },
   {
     "kichwa": "alalay",
-    "spanish": "feo, fea"
+    "spanish": "feo, fea",
+    "categoryId": "general"
   },
   {
     "kichwa": "allana puncha",
-    "spanish": "dia de la cosecha"
+    "spanish": "dia de la cosecha",
+    "categoryId": "nature"
   },
   {
     "kichwa": "alli",
-    "spanish": "bueno, buena"
+    "spanish": "bueno, buena",
+    "categoryId": "general"
   },
   {
     "kichwa": "alli",
-    "spanish": "sano"
+    "spanish": "sano",
+    "categoryId": "general"
   },
   {
     "kichwa": "alli chishi",
-    "spanish": "buenas tardes"
+    "spanish": "buenas tardes",
+    "categoryId": "greetings"
   },
   {
     "kichwa": "alli puncha",
-    "spanish": "buenos dias"
+    "spanish": "buenos dias",
+    "categoryId": "greetings"
   },
   {
     "kichwa": "alli tuta",
-    "spanish": "buenas noches"
+    "spanish": "buenas noches",
+    "categoryId": "greetings"
   },
   {
     "kichwa": "allichina",
-    "spanish": "numero"
+    "spanish": "numero",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "allitukuna",
-    "spanish": "mejorar"
+    "spanish": "mejorar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "allku",
-    "spanish": "perro"
+    "spanish": "perro",
+    "categoryId": "animals"
   },
   {
     "kichwa": "allkuyuk",
-    "spanish": "dueño de perro"
+    "spanish": "dueño de perro",
+    "categoryId": "animals"
   },
   {
     "kichwa": "allpa",
-    "spanish": "tierra, terreno"
+    "spanish": "tierra, terreno",
+    "categoryId": "nature"
   },
   {
     "kichwa": "allpa",
-    "spanish": "tierra"
+    "spanish": "tierra",
+    "categoryId": "nature"
   },
   {
     "kichwa": "almuza",
-    "spanish": "almuerzo"
+    "spanish": "almuerzo",
+    "categoryId": "food"
   },
   {
     "kichwa": "anaku",
-    "spanish": "falda"
+    "spanish": "falda",
+    "categoryId": "house"
   },
   {
     "kichwa": "anchuchina",
-    "spanish": "quitar"
+    "spanish": "quitar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "anchuna",
-    "spanish": "quitarse"
+    "spanish": "quitarse",
+    "categoryId": "actions"
   },
   {
     "kichwa": "ankana",
-    "spanish": "volar"
+    "spanish": "volar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "ankas",
-    "spanish": "azul"
+    "spanish": "azul",
+    "categoryId": "colors"
   },
   {
     "kichwa": "antawa",
-    "spanish": "carro, auto"
+    "spanish": "carro, auto",
+    "categoryId": "general"
   },
   {
     "kichwa": "apachina",
-    "spanish": "hacer cargar"
+    "spanish": "hacer cargar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "apamuna",
-    "spanish": "traer"
+    "spanish": "traer",
+    "categoryId": "actions"
   },
   {
     "kichwa": "apana",
-    "spanish": "llevar"
+    "spanish": "llevar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "api",
-    "spanish": "colada"
+    "spanish": "colada",
+    "categoryId": "food"
   },
   {
     "kichwa": "apunchik",
-    "spanish": "dios"
+    "spanish": "dios",
+    "categoryId": "general"
   },
   {
     "kichwa": "apunchikpa wasi",
-    "spanish": "casa de dios"
+    "spanish": "casa de dios",
+    "categoryId": "house"
   },
   {
     "kichwa": "ari",
-    "spanish": "si"
+    "spanish": "si",
+    "categoryId": "general"
   },
   {
     "kichwa": "arinina",
-    "spanish": "aceptar"
+    "spanish": "aceptar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "armachina",
-    "spanish": "hacer bañar"
+    "spanish": "hacer bañar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "armana uku",
-    "spanish": "baño"
+    "spanish": "baño",
+    "categoryId": "house"
   },
   {
     "kichwa": "arrendashka",
-    "spanish": "arrendado"
+    "spanish": "arrendado",
+    "categoryId": "general"
   },
   {
     "kichwa": "asha ",
-    "spanish": "poco"
+    "spanish": "poco",
+    "categoryId": "general"
   },
   {
     "kichwa": "asha ",
-    "spanish": "poco"
+    "spanish": "poco",
+    "categoryId": "general"
   },
   {
     "kichwa": "asha muspa",
-    "spanish": "poco loco o loca"
+    "spanish": "poco loco o loca",
+    "categoryId": "general"
   },
   {
     "kichwa": "ashtaka",
-    "spanish": "bastante"
+    "spanish": "bastante",
+    "categoryId": "general"
   },
   {
     "kichwa": "ashtakashkaman",
-    "spanish": "hasta luego"
+    "spanish": "hasta luego",
+    "categoryId": "greetings"
   },
   {
     "kichwa": "asichina",
-    "spanish": "hacer reir"
+    "spanish": "hacer reir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "asina",
-    "spanish": "reirse"
+    "spanish": "reirse",
+    "categoryId": "actions"
   },
   {
     "kichwa": "aspirina",
-    "spanish": "rascarse"
+    "spanish": "rascarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "aswa",
-    "spanish": "chicha"
+    "spanish": "chicha",
+    "categoryId": "food"
   },
   {
     "kichwa": "atallpa",
-    "spanish": "gallina"
+    "spanish": "gallina",
+    "categoryId": "animals"
   },
   {
     "kichwa": "awak kari",
-    "spanish": "tejedora "
+    "spanish": "tejedora ",
+    "categoryId": "house"
   },
   {
     "kichwa": "awak warmi",
-    "spanish": "tejedora "
+    "spanish": "tejedora ",
+    "categoryId": "house"
   },
   {
     "kichwa": "awana",
-    "spanish": "tejer"
+    "spanish": "tejer",
+    "categoryId": "house"
   },
   {
     "kichwa": "aycha",
-    "spanish": "carne"
+    "spanish": "carne",
+    "categoryId": "food"
   },
   {
     "kichwa": "ayllu",
-    "spanish": "familia"
+    "spanish": "familia",
+    "categoryId": "family"
   },
   {
     "kichwa": "ayllu",
-    "spanish": "familia"
+    "spanish": "familia",
+    "categoryId": "family"
   },
   {
     "kichwa": "aysana",
-    "spanish": "halar"
+    "spanish": "halar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "balun",
-    "spanish": "pantalon"
+    "spanish": "pantalon",
+    "categoryId": "house"
   },
   {
     "kichwa": "banca",
-    "spanish": "banca"
+    "spanish": "banca",
+    "categoryId": "general"
   },
   {
     "kichwa": "bloque",
-    "spanish": "bloque"
+    "spanish": "bloque",
+    "categoryId": "general"
   },
   {
     "kichwa": "cafe",
-    "spanish": "cafe"
+    "spanish": "cafe",
+    "categoryId": "general"
   },
   {
     "kichwa": "camisa",
-    "spanish": "blusa"
+    "spanish": "blusa",
+    "categoryId": "house"
   },
   {
     "kichwa": "capilla",
-    "spanish": "capilla"
+    "spanish": "capilla",
+    "categoryId": "house"
   },
   {
     "kichwa": "carro",
-    "spanish": "carro, auto"
+    "spanish": "carro, auto",
+    "categoryId": "general"
   },
   {
     "kichwa": "casa comunal",
-    "spanish": "casa comunal"
+    "spanish": "casa comunal",
+    "categoryId": "house"
   },
   {
     "kichwa": "casado",
-    "spanish": "casado"
+    "spanish": "casado",
+    "categoryId": "family"
   },
   {
     "kichwa": "casarana",
-    "spanish": "casaarse"
+    "spanish": "casaarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "cebolla",
-    "spanish": "cebolla"
+    "spanish": "cebolla",
+    "categoryId": "food"
   },
   {
     "kichwa": "chakana",
-    "spanish": "escalera"
+    "spanish": "escalera",
+    "categoryId": "house"
   },
   {
     "kichwa": "chaki",
-    "spanish": "patas"
+    "spanish": "patas",
+    "categoryId": "body"
   },
   {
     "kichwa": "chaki",
-    "spanish": "pie"
+    "spanish": "pie",
+    "categoryId": "body"
   },
   {
     "kichwa": "chaki ñan",
-    "spanish": "sendero"
+    "spanish": "sendero",
+    "categoryId": "nature"
   },
   {
     "kichwa": "chakina",
-    "spanish": "secar"
+    "spanish": "secar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "challwa",
-    "spanish": "pescado"
+    "spanish": "pescado",
+    "categoryId": "food"
   },
   {
     "kichwa": "challwa",
-    "spanish": "pescado"
+    "spanish": "pescado",
+    "categoryId": "food"
   },
   {
     "kichwa": "chapa",
-    "spanish": "burro"
+    "spanish": "burro",
+    "categoryId": "animals"
   },
   {
     "kichwa": "chapakrirka",
-    "spanish": "fue a vigilar"
+    "spanish": "fue a vigilar",
+    "categoryId": "general"
   },
   {
     "kichwa": "chapana",
-    "spanish": "espiar"
+    "spanish": "espiar",
+    "categoryId": "general"
   },
   {
     "kichwa": "chaquishka",
-    "spanish": "secar"
+    "spanish": "secar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "charijayak",
-    "spanish": "rico amargado"
+    "spanish": "rico amargado",
+    "categoryId": "general"
   },
   {
     "kichwa": "charik",
-    "spanish": "rico, millonario"
+    "spanish": "rico, millonario",
+    "categoryId": "general"
   },
   {
     "kichwa": "charina",
-    "spanish": "tener"
+    "spanish": "tener",
+    "categoryId": "general"
   },
   {
     "kichwa": "chaskina",
-    "spanish": "recibir"
+    "spanish": "recibir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "chawa",
-    "spanish": "crudo"
+    "spanish": "crudo",
+    "categoryId": "food"
   },
   {
     "kichwa": "chawpi puncha mikuna",
-    "spanish": "almuerzo"
+    "spanish": "almuerzo",
+    "categoryId": "food"
   },
   {
     "kichwa": "chay",
-    "spanish": "esa, ese, eso"
+    "spanish": "esa, ese, eso",
+    "categoryId": "general"
   },
   {
     "kichwa": "chay shuk ",
-    "spanish": "otro u otros"
+    "spanish": "otro u otros",
+    "categoryId": "general"
   },
   {
     "kichwa": "chay shuk punchakuna",
-    "spanish": "otros dias"
+    "spanish": "otros dias",
+    "categoryId": "general"
   },
   {
     "kichwa": "chayachina",
-    "spanish": "hacer llegar"
+    "spanish": "hacer llegar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "chayana",
-    "spanish": "llegar"
+    "spanish": "llegar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "chayana",
-    "spanish": "llegar"
+    "spanish": "llegar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "chaymanta",
-    "spanish": "por eso"
+    "spanish": "por eso",
+    "categoryId": "general"
   },
   {
     "kichwa": "chaypak",
-    "spanish": "para eso"
+    "spanish": "para eso",
+    "categoryId": "general"
   },
   {
     "kichwa": "chaypi",
-    "spanish": "alli"
+    "spanish": "alli",
+    "categoryId": "general"
   },
   {
     "kichwa": "chinpa",
-    "spanish": "en/ al frente"
+    "spanish": "en/ al frente",
+    "categoryId": "general"
   },
   {
     "kichwa": "chiri",
-    "spanish": "frio"
+    "spanish": "frio",
+    "categoryId": "nature"
   },
   {
     "kichwa": "chishi",
-    "spanish": "tarde"
+    "spanish": "tarde",
+    "categoryId": "general"
   },
   {
     "kichwa": "chishi",
-    "spanish": "tarde"
+    "spanish": "tarde",
+    "categoryId": "general"
   },
   {
     "kichwa": "chukrichina",
-    "spanish": "lastimar, herir"
+    "spanish": "lastimar, herir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "chumpak",
-    "spanish": "invitados, acompañantes"
+    "spanish": "invitados, acompañantes",
+    "categoryId": "general"
   },
   {
     "kichwa": "chunka",
-    "spanish": "diez"
+    "spanish": "diez",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "chunkana",
-    "spanish": "jugar a las planchas"
+    "spanish": "jugar a las planchas",
+    "categoryId": "actions"
   },
   {
     "kichwa": "chunpi",
-    "spanish": "faja"
+    "spanish": "faja",
+    "categoryId": "house"
   },
   {
     "kichwa": "churachina",
-    "spanish": "hacer vestir"
+    "spanish": "hacer vestir",
+    "categoryId": "house"
   },
   {
     "kichwa": "churakuna",
-    "spanish": "vestimenta"
+    "spanish": "vestimenta",
+    "categoryId": "house"
   },
   {
     "kichwa": "churana",
-    "spanish": "poner"
+    "spanish": "poner",
+    "categoryId": "actions"
   },
   {
     "kichwa": "churi",
-    "spanish": "hija"
+    "spanish": "hija",
+    "categoryId": "general"
   },
   {
     "kichwa": "chusku",
-    "spanish": "cuatro"
+    "spanish": "cuatro",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "chuya",
-    "spanish": "limpio"
+    "spanish": "limpio",
+    "categoryId": "general"
   },
   {
     "kichwa": "culantro",
-    "spanish": "culantro"
+    "spanish": "culantro",
+    "categoryId": "food"
   },
   {
     "kichwa": "culis",
-    "spanish": "col"
+    "spanish": "col",
+    "categoryId": "general"
   },
   {
     "kichwa": "cumpana",
-    "spanish": "acompañar"
+    "spanish": "acompañar",
+    "categoryId": "general"
   },
   {
     "kichwa": "fanga",
-    "spanish": "papel"
+    "spanish": "papel",
+    "categoryId": "general"
   },
   {
     "kichwa": "gas",
-    "spanish": "gas"
+    "spanish": "gas",
+    "categoryId": "general"
   },
   {
     "kichwa": "grano",
-    "spanish": "grano"
+    "spanish": "grano",
+    "categoryId": "general"
   },
   {
     "kichwa": "halaw",
-    "spanish": "agradable"
+    "spanish": "agradable",
+    "categoryId": "general"
   },
   {
     "kichwa": "hallu",
-    "spanish": "lengua"
+    "spanish": "lengua",
+    "categoryId": "body"
   },
   {
     "kichwa": "hanak",
-    "spanish": "arriba"
+    "spanish": "arriba",
+    "categoryId": "general"
   },
   {
     "kichwa": "hanan",
-    "spanish": "arriba inclinado"
+    "spanish": "arriba inclinado",
+    "categoryId": "general"
   },
   {
     "kichwa": "hanpi wasi",
-    "spanish": "centro de salud"
+    "spanish": "centro de salud",
+    "categoryId": "house"
   },
   {
     "kichwa": "hanpik tayta ",
-    "spanish": "curandero"
+    "spanish": "curandero",
+    "categoryId": "general"
   },
   {
     "kichwa": "hanpina",
-    "spanish": "curar"
+    "spanish": "curar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "hatun",
-    "spanish": "alto"
+    "spanish": "alto",
+    "categoryId": "general"
   },
   {
     "kichwa": "hatun",
-    "spanish": "alto, grande"
+    "spanish": "alto, grande",
+    "categoryId": "general"
   },
   {
     "kichwa": "hatun mama",
-    "spanish": "abuela"
+    "spanish": "abuela",
+    "categoryId": "family"
   },
   {
     "kichwa": "hatun tayta",
-    "spanish": "abuelo"
+    "spanish": "abuelo",
+    "categoryId": "family"
   },
   {
     "kichwa": "hatun tayta",
-    "spanish": "abuelo"
+    "spanish": "abuelo",
+    "categoryId": "family"
   },
   {
     "kichwa": "hatun yachana wasi",
-    "spanish": "colegio"
+    "spanish": "colegio",
+    "categoryId": "house"
   },
   {
     "kichwa": "hawa pacha",
-    "spanish": "cielo"
+    "spanish": "cielo",
+    "categoryId": "nature"
   },
   {
     "kichwa": "hawa pacha",
-    "spanish": "arriba"
+    "spanish": "arriba",
+    "categoryId": "general"
   },
   {
     "kichwa": "hunu",
-    "spanish": "mullon"
+    "spanish": "mullon",
+    "categoryId": "general"
   },
   {
     "kichwa": "ima",
-    "spanish": "porque"
+    "spanish": "porque",
+    "categoryId": "general"
   },
   {
     "kichwa": "ima colortak?",
-    "spanish": "de que color?"
+    "spanish": "de que color?",
+    "categoryId": "colors"
   },
   {
     "kichwa": "ima punchatatak?",
-    "spanish": "que dia?"
+    "spanish": "que dia?",
+    "categoryId": "general"
   },
   {
     "kichwa": "ima shutitak?",
-    "spanish": "que nombre?"
+    "spanish": "que nombre?",
+    "categoryId": "general"
   },
   {
     "kichwa": "ima tunutatak ?",
-    "spanish": "que musica?"
+    "spanish": "que musica?",
+    "categoryId": "general"
   },
   {
     "kichwa": "imachik",
-    "spanish": "verbo"
+    "spanish": "verbo",
+    "categoryId": "general"
   },
   {
     "kichwa": "imamantak?",
-    "spanish": "porque?"
+    "spanish": "porque?",
+    "categoryId": "general"
   },
   {
     "kichwa": "imanallatak?",
-    "spanish": "como?"
+    "spanish": "como?",
+    "categoryId": "general"
   },
   {
     "kichwa": "imapatak?",
-    "spanish": "para que?"
+    "spanish": "para que?",
+    "categoryId": "general"
   },
   {
     "kichwa": "imapitak?",
-    "spanish": "en que?"
+    "spanish": "en que?",
+    "categoryId": "general"
   },
   {
     "kichwa": "imatak?",
-    "spanish": "que?"
+    "spanish": "que?",
+    "categoryId": "general"
   },
   {
     "kichwa": "imatapash",
-    "spanish": "algo"
+    "spanish": "algo",
+    "categoryId": "general"
   },
   {
     "kichwa": "imatatak?",
-    "spanish": "que?"
+    "spanish": "que?",
+    "categoryId": "general"
   },
   {
     "kichwa": "imawantak?",
-    "spanish": "con que?"
+    "spanish": "con que?",
+    "categoryId": "general"
   },
   {
     "kichwa": "inina",
-    "spanish": "creer"
+    "spanish": "creer",
+    "categoryId": "actions"
   },
   {
     "kichwa": "iñina",
-    "spanish": "creer"
+    "spanish": "creer",
+    "categoryId": "actions"
   },
   {
     "kichwa": "irki",
-    "spanish": "debil"
+    "spanish": "debil",
+    "categoryId": "general"
   },
   {
     "kichwa": "ishkay",
-    "spanish": "dos"
+    "spanish": "dos",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "ishtirana",
-    "spanish": "esterar"
+    "spanish": "esterar",
+    "categoryId": "general"
   },
   {
     "kichwa": "iskun",
-    "spanish": "nueve"
+    "spanish": "nueve",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "jallmana",
-    "spanish": "deshierbar"
+    "spanish": "deshierbar",
+    "categoryId": "nature"
   },
   {
     "kichwa": "janpik doctora",
-    "spanish": "medica"
+    "spanish": "medica",
+    "categoryId": "general"
   },
   {
     "kichwa": "japina",
-    "spanish": "pescar"
+    "spanish": "pescar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "japina",
-    "spanish": "cojer"
+    "spanish": "cojer",
+    "categoryId": "general"
   },
   {
     "kichwa": "japirina",
-    "spanish": "encenderse"
+    "spanish": "encenderse",
+    "categoryId": "general"
   },
   {
     "kichwa": "jatarina",
-    "spanish": "levantarse"
+    "spanish": "levantarse",
+    "categoryId": "actions"
   },
   {
     "kichwa": "jawapi",
-    "spanish": "sobre"
+    "spanish": "sobre",
+    "categoryId": "general"
   },
   {
     "kichwa": "jichana",
-    "spanish": "regar"
+    "spanish": "regar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "jichana",
-    "spanish": "regar"
+    "spanish": "regar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "jirru",
-    "spanish": "hierro"
+    "spanish": "hierro",
+    "categoryId": "general"
   },
   {
     "kichwa": "jugo",
-    "spanish": "jugo"
+    "spanish": "jugo",
+    "categoryId": "food"
   },
   {
     "kichwa": "kachi ",
-    "spanish": "sal"
+    "spanish": "sal",
+    "categoryId": "food"
   },
   {
     "kichwa": "kallana",
-    "spanish": "tiesto, sarten"
+    "spanish": "tiesto, sarten",
+    "categoryId": "general"
   },
   {
     "kichwa": "kallana",
-    "spanish": "tiesto, sarten"
+    "spanish": "tiesto, sarten",
+    "categoryId": "general"
   },
   {
     "kichwa": "kallarina",
-    "spanish": "empezar"
+    "spanish": "empezar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kallarina",
-    "spanish": "comenzar"
+    "spanish": "comenzar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kallarina",
-    "spanish": "comenzar"
+    "spanish": "comenzar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kallpana",
-    "spanish": "correr"
+    "spanish": "correr",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kaman",
-    "spanish": "hasta"
+    "spanish": "hasta",
+    "categoryId": "general"
   },
   {
     "kichwa": "kamcha",
-    "spanish": "tostado"
+    "spanish": "tostado",
+    "categoryId": "food"
   },
   {
     "kichwa": "kamchana",
-    "spanish": "tostar"
+    "spanish": "tostar",
+    "categoryId": "food"
   },
   {
     "kichwa": "kamchana",
-    "spanish": "tostar"
+    "spanish": "tostar",
+    "categoryId": "food"
   },
   {
     "kichwa": "kamchashka",
-    "spanish": "tostado"
+    "spanish": "tostado",
+    "categoryId": "food"
   },
   {
     "kichwa": "kamuti",
-    "spanish": "libro"
+    "spanish": "libro",
+    "categoryId": "house"
   },
   {
     "kichwa": "kan",
-    "spanish": "tu"
+    "spanish": "tu",
+    "categoryId": "general"
   },
   {
     "kichwa": "kana",
-    "spanish": "ser, estar"
+    "spanish": "ser, estar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kancha",
-    "spanish": "afuera, fuera"
+    "spanish": "afuera, fuera",
+    "categoryId": "general"
   },
   {
     "kichwa": "kancha",
-    "spanish": "patio"
+    "spanish": "patio",
+    "categoryId": "house"
   },
   {
     "kichwa": "kanchis",
-    "spanish": "siete"
+    "spanish": "siete",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "kankuna",
-    "spanish": "vosotros, vosotras"
+    "spanish": "vosotros, vosotras",
+    "categoryId": "general"
   },
   {
     "kichwa": "kanllaka",
-    "spanish": "solamente tu"
+    "spanish": "solamente tu",
+    "categoryId": "general"
   },
   {
     "kichwa": "kara",
-    "spanish": "cueros"
+    "spanish": "cueros",
+    "categoryId": "general"
   },
   {
     "kichwa": "karana",
-    "spanish": "compartir"
+    "spanish": "compartir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "karana",
-    "spanish": "regalar"
+    "spanish": "regalar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kari",
-    "spanish": "hombra"
+    "spanish": "hombra",
+    "categoryId": "general"
   },
   {
     "kichwa": "kari wawa",
-    "spanish": "niño, niña"
+    "spanish": "niño, niña",
+    "categoryId": "general"
   },
   {
     "kichwa": "karipa churakuna",
-    "spanish": "ropa de hombre"
+    "spanish": "ropa de hombre",
+    "categoryId": "general"
   },
   {
     "kichwa": "karu",
-    "spanish": "lejos"
+    "spanish": "lejos",
+    "categoryId": "general"
   },
   {
-    "kichwa": "kashpallata"
+    "kichwa": "kashpallata",
+    "spanish": "",
+    "categoryId": "general"
   },
   {
     "kichwa": "kasilla",
-    "spanish": "quietos"
+    "spanish": "quietos",
+    "categoryId": "general"
   },
   {
     "kichwa": "kaspana",
-    "spanish": "chamuscar"
+    "spanish": "chamuscar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kaspi",
-    "spanish": "madera, palo"
+    "spanish": "madera, palo",
+    "categoryId": "general"
   },
   {
     "kichwa": "kaspi",
-    "spanish": "palo"
+    "spanish": "palo",
+    "categoryId": "general"
   },
   {
     "kichwa": "kati",
-    "spanish": "seguido"
+    "spanish": "seguido",
+    "categoryId": "general"
   },
   {
     "kichwa": "katina",
-    "spanish": "seguir, perseguir"
+    "spanish": "seguir, perseguir",
+    "categoryId": "general"
   },
   {
     "kichwa": "katuk warmi",
-    "spanish": "vendedora"
+    "spanish": "vendedora",
+    "categoryId": "general"
   },
   {
     "kichwa": "katuku",
-    "spanish": "abuelo, abuela"
+    "spanish": "abuelo, abuela",
+    "categoryId": "family"
   },
   {
     "kichwa": "katuna",
-    "spanish": "vender"
+    "spanish": "vender",
+    "categoryId": "general"
   },
   {
     "kichwa": "katuna pamba",
-    "spanish": "mercado"
+    "spanish": "mercado",
+    "categoryId": "general"
   },
   {
     "kichwa": "kawsana",
-    "spanish": "vivir"
+    "spanish": "vivir",
+    "categoryId": "general"
   },
   {
     "kichwa": "kay",
-    "spanish": "este, esto"
+    "spanish": "este, esto",
+    "categoryId": "general"
   },
   {
     "kichwa": "kayakaman",
-    "spanish": "hasta mañana"
+    "spanish": "hasta mañana",
+    "categoryId": "general"
   },
   {
     "kichwa": "kayana",
-    "spanish": "llamar"
+    "spanish": "llamar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kayanti",
-    "spanish": "dia siguiente"
+    "spanish": "dia siguiente",
+    "categoryId": "general"
   },
   {
     "kichwa": "kayka",
-    "spanish": "toma!"
+    "spanish": "toma!",
+    "categoryId": "general"
   },
   {
     "kichwa": "kaynana",
-    "spanish": "permanecer"
+    "spanish": "permanecer",
+    "categoryId": "general"
   },
   {
     "kichwa": "kaynana",
-    "spanish": "pasar el dia"
+    "spanish": "pasar el dia",
+    "categoryId": "general"
   },
   {
     "kichwa": "kaynanik",
-    "spanish": "el otro dia"
+    "spanish": "el otro dia",
+    "categoryId": "general"
   },
   {
     "kichwa": "kaypi",
-    "spanish": "aqui"
+    "spanish": "aqui",
+    "categoryId": "general"
   },
   {
     "kichwa": "kichki",
-    "spanish": "estrecho"
+    "spanish": "estrecho",
+    "categoryId": "general"
   },
   {
     "kichwa": "kichuna",
-    "spanish": "quitar, arranchar"
+    "spanish": "quitar, arranchar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kikin",
-    "spanish": "usted"
+    "spanish": "usted",
+    "categoryId": "general"
   },
   {
     "kichwa": "kikinkuna",
-    "spanish": "ustedes"
+    "spanish": "ustedes",
+    "categoryId": "general"
   },
   {
     "kichwa": "killa",
-    "spanish": "mes"
+    "spanish": "mes",
+    "categoryId": "general"
   },
   {
     "kichwa": "killa",
-    "spanish": "mes"
+    "spanish": "mes",
+    "categoryId": "general"
   },
   {
     "kichwa": "killkana",
-    "spanish": "escribir"
+    "spanish": "escribir",
+    "categoryId": "general"
   },
   {
     "kichwa": "killpana",
-    "spanish": "cubrirse"
+    "spanish": "cubrirse",
+    "categoryId": "general"
   },
   {
     "kichwa": "killpana",
-    "spanish": "cubrir"
+    "spanish": "cubrir",
+    "categoryId": "general"
   },
   {
     "kichwa": "killu",
-    "spanish": "amarrillo"
+    "spanish": "amarrillo",
+    "categoryId": "general"
   },
   {
     "kichwa": "killu",
-    "spanish": "amarillo"
+    "spanish": "amarillo",
+    "categoryId": "colors"
   },
   {
     "kichwa": "kimsa",
-    "spanish": "tres"
+    "spanish": "tres",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "kinkray",
-    "spanish": "interseccion"
+    "spanish": "interseccion",
+    "categoryId": "general"
   },
   {
     "kichwa": "kipa",
-    "spanish": "leuego, despues"
+    "spanish": "leuego, despues",
+    "categoryId": "general"
   },
   {
     "kichwa": "kipa churi",
-    "spanish": "hijo menor"
+    "spanish": "hijo menor",
+    "categoryId": "family"
   },
   {
     "kichwa": "kipi",
-    "spanish": "maleta"
+    "spanish": "maleta",
+    "categoryId": "general"
   },
   {
     "kichwa": "kipi",
-    "spanish": "maleta"
+    "spanish": "maleta",
+    "categoryId": "general"
   },
   {
     "kichwa": "kishpirina",
-    "spanish": "libertad"
+    "spanish": "libertad",
+    "categoryId": "general"
   },
   {
     "kichwa": "kiwana",
-    "spanish": "limpiar hierbas"
+    "spanish": "limpiar hierbas",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kiwu",
-    "spanish": "hierba"
+    "spanish": "hierba",
+    "categoryId": "nature"
   },
   {
     "kichwa": "kucha",
-    "spanish": "laguna, lago"
+    "spanish": "laguna, lago",
+    "categoryId": "nature"
   },
   {
     "kichwa": "kuchi",
-    "spanish": "chancho"
+    "spanish": "chancho",
+    "categoryId": "animals"
   },
   {
     "kichwa": "kuchu",
-    "spanish": "rincon"
+    "spanish": "rincon",
+    "categoryId": "general"
   },
   {
     "kichwa": "kuchu",
-    "spanish": "cerca"
+    "spanish": "cerca",
+    "categoryId": "general"
   },
   {
     "kichwa": "kuliarana",
-    "spanish": "enojarse"
+    "spanish": "enojarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "kullki",
-    "spanish": "dinero"
+    "spanish": "dinero",
+    "categoryId": "general"
   },
   {
     "kichwa": "kulta",
-    "spanish": "pato"
+    "spanish": "pato",
+    "categoryId": "animals"
   },
   {
     "kichwa": "kuna",
-    "spanish": "dar"
+    "spanish": "dar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kuna",
-    "spanish": "dar"
+    "spanish": "dar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kunan",
-    "spanish": "ahora, hoy"
+    "spanish": "ahora, hoy",
+    "categoryId": "general"
   },
   {
     "kichwa": "kunuchina",
-    "spanish": "calentar, recalentar"
+    "spanish": "calentar, recalentar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kunuk",
-    "spanish": "caliente"
+    "spanish": "caliente",
+    "categoryId": "general"
   },
   {
     "kichwa": "kurina",
-    "spanish": "importar"
+    "spanish": "importar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kusa",
-    "spanish": "esposo"
+    "spanish": "esposo",
+    "categoryId": "family"
   },
   {
     "kichwa": "kusa",
-    "spanish": "esposo"
+    "spanish": "esposo",
+    "categoryId": "family"
   },
   {
     "kichwa": "kusa",
-    "spanish": "espso"
+    "spanish": "espso",
+    "categoryId": "general"
   },
   {
     "kichwa": "kusa tukuna",
-    "spanish": "enamorado"
+    "spanish": "enamorado",
+    "categoryId": "family"
   },
   {
     "kichwa": "kusana",
-    "spanish": "asar, freir"
+    "spanish": "asar, freir",
+    "categoryId": "general"
   },
   {
     "kichwa": "kusashka aycha",
-    "spanish": "carne asada, carne frita"
+    "spanish": "carne asada, carne frita",
+    "categoryId": "food"
   },
   {
     "kichwa": "kushma",
-    "spanish": "chaleco"
+    "spanish": "chaleco",
+    "categoryId": "general"
   },
   {
     "kichwa": "kutana",
-    "spanish": "moler"
+    "spanish": "moler",
+    "categoryId": "general"
   },
   {
     "kichwa": "kutin",
-    "spanish": "en cambio"
+    "spanish": "en cambio",
+    "categoryId": "general"
   },
   {
     "kichwa": "kutin nipay",
-    "spanish": "repetir"
+    "spanish": "repetir",
+    "categoryId": "general"
   },
   {
     "kichwa": "kuyana",
-    "spanish": "querer"
+    "spanish": "querer",
+    "categoryId": "general"
   },
   {
     "kichwa": "kuytsa",
-    "spanish": "joven mujer"
+    "spanish": "joven mujer",
+    "categoryId": "family"
   },
   {
     "kichwa": "kuytsa",
-    "spanish": "cuy, cobayo"
+    "spanish": "cuy, cobayo",
+    "categoryId": "animals"
   },
   {
     "kichwa": "ladrillo",
-    "spanish": "ladrillo"
+    "spanish": "ladrillo",
+    "categoryId": "general"
   },
   {
     "kichwa": "lampa",
-    "spanish": "pala"
+    "spanish": "pala",
+    "categoryId": "general"
   },
   {
     "kichwa": "leche",
-    "spanish": "leche"
+    "spanish": "leche",
+    "categoryId": "food"
   },
   {
     "kichwa": "llachu",
-    "spanish": "pico"
+    "spanish": "pico",
+    "categoryId": "general"
   },
   {
     "kichwa": "llaki",
-    "spanish": "triste"
+    "spanish": "triste",
+    "categoryId": "general"
   },
   {
     "kichwa": "llakilla",
-    "spanish": "triste"
+    "spanish": "triste",
+    "categoryId": "general"
   },
   {
     "kichwa": "llakta",
-    "spanish": "comundiad, pueblo, ciudad"
+    "spanish": "comundiad, pueblo, ciudad",
+    "categoryId": "general"
   },
   {
     "kichwa": "llama",
-    "spanish": "oveja"
+    "spanish": "oveja",
+    "categoryId": "animals"
   },
   {
     "kichwa": "llanada",
-    "spanish": "llanura"
+    "spanish": "llanura",
+    "categoryId": "general"
   },
   {
     "kichwa": "llapishka",
-    "spanish": "aplastado"
+    "spanish": "aplastado",
+    "categoryId": "general"
   },
   {
     "kichwa": "llapishka papa",
-    "spanish": "tortilla"
+    "spanish": "tortilla",
+    "categoryId": "general"
   },
   {
     "kichwa": "llukchana",
-    "spanish": "resbalar"
+    "spanish": "resbalar",
+    "categoryId": "general"
   },
   {
     "kichwa": "llukshina",
-    "spanish": "salir"
+    "spanish": "salir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "llukshina",
-    "spanish": "sacar"
+    "spanish": "sacar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "llukshirka",
-    "spanish": "salio"
+    "spanish": "salio",
+    "categoryId": "general"
   },
   {
     "kichwa": "llullana",
-    "spanish": "mentir"
+    "spanish": "mentir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "llullu",
-    "spanish": "berro"
+    "spanish": "berro",
+    "categoryId": "general"
   },
   {
     "kichwa": "llunchina",
-    "spanish": "estucar"
+    "spanish": "estucar",
+    "categoryId": "general"
   },
   {
     "kichwa": "llunchiska",
-    "spanish": "estucado"
+    "spanish": "estucado",
+    "categoryId": "general"
   },
   {
     "kichwa": "lukru",
-    "spanish": "locro"
+    "spanish": "locro",
+    "categoryId": "general"
   },
   {
     "kichwa": "lulun",
-    "spanish": "huevo"
+    "spanish": "huevo",
+    "categoryId": "food"
   },
   {
     "kichwa": "machana",
-    "spanish": "emborracharse"
+    "spanish": "emborracharse",
+    "categoryId": "general"
   },
   {
     "kichwa": "machana yaku",
-    "spanish": "alcochol"
+    "spanish": "alcochol",
+    "categoryId": "general"
   },
   {
     "kichwa": "machana yaku",
-    "spanish": "licor"
+    "spanish": "licor",
+    "categoryId": "general"
   },
   {
     "kichwa": "machashka",
-    "spanish": "borracho"
+    "spanish": "borracho",
+    "categoryId": "general"
   },
   {
     "kichwa": "makanakuna",
-    "spanish": "pelearse"
+    "spanish": "pelearse",
+    "categoryId": "general"
   },
   {
     "kichwa": "makanakuna runpa",
-    "spanish": "guantes de pelea"
+    "spanish": "guantes de pelea",
+    "categoryId": "general"
   },
   {
     "kichwa": "maki",
-    "spanish": "manos"
+    "spanish": "manos",
+    "categoryId": "general"
   },
   {
     "kichwa": "maki watana",
-    "spanish": "manilla"
+    "spanish": "manilla",
+    "categoryId": "general"
   },
   {
     "kichwa": "mallichiway",
-    "spanish": "hazme probar"
+    "spanish": "hazme probar",
+    "categoryId": "general"
   },
   {
     "kichwa": "mallina",
-    "spanish": "probar"
+    "spanish": "probar",
+    "categoryId": "general"
   },
   {
     "kichwa": "mallki",
-    "spanish": "rama"
+    "spanish": "rama",
+    "categoryId": "general"
   },
   {
     "kichwa": "malta kallana",
-    "spanish": "tiesto mediano"
+    "spanish": "tiesto mediano",
+    "categoryId": "general"
   },
   {
     "kichwa": "malta manka",
-    "spanish": "olla mediana"
+    "spanish": "olla mediana",
+    "categoryId": "general"
   },
   {
     "kichwa": "mama",
-    "spanish": "mama"
+    "spanish": "mama",
+    "categoryId": "general"
   },
   {
     "kichwa": "mama kallana",
-    "spanish": "tiesto grande"
+    "spanish": "tiesto grande",
+    "categoryId": "general"
   },
   {
     "kichwa": "mama manka",
-    "spanish": "olla grande"
+    "spanish": "olla grande",
+    "categoryId": "general"
   },
   {
     "kichwa": "mana",
-    "spanish": "no"
+    "spanish": "no",
+    "categoryId": "general"
   },
   {
     "kichwa": "mana pipash",
-    "spanish": "nadie"
+    "spanish": "nadie",
+    "categoryId": "general"
   },
   {
     "kichwa": "mana yachanichu",
-    "spanish": "no entiendo"
+    "spanish": "no entiendo",
+    "categoryId": "general"
   },
   {
     "kichwa": "mañana",
-    "spanish": "pedir"
+    "spanish": "pedir",
+    "categoryId": "general"
   },
   {
     "kichwa": "mananinar",
-    "spanish": "rechazar"
+    "spanish": "rechazar",
+    "categoryId": "general"
   },
   {
     "kichwa": "manka",
-    "spanish": "olla"
+    "spanish": "olla",
+    "categoryId": "general"
   },
   {
     "kichwa": "manka",
-    "spanish": "olla"
+    "spanish": "olla",
+    "categoryId": "general"
   },
   {
     "kichwa": "manña ",
-    "spanish": "borde"
+    "spanish": "borde",
+    "categoryId": "general"
   },
   {
     "kichwa": "mapa",
-    "spanish": "sucio"
+    "spanish": "sucio",
+    "categoryId": "general"
   },
   {
     "kichwa": "mapa",
-    "spanish": "sucio"
+    "spanish": "sucio",
+    "categoryId": "general"
   },
   {
     "kichwa": "maquina",
-    "spanish": "maquina"
+    "spanish": "maquina",
+    "categoryId": "general"
   },
   {
     "kichwa": "marka",
-    "spanish": "provincia"
+    "spanish": "provincia",
+    "categoryId": "general"
   },
   {
     "kichwa": "mashi",
-    "spanish": "amigo-compañero"
+    "spanish": "amigo-compañero",
+    "categoryId": "general"
   },
   {
     "kichwa": "mashkana",
-    "spanish": "buscar"
+    "spanish": "buscar",
+    "categoryId": "general"
   },
   {
     "kichwa": "mashna..tak?",
-    "spanish": "cuanto?"
+    "spanish": "cuanto?",
+    "categoryId": "general"
   },
   {
     "kichwa": "maskana",
-    "spanish": "buscar"
+    "spanish": "buscar",
+    "categoryId": "general"
   },
   {
     "kichwa": "mawka",
-    "spanish": "viejo, inanimado"
+    "spanish": "viejo, inanimado",
+    "categoryId": "general"
   },
   {
     "kichwa": "maykan...tak?",
-    "spanish": "cual?"
+    "spanish": "cual?",
+    "categoryId": "general"
   },
   {
     "kichwa": "maykunatapash",
-    "spanish": "por doquier"
+    "spanish": "por doquier",
+    "categoryId": "general"
   },
   {
     "kichwa": "maymantatak?",
-    "spanish": "de donde?"
+    "spanish": "de donde?",
+    "categoryId": "general"
   },
   {
     "kichwa": "maymutsurik",
-    "spanish": "importante"
+    "spanish": "importante",
+    "categoryId": "general"
   },
   {
     "kichwa": "maypipash",
-    "spanish": "en doquier"
+    "spanish": "en doquier",
+    "categoryId": "general"
   },
   {
     "kichwa": "maypitak?",
-    "spanish": "en donde?"
+    "spanish": "en donde?",
+    "categoryId": "general"
   },
   {
     "kichwa": "maytatak?",
-    "spanish": "por donde?"
+    "spanish": "por donde?",
+    "categoryId": "general"
   },
   {
     "kichwa": "mayu",
-    "spanish": "rio"
+    "spanish": "rio",
+    "categoryId": "nature"
   },
   {
     "kichwa": "mesa",
-    "spanish": "mesa"
+    "spanish": "mesa",
+    "categoryId": "general"
   },
   {
     "kichwa": "michik kari",
-    "spanish": "pastor"
+    "spanish": "pastor",
+    "categoryId": "general"
   },
   {
     "kichwa": "michik warmi",
-    "spanish": "pastora"
+    "spanish": "pastora",
+    "categoryId": "general"
   },
   {
     "kichwa": "michina",
-    "spanish": "pastar"
+    "spanish": "pastar",
+    "categoryId": "general"
   },
   {
     "kichwa": "mikuna",
-    "spanish": "dinero"
+    "spanish": "dinero",
+    "categoryId": "general"
   },
   {
     "kichwa": "mikuna",
-    "spanish": "comer"
+    "spanish": "comer",
+    "categoryId": "general"
   },
   {
     "kichwa": "mikuna uku",
-    "spanish": "comedor"
+    "spanish": "comedor",
+    "categoryId": "general"
   },
   {
     "kichwa": "minishtina",
-    "spanish": "necesitar"
+    "spanish": "necesitar",
+    "categoryId": "general"
   },
   {
     "kichwa": "minka",
-    "spanish": "trabajo comunal"
+    "spanish": "trabajo comunal",
+    "categoryId": "house"
   },
   {
     "kichwa": "mishki",
-    "spanish": "tayta galan"
+    "spanish": "tayta galan",
+    "categoryId": "general"
   },
   {
     "kichwa": "mishki",
-    "spanish": "sabroso"
+    "spanish": "sabroso",
+    "categoryId": "general"
   },
   {
     "kichwa": "mishki pacha",
-    "spanish": "delicioso"
+    "spanish": "delicioso",
+    "categoryId": "general"
   },
   {
     "kichwa": "mishu",
-    "spanish": "misho"
+    "spanish": "misho",
+    "categoryId": "general"
   },
   {
     "kichwa": "misi",
-    "spanish": "gato"
+    "spanish": "gato",
+    "categoryId": "animals"
   },
   {
     "kichwa": "moleshtana",
-    "spanish": "molestar"
+    "spanish": "molestar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "muchana",
-    "spanish": "adorar"
+    "spanish": "adorar",
+    "categoryId": "general"
   },
   {
     "kichwa": "muchiku",
-    "spanish": "sombrero"
+    "spanish": "sombrero",
+    "categoryId": "general"
   },
   {
     "kichwa": "munana",
-    "spanish": "desear, querer"
+    "spanish": "desear, querer",
+    "categoryId": "general"
   },
   {
     "kichwa": "munaywan",
-    "spanish": "con gusto"
+    "spanish": "con gusto",
+    "categoryId": "general"
   },
   {
     "kichwa": "muru",
-    "spanish": "grano"
+    "spanish": "grano",
+    "categoryId": "general"
   },
   {
     "kichwa": "mushuk",
-    "spanish": "nuevo"
+    "spanish": "nuevo",
+    "categoryId": "general"
   },
   {
     "kichwa": "mushuk",
-    "spanish": "nuevo"
+    "spanish": "nuevo",
+    "categoryId": "general"
   },
   {
     "kichwa": "muspa",
-    "spanish": "loco"
+    "spanish": "loco",
+    "categoryId": "general"
   },
   {
     "kichwa": "muti",
-    "spanish": "mote"
+    "spanish": "mote",
+    "categoryId": "food"
   },
   {
     "kichwa": "mutshuska",
-    "spanish": "necesitado"
+    "spanish": "necesitado",
+    "categoryId": "general"
   },
   {
     "kichwa": "mutsuna",
-    "spanish": "necesitar"
+    "spanish": "necesitar",
+    "categoryId": "general"
   },
   {
     "kichwa": "muyu",
-    "spanish": "semilla"
+    "spanish": "semilla",
+    "categoryId": "general"
   },
   {
     "kichwa": "muyuna",
-    "spanish": "girar"
+    "spanish": "girar",
+    "categoryId": "general"
   },
   {
     "kichwa": "muyuna",
-    "spanish": "rodear"
+    "spanish": "rodear",
+    "categoryId": "general"
   },
   {
     "kichwa": "muyuntin",
-    "spanish": "alrededor"
+    "spanish": "alrededor",
+    "categoryId": "general"
   },
   {
     "kichwa": "muyuntin",
-    "spanish": "rodear"
+    "spanish": "rodear",
+    "categoryId": "general"
   },
   {
     "kichwa": "ña",
-    "spanish": "ya!"
+    "spanish": "ya!",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñan",
-    "spanish": "camino"
+    "spanish": "camino",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñaña",
-    "spanish": "hermana-hermana"
+    "spanish": "hermana-hermana",
+    "categoryId": "family"
   },
   {
     "kichwa": "nanana",
-    "spanish": "doler"
+    "spanish": "doler",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñanta mañachi",
-    "spanish": "prestame el camino"
+    "spanish": "prestame el camino",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñatak",
-    "spanish": "en este momento"
+    "spanish": "en este momento",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñawi",
-    "spanish": "cara, faz"
+    "spanish": "cara, faz",
+    "categoryId": "body"
   },
   {
     "kichwa": "ñawpa",
-    "spanish": "adelante"
+    "spanish": "adelante",
+    "categoryId": "general"
   },
   {
     "kichwa": "nima",
-    "spanish": "cero"
+    "spanish": "cero",
+    "categoryId": "general"
   },
   {
     "kichwa": "nina",
-    "spanish": "decir"
+    "spanish": "decir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "nina",
-    "spanish": "decir"
+    "spanish": "decir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "nina japirirka ",
-    "spanish": "se encendio"
+    "spanish": "se encendio",
+    "categoryId": "general"
   },
   {
     "kichwa": "nishpa",
-    "spanish": "diciendo"
+    "spanish": "diciendo",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñuka",
-    "spanish": "yo"
+    "spanish": "yo",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñukanchik",
-    "spanish": "nosostros, nosotras"
+    "spanish": "nosostros, nosotras",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñukashina",
-    "spanish": "como yo"
+    "spanish": "como yo",
+    "categoryId": "general"
   },
   {
     "kichwa": "ñutuchina",
-    "spanish": "pulverizar"
+    "spanish": "pulverizar",
+    "categoryId": "general"
   },
   {
     "kichwa": "pacha",
-    "spanish": "hora"
+    "spanish": "hora",
+    "categoryId": "general"
   },
   {
     "kichwa": "pacha",
-    "spanish": "tierra"
+    "spanish": "tierra",
+    "categoryId": "nature"
   },
   {
     "kichwa": "pachallina",
-    "spanish": "chal corto"
+    "spanish": "chal corto",
+    "categoryId": "general"
   },
   {
     "kichwa": "pachan pachan",
-    "spanish": "tiempo en tiempo"
+    "spanish": "tiempo en tiempo",
+    "categoryId": "general"
   },
   {
     "kichwa": "pakakuna",
-    "spanish": "esconderse"
+    "spanish": "esconderse",
+    "categoryId": "general"
   },
   {
     "kichwa": "pakarina",
-    "spanish": "amanecerse"
+    "spanish": "amanecerse",
+    "categoryId": "general"
   },
   {
     "kichwa": "pakcha",
-    "spanish": "cascada"
+    "spanish": "cascada",
+    "categoryId": "general"
   },
   {
     "kichwa": "pakina",
-    "spanish": "romper, quebrar"
+    "spanish": "romper, quebrar",
+    "categoryId": "general"
   },
   {
     "kichwa": "paku",
-    "spanish": "cafe"
+    "spanish": "cafe",
+    "categoryId": "general"
   },
   {
-    "kichwa": "pakuana"
+    "kichwa": "pakuana",
+    "spanish": "",
+    "categoryId": "general"
   },
   {
     "kichwa": "pallana",
-    "spanish": "cosechar"
+    "spanish": "cosechar",
+    "categoryId": "nature"
   },
   {
     "kichwa": "pana",
-    "spanish": "pagar"
+    "spanish": "pagar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "pani",
-    "spanish": "hermano-hermana"
+    "spanish": "hermano-hermana",
+    "categoryId": "family"
   },
   {
     "kichwa": "panka",
-    "spanish": "pagina"
+    "spanish": "pagina",
+    "categoryId": "general"
   },
   {
     "kichwa": "pargati",
-    "spanish": "alpargate"
+    "spanish": "alpargate",
+    "categoryId": "house"
   },
   {
     "kichwa": "parkati",
-    "spanish": "alpargate"
+    "spanish": "alpargate",
+    "categoryId": "house"
   },
   {
     "kichwa": "parlana",
-    "spanish": "conversar"
+    "spanish": "conversar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "paskana",
-    "spanish": "abrir"
+    "spanish": "abrir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "patakunawan wasi",
-    "spanish": "edificio con muchos pisos"
+    "spanish": "edificio con muchos pisos",
+    "categoryId": "house"
   },
   {
     "kichwa": "patsak",
-    "spanish": "cien"
+    "spanish": "cien",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "pay",
-    "spanish": "el, ella"
+    "spanish": "el, ella",
+    "categoryId": "general"
   },
   {
     "kichwa": "pay",
-    "spanish": "gracias"
+    "spanish": "gracias",
+    "categoryId": "greetings"
   },
   {
     "kichwa": "paykuna",
-    "spanish": "ellos, ellas"
+    "spanish": "ellos, ellas",
+    "categoryId": "general"
   },
   {
     "kichwa": "pichana",
-    "spanish": "limpiar hierbas"
+    "spanish": "limpiar hierbas",
+    "categoryId": "actions"
   },
   {
     "kichwa": "pichana",
-    "spanish": "limpiar"
+    "spanish": "limpiar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "pichka",
-    "spanish": "cinco"
+    "spanish": "cinco",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "pillurka",
-    "spanish": "envolvio"
+    "spanish": "envolvio",
+    "categoryId": "general"
   },
   {
     "kichwa": "pimantatak?",
-    "spanish": "por quien?"
+    "spanish": "por quien?",
+    "categoryId": "general"
   },
   {
     "kichwa": "piña",
-    "spanish": "enojado, enojada"
+    "spanish": "enojado, enojada",
+    "categoryId": "general"
   },
   {
     "kichwa": "piñachina",
-    "spanish": "hacer enojar"
+    "spanish": "hacer enojar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "piñachina",
-    "spanish": "hacer enojar"
+    "spanish": "hacer enojar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "pintu",
-    "spanish": "tela"
+    "spanish": "tela",
+    "categoryId": "house"
   },
   {
     "kichwa": "pipash",
-    "spanish": "alguien"
+    "spanish": "alguien",
+    "categoryId": "general"
   },
   {
     "kichwa": "pishku",
-    "spanish": "pajaro"
+    "spanish": "pajaro",
+    "categoryId": "animals"
   },
   {
     "kichwa": "pitak?",
-    "spanish": "quien?"
+    "spanish": "quien?",
+    "categoryId": "general"
   },
   {
     "kichwa": "pitatak?",
-    "spanish": "a quien?"
+    "spanish": "a quien?",
+    "categoryId": "general"
   },
   {
     "kichwa": "piwantak?",
-    "spanish": "con quien?"
+    "spanish": "con quien?",
+    "categoryId": "general"
   },
   {
     "kichwa": "plituna",
-    "spanish": "molestar"
+    "spanish": "molestar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "puka",
-    "spanish": "rojo"
+    "spanish": "rojo",
+    "categoryId": "colors"
   },
   {
     "kichwa": "pukllana",
-    "spanish": "jugar"
+    "spanish": "jugar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "pukru",
-    "spanish": "loma"
+    "spanish": "loma",
+    "categoryId": "nature"
   },
   {
     "kichwa": "puku",
-    "spanish": "plato"
+    "spanish": "plato",
+    "categoryId": "general"
   },
   {
     "kichwa": "pukuna",
-    "spanish": "madurar, soplar"
+    "spanish": "madurar, soplar",
+    "categoryId": "food"
   },
   {
     "kichwa": "pukuna",
-    "spanish": "madurar, fermentarse"
+    "spanish": "madurar, fermentarse",
+    "categoryId": "food"
   },
   {
     "kichwa": "pukushka",
-    "spanish": "madurado"
+    "spanish": "madurado",
+    "categoryId": "general"
   },
   {
     "kichwa": "pukyu",
-    "spanish": "vertiente"
+    "spanish": "vertiente",
+    "categoryId": "nature"
   },
   {
     "kichwa": "puncha",
-    "spanish": "dialogo"
+    "spanish": "dialogo",
+    "categoryId": "general"
   },
   {
     "kichwa": "puñuna",
-    "spanish": "dormir"
+    "spanish": "dormir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "puñuna",
-    "spanish": "dormir"
+    "spanish": "dormir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "puñuna uku",
-    "spanish": "dormitorio"
+    "spanish": "dormitorio",
+    "categoryId": "house"
   },
   {
     "kichwa": "purina",
-    "spanish": "andar"
+    "spanish": "andar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "purishpa",
-    "spanish": "caminando"
+    "spanish": "caminando",
+    "categoryId": "general"
   },
   {
     "kichwa": "pusak",
-    "spanish": "ocho"
+    "spanish": "ocho",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "pushak",
-    "spanish": "presidente"
+    "spanish": "presidente",
+    "categoryId": "general"
   },
   {
     "kichwa": "pushana",
-    "spanish": "llevar"
+    "spanish": "llevar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "pusharkakuna",
-    "spanish": "llevaron"
+    "spanish": "llevaron",
+    "categoryId": "general"
   },
   {
     "kichwa": "pushtu",
-    "spanish": "sector"
+    "spanish": "sector",
+    "categoryId": "house"
   },
   {
     "kichwa": "pushtupi",
-    "spanish": "en el sector"
+    "spanish": "en el sector",
+    "categoryId": "house"
   },
   {
     "kichwa": "pusu",
-    "spanish": "plomo"
+    "spanish": "plomo",
+    "categoryId": "colors"
   },
   {
     "kichwa": "putsuku yaku",
-    "spanish": "cerveza"
+    "spanish": "cerveza",
+    "categoryId": "food"
   },
   {
     "kichwa": "puyo",
-    "spanish": "niebla"
+    "spanish": "niebla",
+    "categoryId": "nature"
   },
   {
     "kichwa": "rakina",
-    "spanish": "repartir"
+    "spanish": "repartir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "raku",
-    "spanish": "grueso"
+    "spanish": "grueso",
+    "categoryId": "general"
   },
   {
     "kichwa": "ranti",
-    "spanish": "comprar"
+    "spanish": "comprar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "rantina",
-    "spanish": "comprar"
+    "spanish": "comprar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "rasu",
-    "spanish": "nieve"
+    "spanish": "nieve",
+    "categoryId": "nature"
   },
   {
     "kichwa": "rikchari",
-    "spanish": "despiertate"
+    "spanish": "despiertate",
+    "categoryId": "general"
   },
   {
     "kichwa": "rikra",
-    "spanish": "brazo"
+    "spanish": "brazo",
+    "categoryId": "body"
   },
   {
     "kichwa": "riksik",
-    "spanish": "amigo conocido"
+    "spanish": "amigo conocido",
+    "categoryId": "general"
   },
   {
     "kichwa": "riksina",
-    "spanish": "conocer"
+    "spanish": "conocer",
+    "categoryId": "general"
   },
   {
     "kichwa": "riksishka",
-    "spanish": "amigo nuevo"
+    "spanish": "amigo nuevo",
+    "categoryId": "general"
   },
   {
     "kichwa": "riksishka",
-    "spanish": "amigo, amiga"
+    "spanish": "amigo, amiga",
+    "categoryId": "general"
   },
   {
     "kichwa": "rikuchiway",
-    "spanish": "muestrame"
+    "spanish": "muestrame",
+    "categoryId": "general"
   },
   {
     "kichwa": "rikuna",
-    "spanish": "ver, mirar"
+    "spanish": "ver, mirar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "rimanakuy",
-    "spanish": "dialogo"
+    "spanish": "dialogo",
+    "categoryId": "general"
   },
   {
     "kichwa": "rimashka katina",
-    "spanish": "seguir hablando"
+    "spanish": "seguir hablando",
+    "categoryId": "general"
   },
   {
     "kichwa": "rina",
-    "spanish": "ir"
+    "spanish": "ir",
+    "categoryId": "general"
   },
   {
     "kichwa": "rinri",
-    "spanish": "oreja"
+    "spanish": "oreja",
+    "categoryId": "body"
   },
   {
     "kichwa": "ruka",
-    "spanish": "dedo"
+    "spanish": "dedo",
+    "categoryId": "body"
   },
   {
     "kichwa": "ruku",
-    "spanish": "viejo"
+    "spanish": "viejo",
+    "categoryId": "general"
   },
   {
     "kichwa": "rumi",
-    "spanish": "piedra"
+    "spanish": "piedra",
+    "categoryId": "nature"
   },
   {
     "kichwa": "rumi",
-    "spanish": "rumi"
+    "spanish": "rumi",
+    "categoryId": "general"
   },
   {
     "kichwa": "rumilla pamba",
-    "spanish": "pedregroso"
+    "spanish": "pedregroso",
+    "categoryId": "general"
   },
   {
     "kichwa": "rumpa",
-    "spanish": "pelotas, canicas"
+    "spanish": "pelotas, canicas",
+    "categoryId": "general"
   },
   {
     "kichwa": "runpa",
-    "spanish": "guantes"
+    "spanish": "guantes",
+    "categoryId": "general"
   },
   {
     "kichwa": "rurana",
-    "spanish": "deber"
+    "spanish": "deber",
+    "categoryId": "general"
   },
   {
     "kichwa": "rurana",
-    "spanish": "aplicar"
+    "spanish": "aplicar",
+    "categoryId": "general"
   },
   {
     "kichwa": "rurana",
-    "spanish": "hacer"
+    "spanish": "hacer",
+    "categoryId": "general"
   },
   {
     "kichwa": "ruwana",
-    "spanish": "poncho"
+    "spanish": "poncho",
+    "categoryId": "house"
   },
   {
     "kichwa": "sacha kuchi",
-    "spanish": "cerdo salvaje"
+    "spanish": "cerdo salvaje",
+    "categoryId": "animals"
   },
   {
     "kichwa": "sakina",
-    "spanish": "dejar"
+    "spanish": "dejar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "sakina",
-    "spanish": "extraer, sacar"
+    "spanish": "extraer, sacar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "sakirina",
-    "spanish": "quedarse"
+    "spanish": "quedarse",
+    "categoryId": "actions"
   },
   {
     "kichwa": "sakiway",
-    "spanish": "me deje"
+    "spanish": "me deje",
+    "categoryId": "general"
   },
   {
     "kichwa": "samana",
-    "spanish": "descansar"
+    "spanish": "descansar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "samarina uku",
-    "spanish": "sala"
+    "spanish": "sala",
+    "categoryId": "house"
   },
   {
     "kichwa": "sara chakra",
-    "spanish": "sementeria maiz"
+    "spanish": "sementeria maiz",
+    "categoryId": "nature"
   },
   {
     "kichwa": "sara panka",
-    "spanish": "hojas de maiz"
+    "spanish": "hojas de maiz",
+    "categoryId": "nature"
   },
   {
     "kichwa": "sarantanu",
-    "spanish": "de varios colores"
+    "spanish": "de varios colores",
+    "categoryId": "colors"
   },
   {
     "kichwa": "sarcillo",
-    "spanish": "arete"
+    "spanish": "arete",
+    "categoryId": "house"
   },
   {
     "kichwa": "shamuna",
-    "spanish": "venir"
+    "spanish": "venir",
+    "categoryId": "general"
   },
   {
     "kichwa": "shamupasha",
-    "spanish": "me permite venir"
+    "spanish": "me permite venir",
+    "categoryId": "general"
   },
   {
     "kichwa": "shamupaylla",
-    "spanish": "venga no mas"
+    "spanish": "venga no mas",
+    "categoryId": "general"
   },
   {
     "kichwa": "shayachina",
-    "spanish": "hacer parar"
+    "spanish": "hacer parar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "shayana",
-    "spanish": "para"
+    "spanish": "para",
+    "categoryId": "general"
   },
   {
     "kichwa": "shaykuna",
-    "spanish": "cansarse"
+    "spanish": "cansarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "shaykushka",
-    "spanish": "cansado, cansada, estresado"
+    "spanish": "cansado, cansada, estresado",
+    "categoryId": "general"
   },
   {
     "kichwa": "shikra",
-    "spanish": "mochila"
+    "spanish": "mochila",
+    "categoryId": "house"
   },
   {
     "kichwa": "shila",
-    "spanish": "vaso"
+    "spanish": "vaso",
+    "categoryId": "general"
   },
   {
     "kichwa": "shilla",
-    "spanish": "vaso"
+    "spanish": "vaso",
+    "categoryId": "general"
   },
   {
     "kichwa": "shimi",
-    "spanish": "lengua"
+    "spanish": "lengua",
+    "categoryId": "body"
   },
   {
     "kichwa": "shina shinalla",
-    "spanish": "mas o menos"
+    "spanish": "mas o menos",
+    "categoryId": "general"
   },
   {
     "kichwa": "shinallatak",
-    "spanish": "asi mismo"
+    "spanish": "asi mismo",
+    "categoryId": "general"
   },
   {
     "kichwa": "shinapash",
-    "spanish": "sin embargo, pero"
+    "spanish": "sin embargo, pero",
+    "categoryId": "general"
   },
   {
     "kichwa": "shitana",
-    "spanish": "botar, arrojar"
+    "spanish": "botar, arrojar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "shitona",
-    "spanish": "botar"
+    "spanish": "botar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "shuk",
-    "spanish": "uno"
+    "spanish": "uno",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "shunku",
-    "spanish": "corazon"
+    "spanish": "corazon",
+    "categoryId": "body"
   },
   {
     "kichwa": "shunku",
-    "spanish": "corazon"
+    "spanish": "corazon",
+    "categoryId": "body"
   },
   {
     "kichwa": "shunkuna",
-    "spanish": "desayuno"
+    "spanish": "desayuno",
+    "categoryId": "food"
   },
   {
     "kichwa": "shunsho",
-    "spanish": "idiota"
+    "spanish": "idiota",
+    "categoryId": "general"
   },
   {
     "kichwa": "shuti",
-    "spanish": "nombre"
+    "spanish": "nombre",
+    "categoryId": "general"
   },
   {
     "kichwa": "shutichikuna",
-    "spanish": "pronombres"
+    "spanish": "pronombres",
+    "categoryId": "general"
   },
   {
     "kichwa": "shuwak",
-    "spanish": "ladron"
+    "spanish": "ladron",
+    "categoryId": "general"
   },
   {
     "kichwa": "shuyana",
-    "spanish": "esperar"
+    "spanish": "esperar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "sirana",
-    "spanish": "coser"
+    "spanish": "coser",
+    "categoryId": "actions"
   },
   {
     "kichwa": "sirina",
-    "spanish": "acostarse"
+    "spanish": "acostarse",
+    "categoryId": "actions"
   },
   {
     "kichwa": "sisa",
-    "spanish": "flor"
+    "spanish": "flor",
+    "categoryId": "nature"
   },
   {
     "kichwa": "soltera",
-    "spanish": "soltera"
+    "spanish": "soltera",
+    "categoryId": "family"
   },
   {
     "kichwa": "sukta",
-    "spanish": "seis"
+    "spanish": "seis",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "sumak",
-    "spanish": "excelente"
+    "spanish": "excelente",
+    "categoryId": "general"
   },
   {
     "kichwa": "surkuna",
-    "spanish": "sacar"
+    "spanish": "sacar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "tabacu",
-    "spanish": "tabaco, cigarrillo"
+    "spanish": "tabaco, cigarrillo",
+    "categoryId": "general"
   },
   {
     "kichwa": "taki",
-    "spanish": "musica"
+    "spanish": "musica",
+    "categoryId": "general"
   },
   {
     "kichwa": "takina",
-    "spanish": "hacer musica"
+    "spanish": "hacer musica",
+    "categoryId": "general"
   },
   {
     "kichwa": "takshak kari",
-    "spanish": "lavandero"
+    "spanish": "lavandero",
+    "categoryId": "general"
   },
   {
     "kichwa": "takshak warmi",
-    "spanish": "lavandera"
+    "spanish": "lavandera",
+    "categoryId": "general"
   },
   {
     "kichwa": "takshana",
-    "spanish": "lavar"
+    "spanish": "lavar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "tamiana",
-    "spanish": "llover"
+    "spanish": "llover",
+    "categoryId": "general"
   },
   {
     "kichwa": "tanta",
-    "spanish": "pan"
+    "spanish": "pan",
+    "categoryId": "food"
   },
   {
     "kichwa": "tantanakuna",
-    "spanish": "reunirse"
+    "spanish": "reunirse",
+    "categoryId": "general"
   },
   {
     "kichwa": "tantanakuy",
-    "spanish": "reunion"
+    "spanish": "reunion",
+    "categoryId": "general"
   },
   {
     "kichwa": "tarina",
-    "spanish": "encontrar"
+    "spanish": "encontrar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "tarishka",
-    "spanish": "encontrado"
+    "spanish": "encontrado",
+    "categoryId": "general"
   },
   {
     "kichwa": "tarpuk warmi",
-    "spanish": "agricultora"
+    "spanish": "agricultora",
+    "categoryId": "general"
   },
   {
     "kichwa": "tarpuna",
-    "spanish": "sembrar"
+    "spanish": "sembrar",
+    "categoryId": "nature"
   },
   {
     "kichwa": "tarpuy",
-    "spanish": "siembra"
+    "spanish": "siembra",
+    "categoryId": "nature"
   },
   {
     "kichwa": "taspurshka",
-    "spanish": "sembrio"
+    "spanish": "sembrio",
+    "categoryId": "general"
   },
   {
     "kichwa": "tawka",
-    "spanish": "varios"
+    "spanish": "varios",
+    "categoryId": "general"
   },
   {
     "kichwa": "tawka",
-    "spanish": "muchos"
+    "spanish": "muchos",
+    "categoryId": "general"
   },
   {
     "kichwa": "tawri",
-    "spanish": "chochos"
+    "spanish": "chochos",
+    "categoryId": "food"
   },
   {
     "kichwa": "tayta",
-    "spanish": "señor, papa"
+    "spanish": "señor, papa",
+    "categoryId": "general"
   },
   {
     "kichwa": "tayta cura",
-    "spanish": "papa cura"
+    "spanish": "papa cura",
+    "categoryId": "general"
   },
   {
     "kichwa": "tayta yaya",
-    "spanish": "padre biologico"
+    "spanish": "padre biologico",
+    "categoryId": "family"
   },
   {
     "kichwa": "telar",
-    "spanish": "telar"
+    "spanish": "telar",
+    "categoryId": "house"
   },
   {
     "kichwa": "tikrana",
-    "spanish": "regresar, volver"
+    "spanish": "regresar, volver",
+    "categoryId": "general"
   },
   {
     "kichwa": "tinpuna",
-    "spanish": "hervir"
+    "spanish": "hervir",
+    "categoryId": "food"
   },
   {
     "kichwa": "tio",
-    "spanish": "señor"
+    "spanish": "señor",
+    "categoryId": "general"
   },
   {
     "kichwa": "tiyana",
-    "spanish": "haber, existir"
+    "spanish": "haber, existir",
+    "categoryId": "general"
   },
   {
     "kichwa": "tiyarina",
-    "spanish": "silla, silleta"
+    "spanish": "silla, silleta",
+    "categoryId": "general"
   },
   {
     "kichwa": "tiyarina",
-    "spanish": "sentarse"
+    "spanish": "sentarse",
+    "categoryId": "actions"
   },
   {
     "kichwa": "trabajana",
-    "spanish": "trabajar"
+    "spanish": "trabajar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "tukuna",
-    "spanish": "hacerse"
+    "spanish": "hacerse",
+    "categoryId": "general"
   },
   {
     "kichwa": "tukuy",
-    "spanish": "todos"
+    "spanish": "todos",
+    "categoryId": "general"
   },
   {
     "kichwa": "tukuylla",
-    "spanish": "todos"
+    "spanish": "todos",
+    "categoryId": "general"
   },
   {
     "kichwa": "tullpa",
-    "spanish": "fogon"
+    "spanish": "fogon",
+    "categoryId": "general"
   },
   {
     "kichwa": "tullpa",
-    "spanish": "fogon"
+    "spanish": "fogon",
+    "categoryId": "general"
   },
   {
     "kichwa": "tullpuna ",
-    "spanish": "colorear"
+    "spanish": "colorear",
+    "categoryId": "colors"
   },
   {
     "kichwa": "tullpuyuk",
-    "spanish": "colorido"
+    "spanish": "colorido",
+    "categoryId": "colors"
   },
   {
     "kichwa": "tullu",
-    "spanish": "flaco"
+    "spanish": "flaco",
+    "categoryId": "body"
   },
   {
     "kichwa": "tunu",
-    "spanish": "musica"
+    "spanish": "musica",
+    "categoryId": "general"
   },
   {
     "kichwa": "tupana",
-    "spanish": "encontrarse"
+    "spanish": "encontrarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "turi",
-    "spanish": "hermana-hermano"
+    "spanish": "hermana-hermano",
+    "categoryId": "family"
   },
   {
     "kichwa": "turu",
-    "spanish": "lodo"
+    "spanish": "lodo",
+    "categoryId": "nature"
   },
   {
     "kichwa": "tushuna",
-    "spanish": "bailar"
+    "spanish": "bailar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "tushuna",
-    "spanish": "bailar"
+    "spanish": "bailar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "tuta mikuna",
-    "spanish": "cena"
+    "spanish": "cena",
+    "categoryId": "food"
   },
   {
     "kichwa": "tutamanta",
-    "spanish": "la mañana"
+    "spanish": "la mañana",
+    "categoryId": "general"
   },
   {
     "kichwa": "tyarina",
-    "spanish": "sentarse"
+    "spanish": "sentarse",
+    "categoryId": "actions"
   },
   {
     "kichwa": "ucha",
-    "spanish": "pronto"
+    "spanish": "pronto",
+    "categoryId": "general"
   },
   {
     "kichwa": "uchilla",
-    "spanish": "pequeño"
+    "spanish": "pequeño",
+    "categoryId": "general"
   },
   {
     "kichwa": "uchilla",
-    "spanish": "pequeño"
+    "spanish": "pequeño",
+    "categoryId": "general"
   },
   {
     "kichwa": "uchilla pacha",
-    "spanish": "minuto"
+    "spanish": "minuto",
+    "categoryId": "general"
   },
   {
     "kichwa": "ukllana",
-    "spanish": "abrazar"
+    "spanish": "abrazar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "uksha",
-    "spanish": "pajaro"
+    "spanish": "pajaro",
+    "categoryId": "animals"
   },
   {
     "kichwa": "uksha",
-    "spanish": "paja"
+    "spanish": "paja",
+    "categoryId": "nature"
   },
   {
     "kichwa": "uku",
-    "spanish": "adentro, dentro"
+    "spanish": "adentro, dentro",
+    "categoryId": "general"
   },
   {
     "kichwa": "uku",
-    "spanish": "cuarto"
+    "spanish": "cuarto",
+    "categoryId": "house"
   },
   {
     "kichwa": "uku",
-    "spanish": "cuarto, habitacion"
+    "spanish": "cuarto, habitacion",
+    "categoryId": "house"
   },
   {
     "kichwa": "uku pacha",
-    "spanish": "infierno"
+    "spanish": "infierno",
+    "categoryId": "general"
   },
   {
     "kichwa": "ukucha",
-    "spanish": "raton"
+    "spanish": "raton",
+    "categoryId": "animals"
   },
   {
     "kichwa": "ullana",
-    "spanish": "oir"
+    "spanish": "oir",
+    "categoryId": "general"
   },
   {
     "kichwa": "uma",
-    "spanish": "cabeza"
+    "spanish": "cabeza",
+    "categoryId": "body"
   },
   {
     "kichwa": "uma pachallina",
-    "spanish": "tla para cubrirse la cabeza"
+    "spanish": "tla para cubrirse la cabeza",
+    "categoryId": "body"
   },
   {
     "kichwa": "umana",
-    "spanish": "mentir"
+    "spanish": "mentir",
+    "categoryId": "actions"
   },
   {
     "kichwa": "unkuna",
-    "spanish": "enfermarse"
+    "spanish": "enfermarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "upalla",
-    "spanish": "callado"
+    "spanish": "callado",
+    "categoryId": "general"
   },
   {
     "kichwa": "upallana",
-    "spanish": "callar"
+    "spanish": "callar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "upyana",
-    "spanish": "beber"
+    "spanish": "beber",
+    "categoryId": "general"
   },
   {
     "kichwa": "ura",
-    "spanish": "abajo"
+    "spanish": "abajo",
+    "categoryId": "general"
   },
   {
     "kichwa": "urku",
-    "spanish": "montaña, monte"
+    "spanish": "montaña, monte",
+    "categoryId": "nature"
   },
   {
     "kichwa": "urpi",
-    "spanish": "tortola"
+    "spanish": "tortola",
+    "categoryId": "animals"
   },
   {
     "kichwa": "usa",
-    "spanish": "piojo"
+    "spanish": "piojo",
+    "categoryId": "animals"
   },
   {
     "kichwa": "ushana",
-    "spanish": "poder"
+    "spanish": "poder",
+    "categoryId": "actions"
   },
   {
     "kichwa": "ushana",
-    "spanish": "poder"
+    "spanish": "poder",
+    "categoryId": "actions"
   },
   {
     "kichwa": "ushana",
-    "spanish": "poder"
+    "spanish": "poder",
+    "categoryId": "actions"
   },
   {
     "kichwa": "ushushi",
-    "spanish": "hijo"
+    "spanish": "hijo",
+    "categoryId": "general"
   },
   {
     "kichwa": "ushuta",
-    "spanish": "calzado"
+    "spanish": "calzado",
+    "categoryId": "house"
   },
   {
     "kichwa": "utiya",
-    "spanish": "rapido"
+    "spanish": "rapido",
+    "categoryId": "general"
   },
   {
     "kichwa": "utya",
-    "spanish": "pronto"
+    "spanish": "pronto",
+    "categoryId": "general"
   },
   {
     "kichwa": "uyana",
-    "spanish": "escuchar"
+    "spanish": "escuchar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "uyay",
-    "spanish": "atento"
+    "spanish": "atento",
+    "categoryId": "general"
   },
   {
     "kichwa": "valina",
-    "spanish": "valer, costar"
+    "spanish": "valer, costar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "wachuna",
-    "spanish": "formar surcos"
+    "spanish": "formar surcos",
+    "categoryId": "general"
   },
   {
     "kichwa": "wakana",
-    "spanish": "llorar"
+    "spanish": "llorar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "wakaychina",
-    "spanish": "guardar"
+    "spanish": "guardar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "wakcha",
-    "spanish": "pobre"
+    "spanish": "pobre",
+    "categoryId": "general"
   },
   {
     "kichwa": "wakcha",
-    "spanish": "pobre"
+    "spanish": "pobre",
+    "categoryId": "general"
   },
   {
     "kichwa": "wakin",
-    "spanish": "alguno"
+    "spanish": "alguno",
+    "categoryId": "general"
   },
   {
     "kichwa": "wakin",
-    "spanish": "algun"
+    "spanish": "algun",
+    "categoryId": "general"
   },
   {
     "kichwa": "wakinpi",
-    "spanish": "rara vez"
+    "spanish": "rara vez",
+    "categoryId": "general"
   },
   {
     "kichwa": "waklli",
-    "spanish": "dañado"
+    "spanish": "dañado",
+    "categoryId": "general"
   },
   {
     "kichwa": "wakllina",
-    "spanish": "dañarse"
+    "spanish": "dañarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "wakra",
-    "spanish": "toro"
+    "spanish": "toro",
+    "categoryId": "animals"
   },
   {
     "kichwa": "wallka",
-    "spanish": "collar"
+    "spanish": "collar",
+    "categoryId": "house"
   },
   {
     "kichwa": "wampra",
-    "spanish": "joven hombre"
+    "spanish": "joven hombre",
+    "categoryId": "family"
   },
   {
     "kichwa": "wankipi",
-    "spanish": "a veces"
+    "spanish": "a veces",
+    "categoryId": "general"
   },
   {
     "kichwa": "wañuchina",
-    "spanish": "hacer apagar"
+    "spanish": "hacer apagar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "wanuna",
-    "spanish": "abonar"
+    "spanish": "abonar",
+    "categoryId": "nature"
   },
   {
     "kichwa": "wañushka",
-    "spanish": "muerto"
+    "spanish": "muerto",
+    "categoryId": "general"
   },
   {
     "kichwa": "waranka",
-    "spanish": "mil"
+    "spanish": "mil",
+    "categoryId": "numbers"
   },
   {
     "kichwa": "warmi",
-    "spanish": "mujer"
+    "spanish": "mujer",
+    "categoryId": "general"
   },
   {
     "kichwa": "warmi",
-    "spanish": "esposa"
+    "spanish": "esposa",
+    "categoryId": "family"
   },
   {
     "kichwa": "warmi tukuna",
-    "spanish": "enamorada"
+    "spanish": "enamorada",
+    "categoryId": "family"
   },
   {
     "kichwa": "warmi wawa",
-    "spanish": "niña"
+    "spanish": "niña",
+    "categoryId": "general"
   },
   {
     "kichwa": "warmikunayuk",
-    "spanish": "dueño de mujeres"
+    "spanish": "dueño de mujeres",
+    "categoryId": "general"
   },
   {
     "kichwa": "warmipa churakuna",
-    "spanish": "ropa de mujer"
+    "spanish": "ropa de mujer",
+    "categoryId": "general"
   },
   {
     "kichwa": "warmiyuk",
-    "spanish": "dueño de una warmi"
+    "spanish": "dueño de una warmi",
+    "categoryId": "general"
   },
   {
     "kichwa": "washa",
-    "spanish": "atras, tras"
+    "spanish": "atras, tras",
+    "categoryId": "general"
   },
   {
     "kichwa": "wasi",
-    "spanish": "casado"
+    "spanish": "casado",
+    "categoryId": "family"
   },
   {
     "kichwa": "wasichina ",
-    "spanish": "construir casa"
+    "spanish": "construir casa",
+    "categoryId": "house"
   },
   {
     "kichwa": "wasiyuk",
-    "spanish": "dueño de casa"
+    "spanish": "dueño de casa",
+    "categoryId": "house"
   },
   {
     "kichwa": "wata",
-    "spanish": "año"
+    "spanish": "año",
+    "categoryId": "general"
   },
   {
     "kichwa": "watarka",
-    "spanish": "amarro"
+    "spanish": "amarro",
+    "categoryId": "general"
   },
   {
     "kichwa": "wawa",
-    "spanish": "niño, niña"
+    "spanish": "niño, niña",
+    "categoryId": "general"
   },
   {
     "kichwa": "wawa kallana",
-    "spanish": "tiesto pequeño"
+    "spanish": "tiesto pequeño",
+    "categoryId": "general"
   },
   {
     "kichwa": "wawa manka",
-    "spanish": "olla pequeña"
+    "spanish": "olla pequeña",
+    "categoryId": "general"
   },
   {
     "kichwa": "wawa pacha",
-    "spanish": "segundo"
+    "spanish": "segundo",
+    "categoryId": "general"
   },
   {
     "kichwa": "wawa unkuchik",
-    "spanish": "partera"
+    "spanish": "partera",
+    "categoryId": "general"
   },
   {
     "kichwa": "wawki",
-    "spanish": "hermano-hermano"
+    "spanish": "hermano-hermano",
+    "categoryId": "family"
   },
   {
     "kichwa": "waylla",
-    "spanish": "verde"
+    "spanish": "verde",
+    "categoryId": "colors"
   },
   {
     "kichwa": "wayra",
-    "spanish": "viento"
+    "spanish": "viento",
+    "categoryId": "nature"
   },
   {
     "kichwa": "wichayman",
-    "spanish": "hacia arriba"
+    "spanish": "hacia arriba",
+    "categoryId": "general"
   },
   {
     "kichwa": "willana",
-    "spanish": "avisar"
+    "spanish": "avisar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "wira",
-    "spanish": "manteca"
+    "spanish": "manteca",
+    "categoryId": "food"
   },
   {
     "kichwa": "wirwila",
-    "spanish": "guitarra"
+    "spanish": "guitarra",
+    "categoryId": "general"
   },
   {
     "kichwa": "wisha",
-    "spanish": "cucharon"
+    "spanish": "cucharon",
+    "categoryId": "general"
   },
   {
     "kichwa": "yachachik",
-    "spanish": "profesor"
+    "spanish": "profesor",
+    "categoryId": "general"
   },
   {
     "kichwa": "yachachina",
-    "spanish": "enseñar"
+    "spanish": "enseñar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "yachakuk",
-    "spanish": "estudiante"
+    "spanish": "estudiante",
+    "categoryId": "general"
   },
   {
     "kichwa": "yachakuna",
-    "spanish": "aprender"
+    "spanish": "aprender",
+    "categoryId": "actions"
   },
   {
     "kichwa": "yachana wasi",
-    "spanish": "escuela"
+    "spanish": "escuela",
+    "categoryId": "house"
   },
   {
     "kichwa": "yacharina",
-    "spanish": "acostumbrarse, enseñarse"
+    "spanish": "acostumbrarse, enseñarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "yaku",
-    "spanish": "agua"
+    "spanish": "agua",
+    "categoryId": "general"
   },
   {
     "kichwa": "yaku",
-    "spanish": "agua"
+    "spanish": "agua",
+    "categoryId": "general"
   },
   {
     "kichwa": "yaku wira",
-    "spanish": "aceite"
+    "spanish": "aceite",
+    "categoryId": "food"
   },
   {
     "kichwa": "yallina",
-    "spanish": "pasarse"
+    "spanish": "pasarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "yana shina",
-    "spanish": "parecido al negro"
+    "spanish": "parecido al negro",
+    "categoryId": "colors"
   },
   {
     "kichwa": "yana shina",
-    "spanish": "negro"
+    "spanish": "negro",
+    "categoryId": "colors"
   },
   {
     "kichwa": "yanapana",
-    "spanish": "ayudar"
+    "spanish": "ayudar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "yanta",
-    "spanish": "leña"
+    "spanish": "leña",
+    "categoryId": "general"
   },
   {
     "kichwa": "yanuk kari",
-    "spanish": "cocinero"
+    "spanish": "cocinero",
+    "categoryId": "food"
   },
   {
     "kichwa": "yanuk warmi",
-    "spanish": "cocinera"
+    "spanish": "cocinera",
+    "categoryId": "food"
   },
   {
     "kichwa": "yanuna ",
-    "spanish": "cocinar"
+    "spanish": "cocinar",
+    "categoryId": "food"
   },
   {
     "kichwa": "yanuna ",
-    "spanish": "cocina"
+    "spanish": "cocina",
+    "categoryId": "general"
   },
   {
     "kichwa": "yanuna ",
-    "spanish": "cocinar"
+    "spanish": "cocinar",
+    "categoryId": "food"
   },
   {
     "kichwa": "yanuna uku",
-    "spanish": "cocina"
+    "spanish": "cocina",
+    "categoryId": "general"
   },
   {
     "kichwa": "yapuna",
-    "spanish": "harar"
+    "spanish": "harar",
+    "categoryId": "general"
   },
   {
     "kichwa": "yaykuna",
-    "spanish": "entrar"
+    "spanish": "entrar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "yupaychini",
-    "spanish": "gracias"
+    "spanish": "gracias",
+    "categoryId": "greetings"
   },
   {
     "kichwa": "yura",
-    "spanish": "planta o matorral"
+    "spanish": "planta o matorral",
+    "categoryId": "nature"
   },
   {
     "kichwa": "yurak",
-    "spanish": "blanco"
+    "spanish": "blanco",
+    "categoryId": "colors"
   },
   {
     "kichwa": "yuyana",
-    "spanish": "intentar"
+    "spanish": "intentar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "winkulak",
-    "spanish": "col"
+    "spanish": "col",
+    "categoryId": "general"
   },
   {
     "kichwa": "nanana",
-    "spanish": "dolor"
+    "spanish": "dolor",
+    "categoryId": "general"
   },
   {
     "kichwa": "ashnana",
-    "spanish": "oler"
+    "spanish": "oler",
+    "categoryId": "actions"
   },
   {
     "kichwa": "mayllana",
-    "spanish": "lavar(excepto ropa)"
+    "spanish": "lavar(excepto ropa)",
+    "categoryId": "actions"
   },
   {
     "kichwa": "akllana",
-    "spanish": "escojer"
+    "spanish": "escojer",
+    "categoryId": "general"
   },
   {
     "kichwa": "mana kullkita kurin",
-    "spanish": "gratis"
+    "spanish": "gratis",
+    "categoryId": "general"
   },
   {
     "kichwa": "chaytallatak",
-    "spanish": "lo mismo"
+    "spanish": "lo mismo",
+    "categoryId": "general"
   },
   {
     "kichwa": "kuna",
-    "spanish": "dar"
+    "spanish": "dar",
+    "categoryId": "general"
   },
   {
     "kichwa": "junka",
-    "spanish": "semana"
+    "spanish": "semana",
+    "categoryId": "general"
   },
   {
     "kichwa": "yanapana",
-    "spanish": "ayudar"
+    "spanish": "ayudar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "imashtawan",
-    "spanish": "que mas?"
+    "spanish": "que mas?",
+    "categoryId": "general"
   },
   {
     "kichwa": "chapuna",
-    "spanish": "revolver"
+    "spanish": "revolver",
+    "categoryId": "general"
   },
   {
     "kichwa": "sapi",
-    "spanish": "raiz"
+    "spanish": "raiz",
+    "categoryId": "nature"
   },
   {
     "kichwa": "hawa",
-    "spanish": "arriba"
+    "spanish": "arriba",
+    "categoryId": "general"
   },
   {
     "kichwa": "yalli alli",
-    "spanish": "pasa bien"
+    "spanish": "pasa bien",
+    "categoryId": "general"
   },
   {
     "kichwa": "taripay",
-    "spanish": "investigacion"
+    "spanish": "investigacion",
+    "categoryId": "general"
   },
   {
     "kichwa": "wachachik",
-    "spanish": "partera"
+    "spanish": "partera",
+    "categoryId": "general"
   },
   {
     "kichwa": "arawi",
-    "spanish": "poema"
+    "spanish": "poema",
+    "categoryId": "general"
   },
   {
     "kichwa": "chinkachina",
-    "spanish": "perder"
+    "spanish": "perder",
+    "categoryId": "actions"
   },
   {
     "kichwa": "yanka",
-    "spanish": "envano"
+    "spanish": "envano",
+    "categoryId": "general"
   },
   {
     "kichwa": "puyu",
-    "spanish": "nube"
+    "spanish": "nube",
+    "categoryId": "nature"
   },
   {
     "kichwa": "uyllana",
-    "spanish": "aviso"
+    "spanish": "aviso",
+    "categoryId": "general"
   },
   {
     "kichwa": "wiñana",
-    "spanish": "crecer"
+    "spanish": "crecer",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kara",
-    "spanish": "cuero"
+    "spanish": "cuero",
+    "categoryId": "general"
   },
   {
     "kichwa": "mañana",
-    "spanish": "pedido, ceremonia"
+    "spanish": "pedido, ceremonia",
+    "categoryId": "general"
   },
   {
     "kichwa": "kunkana",
-    "spanish": "olvidar"
+    "spanish": "olvidar",
+    "categoryId": "general"
   },
   {
     "kichwa": "ninanta",
-    "spanish": "demasiado"
+    "spanish": "demasiado",
+    "categoryId": "general"
   },
   {
     "kichwa": "paktachispa",
-    "spanish": "hacer alcanzar, hacer unir"
+    "spanish": "hacer alcanzar, hacer unir",
+    "categoryId": "general"
   },
   {
     "kichwa": "paktana",
-    "spanish": "unir, alcanzar"
+    "spanish": "unir, alcanzar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kuyana",
-    "spanish": "amando"
+    "spanish": "amando",
+    "categoryId": "general"
   },
   {
     "kichwa": "yallina",
-    "spanish": "pasarse"
+    "spanish": "pasarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "tipina",
-    "spanish": "cosechar sara"
+    "spanish": "cosechar sara",
+    "categoryId": "nature"
   },
   {
     "kichwa": "shuyana",
-    "spanish": "esperar"
+    "spanish": "esperar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "chuya",
-    "spanish": "limpio"
+    "spanish": "limpio",
+    "categoryId": "general"
   },
   {
     "kichwa": "chayamuna",
-    "spanish": "llegar"
+    "spanish": "llegar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "yala",
-    "spanish": "igual que shina"
+    "spanish": "igual que shina",
+    "categoryId": "general"
   },
   {
     "kichwa": "shina",
-    "spanish": "por ejemplo"
+    "spanish": "por ejemplo",
+    "categoryId": "general"
   },
   {
     "kichwa": "llamkay uku",
-    "spanish": "oficina"
+    "spanish": "oficina",
+    "categoryId": "house"
   },
   {
     "kichwa": "mashkana",
-    "spanish": "buscar"
+    "spanish": "buscar",
+    "categoryId": "general"
   },
   {
     "kichwa": "tantanakuna",
-    "spanish": "reunirse"
+    "spanish": "reunirse",
+    "categoryId": "general"
   },
   {
     "kichwa": "shinchitapacha",
-    "spanish": "fuertisimo"
+    "spanish": "fuertisimo",
+    "categoryId": "general"
   },
   {
     "kichwa": "puchka",
-    "spanish": "hilar"
+    "spanish": "hilar",
+    "categoryId": "house"
   },
   {
     "kichwa": "kururu",
-    "spanish": "cono de hilo"
+    "spanish": "cono de hilo",
+    "categoryId": "general"
   },
   {
     "kichwa": "awllina",
-    "spanish": "extramar, hurdir"
+    "spanish": "extramar, hurdir",
+    "categoryId": "general"
   },
   {
     "kichwa": "kawa",
-    "spanish": "balsa de madera para tejer hilo"
+    "spanish": "balsa de madera para tejer hilo",
+    "categoryId": "house"
   },
   {
     "kichwa": "chayana",
-    "spanish": "llegar"
+    "spanish": "llegar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "kawpuna",
-    "spanish": "desenredar hilo"
+    "spanish": "desenredar hilo",
+    "categoryId": "general"
   },
   {
     "kichwa": "kawpuk",
-    "spanish": "el que desenreda"
+    "spanish": "el que desenreda",
+    "categoryId": "general"
   },
   {
     "kichwa": "pilluna",
-    "spanish": "envolver"
+    "spanish": "envolver",
+    "categoryId": "actions"
   },
   {
     "kichwa": "aswana kaspi",
-    "spanish": "palo para tejer"
+    "spanish": "palo para tejer",
+    "categoryId": "house"
   },
   {
     "kichwa": "illana",
-    "spanish": "no habe, no existir"
+    "spanish": "no habe, no existir",
+    "categoryId": "general"
   },
   {
     "kichwa": "illarka",
-    "spanish": "no hubo"
+    "spanish": "no hubo",
+    "categoryId": "general"
   },
   {
     "kichwa": "tukuchina",
-    "spanish": "terminar"
+    "spanish": "terminar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "tukuna",
-    "spanish": "transformarse"
+    "spanish": "transformarse",
+    "categoryId": "general"
   },
   {
     "kichwa": "apamuna",
-    "spanish": "traer"
+    "spanish": "traer",
+    "categoryId": "actions"
   },
   {
     "kichwa": "apachina",
-    "spanish": "cargar"
+    "spanish": "cargar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "apana",
-    "spanish": "llevar"
+    "spanish": "llevar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "aparina",
-    "spanish": "cargar"
+    "spanish": "cargar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "larka",
-    "spanish": "sequia"
+    "spanish": "sequia",
+    "categoryId": "general"
   },
   {
     "kichwa": "yaykuna",
-    "spanish": "entrar"
+    "spanish": "entrar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "awanakaspi",
-    "spanish": "madera para tejer"
+    "spanish": "madera para tejer",
+    "categoryId": "house"
   },
   {
     "kichwa": "manchaklla",
-    "spanish": "temerosamente"
+    "spanish": "temerosamente",
+    "categoryId": "general"
   },
   {
     "kichwa": "manchana",
-    "spanish": "asustar"
+    "spanish": "asustar",
+    "categoryId": "general"
   },
   {
     "kichwa": "manchak",
-    "spanish": "el que teme"
+    "spanish": "el que teme",
+    "categoryId": "general"
   },
   {
     "kichwa": "jananik",
-    "spanish": "subida inclinada"
+    "spanish": "subida inclinada",
+    "categoryId": "general"
   },
   {
     "kichwa": "uranik",
-    "spanish": "hacia abajo en digonal"
+    "spanish": "hacia abajo en digonal",
+    "categoryId": "general"
   },
   {
     "kichwa": "washanik",
-    "spanish": "hacia atras"
+    "spanish": "hacia atras",
+    "categoryId": "general"
   },
   {
     "kichwa": "rikurina",
-    "spanish": "aparecerse, verse"
+    "spanish": "aparecerse, verse",
+    "categoryId": "general"
   },
   {
     "kichwa": "shuktak shina",
-    "spanish": "como otro(diferente)"
+    "spanish": "como otro(diferente)",
+    "categoryId": "general"
   },
   {
     "kichwa": "millma",
-    "spanish": "lana"
+    "spanish": "lana",
+    "categoryId": "general"
   },
   {
     "kichwa": "mañana",
-    "spanish": "pedir"
+    "spanish": "pedir",
+    "categoryId": "general"
   },
   {
     "kichwa": "paypak",
-    "spanish": "para el"
+    "spanish": "para el",
+    "categoryId": "general"
   },
   {
     "kichwa": "chinkana",
-    "spanish": "perder"
+    "spanish": "perder",
+    "categoryId": "actions"
   },
   {
     "kichwa": "rikunakuna",
-    "spanish": "vistas, paisajes"
+    "spanish": "vistas, paisajes",
+    "categoryId": "general"
   },
   {
     "kichwa": "chinkarina",
-    "spanish": "perderse"
+    "spanish": "perderse",
+    "categoryId": "actions"
   },
   {
     "kichwa": "llapina",
-    "spanish": "aplastar"
+    "spanish": "aplastar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kayta chayta",
-    "spanish": "por aqui, por alla"
+    "spanish": "por aqui, por alla",
+    "categoryId": "general"
   },
   {
     "kichwa": "mana pipash",
-    "spanish": "nadie"
+    "spanish": "nadie",
+    "categoryId": "general"
   },
   {
     "kichwa": "machalla",
-    "spanish": "medio ebrio"
+    "spanish": "medio ebrio",
+    "categoryId": "general"
   },
   {
     "kichwa": "shuyana",
-    "spanish": "esperar"
+    "spanish": "esperar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "shayana",
-    "spanish": "detenerse"
+    "spanish": "detenerse",
+    "categoryId": "general"
   },
   {
     "kichwa": "kachana",
-    "spanish": "mandar"
+    "spanish": "mandar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "mashkakrishpa",
-    "spanish": "yendo a buscar"
+    "spanish": "yendo a buscar",
+    "categoryId": "general"
   },
   {
     "kichwa": "kipikunantin",
-    "spanish": "conjuntamente con las maletas"
+    "spanish": "conjuntamente con las maletas",
+    "categoryId": "general"
   },
   {
     "kichwa": "iñina",
-    "spanish": "creencia"
+    "spanish": "creencia",
+    "categoryId": "general"
   },
   {
     "kichwa": "llullu",
-    "spanish": "tierno"
+    "spanish": "tierno",
+    "categoryId": "general"
   },
   {
     "kichwa": "junta",
-    "spanish": "llena"
+    "spanish": "llena",
+    "categoryId": "general"
   },
   {
     "kichwa": "pura killa",
-    "spanish": "luna llena"
+    "spanish": "luna llena",
+    "categoryId": "general"
   },
   {
     "kichwa": "ismuna",
-    "spanish": "podrir"
+    "spanish": "podrir",
+    "categoryId": "general"
   },
   {
     "kichwa": "wasichina ",
-    "spanish": "construir"
+    "spanish": "construir",
+    "categoryId": "house"
   },
   {
     "kichwa": "wirayana",
-    "spanish": "engordar"
+    "spanish": "engordar",
+    "categoryId": "general"
   },
   {
     "kichwa": "surkuna",
-    "spanish": "sacar, cortar"
+    "spanish": "sacar, cortar",
+    "categoryId": "actions"
   },
   {
     "kichwa": "tukurina",
-    "spanish": "termino(algo interno)"
+    "spanish": "termino(algo interno)",
+    "categoryId": "general"
   },
   {
     "kichwa": "utka",
-    "spanish": "rapido"
+    "spanish": "rapido",
+    "categoryId": "general"
   },
   {
     "kichwa": "pukuna",
-    "spanish": "madurar"
+    "spanish": "madurar",
+    "categoryId": "food"
   },
   {
     "kichwa": "imatapash",
-    "spanish": "cualquier cosa"
+    "spanish": "cualquier cosa",
+    "categoryId": "general"
   },
   {
     "kichwa": "wallinku",
-    "spanish": "conejo"
+    "spanish": "conejo",
+    "categoryId": "animals"
   },
   {
     "kichwa": "tukuna",
-    "spanish": "hacerse volverse"
+    "spanish": "hacerse volverse",
+    "categoryId": "general"
   },
   {
     "kichwa": "tunkuri",
-    "spanish": "garganta, cuello"
+    "spanish": "garganta, cuello",
+    "categoryId": "body"
   },
   {
     "kichwa": "kashtuna",
-    "spanish": "mandibula"
+    "spanish": "mandibula",
+    "categoryId": "general"
   },
   {
     "kichwa": "chukchuna",
-    "spanish": "temblor"
+    "spanish": "temblor",
+    "categoryId": "general"
   },
   {
     "kichwa": "amuklla",
-    "spanish": "sabe no mas"
+    "spanish": "sabe no mas",
+    "categoryId": "general"
   }
 ]

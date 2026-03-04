@@ -30,10 +30,8 @@ export default function CategoriesPage() {
         const categoryMap = new Map<string, Category>();
 
         vocabData.forEach((word) => {
-          const categoryId = word.category || "general";
-          const categoryName = word.category
-            ? word.category.charAt(0).toUpperCase() + word.category.slice(1)
-            : "General";
+          const categoryId = word.categoryId;
+          const categoryName = categoryId.charAt(0).toUpperCase() + categoryId.slice(1);
 
           if (!categoryMap.has(categoryId)) {
             categoryMap.set(categoryId, {
