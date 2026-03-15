@@ -1,11 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, KichwaWord } from "@/lib/data";
 
 export default function FlashcardsPage() {
+  const searchParams = useSearchParams();
+  const categoryId = searchParams.get("category");
+
   const [words, setWords] = useState<KichwaWord[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -14,10 +18,13 @@ export default function FlashcardsPage() {
   useEffect(() => {
     (async () => {
       const data = await fetchVocabulary();
-      setWords(data);
+      const filtered = categoryId
+        ? data.filter((w) => w.categoryId === categoryId)
+        : data;
+      setWords(filtered);
       setIsLoading(false);
     })();
-  }, []);
+  }, [categoryId]);
 
   const currentWord = words[currentIndex];
   const progress =
@@ -70,7 +77,7 @@ export default function FlashcardsPage() {
     <Layout>
       <div>
         <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
-          Flashcards
+          Flashcards {categoryId && `— ${categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}`}
         </h2>
 
         {/* Progress Bar */}
@@ -197,7 +204,7 @@ export default function FlashcardsPage() {
                   {currentWord?.spanish}
                 </h3>
                 <p style={{ color: "white", opacity: 0.9, margin: 0 }}>
-                  {currentWord?.category && `Category: ${currentWord.category}`}
+                  {currentWord?.categoryId && `Category: ${currentWord.categoryId}`}
                 </p>
               </div>
             </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, KichwaWord, generateQuizQuestions } from "@/lib/data";
@@ -13,6 +14,9 @@ interface QuizQuestion {
 }
 
 export default function QuizPage() {
+  const searchParams = useSearchParams();
+  const categoryId = searchParams.get("category");
+
   const [words, setWords] = useState<KichwaWord[]>([]);
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -25,11 +29,14 @@ export default function QuizPage() {
   useEffect(() => {
     (async () => {
       const data = await fetchVocabulary();
-      setWords(data);
-      generateQuiz(data);
+      const filtered = categoryId
+        ? data.filter((w) => w.categoryId === categoryId)
+        : data;
+      setWords(filtered);
+      generateQuiz(filtered);
       setIsLoading(false);
     })();
-  }, []);
+  }, [categoryId]);
 
   const generateQuiz = (vocabData: KichwaWord[]) => {
     if (vocabData.length === 0) return;
@@ -163,7 +170,7 @@ export default function QuizPage() {
     <Layout>
       <div>
         <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
-          Quiz
+          Quiz {categoryId && `— ${categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}`}
         </h2>
 
         {/* Progress Bar */}

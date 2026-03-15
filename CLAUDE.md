@@ -30,6 +30,8 @@ cd apps/web && npm run lint    # web only
 
 # Tests
 npm run test          # all workspaces via turbo
+cd apps/web && npx vitest run        # web unit tests only
+cd apps/web && npx vitest --watch    # watch mode during development
 ```
 
 ## Architecture
@@ -83,6 +85,28 @@ Navigation types are defined in `App.tsx` (`RootStackParamList`, `TabParamList`)
 - `src/data/categories.ts` — category definitions with `keywords` used for client-side filtering in native
 
 The backend imports from the shared package using a direct relative path (`../../../packages/shared/index.js`) since it's an ESM module that doesn't run through a bundler.
+
+## Task Tracking
+
+Pending tasks and session notes are tracked in `TODO.md` at the repo root. Check it at the start of each session.
+
+## Testing
+
+### Current coverage (`apps/web/src/lib/__tests__/data.test.ts`)
+
+Vitest is set up in `apps/web`. 12 unit tests covering the three pure utility functions in `apps/web/src/lib/data.ts`:
+
+| Function | What is tested |
+|---|---|
+| `getWordsByCategory` | Filters by categoryId, returns all when no category, empty for unknown |
+| `getRandomWords` | Returns correct count, no duplicates, handles count=0 |
+| `generateQuizQuestions` | Correct count, 4 options per question, correct answer in options, valid type, question matches direction |
+
+### Not yet covered
+
+- **Backend endpoints** — integration tests for `/v1/vocabulary`, `/v1/categories`, `/v1/puzzles`, `/v1/vocabulary/by-category`
+- **Native app** — `dataLoader.ts` utilities (`loadVocabularyData`, `getWordsByCategory`, `getCategoryStats`)
+- **Web pages** — component rendering tests (React Testing Library)
 
 ## Key Conventions
 
