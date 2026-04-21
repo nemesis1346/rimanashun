@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, KichwaWord } from "@/lib/data";
 
-export default function FlashcardsPage() {
+function FlashcardsPage() {
   const searchParams = useSearchParams();
-  const categoryId = searchParams.get("category");
+  const categoryId = searchParams?.get("category") ?? null;
 
   const [words, setWords] = useState<KichwaWord[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -310,4 +310,8 @@ export default function FlashcardsPage() {
       </div>
     </Layout>
   );
+}
+
+export default function FlashcardsPageWrapper() {
+  return <Suspense><FlashcardsPage /></Suspense>;
 }

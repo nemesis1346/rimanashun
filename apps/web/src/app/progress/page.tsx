@@ -42,7 +42,7 @@ export default function ProgressPage() {
 
         // Calculate stats
         const uniqueCategories = new Set(
-          vocabData.map((word) => word.category || "general")
+          vocabData.map((word) => word.categoryId || "general")
         );
 
         // Read learned progress from localStorage if present
@@ -88,7 +88,7 @@ export default function ProgressPage() {
     const categoryMap = new Map<string, number>();
 
     words.forEach((word) => {
-      const category = word.category || "general";
+      const category = word.categoryId || "general";
       categoryMap.set(category, (categoryMap.get(category) || 0) + 1);
     });
 

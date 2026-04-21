@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
@@ -13,9 +13,9 @@ interface QuizQuestion {
   type: "kichwa-to-spanish" | "spanish-to-kichwa";
 }
 
-export default function QuizPage() {
+function QuizPage() {
   const searchParams = useSearchParams();
-  const categoryId = searchParams.get("category");
+  const categoryId = searchParams?.get("category") ?? null;
 
   const [words, setWords] = useState<KichwaWord[]>([]);
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
@@ -362,4 +362,8 @@ export default function QuizPage() {
       </div>
     </Layout>
   );
+}
+
+export default function QuizPageWrapper() {
+  return <Suspense><QuizPage /></Suspense>;
 }
