@@ -1,60 +1,51 @@
-import http from "http";
-import url from "url";
+import express from "express";
 // Use CommonJS-compatible entry for Node runtime to avoid JSON import assertions
 import { vocabularyData, sentencePuzzles, categories } from "../../../packages/shared/index.js";
 
 const PORT = process.env.PORT ? Number(process.env.PORT) : 4000;
 
-const sendJson = (res, status, payload) => {
-  const body = JSON.stringify(payload);
-  res.writeHead(status, {
-    "Content-Type": "application/json; charset=utf-8",
-    "Access-Control-Allow-Origin": "*",
-  });
-  res.end(body);
-};
+const app = express();
 
-const server = http.createServer((req, res) => {
-  const { pathname, query } = url.parse(req.url, true);
-  
-  // Log all incoming requests
-  console.log(`[${new Date().toISOString()}] ${req.method} ${pathname}${query ? '?' + new URLSearchParams(query).toString() : ''}`);
-
-  if (req.method === "GET" && pathname === "/health") {
-    return sendJson(res, 200, { ok: true });
-  }
-
-  if (req.method === "GET" && pathname === "/v1/vocabulary") {
-    console.log(`[${new Date().toISOString()}] Returning ${vocabularyData.length} vocabulary items`);
-    return sendJson(res, 200, vocabularyData);
-  }
-
-  if (req.method === "GET" && pathname === "/v1/puzzles") {
-    console.log(`[${new Date().toISOString()}] Returning ${sentencePuzzles.length} puzzle items`);
-    return sendJson(res, 200, sentencePuzzles);
-  }
-
-  if (req.method === "GET" && pathname === "/v1/categories") {
-    console.log(`[${new Date().toISOString()}] Returning ${categories.length} category items`);
-    return sendJson(res, 200, categories);
-  }
-
-  if (req.method === "GET" && pathname === "/v1/vocabulary/by-category") {
-    const category = (query.category || "").toString();
-    if (!category) {
-      return sendJson(res, 200, vocabularyData);
-    }
-    const filtered = vocabularyData.filter((w) => w.categoryId === category);
-    console.log(`[${new Date().toISOString()}] Filter by "${category}", returning ${filtered.length} items`);
-    return sendJson(res, 200, filtered);
-  }
-
-  console.log(`[${new Date().toISOString()}] 404 - Not Found: ${req.method} ${pathname}`);
-  sendJson(res, 404, { error: "Not Found" });
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl}`);
+  next();
 });
 
-server.listen(PORT, () => {
+app.get("/health", (req, res) => {
+  res.json({ ok: true });
+});
+
+app.get("/v1/vocabulary", (req, res) => {
+  console.log(`[${new Date().toISOString()}] Returning ${vocabularyData.length} vocabulary items`);
+  res.json(vocabularyData);
+});
+
+app.get("/v1/puzzles", (req, res) => {
+  console.log(`[${new Date().toISOString()}] Returning ${sentencePuzzles.length} puzzle items`);
+  res.json(sentencePuzzles);
+});
+
+app.get("/v1/categories", (req, res) => {
+  console.log(`[${new Date().toISOString()}] Returning ${categories.length} category items`);
+  res.json(categories);
+});
+
+app.get("/v1/vocabulary/by-category", (req, res) => {
+  const category = (req.query.category || "").toString();
+  if (!category) {
+    return res.json(vocabularyData);
+  }
+  const filtered = vocabularyData.filter((w) => w.categoryId === category);
+  console.log(`[${new Date().toISOString()}] Filter by "${category}", returning ${filtered.length} items`);
+  res.json(filtered);
+});
+
+app.use((req, res) => {
+  console.log(`[${new Date().toISOString()}] 404 - Not Found: ${req.method} ${req.originalUrl}`);
+  res.status(404).json({ error: "Not Found" });
+});
+
+app.listen(PORT, () => {
   console.log(`[backend] listening on http://localhost:${PORT}`);
 });
-
-

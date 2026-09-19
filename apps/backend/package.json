@@ -4,9 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-oauth2-jwt-bearer": "^1.10.0",
+    "pg": "^8.23.0"
   }
 }
-
-
-
