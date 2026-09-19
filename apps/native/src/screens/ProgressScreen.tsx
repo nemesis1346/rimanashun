@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
-import { loadVocabularyData, getCategoryStats } from "../utils/dataLoader";
+import {
+  loadVocabularyData,
+  loadCategoriesData,
+  getCategoryStats,
+} from "../utils/dataLoader";
 import { colors } from "../constants/colors";
 
 export default function ProgressScreen() {
@@ -27,7 +31,8 @@ export default function ProgressScreen() {
   const loadData = async () => {
     try {
       const words = await loadVocabularyData();
-      const stats = getCategoryStats(words);
+      const categories = await loadCategoriesData();
+      const stats = getCategoryStats(words, categories);
       setTotalWords(words.length);
       setCategoryStats(stats);
     } catch (error) {

@@ -1,5 +1,4 @@
-import { KichwaWord } from "../types";
-import { categories } from "@rimanashun/shared";
+import { KichwaWord, Category } from "../types";
 import axios from "axios";
 
 const API_BASE = process.env.EXPO_PUBLIC_API_URL || "http://localhost:4000";
@@ -11,6 +10,8 @@ const API_BASE = process.env.EXPO_PUBLIC_API_URL || "http://localhost:4000";
 const vocabularyData = require("../../../../packages/shared/data/vocabulary.json");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const sentencePuzzles = require("../../../../packages/shared/data/sentence_puzzles.json");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const categoriesData = require("../../../../packages/shared/data/categories.json");
 
 // Load the vocabulary data
 export const loadVocabularyData = async (): Promise<KichwaWord[]> => {
@@ -28,8 +29,24 @@ export const loadVocabularyData = async (): Promise<KichwaWord[]> => {
   }
 };
 
+// Load the categories data
+export const loadCategoriesData = async (): Promise<Category[]> => {
+  try {
+    const res = await axios.get(`${API_BASE}/v1/categories`, { withCredentials: false });
+    return res.data as Category[];
+  } catch (e) {
+    // network failure – fall back to bundled shared data
+  }
+  try {
+    return categoriesData as Category[];
+  } catch (error) {
+    console.error("Error loading categories data:", error);
+    return [];
+  }
+};
+
 // Check if a word matches any keyword in a category
-const wordMatchesCategory = (word: KichwaWord, category: any): boolean => {
+const wordMatchesCategory = (word: KichwaWord, category: Category): boolean => {
   return category.keywords.some((keyword: string) => {
     // Safety check: ensure word properties exist and are strings
     const kichwaText = word.kichwa?.toLowerCase() || "";
@@ -45,7 +62,8 @@ const wordMatchesCategory = (word: KichwaWord, category: any): boolean => {
 // Filter words by category
 export const getWordsByCategory = (
   words: KichwaWord[],
-  categoryId: string
+  categoryId: string,
+  categories: Category[]
 ): KichwaWord[] => {
   // Return all words if no category specified
   if (!categoryId) return words;
@@ -103,9 +121,9 @@ export const generateQuizQuestions = (
 };
 
 // Get category statistics
-export const getCategoryStats = (words: KichwaWord[]) => {
+export const getCategoryStats = (words: KichwaWord[], categories: Category[]) => {
   return categories.map((category) => {
-    const categoryWords = getWordsByCategory(words, category.id);
+    const categoryWords = getWordsByCategory(words, category.id, categories);
     return {
       ...category,
       wordCount: categoryWords.length,

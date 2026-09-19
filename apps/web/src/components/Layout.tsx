@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { colors } from "@/lib/colors";
+import { useLanguage, QuizMode, QUIZ_MODES } from "@/lib/language";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { mode, setMode } = useLanguage();
 
   const navItems = [
     { href: "/", label: "Home", icon: "🏠" },
@@ -120,22 +122,46 @@ export default function Layout({ children }: LayoutProps) {
               </p>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="mobile-menu"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              style={{
-                display: "none",
-                background: "none",
-                border: "none",
-                color: "white",
-                fontSize: "1.5rem",
-                cursor: "pointer",
-                padding: "0.5rem",
-              }}
-            >
-              ☰
-            </button>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              {/* Quiz Mode Selector: language + direction, 4 explicit modes */}
+              <select
+                value={mode}
+                onChange={(e) => setMode(e.target.value as QuizMode)}
+                style={{
+                  padding: "0.4rem 0.6rem",
+                  border: "1px solid rgba(255,255,255,0.4)",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  color: colors.textPrimary,
+                  backgroundColor: "white",
+                }}
+              >
+                {(Object.keys(QUIZ_MODES) as QuizMode[]).map((key) => (
+                  <option key={key} value={key}>
+                    {QUIZ_MODES[key].label}
+                  </option>
+                ))}
+              </select>
+
+              {/* Mobile Menu Button */}
+              <button
+                className="mobile-menu"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                style={{
+                  display: "none",
+                  background: "none",
+                  border: "none",
+                  color: "white",
+                  fontSize: "1.5rem",
+                  cursor: "pointer",
+                  padding: "0.5rem",
+                }}
+              >
+                ☰
+              </button>
+            </div>
           </div>
         </header>
 

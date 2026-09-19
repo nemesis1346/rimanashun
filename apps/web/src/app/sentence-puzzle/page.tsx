@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchPuzzles, SentencePuzzleItem } from "@/lib/data";
+import { useLanguage } from "@/lib/language";
 
 export default function SentencePuzzlePage() {
+  const { language } = useLanguage();
   const [puzzles, setPuzzles] = useState<SentencePuzzleItem[]>([]);
   const [currentPuzzleIndex, setCurrentPuzzleIndex] = useState(0);
   const [pieces, setPieces] = useState<string[]>([]);
@@ -16,14 +18,16 @@ export default function SentencePuzzlePage() {
 
   useEffect(() => {
     (async () => {
-      const data = await fetchPuzzles();
+      setIsLoading(true);
+      const data = await fetchPuzzles(language);
       setPuzzles(data);
+      setCurrentPuzzleIndex(0);
       if (data.length > 0) {
         loadPuzzle(data[0]);
       }
       setIsLoading(false);
     })();
-  }, []);
+  }, [language]);
 
   const loadPuzzle = (puzzle: SentencePuzzleItem) => {
     // Shuffle pieces with distractors
@@ -95,7 +99,7 @@ export default function SentencePuzzlePage() {
   if (isLoading) {
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="puzzle-loading" style={{ textAlign: "center", padding: "2rem" }}>
           <p style={{ color: colors.textSecondary }}>
             Loading sentence puzzles...
           </p>
@@ -107,7 +111,7 @@ export default function SentencePuzzlePage() {
   if (puzzles.length === 0) {
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="puzzle-empty" style={{ textAlign: "center", padding: "2rem" }}>
           <h2 style={{ color: colors.textPrimary, marginBottom: "1rem" }}>
             No sentence puzzles available
           </h2>
@@ -121,7 +125,7 @@ export default function SentencePuzzlePage() {
 
   return (
     <Layout>
-      <div>
+      <div key="puzzle-active">
         <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
           Sentence Puzzle
         </h2>
@@ -163,7 +167,7 @@ export default function SentencePuzzlePage() {
             </button>
           </div>
           <p style={{ color: colors.textSecondary, margin: 0 }}>
-            <strong>English:</strong> {currentPuzzle?.translation_en}
+            {currentPuzzle?.translation}
           </p>
         </div>
 

@@ -5,17 +5,20 @@ import { useSearchParams } from "next/navigation";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, KichwaWord, generateQuizQuestions } from "@/lib/data";
+import { useLanguage } from "@/lib/language";
+import { uiStrings } from "@rimanashun/shared";
 
 interface QuizQuestion {
   question: string;
   correctAnswer: string;
   options: string[];
-  type: "kichwa-to-spanish" | "spanish-to-kichwa";
+  type: "kichwa-to-base" | "base-to-kichwa";
 }
 
 function QuizPage() {
   const searchParams = useSearchParams();
   const categoryId = searchParams?.get("category") ?? null;
+  const { language, direction } = useLanguage();
 
   const [words, setWords] = useState<KichwaWord[]>([]);
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
@@ -28,7 +31,8 @@ function QuizPage() {
 
   useEffect(() => {
     (async () => {
-      const data = await fetchVocabulary();
+      setIsLoading(true);
+      const data = await fetchVocabulary(language);
       const filtered = categoryId
         ? data.filter((w) => w.categoryId === categoryId)
         : data;
@@ -36,13 +40,14 @@ function QuizPage() {
       generateQuiz(filtered);
       setIsLoading(false);
     })();
-  }, [categoryId]);
+  }, [categoryId, language, direction]);
 
   const generateQuiz = (vocabData: KichwaWord[]) => {
     if (vocabData.length === 0) return;
     const quizQuestions = generateQuizQuestions(
       vocabData,
-      Math.min(10, vocabData.length)
+      Math.min(10, vocabData.length),
+      direction
     );
     setQuestions(quizQuestions);
   };
@@ -86,7 +91,7 @@ function QuizPage() {
   if (isLoading) {
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="quiz-loading" style={{ textAlign: "center", padding: "2rem" }}>
           <p style={{ color: colors.textSecondary }}>Loading quiz...</p>
         </div>
       </Layout>
@@ -96,7 +101,7 @@ function QuizPage() {
   if (words.length === 0) {
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="quiz-empty" style={{ textAlign: "center", padding: "2rem" }}>
           <h2 style={{ color: colors.textPrimary, marginBottom: "1rem" }}>
             No vocabulary available
           </h2>
@@ -112,7 +117,7 @@ function QuizPage() {
     const percentage = Math.round((score / questions.length) * 100);
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="quiz-completed" style={{ textAlign: "center", padding: "2rem" }}>
           <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
             Quiz Complete! 🎉
           </h2>
@@ -123,7 +128,6 @@ function QuizPage() {
               border: `2px solid ${colors.border}`,
               borderRadius: "16px",
               padding: "2rem",
-              marginBottom: "2rem",
               maxWidth: "400px",
               margin: "0 auto 2rem auto",
             }}
@@ -168,7 +172,7 @@ function QuizPage() {
 
   return (
     <Layout>
-      <div>
+      <div key="quiz-active">
         <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
           Quiz {categoryId && `— ${categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}`}
         </h2>
@@ -232,9 +236,9 @@ function QuizPage() {
             {currentQuestion?.question}
           </h3>
           <p style={{ color: colors.textSecondary, margin: 0 }}>
-            {currentQuestion?.type === "kichwa-to-spanish"
-              ? "What does this mean in Spanish?"
-              : "What does this mean in Kichwa?"}
+            {direction === "kichwa-first"
+              ? uiStrings[language].quiz.promptKichwaToBase
+              : uiStrings[language].quiz.promptBaseToKichwa}
           </p>
         </div>
 
@@ -245,7 +249,9 @@ function QuizPage() {
               width: "100%",
               padding: "1rem",
               marginBottom: "0.75rem",
-              border: `2px solid ${colors.border}`,
+              borderWidth: "2px",
+              borderStyle: "solid",
+              borderColor: colors.border,
               borderRadius: "12px",
               backgroundColor: colors.cardBackground,
               color: colors.textPrimary,

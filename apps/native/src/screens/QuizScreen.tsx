@@ -16,6 +16,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../App";
 import {
   loadVocabularyData,
+  loadCategoriesData,
   getWordsByCategory,
   generateQuizQuestions,
 } from "../utils/dataLoader";
@@ -49,7 +50,7 @@ export default function QuizScreen() {
     try {
       const allWords = await loadVocabularyData();
       const filteredWords = category
-        ? getWordsByCategory(allWords, category)
+        ? getWordsByCategory(allWords, category, await loadCategoriesData())
         : allWords;
       const quizQuestions = generateQuizQuestions(filteredWords, 10);
       setQuestions(quizQuestions);

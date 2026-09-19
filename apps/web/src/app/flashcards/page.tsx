@@ -5,53 +5,65 @@ import { useSearchParams } from "next/navigation";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, KichwaWord } from "@/lib/data";
+import { useLanguage } from "@/lib/language";
+import { uiStrings } from "@rimanashun/shared";
 
 function FlashcardsPage() {
   const searchParams = useSearchParams();
   const categoryId = searchParams?.get("category") ?? null;
+  const { language, direction } = useLanguage();
 
   const [words, setWords] = useState<KichwaWord[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showTranslation, setShowTranslation] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const data = await fetchVocabulary();
+      setIsLoading(true);
+      const data = await fetchVocabulary(language);
       const filtered = categoryId
         ? data.filter((w) => w.categoryId === categoryId)
         : data;
       setWords(filtered);
       setIsLoading(false);
     })();
-  }, [categoryId]);
+  }, [categoryId, language]);
 
   const currentWord = words[currentIndex];
   const progress =
     words.length > 0 ? ((currentIndex + 1) / words.length) * 100 : 0;
 
+  // Front/back follow the selected direction: kichwa-first shows Kichwa
+  // first (unchanged from before); base-first shows the translation
+  // first instead, e.g. for "Español → Kichwa" mode.
+  const frontIsKichwa = direction === "kichwa-first";
+  const frontValue = frontIsKichwa ? currentWord?.kichwa : currentWord?.translation;
+  const backValue = frontIsKichwa ? currentWord?.translation : currentWord?.kichwa;
+  const revealingKichwa = isFlipped ? frontIsKichwa : !frontIsKichwa;
+
   const handleNext = () => {
     if (currentIndex < words.length - 1) {
       setCurrentIndex(currentIndex + 1);
-      setShowTranslation(false);
+      setIsFlipped(false);
     }
   };
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
-      setShowTranslation(false);
+      setIsFlipped(false);
     }
   };
 
   const handleFlip = () => {
-    setShowTranslation(!showTranslation);
+    setIsFlipped(!isFlipped);
   };
 
   if (isLoading) {
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="flashcards-loading" style={{ textAlign: "center", padding: "2rem" }}>
           <p style={{ color: colors.textSecondary }}>Loading flashcards...</p>
         </div>
       </Layout>
@@ -61,7 +73,7 @@ function FlashcardsPage() {
   if (words.length === 0) {
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="flashcards-empty" style={{ textAlign: "center", padding: "2rem" }}>
           <h2 style={{ color: colors.textPrimary, marginBottom: "1rem" }}>
             No vocabulary available
           </h2>
@@ -75,7 +87,7 @@ function FlashcardsPage() {
 
   return (
     <Layout>
-      <div>
+      <div key="flashcards-active">
         <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
           Flashcards {categoryId && `— ${categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}`}
         </h2>
@@ -134,7 +146,7 @@ function FlashcardsPage() {
               transformStyle: "preserve-3d",
               cursor: "pointer",
               transition: "transform 0.6s",
-              transform: showTranslation ? "rotateY(180deg)" : "rotateY(0deg)",
+              transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
             }}
           >
             {/* Front of card */}
@@ -164,10 +176,12 @@ function FlashcardsPage() {
                     fontWeight: "bold",
                   }}
                 >
-                  {currentWord?.kichwa}
+                  {frontValue}
                 </h3>
                 <p style={{ color: colors.textSecondary, margin: 0 }}>
-                  Click to reveal translation
+                  {revealingKichwa
+                    ? uiStrings[language].flashcards.clickToRevealKichwa
+                    : uiStrings[language].flashcards.clickToRevealBase}
                 </p>
               </div>
             </div>
@@ -201,7 +215,7 @@ function FlashcardsPage() {
                     fontWeight: "bold",
                   }}
                 >
-                  {currentWord?.spanish}
+                  {backValue}
                 </h3>
                 <p style={{ color: "white", opacity: 0.9, margin: 0 }}>
                   {currentWord?.categoryId && `Category: ${currentWord.categoryId}`}
@@ -253,7 +267,7 @@ function FlashcardsPage() {
               transition: "all 0.2s ease",
             }}
           >
-            {showTranslation ? "Show Kichwa" : "Show Translation"}
+            {revealingKichwa ? uiStrings[language].flashcards.showKichwa : uiStrings[language].flashcards.showBase}
           </button>
 
           <button

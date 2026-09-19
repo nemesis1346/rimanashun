@@ -7,7 +7,7 @@ progress moves from `localStorage` to a real per-user store once this lands.
 ## Status
 
 - [x] `apps/backend` migrated from plain `http` to Express (behavior-preserving)
-- [ ] Auth0 tenant / API / applications created
+- [x] Auth0 tenant / API / applications created
 - [ ] Backend: JWT verification + `/v1/progress` endpoints + Postgres store
 - [ ] Web: `@auth0/nextjs-auth0` integration
 - [ ] Native: `expo-auth-session` integration

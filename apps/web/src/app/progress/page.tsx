@@ -103,7 +103,7 @@ export default function ProgressPage() {
   if (isLoading) {
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="progress-loading" style={{ textAlign: "center", padding: "2rem" }}>
           <p style={{ color: colors.textSecondary }}>Loading progress...</p>
         </div>
       </Layout>
@@ -114,7 +114,7 @@ export default function ProgressPage() {
 
   return (
     <Layout>
-      <div>
+      <div key="progress-active">
         <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
           Progress
         </h2>

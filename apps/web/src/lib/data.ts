@@ -1,11 +1,13 @@
 // Data utilities for the web app
 // Unified: fetch from backend API (served by packages/backend)
 import axios from "axios";
+import { BaseLanguage } from "@/lib/language";
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export interface KichwaWord {
   kichwa: string;
   spanish: string;
+  translation: string;
   categoryId: string;
 }
 
@@ -14,29 +16,56 @@ export interface SentencePuzzleItem {
   language: string;
   type: string;
   surface: string;
-  translation_en: string;
+  translation: string;
   pieces: string[];
   correct_order: number[];
   distractors?: string[];
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  keywords: string[];
 }
 
 // Static fallbacks kept empty; use fetchers below at runtime
 export const vocabularyData: KichwaWord[] = [];
 export const sentencePuzzleData: SentencePuzzleItem[] = [];
 
-export async function fetchVocabulary(): Promise<KichwaWord[]> {
+export async function fetchVocabulary(lang: BaseLanguage = "es"): Promise<KichwaWord[]> {
   try {
-    const res = await axios.get(`${API_BASE}/v1/vocabulary`, { withCredentials: false });
+    const res = await axios.get(`${API_BASE}/v1/vocabulary`, {
+      params: { lang },
+      withCredentials: false,
+    });
     return res.data as KichwaWord[];
   } catch {
     return [];
   }
 }
 
-export async function fetchPuzzles(): Promise<SentencePuzzleItem[]> {
+export async function fetchPuzzles(lang: BaseLanguage = "en"): Promise<SentencePuzzleItem[]> {
   try {
-    const res = await axios.get(`${API_BASE}/v1/puzzles`, { withCredentials: false });
+    const res = await axios.get(`${API_BASE}/v1/puzzles`, {
+      params: { lang },
+      withCredentials: false,
+    });
     return res.data as SentencePuzzleItem[];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchCategories(lang: BaseLanguage = "en"): Promise<Category[]> {
+  try {
+    const res = await axios.get(`${API_BASE}/v1/categories`, {
+      params: { lang },
+      withCredentials: false,
+    });
+    return res.data as Category[];
   } catch {
     return [];
   }
@@ -61,19 +90,20 @@ export const getRandomWords = (
 
 export const generateQuizQuestions = (
   words: KichwaWord[],
-  count: number = 10
+  count: number = 10,
+  direction: "kichwa-first" | "base-first" = "kichwa-first"
 ) => {
   const selectedWords = getRandomWords(words, count);
+  const isKichwaToBase = direction === "kichwa-first";
 
   return selectedWords.map((word) => {
-    const isKichwaToSpanish = Math.random() > 0.5;
-    const question = isKichwaToSpanish ? word.kichwa : word.spanish;
-    const correctAnswer = isKichwaToSpanish ? word.spanish : word.kichwa;
+    const question = isKichwaToBase ? word.kichwa : word.translation;
+    const correctAnswer = isKichwaToBase ? word.translation : word.kichwa;
 
     // Get 3 random wrong answers
     const otherWords = words.filter((w) => w !== word);
     const wrongAnswers = getRandomWords(otherWords, 3).map((w) =>
-      isKichwaToSpanish ? w.spanish : w.kichwa
+      isKichwaToBase ? w.translation : w.kichwa
     );
 
     const options = [correctAnswer, ...wrongAnswers];
@@ -84,10 +114,9 @@ export const generateQuizQuestions = (
       question,
       correctAnswer,
       options: shuffledOptions,
-      type: isKichwaToSpanish
-        ? ("kichwa-to-spanish" as const)
-        : ("spanish-to-kichwa" as const),
+      type: isKichwaToBase
+        ? ("kichwa-to-base" as const)
+        : ("base-to-kichwa" as const),
     };
   });
 };
-

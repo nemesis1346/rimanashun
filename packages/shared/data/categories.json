@@ -180,6 +180,14 @@
       "yupaychini",
       "pay"
     ]
+  },
+  {
+    "id": "general",
+    "name": "General",
+    "description": "Everyday words and expressions that don't fit another category",
+    "icon": "apps",
+    "color": "#B2BABB",
+    "keywords": []
   }
 ]
 

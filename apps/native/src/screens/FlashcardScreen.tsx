@@ -14,7 +14,11 @@ import { useRoute, useNavigation } from "@react-navigation/native";
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../App";
-import { loadVocabularyData, getWordsByCategory } from "../utils/dataLoader";
+import {
+  loadVocabularyData,
+  loadCategoriesData,
+  getWordsByCategory,
+} from "../utils/dataLoader";
 import { KichwaWord, FlashcardData } from "../types";
 
 type FlashcardRouteProp = RouteProp<RootStackParamList, "Flashcard">;
@@ -43,7 +47,7 @@ export default function FlashcardScreen() {
     try {
       const allWords = await loadVocabularyData();
       const filteredWords = category
-        ? getWordsByCategory(allWords, category)
+        ? getWordsByCategory(allWords, category, await loadCategoriesData())
         : allWords;
 
       setWords(filteredWords);

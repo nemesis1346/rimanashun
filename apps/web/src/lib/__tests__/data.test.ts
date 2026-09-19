@@ -22,15 +22,18 @@ import {
 // ---------------------------------------------------------------------------
 // Shared fixture
 // ---------------------------------------------------------------------------
+// `translation` deliberately differs from `spanish` on every fixture so
+// tests genuinely verify generateQuizQuestions reads `translation` (the
+// language-appropriate field), not the always-Spanish `spanish` field.
 const words: KichwaWord[] = [
-  { kichwa: "allku", spanish: "perro", categoryId: "animals" },
-  { kichwa: "misi", spanish: "gato", categoryId: "animals" },
-  { kichwa: "tanta", spanish: "pan", categoryId: "food" },
-  { kichwa: "aycha", spanish: "carne", categoryId: "food" },
-  { kichwa: "uma", spanish: "cabeza", categoryId: "body" },
-  { kichwa: "ñawi", spanish: "ojo", categoryId: "body" },
-  { kichwa: "mama", spanish: "madre", categoryId: "family" },
-  { kichwa: "tayta", spanish: "padre", categoryId: "family" },
+  { kichwa: "allku", spanish: "perro", translation: "dog", categoryId: "animals" },
+  { kichwa: "misi", spanish: "gato", translation: "cat", categoryId: "animals" },
+  { kichwa: "tanta", spanish: "pan", translation: "bread", categoryId: "food" },
+  { kichwa: "aycha", spanish: "carne", translation: "meat", categoryId: "food" },
+  { kichwa: "uma", spanish: "cabeza", translation: "head", categoryId: "body" },
+  { kichwa: "ñawi", spanish: "ojo", translation: "eye", categoryId: "body" },
+  { kichwa: "mama", spanish: "madre", translation: "mother", categoryId: "family" },
+  { kichwa: "tayta", spanish: "padre", translation: "father", categoryId: "family" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -101,20 +104,32 @@ describe("generateQuizQuestions", () => {
     );
   });
 
-  it("type is either kichwa-to-spanish or spanish-to-kichwa", () => {
-    const result = generateQuizQuestions(words, 4);
-    const validTypes = ["kichwa-to-spanish", "spanish-to-kichwa"];
-    result.forEach((q) => expect(validTypes).toContain(q.type));
+  it("direction is fixed for the whole batch, not randomized per question", () => {
+    const kichwaFirst = generateQuizQuestions(words, 8, "kichwa-first");
+    expect(kichwaFirst.every((q) => q.type === "kichwa-to-base")).toBe(true);
+
+    const baseFirst = generateQuizQuestions(words, 8, "base-first");
+    expect(baseFirst.every((q) => q.type === "base-to-kichwa")).toBe(true);
   });
 
-  it("question text matches the direction indicated by type", () => {
-    const result = generateQuizQuestions(words, 8);
+  it("defaults to kichwa-first when no direction is given", () => {
+    const result = generateQuizQuestions(words, 4);
+    expect(result.every((q) => q.type === "kichwa-to-base")).toBe(true);
+  });
+
+  it("kichwa-first: question is the kichwa word, answer is the translation", () => {
+    const result = generateQuizQuestions(words, 8, "kichwa-first");
     result.forEach((q) => {
-      const sourceValues =
-        q.type === "kichwa-to-spanish"
-          ? words.map((w) => w.kichwa)
-          : words.map((w) => w.spanish);
-      expect(sourceValues).toContain(q.question);
+      expect(words.map((w) => w.kichwa)).toContain(q.question);
+      expect(words.map((w) => w.translation)).toContain(q.correctAnswer);
+    });
+  });
+
+  it("base-first: question is the translation, answer is the kichwa word", () => {
+    const result = generateQuizQuestions(words, 8, "base-first");
+    result.forEach((q) => {
+      expect(words.map((w) => w.translation)).toContain(q.question);
+      expect(words.map((w) => w.kichwa)).toContain(q.correctAnswer);
     });
   });
 });

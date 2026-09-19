@@ -16,9 +16,12 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import {
   RootStackParamList,
   TabParamList,
-} from "../../kichwa-learning-app/App";
-import { categories } from "../data/categories";
-import { loadVocabularyData, getCategoryStats } from "../utils/dataLoader";
+} from "../../App";
+import {
+  loadVocabularyData,
+  loadCategoriesData,
+  getCategoryStats,
+} from "../utils/dataLoader";
 import { colors } from "../constants/colors";
 
 type NavigationProp = CompositeNavigationProp<
@@ -38,7 +41,8 @@ export default function CategoriesScreen() {
   const loadCategoryStats = async () => {
     try {
       const words = await loadVocabularyData();
-      const stats = getCategoryStats(words);
+      const categories = await loadCategoriesData();
+      const stats = getCategoryStats(words, categories);
       setCategoryStats(stats);
     } catch (error) {
       console.error("Error loading category stats:", error);

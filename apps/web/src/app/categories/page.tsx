@@ -4,51 +4,54 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
-import { fetchVocabulary, KichwaWord } from "@/lib/data";
+import { fetchVocabulary, fetchCategories, Category as ApiCategory } from "@/lib/data";
+import { useLanguage } from "@/lib/language";
 
-interface Category {
-  id: string;
-  name: string;
-  description: string;
-  icon: string;
-  color: string;
+interface Category extends ApiCategory {
   wordCount: number;
 }
 
+// The backend stores Ionicons names (shared with native); web renders a
+// plain emoji instead of pulling in an icon library for this one page.
+const ICON_EMOJI: { [ioniconsName: string]: string } = {
+  calculator: "🔢",
+  "color-palette": "🎨",
+  people: "👪",
+  restaurant: "🍽️",
+  paw: "🐾",
+  body: "🧍",
+  leaf: "🌿",
+  home: "🏠",
+  walk: "🏃",
+  chatbubbles: "💬",
+  apps: "📚",
+};
+
 export default function CategoriesPage() {
-  const [words, setWords] = useState<KichwaWord[]>([]);
+  const { language } = useLanguage();
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const vocabData = await fetchVocabulary();
-        setWords(vocabData);
+        setIsLoading(true);
+        const [vocabData, categoryData] = await Promise.all([
+          fetchVocabulary(language),
+          fetchCategories(language),
+        ]);
 
-        // Create categories based on available data
-        const categoryMap = new Map<string, Category>();
-
+        const wordCounts = new Map<string, number>();
         vocabData.forEach((word) => {
-          const categoryId = word.categoryId;
-          const categoryName = categoryId.charAt(0).toUpperCase() + categoryId.slice(1);
-
-          if (!categoryMap.has(categoryId)) {
-            categoryMap.set(categoryId, {
-              id: categoryId,
-              name: categoryName,
-              description: `Words related to ${categoryName.toLowerCase()}`,
-              icon: getCategoryIcon(categoryId),
-              color: getCategoryColor(categoryId),
-              wordCount: 0,
-            });
-          }
-
-          const category = categoryMap.get(categoryId)!;
-          category.wordCount++;
+          wordCounts.set(word.categoryId, (wordCounts.get(word.categoryId) ?? 0) + 1);
         });
 
-        setCategories(Array.from(categoryMap.values()));
+        setCategories(
+          categoryData.map((category) => ({
+            ...category,
+            wordCount: wordCounts.get(category.id) ?? 0,
+          }))
+        );
         setIsLoading(false);
       } catch (error) {
         console.error("Error loading data:", error);
@@ -57,36 +60,12 @@ export default function CategoriesPage() {
     };
 
     loadData();
-  }, []);
-
-  const getCategoryIcon = (categoryId: string): string => {
-    const iconMap: { [key: string]: string } = {
-      pronouns: "👤",
-      nature: "🌿",
-      food: "🍽️",
-      home: "🏠",
-      verbs: "🏃",
-      general: "📚",
-    };
-    return iconMap[categoryId] || "📚";
-  };
-
-  const getCategoryColor = (categoryId: string): string => {
-    const colorMap: { [key: string]: string } = {
-      pronouns: colors.primary,
-      nature: "#10B981",
-      food: "#F59E0B",
-      home: "#8B5CF6",
-      verbs: "#EF4444",
-      general: colors.secondary,
-    };
-    return colorMap[categoryId] || colors.secondary;
-  };
+  }, [language]);
 
   if (isLoading) {
     return (
       <Layout>
-        <div style={{ textAlign: "center", padding: "2rem" }}>
+        <div key="categories-loading" style={{ textAlign: "center", padding: "2rem" }}>
           <p style={{ color: colors.textSecondary }}>Loading categories...</p>
         </div>
       </Layout>
@@ -95,7 +74,7 @@ export default function CategoriesPage() {
 
   return (
     <Layout>
-      <div>
+      <div key="categories-active">
         <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
           Categories
         </h2>
@@ -162,7 +141,9 @@ export default function CategoriesPage() {
                       marginRight: "1rem",
                     }}
                   >
-                    <span style={{ fontSize: "2rem" }}>{category.icon}</span>
+                    <span style={{ fontSize: "2rem" }}>
+                      {ICON_EMOJI[category.icon] ?? "📚"}
+                    </span>
                   </div>
                   <div>
                     <h3
