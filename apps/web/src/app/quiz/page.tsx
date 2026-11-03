@@ -6,6 +6,9 @@ import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, KichwaWord, generateQuizQuestions } from "@/lib/data";
 import { useLanguage } from "@/lib/language";
+import { useKeyboardShortcuts } from "@/lib/useKeyboardShortcuts";
+import { useSoundEffects } from "@/lib/sound";
+import KeyHint from "@/components/KeyHint";
 import { uiStrings } from "@rimanashun/shared";
 
 interface QuizQuestion {
@@ -19,6 +22,7 @@ function QuizPage() {
   const searchParams = useSearchParams();
   const categoryId = searchParams?.get("category") ?? null;
   const { language, direction } = useLanguage();
+  const { playCorrect, playWrong } = useSoundEffects();
 
   const [words, setWords] = useState<KichwaWord[]>([]);
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
@@ -66,6 +70,9 @@ function QuizPage() {
 
     if (answer === currentQuestion.correctAnswer) {
       setScore(score + 1);
+      playCorrect();
+    } else {
+      playWrong();
     }
   };
 
@@ -87,6 +94,20 @@ function QuizPage() {
     setQuizCompleted(false);
     generateQuiz(words);
   };
+
+  const optionShortcuts = Object.fromEntries(
+    (currentQuestion?.options ?? []).map((option, i) => [
+      String(i + 1),
+      () => handleAnswerSelect(option),
+    ])
+  );
+
+  useKeyboardShortcuts(
+    isLoading ? {}
+      : quizCompleted ? { Enter: handleRestart }
+      : isAnswered ? { Enter: handleNext }
+      : optionShortcuts
+  );
 
   if (isLoading) {
     return (
@@ -163,6 +184,7 @@ function QuizPage() {
               transition: "all 0.2s ease",
             }}
           >
+            <KeyHint label="↵" />
             Take Another Quiz
           </button>
         </div>
@@ -300,6 +322,7 @@ function QuizPage() {
                 disabled={isAnswered}
                 style={buttonStyle}
               >
+                <KeyHint label={String(index + 1)} />
                 {option}
               </button>
             );
@@ -359,6 +382,7 @@ function QuizPage() {
                 transition: "all 0.2s ease",
               }}
             >
+              <KeyHint label="↵" />
               {currentQuestionIndex < questions.length - 1
                 ? "Next Question"
                 : "Finish Quiz"}

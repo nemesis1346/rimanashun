@@ -17,7 +17,6 @@ interface ProgressStats {
 
 export default function ProgressPage() {
   const [words, setWords] = useState<KichwaWord[]>([]);
-  const [puzzles, setPuzzles] = useState<any[]>([]);
   const [stats, setStats] = useState<ProgressStats>({
     totalWords: 0,
     totalPuzzles: 0,
@@ -38,7 +37,6 @@ export default function ProgressPage() {
         ]);
 
         setWords(vocabData);
-        setPuzzles(puzzleData);
 
         // Calculate stats
         const uniqueCategories = new Set(
@@ -403,7 +401,7 @@ export default function ProgressPage() {
                     fontSize: "0.9rem",
                   }}
                 >
-                  "Ñuka yaku upini" - Correct!
+                  &quot;Ñuka yaku upini&quot; - Correct!
                 </p>
               </div>
             </div>

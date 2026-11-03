@@ -6,6 +6,8 @@ import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, KichwaWord } from "@/lib/data";
 import { useLanguage } from "@/lib/language";
+import { useKeyboardShortcuts } from "@/lib/useKeyboardShortcuts";
+import KeyHint from "@/components/KeyHint";
 import { uiStrings } from "@rimanashun/shared";
 
 function FlashcardsPage() {
@@ -59,6 +61,12 @@ function FlashcardsPage() {
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
   };
+
+  useKeyboardShortcuts(
+    isLoading || words.length === 0
+      ? {}
+      : { " ": handleFlip, ArrowLeft: handlePrevious, ArrowRight: handleNext }
+  );
 
   if (isLoading) {
     return (
@@ -250,7 +258,8 @@ function FlashcardsPage() {
               transition: "all 0.2s ease",
             }}
           >
-            ← Previous
+            <KeyHint label="←" />
+            Previous
           </button>
 
           <button
@@ -267,6 +276,7 @@ function FlashcardsPage() {
               transition: "all 0.2s ease",
             }}
           >
+            <KeyHint label="Space" />
             {revealingKichwa ? uiStrings[language].flashcards.showKichwa : uiStrings[language].flashcards.showBase}
           </button>
 
@@ -292,7 +302,8 @@ function FlashcardsPage() {
               transition: "all 0.2s ease",
             }}
           >
-            Next →
+            <KeyHint label="→" />
+            Next
           </button>
         </div>
 

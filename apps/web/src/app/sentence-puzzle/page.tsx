@@ -5,9 +5,13 @@ import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchPuzzles, SentencePuzzleItem } from "@/lib/data";
 import { useLanguage } from "@/lib/language";
+import { useKeyboardShortcuts } from "@/lib/useKeyboardShortcuts";
+import { useSoundEffects } from "@/lib/sound";
+import KeyHint from "@/components/KeyHint";
 
 export default function SentencePuzzlePage() {
   const { language } = useLanguage();
+  const { playCorrect, playWrong } = useSoundEffects();
   const [puzzles, setPuzzles] = useState<SentencePuzzleItem[]>([]);
   const [currentPuzzleIndex, setCurrentPuzzleIndex] = useState(0);
   const [pieces, setPieces] = useState<string[]>([]);
@@ -75,7 +79,9 @@ export default function SentencePuzzlePage() {
 
     if (isCorrect) {
       setFeedback("correct");
+      playCorrect();
     } else {
+      playWrong();
       setFeedback(`Incorrect. Correct sentence: ${currentPuzzle.surface}`);
     }
   };
@@ -95,6 +101,15 @@ export default function SentencePuzzlePage() {
       loadPuzzle(currentPuzzle);
     }
   };
+
+  const allFilled = slots.length > 0 && slots.every((slot) => slot !== null);
+
+  useKeyboardShortcuts(
+    isLoading || puzzles.length === 0 ? {}
+      : feedback ? { Enter: handleNextPuzzle }
+      : allFilled ? { Enter: handleCheckAnswer }
+      : {}
+  );
 
   if (isLoading) {
     return (
@@ -163,6 +178,7 @@ export default function SentencePuzzlePage() {
                 fontSize: "0.9rem",
               }}
             >
+              {feedback && <KeyHint label="↵" />}
               Next Puzzle
             </button>
           </div>
@@ -300,6 +316,7 @@ export default function SentencePuzzlePage() {
               transition: "all 0.2s ease",
             }}
           >
+            {!feedback && <KeyHint label="↵" />}
             Check Answer
           </button>
 
@@ -369,7 +386,7 @@ export default function SentencePuzzlePage() {
             <li>Click on a word to select it (it will be highlighted)</li>
             <li>Click on an empty slot to place the selected word</li>
             <li>Arrange all words in the correct order</li>
-            <li>Click "Check Answer" when you're ready</li>
+            <li>Click &quot;Check Answer&quot; when you&apos;re ready</li>
           </ul>
         </div>
       </div>

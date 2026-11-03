@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { colors } from "@/lib/colors";
 import { useLanguage, QuizMode, QUIZ_MODES } from "@/lib/language";
+import { useSoundEffects } from "@/lib/sound";
+import { uiStrings } from "@rimanashun/shared";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,7 +15,8 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { mode, setMode } = useLanguage();
+  const { mode, setMode, language } = useLanguage();
+  const { muted, toggleMuted } = useSoundEffects();
 
   const navItems = [
     { href: "/", label: "Home", icon: "🏠" },
@@ -38,7 +41,13 @@ export default function Layout({ children }: LayoutProps) {
             padding: 1rem !important;
           }
           .header-content {
-            padding: 1rem !important;
+            padding: 0 !important;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+          }
+          .header-actions {
+            gap: 0.25rem !important;
+            margin-left: auto;
           }
           .header-title {
             font-size: 1.25rem !important;
@@ -122,7 +131,10 @@ export default function Layout({ children }: LayoutProps) {
               </p>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+            <div
+              className="header-actions"
+              style={{ display: "flex", alignItems: "center", gap: "1rem" }}
+            >
               {/* Quiz Mode Selector: language + direction, 4 explicit modes */}
               <select
                 value={mode}
@@ -144,6 +156,24 @@ export default function Layout({ children }: LayoutProps) {
                   </option>
                 ))}
               </select>
+
+              {/* Sound effects on/off */}
+              <button
+                onClick={toggleMuted}
+                aria-pressed={muted}
+                aria-label={uiStrings[language].sound.mute}
+                title={uiStrings[language].sound.mute}
+                style={{
+                  background: "none",
+                  border: "none",
+                  color: "white",
+                  fontSize: "1.25rem",
+                  cursor: "pointer",
+                  padding: "0.25rem",
+                }}
+              >
+                {muted ? "🔇" : "🔊"}
+              </button>
 
               {/* Mobile Menu Button */}
               <button

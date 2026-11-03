@@ -40,3 +40,10 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Keyboard shortcut badges are no use without a keyboard */
+@media (hover: none) {
+  .key-hint {
+    display: none;
+  }
+}

@@ -163,7 +163,7 @@ export default function HomePage() {
               </span>
               <div>
                 <h4 style={{ margin: "0 0 0.5rem 0" }}>
-                  Complete today's quiz
+                  Complete today&apos;s quiz
                 </h4>
                 <p style={{ margin: 0, opacity: 0.9 }}>
                   Maintain your learning streak!

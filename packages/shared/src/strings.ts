@@ -14,6 +14,9 @@ export const uiStrings = {
       clickToRevealKichwa: "Toca para revelar el kichwa",
       clickToRevealBase: "Toca para revelar la traducción",
     },
+    sound: {
+      mute: "Silenciar sonidos",
+    },
   },
   en: {
     quiz: {
@@ -25,6 +28,9 @@ export const uiStrings = {
       showBase: "Show Translation",
       clickToRevealKichwa: "Click to reveal Kichwa",
       clickToRevealBase: "Click to reveal the translation",
+    },
+    sound: {
+      mute: "Mute sounds",
     },
   },
 } as const;
