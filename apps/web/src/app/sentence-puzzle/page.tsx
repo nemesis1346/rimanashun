@@ -1,22 +1,100 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion, MotionConfig } from "motion/react";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchPuzzles, SentencePuzzleItem } from "@/lib/data";
 import { useLanguage } from "@/lib/language";
 import { useKeyboardShortcuts } from "@/lib/useKeyboardShortcuts";
 import { useSoundEffects } from "@/lib/sound";
+import { markLearned } from "@/lib/progress";
 import KeyHint from "@/components/KeyHint";
+
+interface Piece {
+  id: string;
+  text: string;
+}
+
+const pieceStyle: React.CSSProperties = {
+  position: "relative",
+  padding: "0.75rem 1rem",
+  backgroundColor: colors.cardBackground,
+  color: colors.textPrimary,
+  border: `2px solid ${colors.border}`,
+  borderRadius: "8px",
+  fontSize: "1rem",
+  fontWeight: "500",
+  userSelect: "none",
+};
+
+// The slot under the pointer, if any. `point` is in page coordinates.
+function slotAtPoint(point: { x: number; y: number }): number | null {
+  const slot = document
+    .elementsFromPoint(point.x - window.scrollX, point.y - window.scrollY)
+    .find((el) => (el as HTMLElement).dataset.slot !== undefined);
+  return slot ? Number((slot as HTMLElement).dataset.slot) : null;
+}
+
+interface PuzzlePieceProps {
+  piece: Piece;
+  locked: boolean;
+  onTap: () => void;
+  onDragOverSlot: (slotIndex: number | null) => void;
+  onDrop: (slotIndex: number | null) => void;
+}
+
+// The same layoutId in the pool and in a slot is what makes a piece fly
+// between the two when it moves.
+function PuzzlePiece({ piece, locked, onTap, onDragOverSlot, onDrop }: PuzzlePieceProps) {
+  const wasDragged = useRef(false);
+
+  return (
+    <motion.button
+      layoutId={piece.id}
+      drag={!locked}
+      dragSnapToOrigin
+      dragMomentum={false}
+      whileDrag={{
+        scale: 1.08,
+        zIndex: 10,
+        cursor: "grabbing",
+        boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
+      }}
+      onPointerDown={() => {
+        wasDragged.current = false;
+      }}
+      onDragStart={() => {
+        wasDragged.current = true;
+      }}
+      onDrag={(_, info) => onDragOverSlot(slotAtPoint(info.point))}
+      onDragEnd={(_, info) => {
+        onDragOverSlot(null);
+        onDrop(slotAtPoint(info.point));
+      }}
+      onClick={() => {
+        // Releasing a drag also fires a click, which isn't a tap
+        if (!wasDragged.current) onTap();
+      }}
+      style={{
+        ...pieceStyle,
+        cursor: locked ? "default" : "grab",
+        touchAction: "none",
+      }}
+    >
+      {piece.text}
+    </motion.button>
+  );
+}
 
 export default function SentencePuzzlePage() {
   const { language } = useLanguage();
   const { playCorrect, playWrong } = useSoundEffects();
   const [puzzles, setPuzzles] = useState<SentencePuzzleItem[]>([]);
   const [currentPuzzleIndex, setCurrentPuzzleIndex] = useState(0);
-  const [pieces, setPieces] = useState<string[]>([]);
-  const [slots, setSlots] = useState<(string | null)[]>([]);
-  const [pickedPiece, setPickedPiece] = useState<string | null>(null);
+  const [pieces, setPieces] = useState<Piece[]>([]);
+  const [slots, setSlots] = useState<(string | null)[]>([]); // piece ids
+  const [hoveredSlot, setHoveredSlot] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<string>("");
   const [isLoading, setIsLoading] = useState(true);
 
@@ -36,35 +114,62 @@ export default function SentencePuzzlePage() {
   const loadPuzzle = (puzzle: SentencePuzzleItem) => {
     // Shuffle pieces with distractors
     const allPieces = [...puzzle.pieces, ...(puzzle.distractors || [])];
-    const shuffledPieces = allPieces.sort(() => 0.5 - Math.random());
+    const shuffledPieces = allPieces
+      .map((text, index) => ({ id: `${puzzle.id}-${index}`, text }))
+      .sort(() => 0.5 - Math.random());
 
     setPieces(shuffledPieces);
     setSlots(new Array(puzzle.pieces.length).fill(null));
-    setPickedPiece(null);
     setFeedback("");
   };
 
   const currentPuzzle = puzzles[currentPuzzleIndex];
 
-  const handlePieceClick = (piece: string) => {
-    if (pickedPiece === piece) {
-      setPickedPiece(null);
-    } else {
-      setPickedPiece(piece);
+  // Pass a slot to place the piece there (a piece dragged from another slot
+  // swaps with whatever is there), or null to send it back to the pool.
+  // Locked once the answer is checked, so the feedback can't go stale.
+  const movePiece = (pieceId: string, slotIndex: number | null) => {
+    if (feedback) return;
+
+    const newSlots = [...slots];
+    const fromSlot = newSlots.indexOf(pieceId);
+    if (fromSlot !== -1) {
+      newSlots[fromSlot] = slotIndex === null ? null : slots[slotIndex];
+    }
+    if (slotIndex !== null) {
+      newSlots[slotIndex] = pieceId;
+    }
+    setSlots(newSlots);
+  };
+
+  const handlePieceTap = (pieceId: string) => {
+    if (slots.includes(pieceId)) {
+      movePiece(pieceId, null);
+      return;
+    }
+    const firstEmpty = slots.indexOf(null);
+    if (firstEmpty !== -1) {
+      movePiece(pieceId, firstEmpty);
     }
   };
 
-  const handleSlotClick = (slotIndex: number) => {
-    if (!pickedPiece) return;
-
-    const newSlots = [...slots];
-    newSlots[slotIndex] = pickedPiece;
-    setSlots(newSlots);
-
-    // Remove piece from pool
-    setPieces(pieces.filter((p) => p !== pickedPiece));
-    setPickedPiece(null);
+  // Dropped outside any slot: a placed piece goes back to the pool, a piece
+  // from the pool just snaps back to where it was.
+  const handlePieceDrop = (pieceId: string, slotIndex: number | null) => {
+    if (slotIndex !== null || slots.includes(pieceId)) {
+      movePiece(pieceId, slotIndex);
+    }
   };
+
+  const renderPiece = (piece: Piece) => (
+    <PuzzlePiece
+      piece={piece}
+      locked={!!feedback}
+      onTap={() => handlePieceTap(piece.id)}
+      onDragOverSlot={setHoveredSlot}
+      onDrop={(slotIndex) => handlePieceDrop(piece.id, slotIndex)}
+    />
+  );
 
   const handleCheckAnswer = () => {
     if (slots.some((slot) => slot === null)) {
@@ -74,11 +179,13 @@ export default function SentencePuzzlePage() {
 
     const isCorrect = currentPuzzle.correct_order.every(
       (correctIndex, slotIndex) =>
-        slots[slotIndex] === currentPuzzle.pieces[correctIndex]
+        pieces.find((piece) => piece.id === slots[slotIndex])?.text ===
+        currentPuzzle.pieces[correctIndex]
     );
 
     if (isCorrect) {
       setFeedback("correct");
+      markLearned("learnedPuzzles", currentPuzzle.id);
       playCorrect();
     } else {
       playWrong();
@@ -140,6 +247,10 @@ export default function SentencePuzzlePage() {
 
   return (
     <Layout>
+      <MotionConfig
+        reducedMotion="user"
+        transition={{ type: "spring", stiffness: 500, damping: 35 }}
+      >
       <div key="puzzle-active">
         <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
           Sentence Puzzle
@@ -200,42 +311,43 @@ export default function SentencePuzzlePage() {
               marginBottom: "1rem",
             }}
           >
-            {slots.map((slot, index) => (
-              <div
-                key={index}
-                onClick={() => handleSlotClick(index)}
-                style={{
-                  minWidth: "120px",
-                  height: "60px",
-                  border: `2px dashed ${colors.border}`,
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: pickedPiece ? "pointer" : "default",
-                  backgroundColor: slot ? colors.cardBackground : "transparent",
-                  transition: "all 0.2s ease",
-                }}
-              >
-                {slot ? (
-                  <span
-                    style={{
-                      color: colors.textPrimary,
-                      fontWeight: "500",
-                      fontSize: "1.1rem",
-                    }}
-                  >
-                    {slot}
-                  </span>
-                ) : (
-                  <span
-                    style={{ color: colors.textSecondary, fontSize: "0.9rem" }}
-                  >
-                    Slot {index + 1}
-                  </span>
-                )}
-              </div>
-            ))}
+            {slots.map((slot, index) => {
+              const piece = pieces.find((p) => p.id === slot);
+              return (
+                <div
+                  key={index}
+                  data-slot={index}
+                  style={{
+                    minWidth: "120px",
+                    height: "60px",
+                    border: `2px dashed ${
+                      hoveredSlot === index ? colors.primary : colors.border
+                    }`,
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor:
+                      hoveredSlot === index
+                        ? colors.border
+                        : slot
+                        ? colors.cardBackground
+                        : "transparent",
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  {piece ? (
+                    renderPiece(piece)
+                  ) : (
+                    <span
+                      style={{ color: colors.textSecondary, fontSize: "0.9rem" }}
+                    >
+                      Slot {index + 1}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -251,38 +363,24 @@ export default function SentencePuzzlePage() {
               flexWrap: "wrap",
             }}
           >
-            {pieces.map((piece, index) => (
-              <button
-                key={index}
-                onClick={() => handlePieceClick(piece)}
-                style={{
-                  padding: "0.75rem 1rem",
-                  backgroundColor:
-                    pickedPiece === piece
-                      ? colors.primary
-                      : colors.cardBackground,
-                  color: pickedPiece === piece ? "white" : colors.textPrimary,
-                  border: `2px solid ${
-                    pickedPiece === piece ? colors.primary : colors.border
-                  }`,
-                  borderRadius: "8px",
-                  cursor: "pointer",
-                  fontSize: "1rem",
-                  fontWeight: "500",
-                  transition: "all 0.2s ease",
-                  transform:
-                    pickedPiece === piece
-                      ? "translateY(-2px)"
-                      : "translateY(0)",
-                  boxShadow:
-                    pickedPiece === piece
-                      ? "0 4px 8px rgba(0,0,0,0.1)"
-                      : "none",
-                }}
-              >
-                {piece}
-              </button>
-            ))}
+            {pieces.map((piece) =>
+              slots.includes(piece.id) ? (
+                // Empty outline keeps the other words from shifting
+                <span
+                  key={piece.id}
+                  aria-hidden="true"
+                  style={{
+                    ...pieceStyle,
+                    backgroundColor: colors.border,
+                    color: "transparent",
+                  }}
+                >
+                  {piece.text}
+                </span>
+              ) : (
+                <div key={piece.id}>{renderPiece(piece)}</div>
+              )
+            )}
           </div>
         </div>
 
@@ -383,13 +481,14 @@ export default function SentencePuzzlePage() {
               paddingLeft: "1.5rem",
             }}
           >
-            <li>Click on a word to select it (it will be highlighted)</li>
-            <li>Click on an empty slot to place the selected word</li>
-            <li>Arrange all words in the correct order</li>
+            <li>Click a word to place it in the next empty slot, or drag it into any slot</li>
+            <li>Click a placed word to send it back, or drag it to another slot</li>
+            <li>Arrange the words in the correct order</li>
             <li>Click &quot;Check Answer&quot; when you&apos;re ready</li>
           </ul>
         </div>
       </div>
+      </MotionConfig>
     </Layout>
   );
 }

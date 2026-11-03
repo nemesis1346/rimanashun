@@ -60,6 +60,7 @@ Postgres is populated from `packages/shared/data/*.json` via `apps/backend/db/se
 
 Express app, `pg`-backed. Endpoints:
 - `GET /health`
+- `GET /v1/me` — protected (Auth0 bearer token, verified in `src/auth.js`); returns `{ sub }` from the token. All other routes are public. Returns 503 if `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` aren't set.
 - `GET /v1/vocabulary?lang=es|en` — all words (each row is one *sense* of a Kichwa word — the same spelling can legitimately appear more than once with a different meaning/category, e.g. `chaki` → "pie" in body, "patas" in animals). Response includes both `spanish` (always literal Spanish — native depends on this and never passes `lang`) and `translation` (whichever language was requested; falls back to Spanish for the 2 words with no English gloss). Default `lang=es` if omitted, matching the pre-selector behavior exactly.
 - `GET /v1/vocabulary/by-category?category=<id>&lang=es|en` — filtered by category
 - `GET /v1/puzzles?lang=es|en` — `translation` field follows `lang`. Default `lang=en` if omitted (native doesn't call this endpoint at all — it imports `sentencePuzzles` directly from `@rimanashun/shared` instead, so it's unaffected either way).
@@ -136,14 +137,14 @@ Vitest is set up in `apps/web`. 14 unit tests covering the three pure utility fu
 
 ### Not yet covered
 
-- **Backend endpoints** — integration tests for `/v1/vocabulary`, `/v1/categories`, `/v1/puzzles`, `/v1/vocabulary/by-category`
+- **Backend content endpoints** — integration tests for `/v1/vocabulary`, `/v1/categories`, `/v1/puzzles`, `/v1/vocabulary/by-category` (auth is covered in `apps/backend/src/__tests__/auth.test.js`, run with `node --test`, using local keys instead of Auth0)
 - **Native app** — `dataLoader.ts` utilities (`loadVocabularyData`, `getWordsByCategory`, `getCategoryStats`)
 - **Web pages** — component rendering tests (React Testing Library)
 
 ## Key Conventions
 
 - **TypeScript** across all packages; native still uses `require()` for JSON imports due to Metro bundler constraints
-- **`.env` files**: `apps/backend/.env` (git-ignored, see `.env.example`) holds `DATABASE_URL` for local Postgres. Web/native still have none — API URLs are configured via environment variables at runtime.
+- **`.env` files**: `apps/backend/.env` (git-ignored, see `.env.example`) holds `DATABASE_URL` for local Postgres and `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` for token verification. Web/native still have none — API URLs are configured via environment variables at runtime.
 - The shared package does **not** need to be built during development; both apps consume its TypeScript source directly
 - Native data loading has a two-tier fallback: network → bundled JSON (avoids hard failure in offline/dev scenarios)
 - **Web pages with multiple conditional-return branches** (`isLoading` / empty-state / main content, e.g. `quiz`, `flashcards`, `sentence-puzzle`, `categories`, `progress`) give each branch's root `<div>` a distinct `key` (e.g. `key="quiz-loading"`). Without one, React reconciles unrelated branches as "the same element" by tree position alone, which previously caused real "removing a style property during rerender" warnings when one branch's inline style used a shorthand CSS property (e.g. `margin`) and another used the longhand (e.g. `marginBottom`) at the same position. Keep this in mind when adding a new branch to these pages.

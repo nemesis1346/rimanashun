@@ -17,6 +17,10 @@ export const uiStrings = {
     sound: {
       mute: "Silenciar sonidos",
     },
+    auth: {
+      logIn: "Iniciar sesión",
+      logOut: "Cerrar sesión",
+    },
   },
   en: {
     quiz: {
@@ -31,6 +35,10 @@ export const uiStrings = {
     },
     sound: {
       mute: "Mute sounds",
+    },
+    auth: {
+      logIn: "Log in",
+      logOut: "Log out",
     },
   },
 } as const;

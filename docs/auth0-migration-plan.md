@@ -8,7 +8,8 @@ progress moves from `localStorage` to a real per-user store once this lands.
 
 - [x] `apps/backend` migrated from plain `http` to Express (behavior-preserving)
 - [x] Auth0 tenant / API / applications created
-- [ ] Backend: JWT verification + `/v1/progress` endpoints + Postgres store
+- [x] Backend: JWT verification + protected `GET /v1/me`
+- [ ] Backend: `/v1/progress` endpoints + Postgres store (on hold; progress stays in `localStorage` for now)
 - [ ] Web: `@auth0/nextjs-auth0` integration
 - [ ] Native: `expo-auth-session` integration
 - [ ] Deployment: Heroku env vars + Postgres addon + Auth0 allowed URLs
@@ -46,6 +47,11 @@ unauthenticated.
 
 ## 3. Backend: protected progress API
 
+Token verification is done: `apps/backend/src/auth.js` wraps
+`express-oauth2-jwt-bearer`, and `GET /v1/me` is the first protected route.
+If `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` are unset, protected routes return 503 and
+public routes keep working. The progress bullets below are on hold.
+
 - Add `express-oauth2-jwt-bearer` middleware (`issuerBaseURL`, `audience`)
   on new routes only — existing content routes stay public.
 - New routes: `GET /v1/progress`, `PUT /v1/progress`. User identity always
@@ -78,8 +84,8 @@ unauthenticated.
 
 ## 6. Testing & deployment
 
-- Unit-test the Express auth middleware (missing/invalid token → 401)
-  alongside the existing Vitest suite.
+- Express auth middleware tests live in `apps/backend/src/__tests__/auth.test.js`
+  (missing/invalid token → 401), run with `node --test`.
 - On Heroku: set `AUTH0_DOMAIN`, `AUTH0_AUDIENCE`, `AUTH0_CLIENT_SECRET`,
   attach the Postgres addon, and update the Auth0 application's allowed
   URLs to include the Heroku domain.

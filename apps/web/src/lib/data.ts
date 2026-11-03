@@ -72,6 +72,12 @@ export async function fetchCategories(lang: BaseLanguage = "en"): Promise<Catego
 }
 
 // Utility functions
+
+// Words have no id in the API, and the same Kichwa spelling can carry several
+// senses, so a word is identified by its spelling plus its Spanish meaning.
+export const getWordKey = (word: KichwaWord): string =>
+  `${word.kichwa}|${word.spanish}`;
+
 export const getWordsByCategory = (
   words: KichwaWord[],
   categoryId?: string
@@ -111,6 +117,7 @@ export const generateQuizQuestions = (
     const shuffledOptions = options.sort(() => 0.5 - Math.random());
 
     return {
+      wordKey: getWordKey(word),
       question,
       correctAnswer,
       options: shuffledOptions,

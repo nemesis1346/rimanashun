@@ -8,10 +8,12 @@ import { fetchVocabulary, KichwaWord, generateQuizQuestions } from "@/lib/data";
 import { useLanguage } from "@/lib/language";
 import { useKeyboardShortcuts } from "@/lib/useKeyboardShortcuts";
 import { useSoundEffects } from "@/lib/sound";
+import { markLearned } from "@/lib/progress";
 import KeyHint from "@/components/KeyHint";
 import { uiStrings } from "@rimanashun/shared";
 
 interface QuizQuestion {
+  wordKey: string;
   question: string;
   correctAnswer: string;
   options: string[];
@@ -70,6 +72,7 @@ function QuizPage() {
 
     if (answer === currentQuestion.correctAnswer) {
       setScore(score + 1);
+      markLearned("learnedWords", currentQuestion.wordKey);
       playCorrect();
     } else {
       playWrong();

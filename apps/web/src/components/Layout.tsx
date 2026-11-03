@@ -6,6 +6,7 @@ import { useState } from "react";
 import { colors } from "@/lib/colors";
 import { useLanguage, QuizMode, QUIZ_MODES } from "@/lib/language";
 import { useSoundEffects } from "@/lib/sound";
+import AuthControls from "@/components/AuthControls";
 import { uiStrings } from "@rimanashun/shared";
 
 interface LayoutProps {
@@ -48,6 +49,9 @@ export default function Layout({ children }: LayoutProps) {
           .header-actions {
             gap: 0.25rem !important;
             margin-left: auto;
+          }
+          .header-user {
+            display: none;
           }
           .header-title {
             font-size: 1.25rem !important;
@@ -174,6 +178,8 @@ export default function Layout({ children }: LayoutProps) {
               >
                 {muted ? "🔇" : "🔊"}
               </button>
+
+              <AuthControls />
 
               {/* Mobile Menu Button */}
               <button

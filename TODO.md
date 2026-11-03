@@ -3,7 +3,7 @@
 ## Next Session
 
 ### Priority 1
-- [ ] Fix progress tracking — completing a puzzle still shows 0/30 in the progress tab. Investigate how progress is stored (currently no persistence), decide on approach (localStorage vs backend), and implement so puzzle completions are reflected
+- [x] Fix progress tracking — correct puzzle and quiz answers are now saved to localStorage (`apps/web/src/lib/progress.ts`) and shown in the progress tab. Moves to the backend with the Auth0 work (`docs/auth0-migration-plan.md`)
 
 ### Priority 2
 - [ ] Check if vocabulary `categoryId` changes are reflected in the native app

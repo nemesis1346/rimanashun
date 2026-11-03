@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, fetchPuzzles, KichwaWord } from "@/lib/data";
+import { getLearned } from "@/lib/progress";
 
 interface ProgressStats {
   totalWords: number;
@@ -43,23 +44,6 @@ export default function ProgressPage() {
           vocabData.map((word) => word.categoryId || "general")
         );
 
-        // Read learned progress from localStorage if present
-        const getLearnedCount = (key: string) => {
-          try {
-            const raw = localStorage.getItem(key);
-            if (!raw) return 0;
-            const parsed = JSON.parse(raw);
-            if (Array.isArray(parsed)) return parsed.length;
-            const n = parseInt(String(parsed), 10);
-            return Number.isFinite(n) ? n : 0;
-          } catch {
-            return 0;
-          }
-        };
-
-        const learnedWords = getLearnedCount("learnedWords");
-        const learnedPuzzles = getLearnedCount("learnedPuzzles");
-
         // Mock remaining stats (e.g. streak)
         const mockStats: ProgressStats = {
           totalWords: vocabData.length,
@@ -67,8 +51,8 @@ export default function ProgressPage() {
           categoriesStudied: uniqueCategories.size,
           studyStreak: 7, // Mock streak
           lastStudyDate: new Date().toLocaleDateString(),
-          learnedWords,
-          learnedPuzzles,
+          learnedWords: getLearned("learnedWords").length,
+          learnedPuzzles: getLearned("learnedPuzzles").length,
         };
 
         setStats(mockStats);
