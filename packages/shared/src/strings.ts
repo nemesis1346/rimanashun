@@ -17,6 +17,27 @@ export const uiStrings = {
     sound: {
       mute: "Silenciar sonidos",
     },
+    puzzle: {
+      title: "Rompecabezas de oraciones",
+      loading: "Cargando rompecabezas...",
+      emptyTitle: "No hay rompecabezas disponibles",
+      emptyBody: "Agrega datos de rompecabezas para comenzar.",
+      continue: "Continuar",
+      instruction: "Ordena las palabras para formar la oración correcta:",
+      availableWords: "Palabras disponibles:",
+      check: "Comprobar",
+      reset: "Reiniciar",
+      correct: "¡Correcto! 🎉",
+      incomplete: "Completa todos los espacios antes de comprobar tu respuesta.",
+      incorrect: (sentence: string) => `Incorrecto. La oración correcta es: ${sentence}`,
+      howToPlay: "🧩 Cómo jugar",
+      tips: [
+        "Toca una palabra para colocarla en el siguiente espacio vacío, o arrástrala a cualquier espacio",
+        "Toca una palabra colocada para devolverla, o arrástrala a otro espacio",
+        "Ordena las palabras en el orden correcto",
+        "Toca «Comprobar» cuando estés listo",
+      ],
+    },
     path: {
       start: "EMPEZAR",
       practice: "PRACTICAR",
@@ -28,6 +49,12 @@ export const uiStrings = {
       puzzleHint: "Ordena 3 oraciones.",
       completedHint: "¡Completado! Practica otra vez.",
       backToPath: "Continuar",
+      lessonComplete: "¡Lección completada!",
+      lessonFailed: "¡Casi lo logras!",
+      needToPass: (needed: number, total: number) =>
+        `Necesitas ${needed} de ${total} correctas para completar esta lección.`,
+      scoreLine: (score: number, total: number) => `${score} de ${total} correctas`,
+      retry: "Intentar otra vez",
     },
     auth: {
       logIn: "Iniciar sesión",
@@ -48,6 +75,27 @@ export const uiStrings = {
     sound: {
       mute: "Mute sounds",
     },
+    puzzle: {
+      title: "Sentence Puzzle",
+      loading: "Loading sentence puzzles...",
+      emptyTitle: "No sentence puzzles available",
+      emptyBody: "Please add sentence puzzle data to get started.",
+      continue: "Continue",
+      instruction: "Arrange the words to form the correct sentence:",
+      availableWords: "Available words:",
+      check: "Check Answer",
+      reset: "Reset",
+      correct: "Correct! 🎉",
+      incomplete: "Please fill all slots before checking your answer.",
+      incorrect: (sentence: string) => `Incorrect. Correct sentence: ${sentence}`,
+      howToPlay: "🧩 How to Play",
+      tips: [
+        "Click a word to place it in the next empty slot, or drag it into any slot",
+        "Click a placed word to send it back, or drag it to another slot",
+        "Arrange the words in the correct order",
+        "Click \"Check Answer\" when you're ready",
+      ],
+    },
     path: {
       start: "START",
       practice: "PRACTICE",
@@ -59,6 +107,12 @@ export const uiStrings = {
       puzzleHint: "Arrange 3 sentences.",
       completedHint: "Completed! Practice again.",
       backToPath: "Continue",
+      lessonComplete: "Lesson complete!",
+      lessonFailed: "Almost there!",
+      needToPass: (needed: number, total: number) =>
+        `You need ${needed} of ${total} correct to complete this lesson.`,
+      scoreLine: (score: number, total: number) => `${score} of ${total} correct`,
+      retry: "Try again",
     },
     auth: {
       logIn: "Log in",

@@ -11,6 +11,7 @@ import { useSoundEffects } from "@/lib/sound";
 import { markLearned, getLearned } from "@/lib/progress";
 import { hasPassed } from "@/lib/path";
 import KeyHint from "@/components/KeyHint";
+import LessonResult from "@/components/LessonResult";
 import { uiStrings } from "@rimanashun/shared";
 
 interface QuizQuestion {
@@ -120,7 +121,8 @@ function QuizPage() {
 
   useKeyboardShortcuts(
     isLoading ? {}
-      : quizCompleted ? { Enter: lessonId ? () => router.push("/") : handleRestart }
+      : quizCompleted
+        ? { Enter: lessonId && hasPassed(score, questions.length) ? () => router.push("/") : handleRestart }
       : isAnswered ? { Enter: handleNext }
       : optionShortcuts
   );
@@ -145,6 +147,22 @@ function QuizPage() {
           <p style={{ color: colors.textSecondary }}>
             Please add vocabulary data to get started.
           </p>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (quizCompleted && lessonId) {
+    return (
+      <Layout>
+        <div key="quiz-lesson-done">
+          <LessonResult
+            passed={hasPassed(score, questions.length)}
+            score={score}
+            total={questions.length}
+            onContinue={() => router.push("/")}
+            onRetry={handleRestart}
+          />
         </div>
       </Layout>
     );
@@ -187,7 +205,7 @@ function QuizPage() {
           </div>
 
           <button
-            onClick={lessonId ? () => router.push("/") : handleRestart}
+            onClick={handleRestart}
             style={{
               padding: "1rem 2rem",
               backgroundColor: colors.primary,
@@ -201,7 +219,7 @@ function QuizPage() {
             }}
           >
             <KeyHint label="↵" />
-            {lessonId ? uiStrings[language].path.backToPath : "Take Another Quiz"}
+            Take Another Quiz
           </button>
         </div>
       </Layout>

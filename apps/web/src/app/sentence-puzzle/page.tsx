@@ -13,6 +13,7 @@ import { markLearned } from "@/lib/progress";
 import { hasPassed, puzzlesForSlot } from "@/lib/path";
 import { uiStrings } from "@rimanashun/shared";
 import KeyHint from "@/components/KeyHint";
+import LessonResult from "@/components/LessonResult";
 
 interface Piece {
   id: string;
@@ -90,6 +91,9 @@ function PuzzlePiece({ piece, locked, onTap, onDragOverSlot, onDrop }: PuzzlePie
   );
 }
 
+// How long the "Correct!" message stays before the next puzzle loads.
+const AUTO_ADVANCE_MS = 1200;
+
 function SentencePuzzlePage() {
   const { language } = useLanguage();
   const router = useRouter();
@@ -108,7 +112,11 @@ function SentencePuzzlePage() {
   const [pieces, setPieces] = useState<Piece[]>([]);
   const [slots, setSlots] = useState<(string | null)[]>([]); // piece ids
   const [hoveredSlot, setHoveredSlot] = useState<number | null>(null);
-  const [feedback, setFeedback] = useState<string>("");
+  // "incomplete" is only a hint (keep placing words); "correct"/"incorrect"
+  // mean the answer was checked, which locks the pieces until the next puzzle.
+  const [feedback, setFeedback] = useState<"" | "incomplete" | "correct" | "incorrect">("");
+  const checked = feedback === "correct" || feedback === "incorrect";
+  const t = uiStrings[language].puzzle;
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -145,7 +153,7 @@ function SentencePuzzlePage() {
   // swaps with whatever is there), or null to send it back to the pool.
   // Locked once the answer is checked, so the feedback can't go stale.
   const movePiece = (pieceId: string, slotIndex: number | null) => {
-    if (feedback) return;
+    if (checked) return;
 
     const newSlots = [...slots];
     const fromSlot = newSlots.indexOf(pieceId);
@@ -156,6 +164,7 @@ function SentencePuzzlePage() {
       newSlots[slotIndex] = pieceId;
     }
     setSlots(newSlots);
+    if (feedback === "incomplete") setFeedback("");
   };
 
   const handlePieceTap = (pieceId: string) => {
@@ -180,7 +189,7 @@ function SentencePuzzlePage() {
   const renderPiece = (piece: Piece) => (
     <PuzzlePiece
       piece={piece}
-      locked={!!feedback}
+      locked={checked}
       onTap={() => handlePieceTap(piece.id)}
       onDragOverSlot={setHoveredSlot}
       onDrop={(slotIndex) => handlePieceDrop(piece.id, slotIndex)}
@@ -188,8 +197,9 @@ function SentencePuzzlePage() {
   );
 
   const handleCheckAnswer = () => {
+    if (checked) return;
     if (slots.some((slot) => slot === null)) {
-      setFeedback("Please fill all slots before checking your answer.");
+      setFeedback("incomplete");
       return;
     }
 
@@ -206,7 +216,7 @@ function SentencePuzzlePage() {
       playCorrect();
     } else {
       playWrong();
-      setFeedback(`Incorrect. Correct sentence: ${currentPuzzle.surface}`);
+      setFeedback("incorrect");
     }
   };
 
@@ -232,20 +242,41 @@ function SentencePuzzlePage() {
     }
   };
 
+  // After a correct answer, move on by itself once the success message has
+  // been seen. Wrong answers wait for "Continue" so the correct sentence can
+  // be read. The ref always holds the latest handleNextPuzzle, so the timer
+  // sees up-to-date state (e.g. the puzzle just solved) when it fires.
+  const nextPuzzleRef = useRef(handleNextPuzzle);
+  useEffect(() => {
+    nextPuzzleRef.current = handleNextPuzzle;
+  });
+  useEffect(() => {
+    if (feedback !== "correct") return;
+    const timer = setTimeout(() => nextPuzzleRef.current(), AUTO_ADVANCE_MS);
+    return () => clearTimeout(timer);
+  }, [feedback, currentPuzzleIndex]);
+
   const handleReset = () => {
-    if (currentPuzzle) {
+    if (currentPuzzle && !checked) {
       loadPuzzle(currentPuzzle);
     }
   };
 
   const allFilled = slots.length > 0 && slots.every((slot) => slot !== null);
 
+  const lessonPassed = hasPassed(solved.size, puzzles.length);
   const backToPath = () => router.push("/");
+  const retryLesson = () => {
+    setSolved(new Set());
+    setCurrentPuzzleIndex(0);
+    loadPuzzle(puzzles[0]);
+    setLessonDone(false);
+  };
 
   useKeyboardShortcuts(
     isLoading || puzzles.length === 0 ? {}
-      : lessonDone ? { Enter: backToPath }
-      : feedback ? { Enter: handleNextPuzzle }
+      : lessonDone ? { Enter: lessonPassed ? backToPath : retryLesson }
+      : checked ? { Enter: handleNextPuzzle }
       : allFilled ? { Enter: handleCheckAnswer }
       : {}
   );
@@ -255,7 +286,7 @@ function SentencePuzzlePage() {
       <Layout>
         <div key="puzzle-loading" style={{ textAlign: "center", padding: "2rem" }}>
           <p style={{ color: colors.textSecondary }}>
-            Loading sentence puzzles...
+            {t.loading}
           </p>
         </div>
       </Layout>
@@ -267,10 +298,10 @@ function SentencePuzzlePage() {
       <Layout>
         <div key="puzzle-empty" style={{ textAlign: "center", padding: "2rem" }}>
           <h2 style={{ color: colors.textPrimary, marginBottom: "1rem" }}>
-            No sentence puzzles available
+            {t.emptyTitle}
           </h2>
           <p style={{ color: colors.textSecondary }}>
-            Please add sentence puzzle data to get started.
+            {t.emptyBody}
           </p>
         </div>
       </Layout>
@@ -278,30 +309,16 @@ function SentencePuzzlePage() {
   }
 
   if (lessonDone) {
-    const passed = hasPassed(solved.size, puzzles.length);
     return (
       <Layout>
-        <div key="puzzle-lesson-done" style={{ textAlign: "center", padding: "2rem" }}>
-          <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{passed ? "🏆" : "📚"}</div>
-          <h2 style={{ color: colors.textPrimary, marginBottom: "1rem" }}>
-            {solved.size}/{puzzles.length}
-          </h2>
-          <button
-            onClick={backToPath}
-            style={{
-              padding: "1rem 2rem",
-              backgroundColor: colors.primary,
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              cursor: "pointer",
-              fontSize: "1.1rem",
-              fontWeight: "500",
-            }}
-          >
-            <KeyHint label="↵" />
-            {uiStrings[language].path.backToPath}
-          </button>
+        <div key="puzzle-lesson-done">
+          <LessonResult
+            passed={lessonPassed}
+            score={solved.size}
+            total={puzzles.length}
+            onContinue={backToPath}
+            onRetry={retryLesson}
+          />
         </div>
       </Layout>
     );
@@ -314,9 +331,43 @@ function SentencePuzzlePage() {
         transition={{ type: "spring", stiffness: 500, damping: 35 }}
       >
       <div key="puzzle-active">
-        <h2 style={{ color: colors.textPrimary, marginBottom: "2rem" }}>
-          Sentence Puzzle
-        </h2>
+        {/* Lessons are a short run toward the end screen, so they get no
+            title, just the bar. Free play keeps its title. */}
+        {!lessonId && (
+          <h2 style={{ color: colors.textPrimary, marginBottom: "1.5rem" }}>
+            {t.title}
+          </h2>
+        )}
+
+        {/* Progress: fills as each puzzle is answered */}
+        <div
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={puzzles.length}
+          aria-valuenow={currentPuzzleIndex + (checked ? 1 : 0)}
+          style={{
+            height: 16,
+            background: "#E2E8F0",
+            borderRadius: 999,
+            overflow: "hidden",
+            marginBottom: "2rem",
+          }}
+        >
+          <motion.div
+            initial={false}
+            animate={{
+              width: `${((currentPuzzleIndex + (checked ? 1 : 0)) / puzzles.length) * 100}%`,
+            }}
+            transition={{ type: "spring", stiffness: 120, damping: 20 }}
+            style={{
+              height: "100%",
+              background: colors.secondary,
+              borderRadius: 999,
+              // the lighter stripe gives the bar a little depth
+              boxShadow: "inset 0 -4px 0 rgba(0,0,0,0.12), inset 0 4px 0 rgba(255,255,255,0.25)",
+            }}
+          />
+        </div>
 
         {/* Puzzle Info */}
         <div
@@ -328,34 +379,7 @@ function SentencePuzzlePage() {
             marginBottom: "2rem",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginBottom: "1rem",
-            }}
-          >
-            <h3 style={{ color: colors.textPrimary, margin: 0 }}>
-              Puzzle {currentPuzzleIndex + 1} of {puzzles.length}
-            </h3>
-            <button
-              onClick={handleNextPuzzle}
-              style={{
-                padding: "0.5rem 1rem",
-                backgroundColor: colors.secondary,
-                color: "white",
-                border: "none",
-                borderRadius: "6px",
-                cursor: "pointer",
-                fontSize: "0.9rem",
-              }}
-            >
-              {feedback && <KeyHint label="↵" />}
-              {lessonId && currentPuzzleIndex === puzzles.length - 1 ? "Finish" : "Next Puzzle"}
-            </button>
-          </div>
-          <p style={{ color: colors.textSecondary, margin: 0 }}>
+          <p style={{ color: colors.textPrimary, margin: 0, fontSize: "1.15rem", fontWeight: 600 }}>
             {currentPuzzle?.translation}
           </p>
         </div>
@@ -363,7 +387,7 @@ function SentencePuzzlePage() {
         {/* Sentence Slots */}
         <div style={{ marginBottom: "2rem" }}>
           <h4 style={{ color: colors.textPrimary, marginBottom: "1rem" }}>
-            Arrange the words to form the correct sentence:
+            {t.instruction}
           </h4>
           <div
             style={{
@@ -416,7 +440,7 @@ function SentencePuzzlePage() {
         {/* Available Pieces */}
         <div style={{ marginBottom: "2rem" }}>
           <h4 style={{ color: colors.textPrimary, marginBottom: "1rem" }}>
-            Available words:
+            {t.availableWords}
           </h4>
           <div
             style={{
@@ -476,25 +500,27 @@ function SentencePuzzlePage() {
               transition: "all 0.2s ease",
             }}
           >
-            {!feedback && <KeyHint label="↵" />}
-            Check Answer
+            {!checked && <KeyHint label="↵" />}
+            {t.check}
           </button>
 
           <button
             onClick={handleReset}
+            disabled={checked}
             style={{
               padding: "1rem 2rem",
               backgroundColor: colors.secondary,
               color: "white",
               border: "none",
               borderRadius: "8px",
-              cursor: "pointer",
+              cursor: checked ? "not-allowed" : "pointer",
+              opacity: checked ? 0.5 : 1,
               fontSize: "1.1rem",
               fontWeight: "500",
               transition: "all 0.2s ease",
             }}
           >
-            Reset
+            {t.reset}
           </button>
         </div>
 
@@ -519,8 +545,31 @@ function SentencePuzzlePage() {
                 fontWeight: "500",
               }}
             >
-              {feedback === "correct" ? "Correct! 🎉" : feedback}
+              {feedback === "correct"
+                ? t.correct
+                : feedback === "incorrect"
+                  ? t.incorrect(currentPuzzle.surface)
+                  : t.incomplete}
             </p>
+            {feedback === "incorrect" && (
+              <button
+                onClick={handleNextPuzzle}
+                style={{
+                  marginTop: "1rem",
+                  padding: "0.75rem 2rem",
+                  backgroundColor: "#EF4444",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                }}
+              >
+                <KeyHint label="↵" />
+                {t.continue}
+              </button>
+            )}
           </div>
         )}
 
@@ -534,7 +583,7 @@ function SentencePuzzlePage() {
           }}
         >
           <h4 style={{ color: colors.textPrimary, margin: "0 0 1rem 0" }}>
-            🧩 How to Play
+            {t.howToPlay}
           </h4>
           <ul
             style={{
@@ -543,10 +592,9 @@ function SentencePuzzlePage() {
               paddingLeft: "1.5rem",
             }}
           >
-            <li>Click a word to place it in the next empty slot, or drag it into any slot</li>
-            <li>Click a placed word to send it back, or drag it to another slot</li>
-            <li>Arrange the words in the correct order</li>
-            <li>Click &quot;Check Answer&quot; when you&apos;re ready</li>
+            {t.tips.map((tip) => (
+              <li key={tip}>{tip}</li>
+            ))}
           </ul>
         </div>
       </div>
