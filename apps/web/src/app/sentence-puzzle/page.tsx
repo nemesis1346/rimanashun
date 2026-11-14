@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { motion, MotionConfig } from "motion/react";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
@@ -9,6 +10,8 @@ import { useLanguage } from "@/lib/language";
 import { useKeyboardShortcuts } from "@/lib/useKeyboardShortcuts";
 import { useSoundEffects } from "@/lib/sound";
 import { markLearned } from "@/lib/progress";
+import { hasPassed, puzzlesForSlot } from "@/lib/path";
+import { uiStrings } from "@rimanashun/shared";
 import KeyHint from "@/components/KeyHint";
 
 interface Piece {
@@ -87,8 +90,18 @@ function PuzzlePiece({ piece, locked, onTap, onDragOverSlot, onDrop }: PuzzlePie
   );
 }
 
-export default function SentencePuzzlePage() {
+function SentencePuzzlePage() {
   const { language } = useLanguage();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  // Set when started from a puzzle node on the learning path: play only that
+  // lesson's puzzles, then show a result screen instead of looping forever.
+  const lessonId = searchParams?.get("lesson") ?? null;
+  const slot = Number(searchParams?.get("slot") ?? 0);
+  // Puzzle ids answered correctly in this lesson (a set, so re-checking a
+  // solved puzzle can't count twice).
+  const [solved, setSolved] = useState<Set<string>>(new Set());
+  const [lessonDone, setLessonDone] = useState(false);
   const { playCorrect, playWrong } = useSoundEffects();
   const [puzzles, setPuzzles] = useState<SentencePuzzleItem[]>([]);
   const [currentPuzzleIndex, setCurrentPuzzleIndex] = useState(0);
@@ -101,15 +114,18 @@ export default function SentencePuzzlePage() {
   useEffect(() => {
     (async () => {
       setIsLoading(true);
-      const data = await fetchPuzzles(language);
+      const all = await fetchPuzzles(language);
+      const data = lessonId ? puzzlesForSlot(all, slot) : all;
       setPuzzles(data);
+      setSolved(new Set());
+      setLessonDone(false);
       setCurrentPuzzleIndex(0);
       if (data.length > 0) {
         loadPuzzle(data[0]);
       }
       setIsLoading(false);
     })();
-  }, [language]);
+  }, [language, lessonId, slot]);
 
   const loadPuzzle = (puzzle: SentencePuzzleItem) => {
     // Shuffle pieces with distractors
@@ -186,6 +202,7 @@ export default function SentencePuzzlePage() {
     if (isCorrect) {
       setFeedback("correct");
       markLearned("learnedPuzzles", currentPuzzle.id);
+      setSolved((prev) => new Set(prev).add(currentPuzzle.id));
       playCorrect();
     } else {
       playWrong();
@@ -194,6 +211,18 @@ export default function SentencePuzzlePage() {
   };
 
   const handleNextPuzzle = () => {
+    if (lessonId && currentPuzzleIndex === puzzles.length - 1) {
+      if (hasPassed(solved.size, puzzles.length)) {
+        markLearned("completedLessons", lessonId);
+        try {
+          sessionStorage.setItem("justCompletedLesson", lessonId);
+        } catch {
+          // sessionStorage unavailable
+        }
+      }
+      setLessonDone(true);
+      return;
+    }
     if (currentPuzzleIndex < puzzles.length - 1) {
       setCurrentPuzzleIndex(currentPuzzleIndex + 1);
       loadPuzzle(puzzles[currentPuzzleIndex + 1]);
@@ -211,8 +240,11 @@ export default function SentencePuzzlePage() {
 
   const allFilled = slots.length > 0 && slots.every((slot) => slot !== null);
 
+  const backToPath = () => router.push("/");
+
   useKeyboardShortcuts(
     isLoading || puzzles.length === 0 ? {}
+      : lessonDone ? { Enter: backToPath }
       : feedback ? { Enter: handleNextPuzzle }
       : allFilled ? { Enter: handleCheckAnswer }
       : {}
@@ -240,6 +272,36 @@ export default function SentencePuzzlePage() {
           <p style={{ color: colors.textSecondary }}>
             Please add sentence puzzle data to get started.
           </p>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (lessonDone) {
+    const passed = hasPassed(solved.size, puzzles.length);
+    return (
+      <Layout>
+        <div key="puzzle-lesson-done" style={{ textAlign: "center", padding: "2rem" }}>
+          <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{passed ? "🏆" : "📚"}</div>
+          <h2 style={{ color: colors.textPrimary, marginBottom: "1rem" }}>
+            {solved.size}/{puzzles.length}
+          </h2>
+          <button
+            onClick={backToPath}
+            style={{
+              padding: "1rem 2rem",
+              backgroundColor: colors.primary,
+              color: "white",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              fontSize: "1.1rem",
+              fontWeight: "500",
+            }}
+          >
+            <KeyHint label="↵" />
+            {uiStrings[language].path.backToPath}
+          </button>
         </div>
       </Layout>
     );
@@ -290,7 +352,7 @@ export default function SentencePuzzlePage() {
               }}
             >
               {feedback && <KeyHint label="↵" />}
-              Next Puzzle
+              {lessonId && currentPuzzleIndex === puzzles.length - 1 ? "Finish" : "Next Puzzle"}
             </button>
           </div>
           <p style={{ color: colors.textSecondary, margin: 0 }}>
@@ -491,4 +553,8 @@ export default function SentencePuzzlePage() {
       </MotionConfig>
     </Layout>
   );
+}
+
+export default function SentencePuzzlePageWrapper() {
+  return <Suspense><SentencePuzzlePage /></Suspense>;
 }

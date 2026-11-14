@@ -17,6 +17,18 @@ export const uiStrings = {
     sound: {
       mute: "Silenciar sonidos",
     },
+    path: {
+      start: "EMPEZAR",
+      practice: "PRACTICAR",
+      unit: "UNIDAD",
+      lesson: "Lección",
+      review: "repaso",
+      locked: "bloqueado",
+      lessonHint: "Responde 10 preguntas.",
+      puzzleHint: "Ordena 3 oraciones.",
+      completedHint: "¡Completado! Practica otra vez.",
+      backToPath: "Continuar",
+    },
     auth: {
       logIn: "Iniciar sesión",
       logOut: "Cerrar sesión",
@@ -35,6 +47,18 @@ export const uiStrings = {
     },
     sound: {
       mute: "Mute sounds",
+    },
+    path: {
+      start: "START",
+      practice: "PRACTICE",
+      unit: "UNIT",
+      lesson: "Lesson",
+      review: "review",
+      locked: "locked",
+      lessonHint: "Answer 10 questions.",
+      puzzleHint: "Arrange 3 sentences.",
+      completedHint: "Completed! Practice again.",
+      backToPath: "Continue",
     },
     auth: {
       logIn: "Log in",

@@ -1,6 +1,6 @@
 // Learned words and puzzles for this browser. Stored as id lists so a word
 // or puzzle only ever counts once, however many times it's answered.
-export type ProgressKey = "learnedWords" | "learnedPuzzles";
+export type ProgressKey = "learnedWords" | "learnedPuzzles" | "completedLessons";
 
 export function getLearned(key: ProgressKey): string[] {
   try {

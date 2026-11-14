@@ -87,6 +87,8 @@ Local dev needs `DATABASE_URL` in `apps/backend/.env` (git-ignored; see `.env.ex
 Next.js App Router. Routes map to learning features:
 - `/flashcards`, `/quiz`, `/sentence-puzzle`, `/categories`, `/progress`
 
+**Home = learning path** (`app/page.tsx` → `components/LearningPath.tsx`, logic in `lib/path.ts`): each category is a unit of `LESSONS_PER_UNIT` (5) nodes, the last one a checkpoint, on a winding SVG path animated with `motion`. Nodes unlock strictly in order. Activities alternate along the whole path (even `globalIndex` = quiz, odd = puzzle, so never two of a kind in a row, even across units); `lessonHref()` builds the link. Quiz nodes open `/quiz?category=<id>&lesson=<unitId:index>` and pick not-yet-learned words first (`generateQuizQuestions`' `seen` param). Puzzle nodes open `/sentence-puzzle?lesson=<id>&slot=<k>` and play `puzzlesForSlot()`: their own run of `PUZZLES_PER_LESSON` (3) puzzles, so consecutive puzzle lessons never repeat a sentence (wraps after 10 slots with the current 30 puzzles). Finishing either with ≥ 60% (`hasPassed`) adds the lesson id to `completedLessons` in localStorage (`lib/progress.ts`) and sets `sessionStorage.justCompletedLesson` so the path plays a celebration on that node. Labels come from `uiStrings[lang].path`.
+
 Data fetching happens at the page/component level using `fetchVocabulary()` / `fetchPuzzles()` / `fetchCategories()` from `apps/web/src/lib/data.ts`, each taking an optional `BaseLanguage` (`"es" | "en"`) argument.
 
 **Quiz mode selector**: 4 explicit modes, not a language toggle with a randomized direction — `Español → Kichwa`, `Kichwa → Español`, `English → Kichwa`, `Kichwa → English`. Each mode is a fixed (language, direction) pair, defined in `QUIZ_MODES` in `apps/web/src/lib/language.tsx` (`LanguageProvider` + `useLanguage()` returning `{ mode, setMode, language, direction }`; localStorage-persisted, default `"es-to-kichwa"`). Wired in at the root via `apps/web/src/components/Providers.tsx` (kept separate from `app/layout.tsx` so that file can stay a Server Component and keep its `metadata` export). The dropdown itself lives in `Layout.tsx`'s header — every page already renders through `Layout`, so it's available everywhere.
@@ -134,6 +136,8 @@ Vitest is set up in `apps/web`. 14 unit tests covering the three pure utility fu
 | `getWordsByCategory` | Filters by categoryId, returns all when no category, empty for unknown |
 | `getRandomWords` | Returns correct count, no duplicates, handles count=0 |
 | `generateQuizQuestions` | Correct count, 4 options per question, correct answer in options, direction is fixed for the whole batch (not randomized per question — see Web App section), defaults to `kichwa-first`, question/answer sides match the given direction |
+
+`apps/web/src/lib/__tests__/path.test.ts` covers `buildPath` (unit/checkpoint shape, in-order unlocking), `nodeOffset` and `hasPassed`. Vitest has no `@/` alias, so tests use relative imports.
 
 ### Not yet covered
 

@@ -97,9 +97,18 @@ export const getRandomWords = (
 export const generateQuizQuestions = (
   words: KichwaWord[],
   count: number = 10,
-  direction: "kichwa-first" | "base-first" = "kichwa-first"
+  direction: "kichwa-first" | "base-first" = "kichwa-first",
+  // Word keys (getWordKey) already answered correctly. When given, quiz
+  // words are drawn from the rest first, and seen ones only fill the gap,
+  // so repeated quizzes on the same category keep bringing new words.
+  seen?: Set<string>
 ) => {
-  const selectedWords = getRandomWords(words, count);
+  const selectedWords = seen
+    ? [
+        ...getRandomWords(words.filter((w) => !seen.has(getWordKey(w))), count),
+        ...getRandomWords(words.filter((w) => seen.has(getWordKey(w))), count),
+      ].slice(0, count)
+    : getRandomWords(words, count);
   const isKichwaToBase = direction === "kichwa-first";
 
   return selectedWords.map((word) => {

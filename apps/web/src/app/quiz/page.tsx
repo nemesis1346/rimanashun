@@ -1,14 +1,15 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
 import { fetchVocabulary, KichwaWord, generateQuizQuestions } from "@/lib/data";
 import { useLanguage } from "@/lib/language";
 import { useKeyboardShortcuts } from "@/lib/useKeyboardShortcuts";
 import { useSoundEffects } from "@/lib/sound";
-import { markLearned } from "@/lib/progress";
+import { markLearned, getLearned } from "@/lib/progress";
+import { hasPassed } from "@/lib/path";
 import KeyHint from "@/components/KeyHint";
 import { uiStrings } from "@rimanashun/shared";
 
@@ -23,6 +24,9 @@ interface QuizQuestion {
 function QuizPage() {
   const searchParams = useSearchParams();
   const categoryId = searchParams?.get("category") ?? null;
+  // Set when the quiz was started from a node on the learning path.
+  const lessonId = searchParams?.get("lesson") ?? null;
+  const router = useRouter();
   const { language, direction } = useLanguage();
   const { playCorrect, playWrong } = useSoundEffects();
 
@@ -53,7 +57,8 @@ function QuizPage() {
     const quizQuestions = generateQuizQuestions(
       vocabData,
       Math.min(10, vocabData.length),
-      direction
+      direction,
+      new Set(getLearned("learnedWords"))
     );
     setQuestions(quizQuestions);
   };
@@ -85,6 +90,14 @@ function QuizPage() {
       setSelectedAnswer(null);
       setIsAnswered(false);
     } else {
+      if (lessonId && hasPassed(score, questions.length)) {
+        markLearned("completedLessons", lessonId);
+        try {
+          sessionStorage.setItem("justCompletedLesson", lessonId);
+        } catch {
+          // sessionStorage unavailable
+        }
+      }
       setQuizCompleted(true);
     }
   };
@@ -107,7 +120,7 @@ function QuizPage() {
 
   useKeyboardShortcuts(
     isLoading ? {}
-      : quizCompleted ? { Enter: handleRestart }
+      : quizCompleted ? { Enter: lessonId ? () => router.push("/") : handleRestart }
       : isAnswered ? { Enter: handleNext }
       : optionShortcuts
   );
@@ -174,7 +187,7 @@ function QuizPage() {
           </div>
 
           <button
-            onClick={handleRestart}
+            onClick={lessonId ? () => router.push("/") : handleRestart}
             style={{
               padding: "1rem 2rem",
               backgroundColor: colors.primary,
@@ -188,7 +201,7 @@ function QuizPage() {
             }}
           >
             <KeyHint label="↵" />
-            Take Another Quiz
+            {lessonId ? uiStrings[language].path.backToPath : "Take Another Quiz"}
           </button>
         </div>
       </Layout>

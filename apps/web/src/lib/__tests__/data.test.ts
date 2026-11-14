@@ -16,6 +16,7 @@ import {
   getWordsByCategory,
   getRandomWords,
   generateQuizQuestions,
+  getWordKey,
   KichwaWord,
 } from "../data";
 
@@ -131,5 +132,17 @@ describe("generateQuizQuestions", () => {
       expect(words.map((w) => w.translation)).toContain(q.question);
       expect(words.map((w) => w.kichwa)).toContain(q.correctAnswer);
     });
+  });
+
+  it("prefers words not yet seen, filling with seen ones only when needed", () => {
+    const seen = new Set(words.slice(0, words.length - 2).map(getWordKey));
+    const unseen = words.slice(-2).map(getWordKey);
+
+    const two = generateQuizQuestions(words, 2, "kichwa-first", seen);
+    expect(two.map((q) => q.wordKey).sort()).toEqual([...unseen].sort());
+
+    const four = generateQuizQuestions(words, 4, "kichwa-first", seen);
+    expect(new Set(four.map((q) => q.wordKey)).size).toBe(4);
+    unseen.forEach((k) => expect(four.map((q) => q.wordKey)).toContain(k));
   });
 });
