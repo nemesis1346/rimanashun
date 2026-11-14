@@ -1,6 +1,6 @@
 import pg from "pg";
 
-const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+export const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
 
 // Response shapes are additive over the pre-Postgres JSON API, so
 // existing callers that don't pass `lang` see unchanged behavior. A

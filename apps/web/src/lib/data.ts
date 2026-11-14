@@ -2,7 +2,7 @@
 // Unified: fetch from backend API (served by packages/backend)
 import axios from "axios";
 import { BaseLanguage } from "@/lib/language";
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export interface KichwaWord {
   kichwa: string;

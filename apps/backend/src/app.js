@@ -1,7 +1,8 @@
 import express from "express";
 import { UnauthorizedError } from "express-oauth2-jwt-bearer";
 import { createRequireAuth } from "./auth.js";
-import { getVocabulary, getCategories, getPuzzles } from "./db.js";
+import { getVocabulary, getCategories, getPuzzles, pool } from "./db.js";
+import { createPgProgressStore, parseProgressBody } from "./progress.js";
 
 const SUPPORTED_LANGUAGES = ["es", "en"];
 
@@ -15,13 +16,16 @@ function parseLang(req, fallback) {
   return SUPPORTED_LANGUAGES.includes(lang) ? lang : fallback;
 }
 
-export function createApp({ requireAuth = createRequireAuth() } = {}) {
+export function createApp({
+  requireAuth = createRequireAuth(),
+  progressStore = createPgProgressStore(pool),
+} = {}) {
   const app = express();
 
   app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     // Sending an Authorization header makes browsers ask permission first
-    res.header("Access-Control-Allow-Headers", "Authorization");
+    res.header("Access-Control-Allow-Headers", "Authorization, Content-Type");
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl}`);
     if (req.method === "OPTIONS") return res.sendStatus(204);
     next();
@@ -65,6 +69,25 @@ export function createApp({ requireAuth = createRequireAuth() } = {}) {
     res.json({ sub: req.auth.payload.sub });
   });
 
+  // Progress belongs to the token's user; a `sub` in the query or body is
+  // never read. Responses are { learnedWords, learnedPuzzles, completedLessons }.
+  app.get("/v1/progress", requireAuth, async (req, res) => {
+    res.json(await progressStore.get(req.auth.payload.sub));
+  });
+
+  // Adds items to the user's progress (union, never removes) and returns the
+  // full progress afterwards, so one call both uploads and syncs back.
+  app.post(
+    "/v1/progress",
+    requireAuth,
+    express.json({ limit: "256kb" }),
+    async (req, res) => {
+      const { progress, error } = parseProgressBody(req.body);
+      if (error) return res.status(400).json({ error });
+      res.json(await progressStore.add(req.auth.payload.sub, progress));
+    }
+  );
+
   app.use((req, res) => {
     console.log(`[${new Date().toISOString()}] 404 - Not Found: ${req.method} ${req.originalUrl}`);
     res.status(404).json({ error: "Not Found" });
@@ -74,6 +97,10 @@ export function createApp({ requireAuth = createRequireAuth() } = {}) {
     // Failed token checks carry their own status and WWW-Authenticate header
     if (err instanceof UnauthorizedError) {
       return res.status(err.status).set(err.headers).json({ error: err.code ?? "unauthorized" });
+    }
+    // Malformed or oversized JSON bodies from express.json()
+    if (err.type === "entity.parse.failed" || err.type === "entity.too.large") {
+      return res.status(err.status).json({ error: err.type === "entity.too.large" ? "Body too large" : "Invalid JSON" });
     }
     console.error(`[${new Date().toISOString()}] ERROR ${req.method} ${req.originalUrl}:`, err);
     res.status(500).json({ error: "Internal Server Error" });

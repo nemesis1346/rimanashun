@@ -6,13 +6,19 @@ import LearningPath from "@/components/LearningPath";
 import { colors } from "@/lib/colors";
 import { fetchCategories, Category } from "@/lib/data";
 import { useLanguage } from "@/lib/language";
-import { getLearned } from "@/lib/progress";
+import { getLearned, onProgressChanged } from "@/lib/progress";
 import { buildPath, LESSONS_PER_UNIT } from "@/lib/path";
 
 export default function HomePage() {
   const { language } = useLanguage();
   const [categories, setCategories] = React.useState<Category[] | null>(null);
   const [completed, setCompleted] = React.useState<string[]>([]);
+
+  // Re-read after a sync pulls in lessons completed on another device
+  React.useEffect(
+    () => onProgressChanged(() => setCompleted(getLearned("completedLessons"))),
+    []
+  );
 
   React.useEffect(() => {
     setCompleted(getLearned("completedLessons"));

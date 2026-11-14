@@ -9,8 +9,10 @@ progress moves from `localStorage` to a real per-user store once this lands.
 - [x] `apps/backend` migrated from plain `http` to Express (behavior-preserving)
 - [x] Auth0 tenant / API / applications created
 - [x] Backend: JWT verification + protected `GET /v1/me`
-- [ ] Backend: `/v1/progress` endpoints + Postgres store (on hold; progress stays in `localStorage` for now)
-- [ ] Web: `@auth0/nextjs-auth0` integration
+- [x] Backend: `/v1/progress` endpoints + Postgres store (`user_progress` table, migration 0002)
+- [x] Web: `@auth0/nextjs-auth0` login/logout
+- [x] Web: sync progress to the account with the access token (`ProgressSync.tsx` / `lib/progressSync.ts`)
+- [ ] Web: confirm the sync by hand with a real login (see step 3)
 - [ ] Native: `expo-auth-session` integration
 - [ ] Deployment: Heroku env vars + Postgres addon + Auth0 allowed URLs
 
@@ -50,7 +52,24 @@ unauthenticated.
 Token verification is done: `apps/backend/src/auth.js` wraps
 `express-oauth2-jwt-bearer`, and `GET /v1/me` is the first protected route.
 If `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` are unset, protected routes return 503 and
-public routes keep working. The progress bullets below are on hold.
+public routes keep working. Progress is done (2026-11-14):
+
+- `GET /v1/progress` returns `{ learnedWords, learnedPuzzles, completedLessons }`.
+- `POST /v1/progress` adds items (union; it never removes) and returns the
+  full progress. This differs from the original `PUT` idea on purpose:
+  progress only grows, so an add-only API makes merging a browser's offline
+  progress safe and lets two tabs/devices write at once without overwriting
+  each other.
+- Table `user_progress (auth0_sub, kind, item_id)`, one row per item.
+- Tests: `progress.test.js` (routes) and `progress-pg.test.js` (SQL).
+
+**Manual check with a real login:** restart the backend (`npm run backend`
+doesn't reload), log in on the web app, answer a quiz question, then run
+`SELECT kind, item_id FROM user_progress;` in the dev database: the row
+should be there under your Auth0 `sub`. Log in from another browser and the
+progress should appear there too.
+
+Original design notes:
 
 - Add `express-oauth2-jwt-bearer` middleware (`issuerBaseURL`, `audience`)
   on new routes only — existing content routes stay public.
@@ -63,16 +82,39 @@ public routes keep working. The progress bullets below are on hold.
 - New env vars: `AUTH0_DOMAIN`, `AUTH0_AUDIENCE`, `DATABASE_URL` (set
   automatically once the Postgres addon is attached on Heroku).
 
-## 4. Web (`apps/web`): `@auth0/nextjs-auth0`
+## 4. Web (`apps/web`): `@auth0/nextjs-auth0` v4
 
-- Add `middleware.ts` for the SDK's auth routes; wrap the root layout in
-  its provider.
-- Env vars in `.env.local` (git-ignored): `AUTH0_SECRET`, `AUTH0_BASE_URL`,
-  `AUTH0_ISSUER_BASE_URL`, `AUTH0_CLIENT_ID`, `AUTH0_CLIENT_SECRET`,
-  `AUTH0_AUDIENCE`, `AUTH0_SCOPE`.
-- Add login/logout links. `/progress` requires a session and calls the
-  backend's `/v1/progress` with the SDK's access token as
-  `Authorization: Bearer`.
+Login/logout is done:
+
+- `src/lib/auth0.ts` creates the `Auth0Client`, passing only the API
+  audience; everything else the SDK reads from the environment itself.
+  Login is optional: logged-out users get no error.
+- `src/middleware.ts` runs `auth0.middleware()`, which serves the
+  `/auth/login`, `/auth/logout` and `/auth/callback` routes and keeps
+  sessions fresh. It doesn't protect any page.
+- `src/components/AuthControls.tsx` shows Log in / Log out (and the user's
+  name) in the header, via `useUser()`.
+
+Env vars in `apps/web/.env.local` (git-ignored). These are the v4 names;
+the v3 names `AUTH0_BASE_URL` and `AUTH0_ISSUER_BASE_URL` are not read.
+
+| Variable | Read by | Value |
+|---|---|---|
+| `AUTH0_DOMAIN` | SDK | tenant domain, no `https://` |
+| `AUTH0_CLIENT_ID` | SDK | "Rimanashun Web" Client ID |
+| `AUTH0_CLIENT_SECRET` | SDK | "Rimanashun Web" Client Secret |
+| `AUTH0_SECRET` | SDK | random 32-byte hex, encrypts the session cookie (`openssl rand -hex 32`) |
+| `APP_BASE_URL` | SDK | `http://localhost:3000` locally, the Heroku URL in prod |
+| `AUTH0_AUDIENCE` | `auth0.ts` | API identifier, same value as in `apps/backend/.env` |
+
+Progress sync (done): `components/ProgressSync.tsx`, mounted in `Providers`,
+gets the access token in the browser with the SDK's client
+`getAccessToken()` (served by the middleware at `/auth/access-token`) and
+calls `/v1/progress` directly with `Authorization: Bearer`. Progress only counts
+toward an account while logged in: logged-out progress stays in the
+browser's localStorage and is discarded on login (never uploaded); on
+logout the account's progress is removed from the browser. Rules in
+`lib/progressSync.ts`.
 
 ## 5. Native (`apps/native`): `expo-auth-session`
 
@@ -86,14 +128,13 @@ public routes keep working. The progress bullets below are on hold.
 
 - Express auth middleware tests live in `apps/backend/src/__tests__/auth.test.js`
   (missing/invalid token → 401), run with `node --test`.
-- On Heroku: set `AUTH0_DOMAIN`, `AUTH0_AUDIENCE`, `AUTH0_CLIENT_SECRET`,
+- On Heroku: set the backend's `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` and the web
+  app's six variables from step 4 (with `APP_BASE_URL` set to the Heroku URL),
   attach the Postgres addon, and update the Auth0 application's allowed
   URLs to include the Heroku domain.
 
 ## Note: `.env` files
 
-CLAUDE.md currently states no `.env` files exist in the repo. This plan
-requires them (`.env.local` for web, `.env` for backend) since Auth0
-secrets can't be hardcoded or passed as public runtime vars. Update
-CLAUDE.md's conventions section once this lands, and confirm `.gitignore`
-covers `.env*`.
+`apps/backend/.env` and `apps/web/.env.local` hold the Auth0 values; both
+are git-ignored (`.env*` in `.gitignore`, `.env.example` excepted). Secrets
+can't be hardcoded or passed as public runtime vars.

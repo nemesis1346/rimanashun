@@ -60,7 +60,9 @@ Postgres is populated from `packages/shared/data/*.json` via `apps/backend/db/se
 
 Express app, `pg`-backed. Endpoints:
 - `GET /health`
-- `GET /v1/me` — protected (Auth0 bearer token, verified in `src/auth.js`); returns `{ sub }` from the token. All other routes are public. Returns 503 if `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` aren't set.
+- `GET /v1/me` — protected (Auth0 bearer token, verified in `src/auth.js`); returns `{ sub }` from the token. Returns 503 if `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` aren't set (same for the progress routes).
+- `GET /v1/progress` / `POST /v1/progress` — protected, per-user progress `{ learnedWords, learnedPuzzles, completedLessons, activeDays }` (id lists; `activeDays` are local `YYYY-MM-DD` dates), always for the token's `sub` (never a client-supplied id). `POST` only *adds* (union, idempotent) and returns the full progress, so one call both uploads and syncs back; unknown keys / non-string items / >5000 items → 400. Store + validation in `src/progress.js`; `createApp({ requireAuth, progressStore })` takes both as parameters so tests can swap them.
+- All other routes are public.
 - `GET /v1/vocabulary?lang=es|en` — all words (each row is one *sense* of a Kichwa word — the same spelling can legitimately appear more than once with a different meaning/category, e.g. `chaki` → "pie" in body, "patas" in animals). Response includes both `spanish` (always literal Spanish — native depends on this and never passes `lang`) and `translation` (whichever language was requested; falls back to Spanish for the 2 words with no English gloss). Default `lang=es` if omitted, matching the pre-selector behavior exactly.
 - `GET /v1/vocabulary/by-category?category=<id>&lang=es|en` — filtered by category
 - `GET /v1/puzzles?lang=es|en` — `translation` field follows `lang`. Default `lang=en` if omitted (native doesn't call this endpoint at all — it imports `sentencePuzzles` directly from `@rimanashun/shared` instead, so it's unaffected either way).
@@ -71,6 +73,7 @@ An unrecognized `lang` value falls back to that endpoint's default rather than e
 ### Database (Postgres)
 
 Schema and scripts live in `apps/backend/db/`:
+- `migrations/0002_user_progress.sql` — `user_progress (auth0_sub, kind, item_id)`, one row per learned item, PK on all three. User data: `seed.js` never touches it. `0003_active_days.sql` widens its `kind` check to add `activeDays`. Adding a kind needs a migration *and* `PROGRESS_KINDS` in `src/progress.js` *and* `PROGRESS_KEYS` in web's `lib/progress.ts`; deploy the backend first, since it rejects unknown kinds with 400 (which fails the web's whole sync).
 - `migrations/0001_init.sql` — `languages`, `categories`, `category_translations`, `words`, `word_translations`, `sentence_puzzles`, `puzzle_translations`. A word/puzzle's fixed Kichwa content and its per-base-language translations are split into separate tables on purpose — adding a new base language is a data insert, not a schema change.
 - `migrate.js` — applies pending migration files, tracked in a `schema_migrations` table. Run with `npm run db:migrate` (from `apps/backend`).
 - `seed.js` — truncates and reloads all content tables (idempotent; these are fully derived reference tables, not user data). Run with `npm run db:seed`. Sources, all combined in this one command:
@@ -88,6 +91,8 @@ Next.js App Router. Routes map to learning features:
 - `/flashcards`, `/quiz`, `/sentence-puzzle`, `/categories`, `/progress`
 
 **Home = learning path** (`app/page.tsx` → `components/LearningPath.tsx`, logic in `lib/path.ts`): each category is a unit of `LESSONS_PER_UNIT` (5) nodes, the last one a checkpoint, on a winding SVG path animated with `motion`. Nodes unlock strictly in order. Activities alternate along the whole path (even `globalIndex` = quiz, odd = puzzle, so never two of a kind in a row, even across units); `lessonHref()` builds the link. Quiz nodes open `/quiz?category=<id>&lesson=<unitId:index>` and pick not-yet-learned words first (`generateQuizQuestions`' `seen` param). Puzzle nodes open `/sentence-puzzle?lesson=<id>&slot=<k>` and play `puzzlesForSlot()`: their own run of `PUZZLES_PER_LESSON` (3) puzzles, so consecutive puzzle lessons never repeat a sentence (wraps after 10 slots with the current 30 puzzles). Finishing either with ≥ 60% (`hasPassed`) adds the lesson id to `completedLessons` in localStorage (`lib/progress.ts`) and sets `sessionStorage.justCompletedLesson` so the path plays a celebration on that node. Labels come from `uiStrings[lang].path`.
+
+**Progress** lives in localStorage (`lib/progress.ts`) — always what the UI reads. **Progress only counts toward an account while logged in** (a product decision): logged out, the app works and records progress in localStorage only, and that progress is discarded on login — never uploaded. `components/ProgressSync.tsx` (mounted in `Providers`) runs `lib/progressSync.ts`. `progressOwner` in localStorage records whose progress it holds (account `sub`, or none = logged out); whenever it doesn't match who's logged in, local progress is cleared (login discards logged-out or another account's progress; logout removes the account's). Then, when logged in, it POSTs local progress (only this account's by then; doubles as a retry for failed pushes) and merges the account's back in; each new `markLearned` is also pushed. Pages re-read via `onProgressChanged()` after a sync. `markLearned` also records today (`localDay()`) in `activeDays`, even for an already-learned item. The `/progress` page is computed entirely from stored progress via the pure functions in `lib/stats.ts` (streak, last 7 days, per-category learned/total); nothing on it is mocked.
 
 Data fetching happens at the page/component level using `fetchVocabulary()` / `fetchPuzzles()` / `fetchCategories()` from `apps/web/src/lib/data.ts`, each taking an optional `BaseLanguage` (`"es" | "en"`) argument.
 
@@ -137,18 +142,21 @@ Vitest is set up in `apps/web`. 14 unit tests covering the three pure utility fu
 | `getRandomWords` | Returns correct count, no duplicates, handles count=0 |
 | `generateQuizQuestions` | Correct count, 4 options per question, correct answer in options, direction is fixed for the whole batch (not randomized per question — see Web App section), defaults to `kichwa-first`, question/answer sides match the given direction |
 
-`apps/web/src/lib/__tests__/path.test.ts` covers `buildPath` (unit/checkpoint shape, in-order unlocking), `nodeOffset` and `hasPassed`. Vitest has no `@/` alias, so tests use relative imports.
+`apps/web/src/lib/__tests__/path.test.ts` covers `buildPath` (unit/checkpoint shape, in-order unlocking, quiz/puzzle alternation), `nodeOffset`, `hasPassed`, `puzzlesForSlot`. `progressSync.test.ts` covers the login/logout/user-switch ownership rules, merge on sync, per-item push, and offline failures (fake `ProgressApi`). `apps/web/vitest.config.ts` mirrors tsconfig's `@/` alias.
+
+Backend (`cd apps/backend && npm test` — `node --test`, loads `.env`): `auth.test.js` (token verification), `progress.test.js` (progress routes: auth, isolation between users, validation; in-memory store), `progress-pg.test.js` (the real SQL against `DATABASE_URL`; random test user ids, deleted afterwards; skipped without `DATABASE_URL`). `__tests__/helpers/issuer.js` is a local Auth0 stand-in that signs test tokens.
 
 ### Not yet covered
 
-- **Backend content endpoints** — integration tests for `/v1/vocabulary`, `/v1/categories`, `/v1/puzzles`, `/v1/vocabulary/by-category` (auth is covered in `apps/backend/src/__tests__/auth.test.js`, run with `node --test`, using local keys instead of Auth0)
+- **Backend content endpoints** — integration tests for `/v1/vocabulary`, `/v1/categories`, `/v1/puzzles`, `/v1/vocabulary/by-category`
+- **`ProgressSync.tsx` with a real Auth0 login** — the sync logic is unit-tested, but the browser → `getAccessToken()` → backend path is only checked by hand
 - **Native app** — `dataLoader.ts` utilities (`loadVocabularyData`, `getWordsByCategory`, `getCategoryStats`)
 - **Web pages** — component rendering tests (React Testing Library)
 
 ## Key Conventions
 
 - **TypeScript** across all packages; native still uses `require()` for JSON imports due to Metro bundler constraints
-- **`.env` files**: `apps/backend/.env` (git-ignored, see `.env.example`) holds `DATABASE_URL` for local Postgres and `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` for token verification. Web/native still have none — API URLs are configured via environment variables at runtime.
+- **`.env` files**: `apps/backend/.env` (git-ignored, see `.env.example`) holds `DATABASE_URL` for local Postgres and `AUTH0_DOMAIN`/`AUTH0_AUDIENCE` for token verification. `apps/web/.env.local` (git-ignored) holds the Auth0 web login values (v4 SDK names: `AUTH0_DOMAIN`, `AUTH0_CLIENT_ID`, `AUTH0_CLIENT_SECRET`, `AUTH0_SECRET`, `APP_BASE_URL`, `AUTH0_AUDIENCE`; see `docs/auth0-migration-plan.md` step 4). Native has none — its API URL is configured via environment variables at runtime.
 - The shared package does **not** need to be built during development; both apps consume its TypeScript source directly
 - Native data loading has a two-tier fallback: network → bundled JSON (avoids hard failure in offline/dev scenarios)
 - **Web pages with multiple conditional-return branches** (`isLoading` / empty-state / main content, e.g. `quiz`, `flashcards`, `sentence-puzzle`, `categories`, `progress`) give each branch's root `<div>` a distinct `key` (e.g. `key="quiz-loading"`). Without one, React reconciles unrelated branches as "the same element" by tree position alone, which previously caused real "removing a style property during rerender" warnings when one branch's inline style used a shorthand CSS property (e.g. `margin`) and another used the longhand (e.g. `marginBottom`) at the same position. Keep this in mind when adding a new branch to these pages.

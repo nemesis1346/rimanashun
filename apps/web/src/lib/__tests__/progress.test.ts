@@ -32,6 +32,17 @@ describe("progress", () => {
     expect(getLearned("learnedPuzzles")).toEqual(["sp1"]);
   });
 
+  it("records today as an active day, even for an already-learned item", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(2026, 10, 13, 12));
+    markLearned("learnedWords", "w");
+    vi.setSystemTime(new Date(2026, 10, 14, 9));
+    markLearned("learnedWords", "w");
+    vi.useRealTimers();
+    expect(getLearned("activeDays")).toEqual(["2026-11-13", "2026-11-14"]);
+    expect(getLearned("learnedWords")).toEqual(["w"]);
+  });
+
   it("keeps words and puzzles separate", () => {
     markLearned("learnedPuzzles", "sp1");
     expect(getLearned("learnedWords")).toEqual([]);

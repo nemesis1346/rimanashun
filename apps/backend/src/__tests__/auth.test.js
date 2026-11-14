@@ -1,61 +1,21 @@
 /**
- * Tests for token verification on protected routes. Tokens are signed with
- * locally generated keys, and a small local server stands in for Auth0's
- * discovery and key endpoints, so no network or Auth0 account is needed.
+ * Tests for token verification on protected routes, against a local stand-in
+ * for Auth0 (see helpers/issuer.js), so no network or Auth0 account is needed.
  */
 
 import assert from "node:assert/strict";
 import { after, before, describe, it } from "node:test";
-import { createPublicKey, createSign, generateKeyPairSync, randomUUID } from "node:crypto";
-import http from "node:http";
 import { createApp } from "../app.js";
 import { createRequireAuth } from "../auth.js";
+import { AUDIENCE, close, encode, now, otherKey, startIssuer } from "./helpers/issuer.js";
 
-const AUDIENCE = "https://api.test";
-const KID = "test-key";
-
-const signingKey = generateKeyPairSync("rsa", { modulusLength: 2048 }).privateKey;
-const otherKey = generateKeyPairSync("rsa", { modulusLength: 2048 }).privateKey;
-
-const encode = (value) => Buffer.from(JSON.stringify(value)).toString("base64url");
-const now = () => Math.floor(Date.now() / 1000);
-
-let issuer, issuerServer, appUrl, appServer;
-
-function makeToken({ claims = {}, key = signingKey } = {}) {
-  const header = encode({ alg: "RS256", typ: "JWT", kid: KID });
-  const payload = encode({
-    iss: issuer,
-    aud: AUDIENCE,
-    sub: "auth0|alice",
-    iat: now(),
-    exp: now() + 3600,
-    jti: randomUUID(),
-    ...claims,
-  });
-  const signature = createSign("RSA-SHA256").update(`${header}.${payload}`).sign(key, "base64url");
-  return `${header}.${payload}.${signature}`;
-}
+let issuer, makeToken, issuerServer, appUrl, appServer;
 
 const getMe = (token, path = "/v1/me") =>
   fetch(appUrl + path, token ? { headers: { Authorization: `Bearer ${token}` } } : {});
 
-const listen = (server) =>
-  new Promise((resolve) => {
-    server.listen(0, () => resolve(`http://localhost:${server.address().port}`));
-  });
-
 before(async () => {
-  issuerServer = http.createServer((req, res) => {
-    res.setHeader("Content-Type", "application/json");
-    if (req.url === "/.well-known/openid-configuration") {
-      res.end(JSON.stringify({ issuer, jwks_uri: `${issuer}jwks.json` }));
-    } else {
-      const jwk = { ...createPublicKey(signingKey).export({ format: "jwk" }), kid: KID, alg: "RS256", use: "sig" };
-      res.end(JSON.stringify({ keys: [jwk] }));
-    }
-  });
-  issuer = `${await listen(issuerServer)}/`;
+  ({ issuer, makeToken, server: issuerServer } = await startIssuer());
 
   const requireAuth = createRequireAuth({ issuerBaseURL: issuer, audience: AUDIENCE });
   appServer = createApp({ requireAuth }).listen(0);
@@ -63,12 +23,7 @@ before(async () => {
   appUrl = `http://localhost:${appServer.address().port}`;
 });
 
-after(() => {
-  appServer.close();
-  issuerServer.close();
-  appServer.closeAllConnections();
-  issuerServer.closeAllConnections();
-});
+after(() => close(appServer, issuerServer));
 
 describe("GET /v1/me", () => {
   it("returns the user from a valid token", async () => {
@@ -119,7 +74,7 @@ describe("the rest of the API", () => {
     const res = await fetch(`${appUrl}/v1/me`, { method: "OPTIONS" });
     assert.equal(res.status, 204);
     assert.equal(res.headers.get("access-control-allow-origin"), "*");
-    assert.equal(res.headers.get("access-control-allow-headers"), "Authorization");
+    assert.equal(res.headers.get("access-control-allow-headers"), "Authorization, Content-Type");
   });
 
   it("still returns the 404 shape for unknown routes", async () => {
@@ -138,10 +93,7 @@ describe("without Auth0 configured", () => {
     url = `http://localhost:${server.address().port}`;
   });
 
-  after(() => {
-    server.close();
-    server.closeAllConnections();
-  });
+  after(() => close(server));
 
   it("returns 503 on protected routes", async () => {
     const res = await fetch(`${url}/v1/me`);
