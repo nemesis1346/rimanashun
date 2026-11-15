@@ -7,6 +7,8 @@ export const uiStrings = {
     quiz: {
       promptKichwaToBase: "¿Qué significa esto en español?",
       promptBaseToKichwa: "¿Qué significa esto en kichwa?",
+      promptPickPicture: "Elige la imagen correcta",
+      promptPickKichwa: "Elige la palabra en kichwa",
     },
     flashcards: {
       showKichwa: "Mostrar kichwa",
@@ -65,6 +67,8 @@ export const uiStrings = {
     quiz: {
       promptKichwaToBase: "What does this mean in English?",
       promptBaseToKichwa: "What does this mean in Kichwa?",
+      promptPickPicture: "Pick the right picture",
+      promptPickKichwa: "Pick the Kichwa word",
     },
     flashcards: {
       showKichwa: "Show Kichwa",

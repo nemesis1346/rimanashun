@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Layout from "@/components/Layout";
 import { colors } from "@/lib/colors";
-import { fetchVocabulary, KichwaWord, generateQuizQuestions } from "@/lib/data";
+import { fetchVocabulary, KichwaWord, generateQuizQuestions, QuizQuestion } from "@/lib/data";
 import { useLanguage } from "@/lib/language";
 import { useKeyboardShortcuts } from "@/lib/useKeyboardShortcuts";
 import { useSoundEffects } from "@/lib/sound";
@@ -13,14 +13,10 @@ import { hasPassed } from "@/lib/path";
 import KeyHint from "@/components/KeyHint";
 import LessonResult from "@/components/LessonResult";
 import { uiStrings } from "@rimanashun/shared";
+import Image from "next/image";
 
-interface QuizQuestion {
-  wordKey: string;
-  question: string;
-  correctAnswer: string;
-  options: string[];
-  type: "kichwa-to-base" | "base-to-kichwa";
-}
+// Share of questions about a pictured word that are asked with pictures.
+const PICTURE_RATE = 0.5;
 
 function QuizPage() {
   const searchParams = useSearchParams();
@@ -32,6 +28,9 @@ function QuizPage() {
   const { playCorrect, playWrong } = useSoundEffects();
 
   const [words, setWords] = useState<KichwaWord[]>([]);
+  // The whole vocabulary, so a category quiz can still find wrong answers
+  // of the same word type (or with a picture) in other categories.
+  const [allWords, setAllWords] = useState<KichwaWord[]>([]);
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
@@ -48,18 +47,20 @@ function QuizPage() {
         ? data.filter((w) => w.categoryId === categoryId)
         : data;
       setWords(filtered);
-      generateQuiz(filtered);
+      setAllWords(data);
+      generateQuiz(filtered, data);
       setIsLoading(false);
     })();
   }, [categoryId, language, direction]);
 
-  const generateQuiz = (vocabData: KichwaWord[]) => {
+  const generateQuiz = (vocabData: KichwaWord[], pool: KichwaWord[] = allWords) => {
     if (vocabData.length === 0) return;
     const quizQuestions = generateQuizQuestions(
       vocabData,
       Math.min(10, vocabData.length),
       direction,
-      new Set(getLearned("learnedWords"))
+      new Set(getLearned("learnedWords")),
+      { pictureRate: PICTURE_RATE, pool }
     );
     setQuestions(quizQuestions);
   };
@@ -292,15 +293,26 @@ function QuizPage() {
             {currentQuestion?.question}
           </h3>
           <p style={{ color: colors.textSecondary, margin: 0 }}>
-            {direction === "kichwa-first"
-              ? uiStrings[language].quiz.promptKichwaToBase
-              : uiStrings[language].quiz.promptBaseToKichwa}
+            {currentQuestion?.optionImages
+              ? direction === "kichwa-first"
+                ? uiStrings[language].quiz.promptPickPicture
+                : uiStrings[language].quiz.promptPickKichwa
+              : direction === "kichwa-first"
+                  ? uiStrings[language].quiz.promptKichwaToBase
+                  : uiStrings[language].quiz.promptBaseToKichwa}
           </p>
         </div>
 
         {/* Answer Options */}
-        <div style={{ marginBottom: "2rem" }}>
+        <div
+          style={
+            currentQuestion?.optionImages
+              ? { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem", marginBottom: "2rem" }
+              : { marginBottom: "2rem" }
+          }
+        >
           {currentQuestion?.options.map((option, index) => {
+            const image = currentQuestion.optionImages?.[index];
             let buttonStyle: React.CSSProperties = {
               width: "100%",
               padding: "1rem",
@@ -347,6 +359,41 @@ function QuizPage() {
                 ...buttonStyle,
                 cursor: "pointer",
               };
+            }
+
+            if (image) {
+              // Picture card. Spanish/English -> Kichwa shows the Kichwa label
+              // from the start (choosing the Kichwa word is the exercise);
+              // Kichwa -> Spanish/English hides the translation until answered,
+              // since it would give the answer away.
+              const showLabel = isAnswered || direction === "base-first";
+              return (
+                <button
+                  key={`${currentQuestionIndex}-${index}`}
+                  onClick={() => handleAnswerSelect(option)}
+                  disabled={isAnswered}
+                  aria-label={showLabel ? option : `${index + 1}`}
+                  style={{
+                    ...buttonStyle,
+                    marginBottom: 0,
+                    padding: "1rem 0.5rem 0.75rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    position: "relative",
+                    boxShadow: isAnswered ? "none" : `0 4px 0 ${colors.border}`,
+                  }}
+                >
+                  <span style={{ position: "absolute", top: 8, left: 8 }}>
+                    <KeyHint label={String(index + 1)} />
+                  </span>
+                  <Image src={image} alt="" width={96} height={96} unoptimized />
+                  <span style={{ minHeight: "1.4em", fontSize: "1.05rem", fontWeight: 600, visibility: showLabel ? "visible" : "hidden" }}>
+                    {option}
+                  </span>
+                </button>
+              );
             }
 
             return (

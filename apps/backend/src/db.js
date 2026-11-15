@@ -17,7 +17,9 @@ export async function getVocabulary({ categoryId, lang = "es" } = {}) {
     `SELECT w.kichwa,
             es.value AS spanish,
             COALESCE(t.value, es.value) AS translation,
-            w.category_id AS "categoryId"
+            w.category_id AS "categoryId",
+            w.image,
+            w.word_type AS type
      FROM words w
      JOIN word_translations es ON es.word_id = w.id AND es.language_code = 'es'
      LEFT JOIN word_translations t ON t.word_id = w.id AND t.language_code = $2
