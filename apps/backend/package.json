@@ -8,9 +8,12 @@
     "dev": "node --watch --env-file-if-exists=.env src/server.js",
     "test": "node --env-file-if-exists=.env --test",
     "db:migrate": "node --env-file=.env db/migrate.js",
-    "db:seed": "node --env-file=.env db/seed.js"
+    "db:bootstrap": "node --env-file=.env db/bootstrap.js",
+    "db:export": "node --env-file=.env db/export.js",
+    "db:apply-images": "node --env-file=.env db/apply-images.js"
   },
   "dependencies": {
+    "compression": "^1.8.2",
     "express": "^5.2.1",
     "express-oauth2-jwt-bearer": "^1.10.0",
     "pg": "^8.23.0"

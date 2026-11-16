@@ -5,6 +5,8 @@ import { BaseLanguage } from "@/lib/language";
 export const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export interface KichwaWord {
+  // words.id: permanent, so a corrected gloss keeps users' progress.
+  id: number;
   kichwa: string;
   spanish: string;
   translation: string;
@@ -80,10 +82,10 @@ export async function fetchCategories(lang: BaseLanguage = "en"): Promise<Catego
 
 // Utility functions
 
-// Words have no id in the API, and the same Kichwa spelling can carry several
-// senses, so a word is identified by its spelling plus its Spanish meaning.
-export const getWordKey = (word: KichwaWord): string =>
-  `${word.kichwa}|${word.spanish}`;
+// How progress identifies a word: its id, as a string (progress items are
+// strings). Not "kichwa|spanish" any more: that changed whenever a gloss was
+// corrected, losing the word for everyone who had learned it.
+export const getWordKey = (word: KichwaWord): string => String(word.id);
 
 export const getWordsByCategory = (
   words: KichwaWord[],

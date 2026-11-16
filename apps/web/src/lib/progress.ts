@@ -24,10 +24,18 @@ export function setRemoteProgress(hook: RemoteHook | null) {
   remote = hook;
 }
 
+// learnedWords holds word ids (see getWordKey). Browsers may still hold the
+// old "kichwa|spanish" keys: they're skipped on read, so they're never
+// uploaded (the backend rejects them) and disappear on the next write. The
+// account's own list was converted on the server (migration 0006) and comes
+// back on the next sync.
+const isWordId = (id: unknown) => typeof id === "string" && /^[1-9][0-9]*$/.test(id);
+
 export function getLearned(key: ProgressKey): string[] {
   try {
     const parsed = JSON.parse(localStorage.getItem(key) ?? "[]");
-    return Array.isArray(parsed) ? parsed : [];
+    if (!Array.isArray(parsed)) return [];
+    return key === "learnedWords" ? parsed.filter(isWordId) : parsed;
   } catch {
     // localStorage unavailable (private mode, etc.) or corrupt value
     return [];

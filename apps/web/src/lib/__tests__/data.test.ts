@@ -27,14 +27,14 @@ import {
 // tests genuinely verify generateQuizQuestions reads `translation` (the
 // language-appropriate field), not the always-Spanish `spanish` field.
 const words: KichwaWord[] = [
-  { kichwa: "allku", spanish: "perro", translation: "dog", categoryId: "animals" },
-  { kichwa: "misi", spanish: "gato", translation: "cat", categoryId: "animals" },
-  { kichwa: "tanta", spanish: "pan", translation: "bread", categoryId: "food" },
-  { kichwa: "aycha", spanish: "carne", translation: "meat", categoryId: "food" },
-  { kichwa: "uma", spanish: "cabeza", translation: "head", categoryId: "body" },
-  { kichwa: "ñawi", spanish: "ojo", translation: "eye", categoryId: "body" },
-  { kichwa: "mama", spanish: "madre", translation: "mother", categoryId: "family" },
-  { kichwa: "tayta", spanish: "padre", translation: "father", categoryId: "family" },
+  { id: 1, kichwa: "allku", spanish: "perro", translation: "dog", categoryId: "animals" },
+  { id: 2, kichwa: "misi", spanish: "gato", translation: "cat", categoryId: "animals" },
+  { id: 3, kichwa: "tanta", spanish: "pan", translation: "bread", categoryId: "food" },
+  { id: 4, kichwa: "aycha", spanish: "carne", translation: "meat", categoryId: "food" },
+  { id: 5, kichwa: "uma", spanish: "cabeza", translation: "head", categoryId: "body" },
+  { id: 6, kichwa: "ñawi", spanish: "ojo", translation: "eye", categoryId: "body" },
+  { id: 7, kichwa: "mama", spanish: "madre", translation: "mother", categoryId: "family" },
+  { id: 8, kichwa: "tayta", spanish: "padre", translation: "father", categoryId: "family" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -151,7 +151,9 @@ describe("generateQuizQuestions", () => {
 // generateQuizQuestions — picture questions
 // ---------------------------------------------------------------------------
 describe("generateQuizQuestions with pictures", () => {
+  let nextId = 100;
   const pic = (kichwa: string, translation: string, categoryId: string): KichwaWord => ({
+    id: nextId++,
     kichwa,
     spanish: `${translation}-es`,
     translation,
@@ -256,7 +258,9 @@ describe("generateQuizQuestions with pictures", () => {
 // generateQuizQuestions — wrong answers of the same word type
 // ---------------------------------------------------------------------------
 describe("generateQuizQuestions distractors by word type", () => {
+  let nextId = 200;
   const w = (kichwa: string, translation: string, categoryId: string, type: string | null): KichwaWord => ({
+    id: nextId++,
     kichwa,
     spanish: `${translation}-es`,
     translation,

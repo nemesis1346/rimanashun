@@ -79,7 +79,7 @@ describe("authentication", () => {
   }
 
   it("doesn't write anything for a rejected request", async () => {
-    await addProgress(makeToken({ key: otherKey }), { learnedWords: ["x"] });
+    await addProgress(makeToken({ key: otherKey }), { learnedWords: ["1"] });
     const res = await getProgress(alice());
     assert.deepEqual(await res.json(), emptyProgress());
   });
@@ -100,10 +100,10 @@ describe("GET /v1/progress", () => {
 
 describe("POST /v1/progress", () => {
   it("adds items and returns the full progress", async () => {
-    const res = await addProgress(alice(), { learnedWords: ["allku|perro"], completedLessons: ["numbers:0"] });
+    const res = await addProgress(alice(), { learnedWords: ["14"], completedLessons: ["numbers:0"] });
     assert.equal(res.status, 200);
     assert.deepEqual(await res.json(), {
-      learnedWords: ["allku|perro"],
+      learnedWords: ["14"],
       learnedPuzzles: [],
       completedLessons: ["numbers:0"],
       activeDays: [],
@@ -122,29 +122,29 @@ describe("POST /v1/progress", () => {
   });
 
   it("never removes items (an empty body changes nothing)", async () => {
-    await addProgress(alice(), { learnedWords: ["a"] });
+    await addProgress(alice(), { learnedWords: ["2"] });
     const res = await addProgress(alice(), {});
-    assert.deepEqual((await res.json()).learnedWords, ["a"]);
+    assert.deepEqual((await res.json()).learnedWords, ["2"]);
   });
 });
 
 describe("isolation between users", () => {
   it("keeps each user's progress separate", async () => {
-    await addProgress(alice(), { learnedWords: ["alice-word"] });
-    await addProgress(bob(), { learnedWords: ["bob-word"] });
+    await addProgress(alice(), { learnedWords: ["10"] });
+    await addProgress(bob(), { learnedWords: ["20"] });
 
-    assert.deepEqual((await (await getProgress(alice())).json()).learnedWords, ["alice-word"]);
-    assert.deepEqual((await (await getProgress(bob())).json()).learnedWords, ["bob-word"]);
+    assert.deepEqual((await (await getProgress(alice())).json()).learnedWords, ["10"]);
+    assert.deepEqual((await (await getProgress(bob())).json()).learnedWords, ["20"]);
   });
 
   it("ignores a user named in the query string", async () => {
-    await addProgress(bob(), { learnedWords: ["bob-word"] });
+    await addProgress(bob(), { learnedWords: ["20"] });
     const res = await getProgress(alice(), "/v1/progress?sub=auth0|bob");
     assert.deepEqual((await res.json()).learnedWords, []);
   });
 
   it("rejects a user named in the body instead of writing to them", async () => {
-    const res = await addProgress(alice(), { sub: "auth0|bob", learnedWords: ["x"] });
+    const res = await addProgress(alice(), { sub: "auth0|bob", learnedWords: ["1"] });
     assert.equal(res.status, 400);
     assert.deepEqual((await (await getProgress(bob())).json()).learnedWords, []);
   });
@@ -157,9 +157,11 @@ describe("validation", () => {
     "a kind that isn't an array": { learnedWords: "allku" },
     "a non-string item": { learnedWords: [42] },
     "an empty item": { learnedWords: [""] },
-    "an over-long item": { learnedWords: ["x".repeat(MAX_ITEM_LENGTH + 1)] },
+    "an over-long item": { learnedPuzzles: ["x".repeat(MAX_ITEM_LENGTH + 1)] },
+    "an old kichwa|spanish word key": { learnedWords: ["allku|perro"] },
+    "a word id that isn't a positive integer": { learnedWords: ["0"] },
     "too many items": {
-      learnedWords: Array.from({ length: MAX_ITEMS_PER_REQUEST + 1 }, (_, i) => `w${i}`),
+      learnedWords: Array.from({ length: MAX_ITEMS_PER_REQUEST + 1 }, (_, i) => `${i + 1}`),
     },
   };
 
@@ -179,7 +181,7 @@ describe("validation", () => {
   });
 
   it("accepts exactly the maximum item length", async () => {
-    const res = await addProgress(alice(), { learnedWords: ["x".repeat(MAX_ITEM_LENGTH)] });
+    const res = await addProgress(alice(), { learnedPuzzles: ["x".repeat(MAX_ITEM_LENGTH)] });
     assert.equal(res.status, 200);
   });
 });
@@ -200,7 +202,7 @@ describe("without Auth0 configured", () => {
     const res = await fetch(`${url}/v1/progress`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ learnedWords: ["x"] }),
+      body: JSON.stringify({ learnedWords: ["1"] }),
     });
     assert.equal(res.status, 503);
   });

@@ -14,7 +14,8 @@ export async function getVocabulary({ categoryId, lang = "es" } = {}) {
   // `translation` holds whichever language was requested, falling back
   // to Spanish for the couple of words with no English gloss yet.
   const { rows } = await pool.query(
-    `SELECT w.kichwa,
+    `SELECT w.id::int AS id,
+            w.kichwa,
             es.value AS spanish,
             COALESCE(t.value, es.value) AS translation,
             w.category_id AS "categoryId",

@@ -60,7 +60,7 @@ beforeEach(() => {
 
 describe("claimLocalProgress", () => {
   it("discards logged-out progress when someone logs in", () => {
-    markLearned("learnedWords", "allku|perro");
+    markLearned("learnedWords", "14");
     claimLocalProgress("auth0|alice");
     expect(getLearned("learnedWords")).toEqual([]);
     expect(store.get(OWNER_KEY)).toBe("auth0|alice");
@@ -68,7 +68,7 @@ describe("claimLocalProgress", () => {
 
   it("discards another account's progress when a different user logs in", () => {
     claimLocalProgress("auth0|alice");
-    markLearned("learnedWords", "alice-word");
+    markLearned("learnedWords", "10");
     claimLocalProgress("auth0|bob");
     expect(getLearned("learnedWords")).toEqual([]);
     expect(store.get(OWNER_KEY)).toBe("auth0|bob");
@@ -90,23 +90,23 @@ describe("claimLocalProgress", () => {
   });
 
   it("keeps logged-out progress while staying logged out", () => {
-    markLearned("learnedWords", "x");
+    markLearned("learnedWords", "8");
     claimLocalProgress(null);
     claimLocalProgress(null);
-    expect(getLearned("learnedWords")).toEqual(["x"]);
+    expect(getLearned("learnedWords")).toEqual(["8"]);
   });
 });
 
 describe("syncProgress", () => {
   it("sends local progress and merges the account's progress back in", async () => {
     claimLocalProgress("auth0|alice");
-    markLearned("learnedWords", "local-word");
-    const { api, account } = fakeAccount({ learnedWords: ["other-device-word"], completedLessons: ["numbers:0"] });
+    markLearned("learnedWords", "21");
+    const { api, account } = fakeAccount({ learnedWords: ["22"], completedLessons: ["numbers:0"] });
 
     await syncProgress(api);
 
-    expect(account.learnedWords).toEqual(["other-device-word", "local-word"]);
-    expect(getLearned("learnedWords")).toEqual(["local-word", "other-device-word"]);
+    expect(account.learnedWords).toEqual(["22", "21"]);
+    expect(getLearned("learnedWords")).toEqual(["21", "22"]);
     expect(getLearned("completedLessons")).toEqual(["numbers:0"]);
   });
 
@@ -118,34 +118,34 @@ describe("syncProgress", () => {
   });
 
   it("leaves local progress untouched if the backend fails", async () => {
-    markLearned("learnedWords", "w");
+    markLearned("learnedWords", "7");
     await expect(syncProgress(offline())).rejects.toThrow("offline");
-    expect(getLearned("learnedWords")).toEqual(["w"]);
+    expect(getLearned("learnedWords")).toEqual(["7"]);
   });
 });
 
 describe("startProgressSync", () => {
   it("never sends logged-out progress to the account", async () => {
     markLearned("learnedPuzzles", "sp1");
-    markLearned("learnedWords", "anon-word");
-    const { api, account } = fakeAccount({ learnedWords: ["account-word"] });
+    markLearned("learnedWords", "23");
+    const { api, account } = fakeAccount({ learnedWords: ["24"] });
 
     startProgressSync("auth0|alice", api);
     await flush();
 
     expect(account.learnedPuzzles).toEqual([]);
-    expect(account.learnedWords).toEqual(["account-word"]);
+    expect(account.learnedWords).toEqual(["24"]);
     // ...and the browser now shows the account's progress instead
     expect(getLearned("learnedPuzzles")).toEqual([]);
-    expect(getLearned("learnedWords")).toEqual(["account-word"]);
+    expect(getLearned("learnedWords")).toEqual(["24"]);
   });
 
   it("doesn't send anything while logged out", () => {
     const { api } = fakeAccount();
     startProgressSync(null, null);
-    markLearned("learnedWords", "w");
+    markLearned("learnedWords", "7");
     expect(api.add).not.toHaveBeenCalled();
-    expect(getLearned("learnedWords")).toEqual(["w"]);
+    expect(getLearned("learnedWords")).toEqual(["7"]);
   });
 
   it("sends each newly learned item to the account while logged in", async () => {
@@ -153,12 +153,12 @@ describe("startProgressSync", () => {
     startProgressSync("auth0|alice", api);
     await flush();
 
-    markLearned("learnedWords", "new-word");
-    markLearned("learnedWords", "new-word"); // already learned: not sent again
+    markLearned("learnedWords", "25");
+    markLearned("learnedWords", "25"); // already learned: not sent again
     await flush();
 
-    expect(account.learnedWords).toEqual(["new-word"]);
-    expect(api.calls.filter((c) => c.learnedWords?.includes("new-word"))).toHaveLength(1);
+    expect(account.learnedWords).toEqual(["25"]);
+    expect(api.calls.filter((c) => c.learnedWords?.includes("25"))).toHaveLength(1);
   });
 
   it("stops sending items once logged out", async () => {
@@ -178,7 +178,7 @@ describe("startProgressSync", () => {
     const alice = fakeAccount();
     const stop = startProgressSync("auth0|alice", alice.api);
     await flush();
-    markLearned("learnedWords", "alice-word");
+    markLearned("learnedWords", "10");
     stop();
 
     const bob = fakeAccount();
@@ -203,8 +203,8 @@ describe("startProgressSync", () => {
 
   it("keeps working offline: a failed push doesn't throw", async () => {
     startProgressSync("auth0|alice", offline());
-    expect(() => markLearned("learnedWords", "w")).not.toThrow();
+    expect(() => markLearned("learnedWords", "7")).not.toThrow();
     await flush();
-    expect(getLearned("learnedWords")).toEqual(["w"]);
+    expect(getLearned("learnedWords")).toEqual(["7"]);
   });
 });

@@ -35,12 +35,12 @@ describe("progress", () => {
   it("records today as an active day, even for an already-learned item", () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date(2026, 10, 13, 12));
-    markLearned("learnedWords", "w");
+    markLearned("learnedWords", "7");
     vi.setSystemTime(new Date(2026, 10, 14, 9));
-    markLearned("learnedWords", "w");
+    markLearned("learnedWords", "7");
     vi.useRealTimers();
     expect(getLearned("activeDays")).toEqual(["2026-11-13", "2026-11-14"]);
-    expect(getLearned("learnedWords")).toEqual(["w"]);
+    expect(getLearned("learnedWords")).toEqual(["7"]);
   });
 
   it("keeps words and puzzles separate", () => {
@@ -58,6 +58,21 @@ describe("progress", () => {
   it("doesn't throw when localStorage is unavailable", () => {
     vi.stubGlobal("localStorage", undefined);
     expect(getLearned("learnedWords")).toEqual([]);
-    expect(() => markLearned("learnedWords", "x")).not.toThrow();
+    expect(() => markLearned("learnedWords", "8")).not.toThrow();
+  });
+});
+
+describe("old word keys", () => {
+  it("skips kichwa|spanish keys left in localStorage, keeping word ids", () => {
+    store.set("learnedWords", JSON.stringify(["allku|perro", "14", "misi|gato"]));
+    store.set("learnedPuzzles", JSON.stringify(["sp1"]));
+    expect(getLearned("learnedWords")).toEqual(["14"]);
+    expect(getLearned("learnedPuzzles")).toEqual(["sp1"]);
+  });
+
+  it("drops them from storage on the next write", () => {
+    store.set("learnedWords", JSON.stringify(["allku|perro"]));
+    markLearned("learnedWords", "311");
+    expect(JSON.parse(store.get("learnedWords")!)).toEqual(["311"]);
   });
 });

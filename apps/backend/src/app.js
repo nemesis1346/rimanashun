@@ -1,3 +1,4 @@
+import compression from "compression";
 import express from "express";
 import { UnauthorizedError } from "express-oauth2-jwt-bearer";
 import { createRequireAuth } from "./auth.js";
@@ -21,6 +22,8 @@ export function createApp({
   progressStore = createPgProgressStore(pool),
 } = {}) {
   const app = express();
+  // The vocabulary is ~86 KB as JSON, ~8 KB gzipped.
+  app.use(compression());
 
   app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");

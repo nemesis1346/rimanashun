@@ -1,7 +1,10 @@
 // Writes the quiz pictures and the word -> picture mapping:
 //   apps/web/public/images/words/<file>.svg
-//   packages/shared/data/word-images.json   ({ "kichwa|spanish": "/images/words/<file>.svg" })
-// The seed (apps/backend/db/seed.js) loads the mapping into words.image.
+//   packages/shared/data/word-images.json   ({ "<word id>": "/images/words/<file>.svg" })
+// Then `npm run db:apply-images` (apps/backend) sets words.image from the
+// mapping. Icons name their words as "kichwa|spanish" for readability; they
+// are resolved to ids through vocabulary.json (the database export, so run
+// `npm run db:export` first if words were edited).
 //
 //   node packages/shared/scripts/word-icons/build.mjs [--sheet out.png]
 //
@@ -21,11 +24,16 @@ const VOCAB = path.join(ROOT, "packages/shared/data/vocabulary.json");
 const svg = (body) =>
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">${body}\n</svg>\n`;
 
-// Every key must name a real word, or the picture silently never shows.
-const wordKeys = new Set(JSON.parse(readFileSync(VOCAB, "utf-8")).map((w) => `${w.kichwa}|${w.spanish}`));
-const missing = icons.flatMap((i) => i.keys).filter((k) => !wordKeys.has(k));
-if (missing.length) {
-  console.error(`No such word for: ${missing.join(", ")}`);
+// Every key must name exactly one word, or the picture silently goes to the
+// wrong word or nowhere (e.g. after a gloss was corrected in the database).
+const idsByKey = new Map();
+for (const w of JSON.parse(readFileSync(VOCAB, "utf-8"))) {
+  const key = `${w.kichwa}|${w.spanish}`;
+  idsByKey.set(key, [...(idsByKey.get(key) ?? []), w.id]);
+}
+const bad = icons.flatMap((i) => i.keys).filter((k) => idsByKey.get(k)?.length !== 1);
+if (bad.length) {
+  console.error(`Keys that match no word, or more than one: ${bad.join(", ")}`);
   process.exit(1);
 }
 
@@ -33,10 +41,10 @@ mkdirSync(IMAGES_DIR, { recursive: true });
 const mapping = {};
 for (const icon of icons) {
   writeFileSync(path.join(IMAGES_DIR, `${icon.file}.svg`), svg(icon.body));
-  for (const key of icon.keys) mapping[key] = `/images/words/${icon.file}.svg`;
+  for (const key of icon.keys) mapping[idsByKey.get(key)[0]] = `/images/words/${icon.file}.svg`;
 }
-const sorted = Object.fromEntries(Object.entries(mapping).sort(([a], [b]) => a.localeCompare(b)));
-writeFileSync(MAPPING, JSON.stringify(sorted, null, 2) + "\n");
+// Integer-like keys are written in numeric order.
+writeFileSync(MAPPING, JSON.stringify(mapping, null, 2) + "\n");
 console.log(`wrote ${icons.length} pictures for ${Object.keys(mapping).length} words`);
 
 const sheetArg = process.argv.indexOf("--sheet");

@@ -47,19 +47,16 @@ Not in the vocabulary at all, but basic and picturable:
 - `kuy`: cuy (guinea pig), see `kuytsa` above
 - "ojo" (eye) and "fuego" (fire) as glosses, see `ñawi` and `nina` above
 
-## Things to know before editing `vocabulary.json`
+## Things to know before fixing these
 
-- `apps/backend/db/seed.js` collapses exact duplicates (746 entries → 703
-  senses). `en-translations.json` (backfilled English glosses) is keyed by
-  word **insertion order after that dedup**, so inserting, deleting or
-  reordering entries shifts every English gloss after that point. Add new
-  words at the end, or regenerate `en-translations.json` together with the
-  change.
-- The web app identifies a word as `kichwa|spanish` (`getWordKey`), and that
-  key is stored in users' progress (`user_progress`, kind `learnedWords`).
-  Changing a gloss (e.g. `wasi|casado` → `wasi|casa`) makes existing progress
-  for that word stop matching. Fine for now (little real progress exists),
-  but a migration that renames the stored keys would be needed later.
-- Picture mapping lives in `packages/shared/data/word-images.json`, keyed by
-  the same `kichwa|spanish` key, so fixing a gloss also means updating its
-  key there.
+Since 2026-11-15 the database is the source of truth and `vocabulary.json`
+is its export (`npm run db:export`), so fixes go into the database (a
+migration for now, the admin console later), then re-export. Indexes above
+are positions in the old hand-written file; use the word ids in the current
+`vocabulary.json` instead.
+
+- Progress refers to words by id, so correcting a gloss no longer loses
+  anyone's progress.
+- A fixed gloss can break a picture key in
+  `packages/shared/scripts/word-icons/icons/*.mjs` (`kichwa|spanish`); the
+  icon build reports it, then update the key.

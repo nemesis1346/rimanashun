@@ -6,8 +6,8 @@
 // - one darker shade of the main color for depth, soft ground shadow
 // - colors from the palette below; Andean motifs (zigzag bands) where natural
 //
-// `keys` are the words this picture is for, as `kichwa|spanish` (the app's
-// word key, see getWordKey in apps/web/src/lib/data.ts). Words with a
+// `keys` are the words this picture is for, as `kichwa|spanish` (readable;
+// build.mjs resolves each to its word id through vocabulary.json). Words with a
 // doubtful gloss are left out on purpose; see docs/vocabulary-data-issues.md.
 
 export const C = {

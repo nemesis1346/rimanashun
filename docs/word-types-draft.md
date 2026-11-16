@@ -1,16 +1,15 @@
 # Word types — draft for review
 
 Proposed word type for each of the 703 senses in `packages/shared/data/vocabulary.json`
-(after the seed's dedup). **In use since 2026-11-15**: the source of truth is now
-`packages/shared/data/word-types.json` (seeded into `words.word_type`); this file is the
-readable copy made for review and isn't regenerated. Quiz wrong answers are picked from
+(after the seed's dedup). **In use since 2026-11-15**: the types live in the database (`words.word_type`,
+exported as `type` in `vocabulary.json`); this file is the copy made for review and
+isn't regenerated. `#` is the word's id. Quiz wrong answers are picked from
 the same type first (see `rankByLikeness` in `apps/web/src/lib/data.ts`).
 
 How it was made: a rule pass (Spanish gloss ending in -ar/-er/-ir → verb, category
 `numbers` → number, etc.), then every row checked by hand. Rows marked ⚠ depend on a
 gloss that looks wrong; see also `docs/vocabulary-data-issues.md`.
 
-`#` is the sense's position after dedup (the same numbering `en-translations.json` uses).
 
 ## Summary
 
@@ -29,8 +28,8 @@ gloss that looks wrong; see also `docs/vocabulary-data-issues.md`.
 | `phrase` | 24 | greetings and multi-word expressions |
 | `unclear` | 3 | can't tell from the gloss |
 
-To correct a row, change it in `word-types.json` and re-run `npm run db:seed` (or tell
-Claude the `#` and the right type).
+To correct a row, update `words.word_type` for that id (a migration for now, the admin
+console later), or tell Claude the `#` and the right type.
 
 ## `noun` (285)
 

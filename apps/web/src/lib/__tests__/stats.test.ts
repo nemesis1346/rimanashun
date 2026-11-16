@@ -70,7 +70,8 @@ describe("localDay", () => {
   });
 });
 
-const w = (kichwa: string, spanish: string, categoryId: string): KichwaWord => ({
+const w = (id: number, kichwa: string, spanish: string, categoryId: string): KichwaWord => ({
+  id,
   kichwa,
   spanish,
   translation: spanish,
@@ -79,10 +80,10 @@ const w = (kichwa: string, spanish: string, categoryId: string): KichwaWord => (
 const cat = (id: string): Category => ({ id, name: id.toUpperCase(), description: "", icon: "", color: "#000", keywords: [] });
 
 describe("categoryProgress", () => {
-  const words = [w("allku", "perro", "animals"), w("misi", "gato", "animals"), w("shuk", "uno", "numbers")];
+  const words = [w(14, "allku", "perro", "animals"), w(311, "misi", "gato", "animals"), w(458, "shuk", "uno", "numbers")];
 
   it("counts learned vs total words per category, in category order", () => {
-    const result = categoryProgress(words, [cat("numbers"), cat("animals"), cat("empty")], ["allku|perro"]);
+    const result = categoryProgress(words, [cat("numbers"), cat("animals"), cat("empty")], ["14"]);
     expect(result.map((c) => [c.id, c.learned, c.total, c.percentage])).toEqual([
       ["numbers", 0, 1, 0],
       ["animals", 1, 2, 50],
@@ -91,8 +92,8 @@ describe("categoryProgress", () => {
 });
 
 describe("countLearnedWords", () => {
-  it("only counts keys that match a current word", () => {
-    const words = [w("allku", "perro", "animals"), w("misi", "gato", "animals")];
-    expect(countLearnedWords(words, ["allku|perro", "gone|word"])).toBe(1);
+  it("only counts ids that match a current word", () => {
+    const words = [w(14, "allku", "perro", "animals"), w(311, "misi", "gato", "animals")];
+    expect(countLearnedWords(words, ["14", "999"])).toBe(1);
   });
 });

@@ -1,3732 +1,705 @@
 [
-  {
-    "kichwa": "achi mama",
-    "spanish": "madrina",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "achi tayta",
-    "spanish": "padrino",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "achikta japichipay",
-    "spanish": "enciende la luz porfavor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "akcha",
-    "spanish": "pelo",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "alalay",
-    "spanish": "feo, fea",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "allana puncha",
-    "spanish": "dia de la cosecha",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "alli",
-    "spanish": "bueno, buena",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "alli",
-    "spanish": "sano",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "alli chishi",
-    "spanish": "buenas tardes",
-    "categoryId": "greetings"
-  },
-  {
-    "kichwa": "alli puncha",
-    "spanish": "buenos dias",
-    "categoryId": "greetings"
-  },
-  {
-    "kichwa": "alli tuta",
-    "spanish": "buenas noches",
-    "categoryId": "greetings"
-  },
-  {
-    "kichwa": "allichina",
-    "spanish": "numero",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "allitukuna",
-    "spanish": "mejorar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "allku",
-    "spanish": "perro",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "allkuyuk",
-    "spanish": "dueño de perro",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "allpa",
-    "spanish": "tierra, terreno",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "allpa",
-    "spanish": "tierra",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "almuza",
-    "spanish": "almuerzo",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "anaku",
-    "spanish": "falda",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "anchuchina",
-    "spanish": "quitar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "anchuna",
-    "spanish": "quitarse",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "ankana",
-    "spanish": "volar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "ankas",
-    "spanish": "azul",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "antawa",
-    "spanish": "carro, auto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "apachina",
-    "spanish": "hacer cargar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "apamuna",
-    "spanish": "traer",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "apana",
-    "spanish": "llevar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "api",
-    "spanish": "colada",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "apunchik",
-    "spanish": "dios",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "apunchikpa wasi",
-    "spanish": "casa de dios",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "ari",
-    "spanish": "si",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "arinina",
-    "spanish": "aceptar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "armachina",
-    "spanish": "hacer bañar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "armana uku",
-    "spanish": "baño",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "arrendashka",
-    "spanish": "arrendado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "asha ",
-    "spanish": "poco",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "asha ",
-    "spanish": "poco",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "asha muspa",
-    "spanish": "poco loco o loca",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ashtaka",
-    "spanish": "bastante",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ashtakashkaman",
-    "spanish": "hasta luego",
-    "categoryId": "greetings"
-  },
-  {
-    "kichwa": "asichina",
-    "spanish": "hacer reir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "asina",
-    "spanish": "reirse",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "aspirina",
-    "spanish": "rascarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "aswa",
-    "spanish": "chicha",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "atallpa",
-    "spanish": "gallina",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "awak kari",
-    "spanish": "tejedora ",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "awak warmi",
-    "spanish": "tejedora ",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "awana",
-    "spanish": "tejer",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "aycha",
-    "spanish": "carne",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "ayllu",
-    "spanish": "familia",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "ayllu",
-    "spanish": "familia",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "aysana",
-    "spanish": "halar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "balun",
-    "spanish": "pantalon",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "banca",
-    "spanish": "banca",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "bloque",
-    "spanish": "bloque",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "cafe",
-    "spanish": "cafe",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "camisa",
-    "spanish": "blusa",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "capilla",
-    "spanish": "capilla",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "carro",
-    "spanish": "carro, auto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "casa comunal",
-    "spanish": "casa comunal",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "casado",
-    "spanish": "casado",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "casarana",
-    "spanish": "casaarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "cebolla",
-    "spanish": "cebolla",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "chakana",
-    "spanish": "escalera",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "chaki",
-    "spanish": "patas",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "chaki",
-    "spanish": "pie",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "chaki ñan",
-    "spanish": "sendero",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "chakina",
-    "spanish": "secar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "challwa",
-    "spanish": "pescado",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "challwa",
-    "spanish": "pescado",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "chapa",
-    "spanish": "burro",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "chapakrirka",
-    "spanish": "fue a vigilar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chapana",
-    "spanish": "espiar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chaquishka",
-    "spanish": "secar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "charijayak",
-    "spanish": "rico amargado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "charik",
-    "spanish": "rico, millonario",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "charina",
-    "spanish": "tener",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chaskina",
-    "spanish": "recibir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "chawa",
-    "spanish": "crudo",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "chawpi puncha mikuna",
-    "spanish": "almuerzo",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "chay",
-    "spanish": "esa, ese, eso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chay shuk ",
-    "spanish": "otro u otros",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chay shuk punchakuna",
-    "spanish": "otros dias",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chayachina",
-    "spanish": "hacer llegar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "chayana",
-    "spanish": "llegar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "chayana",
-    "spanish": "llegar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "chaymanta",
-    "spanish": "por eso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chaypak",
-    "spanish": "para eso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chaypi",
-    "spanish": "alli",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chinpa",
-    "spanish": "en/ al frente",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chiri",
-    "spanish": "frio",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "chishi",
-    "spanish": "tarde",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chishi",
-    "spanish": "tarde",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chukrichina",
-    "spanish": "lastimar, herir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "chumpak",
-    "spanish": "invitados, acompañantes",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chunka",
-    "spanish": "diez",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "chunkana",
-    "spanish": "jugar a las planchas",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "chunpi",
-    "spanish": "faja",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "churachina",
-    "spanish": "hacer vestir",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "churakuna",
-    "spanish": "vestimenta",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "churana",
-    "spanish": "poner",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "churi",
-    "spanish": "hija",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chusku",
-    "spanish": "cuatro",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "chuya",
-    "spanish": "limpio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "culantro",
-    "spanish": "culantro",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "culis",
-    "spanish": "col",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "cumpana",
-    "spanish": "acompañar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "fanga",
-    "spanish": "papel",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "gas",
-    "spanish": "gas",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "grano",
-    "spanish": "grano",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "halaw",
-    "spanish": "agradable",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "hallu",
-    "spanish": "lengua",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "hanak",
-    "spanish": "arriba",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "hanan",
-    "spanish": "arriba inclinado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "hanpi wasi",
-    "spanish": "centro de salud",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "hanpik tayta ",
-    "spanish": "curandero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "hanpina",
-    "spanish": "curar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "hatun",
-    "spanish": "alto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "hatun",
-    "spanish": "alto, grande",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "hatun mama",
-    "spanish": "abuela",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "hatun tayta",
-    "spanish": "abuelo",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "hatun tayta",
-    "spanish": "abuelo",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "hatun yachana wasi",
-    "spanish": "colegio",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "hawa pacha",
-    "spanish": "cielo",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "hawa pacha",
-    "spanish": "arriba",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "hunu",
-    "spanish": "mullon",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ima",
-    "spanish": "porque",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ima colortak?",
-    "spanish": "de que color?",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "ima punchatatak?",
-    "spanish": "que dia?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ima shutitak?",
-    "spanish": "que nombre?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ima tunutatak ?",
-    "spanish": "que musica?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imachik",
-    "spanish": "verbo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imamantak?",
-    "spanish": "porque?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imanallatak?",
-    "spanish": "como?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imapatak?",
-    "spanish": "para que?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imapitak?",
-    "spanish": "en que?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imatak?",
-    "spanish": "que?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imatapash",
-    "spanish": "algo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imatatak?",
-    "spanish": "que?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "imawantak?",
-    "spanish": "con que?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "inina",
-    "spanish": "creer",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "iñina",
-    "spanish": "creer",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "irki",
-    "spanish": "debil",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ishkay",
-    "spanish": "dos",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "ishtirana",
-    "spanish": "esterar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "iskun",
-    "spanish": "nueve",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "jallmana",
-    "spanish": "deshierbar",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "janpik doctora",
-    "spanish": "medica",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "japina",
-    "spanish": "pescar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "japina",
-    "spanish": "cojer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "japirina",
-    "spanish": "encenderse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "jatarina",
-    "spanish": "levantarse",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "jawapi",
-    "spanish": "sobre",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "jichana",
-    "spanish": "regar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "jichana",
-    "spanish": "regar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "jirru",
-    "spanish": "hierro",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "jugo",
-    "spanish": "jugo",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "kachi ",
-    "spanish": "sal",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "kallana",
-    "spanish": "tiesto, sarten",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kallana",
-    "spanish": "tiesto, sarten",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kallarina",
-    "spanish": "empezar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kallarina",
-    "spanish": "comenzar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kallarina",
-    "spanish": "comenzar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kallpana",
-    "spanish": "correr",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kaman",
-    "spanish": "hasta",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kamcha",
-    "spanish": "tostado",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "kamchana",
-    "spanish": "tostar",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "kamchana",
-    "spanish": "tostar",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "kamchashka",
-    "spanish": "tostado",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "kamuti",
-    "spanish": "libro",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "kan",
-    "spanish": "tu",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kana",
-    "spanish": "ser, estar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kancha",
-    "spanish": "afuera, fuera",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kancha",
-    "spanish": "patio",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "kanchis",
-    "spanish": "siete",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "kankuna",
-    "spanish": "vosotros, vosotras",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kanllaka",
-    "spanish": "solamente tu",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kara",
-    "spanish": "cueros",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "karana",
-    "spanish": "compartir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "karana",
-    "spanish": "regalar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kari",
-    "spanish": "hombra",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kari wawa",
-    "spanish": "niño, niña",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "karipa churakuna",
-    "spanish": "ropa de hombre",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "karu",
-    "spanish": "lejos",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kashpallata",
-    "spanish": "",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kasilla",
-    "spanish": "quietos",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kaspana",
-    "spanish": "chamuscar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kaspi",
-    "spanish": "madera, palo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kaspi",
-    "spanish": "palo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kati",
-    "spanish": "seguido",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "katina",
-    "spanish": "seguir, perseguir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "katuk warmi",
-    "spanish": "vendedora",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "katuku",
-    "spanish": "abuelo, abuela",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "katuna",
-    "spanish": "vender",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "katuna pamba",
-    "spanish": "mercado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kawsana",
-    "spanish": "vivir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kay",
-    "spanish": "este, esto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kayakaman",
-    "spanish": "hasta mañana",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kayana",
-    "spanish": "llamar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kayanti",
-    "spanish": "dia siguiente",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kayka",
-    "spanish": "toma!",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kaynana",
-    "spanish": "permanecer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kaynana",
-    "spanish": "pasar el dia",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kaynanik",
-    "spanish": "el otro dia",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kaypi",
-    "spanish": "aqui",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kichki",
-    "spanish": "estrecho",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kichuna",
-    "spanish": "quitar, arranchar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kikin",
-    "spanish": "usted",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kikinkuna",
-    "spanish": "ustedes",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "killa",
-    "spanish": "mes",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "killa",
-    "spanish": "mes",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "killkana",
-    "spanish": "escribir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "killpana",
-    "spanish": "cubrirse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "killpana",
-    "spanish": "cubrir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "killu",
-    "spanish": "amarrillo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "killu",
-    "spanish": "amarillo",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "kimsa",
-    "spanish": "tres",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "kinkray",
-    "spanish": "interseccion",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kipa",
-    "spanish": "leuego, despues",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kipa churi",
-    "spanish": "hijo menor",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "kipi",
-    "spanish": "maleta",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kipi",
-    "spanish": "maleta",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kishpirina",
-    "spanish": "libertad",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kiwana",
-    "spanish": "limpiar hierbas",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kiwu",
-    "spanish": "hierba",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "kucha",
-    "spanish": "laguna, lago",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "kuchi",
-    "spanish": "chancho",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "kuchu",
-    "spanish": "rincon",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kuchu",
-    "spanish": "cerca",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kuliarana",
-    "spanish": "enojarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kullki",
-    "spanish": "dinero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kulta",
-    "spanish": "pato",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "kuna",
-    "spanish": "dar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kuna",
-    "spanish": "dar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kunan",
-    "spanish": "ahora, hoy",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kunuchina",
-    "spanish": "calentar, recalentar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kunuk",
-    "spanish": "caliente",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kurina",
-    "spanish": "importar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kusa",
-    "spanish": "esposo",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "kusa",
-    "spanish": "esposo",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "kusa",
-    "spanish": "espso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kusa tukuna",
-    "spanish": "enamorado",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "kusana",
-    "spanish": "asar, freir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kusashka aycha",
-    "spanish": "carne asada, carne frita",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "kushma",
-    "spanish": "chaleco",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kutana",
-    "spanish": "moler",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kutin",
-    "spanish": "en cambio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kutin nipay",
-    "spanish": "repetir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kuyana",
-    "spanish": "querer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kuytsa",
-    "spanish": "joven mujer",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "kuytsa",
-    "spanish": "cuy, cobayo",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "ladrillo",
-    "spanish": "ladrillo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "lampa",
-    "spanish": "pala",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "leche",
-    "spanish": "leche",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "llachu",
-    "spanish": "pico",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llaki",
-    "spanish": "triste",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llakilla",
-    "spanish": "triste",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llakta",
-    "spanish": "comundiad, pueblo, ciudad",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llama",
-    "spanish": "oveja",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "llanada",
-    "spanish": "llanura",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llapishka",
-    "spanish": "aplastado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llapishka papa",
-    "spanish": "tortilla",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llukchana",
-    "spanish": "resbalar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llukshina",
-    "spanish": "salir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "llukshina",
-    "spanish": "sacar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "llukshirka",
-    "spanish": "salio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llullana",
-    "spanish": "mentir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "llullu",
-    "spanish": "berro",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llunchina",
-    "spanish": "estucar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llunchiska",
-    "spanish": "estucado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "lukru",
-    "spanish": "locro",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "lulun",
-    "spanish": "huevo",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "machana",
-    "spanish": "emborracharse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "machana yaku",
-    "spanish": "alcochol",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "machana yaku",
-    "spanish": "licor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "machashka",
-    "spanish": "borracho",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "makanakuna",
-    "spanish": "pelearse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "makanakuna runpa",
-    "spanish": "guantes de pelea",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maki",
-    "spanish": "manos",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maki watana",
-    "spanish": "manilla",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mallichiway",
-    "spanish": "hazme probar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mallina",
-    "spanish": "probar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mallki",
-    "spanish": "rama",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "malta kallana",
-    "spanish": "tiesto mediano",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "malta manka",
-    "spanish": "olla mediana",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mama",
-    "spanish": "mama",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mama kallana",
-    "spanish": "tiesto grande",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mama manka",
-    "spanish": "olla grande",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mana",
-    "spanish": "no",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mana pipash",
-    "spanish": "nadie",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mana yachanichu",
-    "spanish": "no entiendo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mañana",
-    "spanish": "pedir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mananinar",
-    "spanish": "rechazar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "manka",
-    "spanish": "olla",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "manka",
-    "spanish": "olla",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "manña ",
-    "spanish": "borde",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mapa",
-    "spanish": "sucio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mapa",
-    "spanish": "sucio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maquina",
-    "spanish": "maquina",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "marka",
-    "spanish": "provincia",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mashi",
-    "spanish": "amigo-compañero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mashkana",
-    "spanish": "buscar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mashna..tak?",
-    "spanish": "cuanto?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maskana",
-    "spanish": "buscar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mawka",
-    "spanish": "viejo, inanimado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maykan...tak?",
-    "spanish": "cual?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maykunatapash",
-    "spanish": "por doquier",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maymantatak?",
-    "spanish": "de donde?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maymutsurik",
-    "spanish": "importante",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maypipash",
-    "spanish": "en doquier",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maypitak?",
-    "spanish": "en donde?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "maytatak?",
-    "spanish": "por donde?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mayu",
-    "spanish": "rio",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "mesa",
-    "spanish": "mesa",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "michik kari",
-    "spanish": "pastor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "michik warmi",
-    "spanish": "pastora",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "michina",
-    "spanish": "pastar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mikuna",
-    "spanish": "dinero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mikuna",
-    "spanish": "comer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mikuna uku",
-    "spanish": "comedor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "minishtina",
-    "spanish": "necesitar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "minka",
-    "spanish": "trabajo comunal",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "mishki",
-    "spanish": "tayta galan",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mishki",
-    "spanish": "sabroso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mishki pacha",
-    "spanish": "delicioso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mishu",
-    "spanish": "misho",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "misi",
-    "spanish": "gato",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "moleshtana",
-    "spanish": "molestar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "muchana",
-    "spanish": "adorar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muchiku",
-    "spanish": "sombrero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "munana",
-    "spanish": "desear, querer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "munaywan",
-    "spanish": "con gusto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muru",
-    "spanish": "grano",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mushuk",
-    "spanish": "nuevo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mushuk",
-    "spanish": "nuevo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muspa",
-    "spanish": "loco",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muti",
-    "spanish": "mote",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "mutshuska",
-    "spanish": "necesitado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mutsuna",
-    "spanish": "necesitar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muyu",
-    "spanish": "semilla",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muyuna",
-    "spanish": "girar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muyuna",
-    "spanish": "rodear",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muyuntin",
-    "spanish": "alrededor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "muyuntin",
-    "spanish": "rodear",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ña",
-    "spanish": "ya!",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñan",
-    "spanish": "camino",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñaña",
-    "spanish": "hermana-hermana",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "nanana",
-    "spanish": "doler",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñanta mañachi",
-    "spanish": "prestame el camino",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñatak",
-    "spanish": "en este momento",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñawi",
-    "spanish": "cara, faz",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "ñawpa",
-    "spanish": "adelante",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "nima",
-    "spanish": "cero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "nina",
-    "spanish": "decir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "nina",
-    "spanish": "decir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "nina japirirka ",
-    "spanish": "se encendio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "nishpa",
-    "spanish": "diciendo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñuka",
-    "spanish": "yo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñukanchik",
-    "spanish": "nosostros, nosotras",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñukashina",
-    "spanish": "como yo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ñutuchina",
-    "spanish": "pulverizar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pacha",
-    "spanish": "hora",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pacha",
-    "spanish": "tierra",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "pachallina",
-    "spanish": "chal corto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pachan pachan",
-    "spanish": "tiempo en tiempo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pakakuna",
-    "spanish": "esconderse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pakarina",
-    "spanish": "amanecerse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pakcha",
-    "spanish": "cascada",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pakina",
-    "spanish": "romper, quebrar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "paku",
-    "spanish": "cafe",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pakuana",
-    "spanish": "",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pallana",
-    "spanish": "cosechar",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "pana",
-    "spanish": "pagar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "pani",
-    "spanish": "hermano-hermana",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "panka",
-    "spanish": "pagina",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pargati",
-    "spanish": "alpargate",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "parkati",
-    "spanish": "alpargate",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "parlana",
-    "spanish": "conversar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "paskana",
-    "spanish": "abrir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "patakunawan wasi",
-    "spanish": "edificio con muchos pisos",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "patsak",
-    "spanish": "cien",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "pay",
-    "spanish": "el, ella",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pay",
-    "spanish": "gracias",
-    "categoryId": "greetings"
-  },
-  {
-    "kichwa": "paykuna",
-    "spanish": "ellos, ellas",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pichana",
-    "spanish": "limpiar hierbas",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "pichana",
-    "spanish": "limpiar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "pichka",
-    "spanish": "cinco",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "pillurka",
-    "spanish": "envolvio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pimantatak?",
-    "spanish": "por quien?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "piña",
-    "spanish": "enojado, enojada",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "piñachina",
-    "spanish": "hacer enojar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "piñachina",
-    "spanish": "hacer enojar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "pintu",
-    "spanish": "tela",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "pipash",
-    "spanish": "alguien",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pishku",
-    "spanish": "pajaro",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "pitak?",
-    "spanish": "quien?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pitatak?",
-    "spanish": "a quien?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "piwantak?",
-    "spanish": "con quien?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "plituna",
-    "spanish": "molestar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "puka",
-    "spanish": "rojo",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "pukllana",
-    "spanish": "jugar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "pukru",
-    "spanish": "loma",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "puku",
-    "spanish": "plato",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pukuna",
-    "spanish": "madurar, soplar",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "pukuna",
-    "spanish": "madurar, fermentarse",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "pukushka",
-    "spanish": "madurado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pukyu",
-    "spanish": "vertiente",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "puncha",
-    "spanish": "dialogo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "puñuna",
-    "spanish": "dormir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "puñuna",
-    "spanish": "dormir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "puñuna uku",
-    "spanish": "dormitorio",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "purina",
-    "spanish": "andar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "purishpa",
-    "spanish": "caminando",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pusak",
-    "spanish": "ocho",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "pushak",
-    "spanish": "presidente",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pushana",
-    "spanish": "llevar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "pusharkakuna",
-    "spanish": "llevaron",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pushtu",
-    "spanish": "sector",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "pushtupi",
-    "spanish": "en el sector",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "pusu",
-    "spanish": "plomo",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "putsuku yaku",
-    "spanish": "cerveza",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "puyo",
-    "spanish": "niebla",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "rakina",
-    "spanish": "repartir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "raku",
-    "spanish": "grueso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ranti",
-    "spanish": "comprar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "rantina",
-    "spanish": "comprar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "rasu",
-    "spanish": "nieve",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "rikchari",
-    "spanish": "despiertate",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rikra",
-    "spanish": "brazo",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "riksik",
-    "spanish": "amigo conocido",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "riksina",
-    "spanish": "conocer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "riksishka",
-    "spanish": "amigo nuevo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "riksishka",
-    "spanish": "amigo, amiga",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rikuchiway",
-    "spanish": "muestrame",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rikuna",
-    "spanish": "ver, mirar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "rimanakuy",
-    "spanish": "dialogo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rimashka katina",
-    "spanish": "seguir hablando",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rina",
-    "spanish": "ir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rinri",
-    "spanish": "oreja",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "ruka",
-    "spanish": "dedo",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "ruku",
-    "spanish": "viejo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rumi",
-    "spanish": "piedra",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "rumi",
-    "spanish": "rumi",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rumilla pamba",
-    "spanish": "pedregroso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rumpa",
-    "spanish": "pelotas, canicas",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "runpa",
-    "spanish": "guantes",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rurana",
-    "spanish": "deber",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rurana",
-    "spanish": "aplicar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rurana",
-    "spanish": "hacer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ruwana",
-    "spanish": "poncho",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "sacha kuchi",
-    "spanish": "cerdo salvaje",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "sakina",
-    "spanish": "dejar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "sakina",
-    "spanish": "extraer, sacar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "sakirina",
-    "spanish": "quedarse",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "sakiway",
-    "spanish": "me deje",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "samana",
-    "spanish": "descansar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "samarina uku",
-    "spanish": "sala",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "sara chakra",
-    "spanish": "sementeria maiz",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "sara panka",
-    "spanish": "hojas de maiz",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "sarantanu",
-    "spanish": "de varios colores",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "sarcillo",
-    "spanish": "arete",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "shamuna",
-    "spanish": "venir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shamupasha",
-    "spanish": "me permite venir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shamupaylla",
-    "spanish": "venga no mas",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shayachina",
-    "spanish": "hacer parar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "shayana",
-    "spanish": "para",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shaykuna",
-    "spanish": "cansarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shaykushka",
-    "spanish": "cansado, cansada, estresado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shikra",
-    "spanish": "mochila",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "shila",
-    "spanish": "vaso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shilla",
-    "spanish": "vaso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shimi",
-    "spanish": "lengua",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "shina shinalla",
-    "spanish": "mas o menos",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shinallatak",
-    "spanish": "asi mismo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shinapash",
-    "spanish": "sin embargo, pero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shitana",
-    "spanish": "botar, arrojar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "shitona",
-    "spanish": "botar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "shuk",
-    "spanish": "uno",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "shunku",
-    "spanish": "corazon",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "shunku",
-    "spanish": "corazon",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "shunkuna",
-    "spanish": "desayuno",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "shunsho",
-    "spanish": "idiota",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shuti",
-    "spanish": "nombre",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shutichikuna",
-    "spanish": "pronombres",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shuwak",
-    "spanish": "ladron",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shuyana",
-    "spanish": "esperar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "sirana",
-    "spanish": "coser",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "sirina",
-    "spanish": "acostarse",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "sisa",
-    "spanish": "flor",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "soltera",
-    "spanish": "soltera",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "sukta",
-    "spanish": "seis",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "sumak",
-    "spanish": "excelente",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "surkuna",
-    "spanish": "sacar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "tabacu",
-    "spanish": "tabaco, cigarrillo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "taki",
-    "spanish": "musica",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "takina",
-    "spanish": "hacer musica",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "takshak kari",
-    "spanish": "lavandero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "takshak warmi",
-    "spanish": "lavandera",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "takshana",
-    "spanish": "lavar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "tamiana",
-    "spanish": "llover",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tanta",
-    "spanish": "pan",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "tantanakuna",
-    "spanish": "reunirse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tantanakuy",
-    "spanish": "reunion",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tarina",
-    "spanish": "encontrar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "tarishka",
-    "spanish": "encontrado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tarpuk warmi",
-    "spanish": "agricultora",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tarpuna",
-    "spanish": "sembrar",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "tarpuy",
-    "spanish": "siembra",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "taspurshka",
-    "spanish": "sembrio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tawka",
-    "spanish": "varios",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tawka",
-    "spanish": "muchos",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tawri",
-    "spanish": "chochos",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "tayta",
-    "spanish": "señor, papa",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tayta cura",
-    "spanish": "papa cura",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tayta yaya",
-    "spanish": "padre biologico",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "telar",
-    "spanish": "telar",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "tikrana",
-    "spanish": "regresar, volver",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tinpuna",
-    "spanish": "hervir",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "tio",
-    "spanish": "señor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tiyana",
-    "spanish": "haber, existir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tiyarina",
-    "spanish": "silla, silleta",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tiyarina",
-    "spanish": "sentarse",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "trabajana",
-    "spanish": "trabajar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "tukuna",
-    "spanish": "hacerse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tukuy",
-    "spanish": "todos",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tukuylla",
-    "spanish": "todos",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tullpa",
-    "spanish": "fogon",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tullpa",
-    "spanish": "fogon",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tullpuna ",
-    "spanish": "colorear",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "tullpuyuk",
-    "spanish": "colorido",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "tullu",
-    "spanish": "flaco",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "tunu",
-    "spanish": "musica",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tupana",
-    "spanish": "encontrarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "turi",
-    "spanish": "hermana-hermano",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "turu",
-    "spanish": "lodo",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "tushuna",
-    "spanish": "bailar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "tushuna",
-    "spanish": "bailar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "tuta mikuna",
-    "spanish": "cena",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "tutamanta",
-    "spanish": "la mañana",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tyarina",
-    "spanish": "sentarse",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "ucha",
-    "spanish": "pronto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "uchilla",
-    "spanish": "pequeño",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "uchilla",
-    "spanish": "pequeño",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "uchilla pacha",
-    "spanish": "minuto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ukllana",
-    "spanish": "abrazar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "uksha",
-    "spanish": "pajaro",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "uksha",
-    "spanish": "paja",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "uku",
-    "spanish": "adentro, dentro",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "uku",
-    "spanish": "cuarto",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "uku",
-    "spanish": "cuarto, habitacion",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "uku pacha",
-    "spanish": "infierno",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ukucha",
-    "spanish": "raton",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "ullana",
-    "spanish": "oir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "uma",
-    "spanish": "cabeza",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "uma pachallina",
-    "spanish": "tla para cubrirse la cabeza",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "umana",
-    "spanish": "mentir",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "unkuna",
-    "spanish": "enfermarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "upalla",
-    "spanish": "callado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "upallana",
-    "spanish": "callar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "upyana",
-    "spanish": "beber",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ura",
-    "spanish": "abajo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "urku",
-    "spanish": "montaña, monte",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "urpi",
-    "spanish": "tortola",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "usa",
-    "spanish": "piojo",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "ushana",
-    "spanish": "poder",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "ushana",
-    "spanish": "poder",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "ushana",
-    "spanish": "poder",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "ushushi",
-    "spanish": "hijo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ushuta",
-    "spanish": "calzado",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "utiya",
-    "spanish": "rapido",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "utya",
-    "spanish": "pronto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "uyana",
-    "spanish": "escuchar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "uyay",
-    "spanish": "atento",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "valina",
-    "spanish": "valer, costar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "wachuna",
-    "spanish": "formar surcos",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wakana",
-    "spanish": "llorar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "wakaychina",
-    "spanish": "guardar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "wakcha",
-    "spanish": "pobre",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wakcha",
-    "spanish": "pobre",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wakin",
-    "spanish": "alguno",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wakin",
-    "spanish": "algun",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wakinpi",
-    "spanish": "rara vez",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "waklli",
-    "spanish": "dañado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wakllina",
-    "spanish": "dañarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wakra",
-    "spanish": "toro",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "wallka",
-    "spanish": "collar",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "wampra",
-    "spanish": "joven hombre",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "wankipi",
-    "spanish": "a veces",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wañuchina",
-    "spanish": "hacer apagar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "wanuna",
-    "spanish": "abonar",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "wañushka",
-    "spanish": "muerto",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "waranka",
-    "spanish": "mil",
-    "categoryId": "numbers"
-  },
-  {
-    "kichwa": "warmi",
-    "spanish": "mujer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "warmi",
-    "spanish": "esposa",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "warmi tukuna",
-    "spanish": "enamorada",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "warmi wawa",
-    "spanish": "niña",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "warmikunayuk",
-    "spanish": "dueño de mujeres",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "warmipa churakuna",
-    "spanish": "ropa de mujer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "warmiyuk",
-    "spanish": "dueño de una warmi",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "washa",
-    "spanish": "atras, tras",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wasi",
-    "spanish": "casado",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "wasichina ",
-    "spanish": "construir casa",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "wasiyuk",
-    "spanish": "dueño de casa",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "wata",
-    "spanish": "año",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "watarka",
-    "spanish": "amarro",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wawa",
-    "spanish": "niño, niña",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wawa kallana",
-    "spanish": "tiesto pequeño",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wawa manka",
-    "spanish": "olla pequeña",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wawa pacha",
-    "spanish": "segundo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wawa unkuchik",
-    "spanish": "partera",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wawki",
-    "spanish": "hermano-hermano",
-    "categoryId": "family"
-  },
-  {
-    "kichwa": "waylla",
-    "spanish": "verde",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "wayra",
-    "spanish": "viento",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "wichayman",
-    "spanish": "hacia arriba",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "willana",
-    "spanish": "avisar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "wira",
-    "spanish": "manteca",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "wirwila",
-    "spanish": "guitarra",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wisha",
-    "spanish": "cucharon",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yachachik",
-    "spanish": "profesor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yachachina",
-    "spanish": "enseñar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "yachakuk",
-    "spanish": "estudiante",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yachakuna",
-    "spanish": "aprender",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "yachana wasi",
-    "spanish": "escuela",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "yacharina",
-    "spanish": "acostumbrarse, enseñarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yaku",
-    "spanish": "agua",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yaku",
-    "spanish": "agua",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yaku wira",
-    "spanish": "aceite",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "yallina",
-    "spanish": "pasarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yana shina",
-    "spanish": "parecido al negro",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "yana shina",
-    "spanish": "negro",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "yanapana",
-    "spanish": "ayudar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "yanta",
-    "spanish": "leña",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yanuk kari",
-    "spanish": "cocinero",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "yanuk warmi",
-    "spanish": "cocinera",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "yanuna ",
-    "spanish": "cocinar",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "yanuna ",
-    "spanish": "cocina",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yanuna ",
-    "spanish": "cocinar",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "yanuna uku",
-    "spanish": "cocina",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yapuna",
-    "spanish": "harar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yaykuna",
-    "spanish": "entrar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "yupaychini",
-    "spanish": "gracias",
-    "categoryId": "greetings"
-  },
-  {
-    "kichwa": "yura",
-    "spanish": "planta o matorral",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "yurak",
-    "spanish": "blanco",
-    "categoryId": "colors"
-  },
-  {
-    "kichwa": "yuyana",
-    "spanish": "intentar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "winkulak",
-    "spanish": "col",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "nanana",
-    "spanish": "dolor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ashnana",
-    "spanish": "oler",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "mayllana",
-    "spanish": "lavar(excepto ropa)",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "akllana",
-    "spanish": "escojer",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mana kullkita kurin",
-    "spanish": "gratis",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chaytallatak",
-    "spanish": "lo mismo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kuna",
-    "spanish": "dar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "junka",
-    "spanish": "semana",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yanapana",
-    "spanish": "ayudar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "imashtawan",
-    "spanish": "que mas?",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chapuna",
-    "spanish": "revolver",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "sapi",
-    "spanish": "raiz",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "hawa",
-    "spanish": "arriba",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yalli alli",
-    "spanish": "pasa bien",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "taripay",
-    "spanish": "investigacion",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wachachik",
-    "spanish": "partera",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "arawi",
-    "spanish": "poema",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chinkachina",
-    "spanish": "perder",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "yanka",
-    "spanish": "envano",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "puyu",
-    "spanish": "nube",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "uyllana",
-    "spanish": "aviso",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wiñana",
-    "spanish": "crecer",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kara",
-    "spanish": "cuero",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mañana",
-    "spanish": "pedido, ceremonia",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kunkana",
-    "spanish": "olvidar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ninanta",
-    "spanish": "demasiado",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "paktachispa",
-    "spanish": "hacer alcanzar, hacer unir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "paktana",
-    "spanish": "unir, alcanzar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kuyana",
-    "spanish": "amando",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yallina",
-    "spanish": "pasarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tipina",
-    "spanish": "cosechar sara",
-    "categoryId": "nature"
-  },
-  {
-    "kichwa": "shuyana",
-    "spanish": "esperar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "chuya",
-    "spanish": "limpio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chayamuna",
-    "spanish": "llegar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "yala",
-    "spanish": "igual que shina",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shina",
-    "spanish": "por ejemplo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llamkay uku",
-    "spanish": "oficina",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "mashkana",
-    "spanish": "buscar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tantanakuna",
-    "spanish": "reunirse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shinchitapacha",
-    "spanish": "fuertisimo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "puchka",
-    "spanish": "hilar",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "kururu",
-    "spanish": "cono de hilo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "awllina",
-    "spanish": "extramar, hurdir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kawa",
-    "spanish": "balsa de madera para tejer hilo",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "chayana",
-    "spanish": "llegar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "kawpuna",
-    "spanish": "desenredar hilo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kawpuk",
-    "spanish": "el que desenreda",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pilluna",
-    "spanish": "envolver",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "aswana kaspi",
-    "spanish": "palo para tejer",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "illana",
-    "spanish": "no habe, no existir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "illarka",
-    "spanish": "no hubo",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tukuchina",
-    "spanish": "terminar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "tukuna",
-    "spanish": "transformarse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "apamuna",
-    "spanish": "traer",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "apachina",
-    "spanish": "cargar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "apana",
-    "spanish": "llevar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "aparina",
-    "spanish": "cargar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "larka",
-    "spanish": "sequia",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "yaykuna",
-    "spanish": "entrar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "awanakaspi",
-    "spanish": "madera para tejer",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "manchaklla",
-    "spanish": "temerosamente",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "manchana",
-    "spanish": "asustar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "manchak",
-    "spanish": "el que teme",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "jananik",
-    "spanish": "subida inclinada",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "uranik",
-    "spanish": "hacia abajo en digonal",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "washanik",
-    "spanish": "hacia atras",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "rikurina",
-    "spanish": "aparecerse, verse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shuktak shina",
-    "spanish": "como otro(diferente)",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "millma",
-    "spanish": "lana",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mañana",
-    "spanish": "pedir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "paypak",
-    "spanish": "para el",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chinkana",
-    "spanish": "perder",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "rikunakuna",
-    "spanish": "vistas, paisajes",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chinkarina",
-    "spanish": "perderse",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "llapina",
-    "spanish": "aplastar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kayta chayta",
-    "spanish": "por aqui, por alla",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "mana pipash",
-    "spanish": "nadie",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "machalla",
-    "spanish": "medio ebrio",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "shuyana",
-    "spanish": "esperar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "shayana",
-    "spanish": "detenerse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kachana",
-    "spanish": "mandar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "mashkakrishpa",
-    "spanish": "yendo a buscar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "kipikunantin",
-    "spanish": "conjuntamente con las maletas",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "iñina",
-    "spanish": "creencia",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "llullu",
-    "spanish": "tierno",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "junta",
-    "spanish": "llena",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pura killa",
-    "spanish": "luna llena",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "ismuna",
-    "spanish": "podrir",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wasichina ",
-    "spanish": "construir",
-    "categoryId": "house"
-  },
-  {
-    "kichwa": "wirayana",
-    "spanish": "engordar",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "surkuna",
-    "spanish": "sacar, cortar",
-    "categoryId": "actions"
-  },
-  {
-    "kichwa": "tukurina",
-    "spanish": "termino(algo interno)",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "utka",
-    "spanish": "rapido",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "pukuna",
-    "spanish": "madurar",
-    "categoryId": "food"
-  },
-  {
-    "kichwa": "imatapash",
-    "spanish": "cualquier cosa",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "wallinku",
-    "spanish": "conejo",
-    "categoryId": "animals"
-  },
-  {
-    "kichwa": "tukuna",
-    "spanish": "hacerse volverse",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "tunkuri",
-    "spanish": "garganta, cuello",
-    "categoryId": "body"
-  },
-  {
-    "kichwa": "kashtuna",
-    "spanish": "mandibula",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "chukchuna",
-    "spanish": "temblor",
-    "categoryId": "general"
-  },
-  {
-    "kichwa": "amuklla",
-    "spanish": "sabe no mas",
-    "categoryId": "general"
-  }
+  {"id":1,"kichwa":"achi mama","spanish":"madrina","english":"godmother","categoryId":"family","type":"noun","image":null},
+  {"id":2,"kichwa":"achi tayta","spanish":"padrino","english":"godfather","categoryId":"family","type":"noun","image":null},
+  {"id":3,"kichwa":"achikta japichipay","spanish":"enciende la luz porfavor","english":"turn on the light please","categoryId":"general","type":"phrase","image":null},
+  {"id":4,"kichwa":"akcha","spanish":"pelo","english":"hair","categoryId":"body","type":"noun","image":null},
+  {"id":5,"kichwa":"alalay","spanish":"feo, fea","english":"ugly","categoryId":"general","type":"adjective","image":null},
+  {"id":6,"kichwa":"allana puncha","spanish":"dia de la cosecha","english":"harvest day","categoryId":"nature","type":"noun","image":null},
+  {"id":7,"kichwa":"alli","spanish":"bueno, buena","english":"good","categoryId":"general","type":"adjective","image":null},
+  {"id":8,"kichwa":"alli","spanish":"sano","english":"healthy","categoryId":"general","type":"adjective","image":null},
+  {"id":9,"kichwa":"alli chishi","spanish":"buenas tardes","english":"good afternoon","categoryId":"greetings","type":"phrase","image":null},
+  {"id":10,"kichwa":"alli puncha","spanish":"buenos dias","english":"good morning","categoryId":"greetings","type":"phrase","image":null},
+  {"id":11,"kichwa":"alli tuta","spanish":"buenas noches","english":"good night","categoryId":"greetings","type":"phrase","image":null},
+  {"id":12,"kichwa":"allichina","spanish":"numero","english":"number","categoryId":"numbers","type":"noun","image":null},
+  {"id":13,"kichwa":"allitukuna","spanish":"mejorar","english":"to improve","categoryId":"actions","type":"verb","image":null},
+  {"id":14,"kichwa":"allku","spanish":"perro","english":"dog","categoryId":"animals","type":"noun","image":"/images/words/allku.svg"},
+  {"id":15,"kichwa":"allkuyuk","spanish":"dueño de perro","english":"dog owner","categoryId":"animals","type":"noun","image":null},
+  {"id":16,"kichwa":"allpa","spanish":"tierra, terreno","english":"land, terrain","categoryId":"nature","type":"noun","image":"/images/words/allpa.svg"},
+  {"id":17,"kichwa":"allpa","spanish":"tierra","english":"earth, land","categoryId":"nature","type":"noun","image":"/images/words/allpa.svg"},
+  {"id":18,"kichwa":"almuza","spanish":"almuerzo","english":"lunch","categoryId":"food","type":"noun","image":null},
+  {"id":19,"kichwa":"anaku","spanish":"falda","english":"skirt","categoryId":"house","type":"noun","image":"/images/words/anaku.svg"},
+  {"id":20,"kichwa":"anchuchina","spanish":"quitar","english":"to remove","categoryId":"actions","type":"verb","image":null},
+  {"id":21,"kichwa":"anchuna","spanish":"quitarse","english":"to take off (clothing)","categoryId":"actions","type":"verb","image":null},
+  {"id":22,"kichwa":"ankana","spanish":"volar","english":"to fly","categoryId":"actions","type":"verb","image":null},
+  {"id":23,"kichwa":"ankas","spanish":"azul","english":"blue","categoryId":"colors","type":"adjective","image":"/images/words/ankas.svg"},
+  {"id":24,"kichwa":"antawa","spanish":"carro, auto","english":"car","categoryId":"general","type":"noun","image":"/images/words/antawa.svg"},
+  {"id":25,"kichwa":"apachina","spanish":"hacer cargar","english":"to make (someone) carry","categoryId":"actions","type":"verb","image":null},
+  {"id":26,"kichwa":"apamuna","spanish":"traer","english":"to bring","categoryId":"actions","type":"verb","image":null},
+  {"id":27,"kichwa":"apana","spanish":"llevar","english":"to carry, take","categoryId":"actions","type":"verb","image":null},
+  {"id":28,"kichwa":"api","spanish":"colada","english":"corn porridge (colada)","categoryId":"food","type":"noun","image":null},
+  {"id":29,"kichwa":"apunchik","spanish":"dios","english":"god","categoryId":"general","type":"noun","image":null},
+  {"id":30,"kichwa":"apunchikpa wasi","spanish":"casa de dios","english":"house of god (church)","categoryId":"house","type":"noun","image":"/images/words/apunchikpa-wasi.svg"},
+  {"id":31,"kichwa":"ari","spanish":"si","english":"yes","categoryId":"general","type":"interjection","image":null},
+  {"id":32,"kichwa":"arinina","spanish":"aceptar","english":"to accept","categoryId":"actions","type":"verb","image":null},
+  {"id":33,"kichwa":"armachina","spanish":"hacer bañar","english":"to bathe (someone)","categoryId":"actions","type":"verb","image":null},
+  {"id":34,"kichwa":"armana uku","spanish":"baño","english":"bathroom","categoryId":"house","type":"noun","image":"/images/words/armana-uku.svg"},
+  {"id":35,"kichwa":"arrendashka","spanish":"arrendado","english":"rented","categoryId":"general","type":"adjective","image":null},
+  {"id":36,"kichwa":"asha ","spanish":"poco","english":"a little, few","categoryId":"general","type":"adverb","image":null},
+  {"id":37,"kichwa":"asha muspa","spanish":"poco loco o loca","english":"a little crazy","categoryId":"general","type":"adjective","image":null},
+  {"id":38,"kichwa":"ashtaka","spanish":"bastante","english":"quite a lot, enough","categoryId":"general","type":"adverb","image":null},
+  {"id":39,"kichwa":"ashtakashkaman","spanish":"hasta luego","english":"see you later","categoryId":"greetings","type":"phrase","image":null},
+  {"id":40,"kichwa":"asichina","spanish":"hacer reir","english":"to make (someone) laugh","categoryId":"actions","type":"verb","image":null},
+  {"id":41,"kichwa":"asina","spanish":"reirse","english":"to laugh","categoryId":"actions","type":"verb","image":"/images/words/asina.svg"},
+  {"id":42,"kichwa":"aspirina","spanish":"rascarse","english":"to scratch oneself","categoryId":"general","type":"verb","image":null},
+  {"id":43,"kichwa":"aswa","spanish":"chicha","english":"chicha (fermented corn drink)","categoryId":"food","type":"noun","image":null},
+  {"id":44,"kichwa":"atallpa","spanish":"gallina","english":"hen, chicken","categoryId":"animals","type":"noun","image":"/images/words/atallpa.svg"},
+  {"id":45,"kichwa":"awak kari","spanish":"tejedora ","english":"weaver","categoryId":"house","type":"noun","image":null},
+  {"id":46,"kichwa":"awak warmi","spanish":"tejedora ","english":"weaver","categoryId":"house","type":"noun","image":null},
+  {"id":47,"kichwa":"awana","spanish":"tejer","english":"to weave","categoryId":"house","type":"verb","image":null},
+  {"id":48,"kichwa":"aycha","spanish":"carne","english":"meat","categoryId":"food","type":"noun","image":"/images/words/aycha.svg"},
+  {"id":49,"kichwa":"ayllu","spanish":"familia","english":"family","categoryId":"family","type":"noun","image":null},
+  {"id":50,"kichwa":"aysana","spanish":"halar","english":"to pull","categoryId":"actions","type":"verb","image":null},
+  {"id":51,"kichwa":"balun","spanish":"pantalon","english":"pants","categoryId":"house","type":"noun","image":"/images/words/balun.svg"},
+  {"id":52,"kichwa":"banca","spanish":"banca","english":"bench","categoryId":"general","type":"noun","image":null},
+  {"id":53,"kichwa":"bloque","spanish":"bloque","english":"block","categoryId":"general","type":"noun","image":null},
+  {"id":54,"kichwa":"cafe","spanish":"cafe","english":"coffee","categoryId":"general","type":"noun","image":null},
+  {"id":55,"kichwa":"camisa","spanish":"blusa","english":"blouse","categoryId":"house","type":"noun","image":null},
+  {"id":56,"kichwa":"capilla","spanish":"capilla","english":"chapel","categoryId":"house","type":"noun","image":null},
+  {"id":57,"kichwa":"carro","spanish":"carro, auto","english":"car","categoryId":"general","type":"noun","image":null},
+  {"id":58,"kichwa":"casa comunal","spanish":"casa comunal","english":"community house","categoryId":"house","type":"noun","image":null},
+  {"id":59,"kichwa":"casado","spanish":"casado","english":"married","categoryId":"family","type":"adjective","image":null},
+  {"id":60,"kichwa":"casarana","spanish":"casaarse","english":"to get married","categoryId":"general","type":"verb","image":null},
+  {"id":61,"kichwa":"cebolla","spanish":"cebolla","english":"onion","categoryId":"food","type":"noun","image":null},
+  {"id":62,"kichwa":"chakana","spanish":"escalera","english":"stairs, ladder","categoryId":"house","type":"noun","image":"/images/words/chakana.svg"},
+  {"id":63,"kichwa":"chaki","spanish":"patas","english":"paws, feet (animal)","categoryId":"body","type":"noun","image":null},
+  {"id":64,"kichwa":"chaki","spanish":"pie","english":"foot","categoryId":"body","type":"noun","image":"/images/words/chaki.svg"},
+  {"id":65,"kichwa":"chaki ñan","spanish":"sendero","english":"path, trail","categoryId":"nature","type":"noun","image":null},
+  {"id":66,"kichwa":"chakina","spanish":"secar","english":"to dry","categoryId":"actions","type":"verb","image":null},
+  {"id":67,"kichwa":"challwa","spanish":"pescado","english":"fish","categoryId":"food","type":"noun","image":"/images/words/challwa.svg"},
+  {"id":68,"kichwa":"chapa","spanish":"burro","english":"donkey","categoryId":"animals","type":"noun","image":"/images/words/chapa.svg"},
+  {"id":69,"kichwa":"chapakrirka","spanish":"fue a vigilar","english":"went to watch/guard","categoryId":"general","type":"verb_form","image":null},
+  {"id":70,"kichwa":"chapana","spanish":"espiar","english":"to spy","categoryId":"general","type":"verb","image":null},
+  {"id":71,"kichwa":"chaquishka","spanish":"secar","english":"dried","categoryId":"actions","type":"adjective","image":null},
+  {"id":72,"kichwa":"charijayak","spanish":"rico amargado","english":"bitter rich person","categoryId":"general","type":"adjective","image":null},
+  {"id":73,"kichwa":"charik","spanish":"rico, millonario","english":"rich, wealthy","categoryId":"general","type":"adjective","image":null},
+  {"id":74,"kichwa":"charina","spanish":"tener","english":"to have","categoryId":"general","type":"verb","image":null},
+  {"id":75,"kichwa":"chaskina","spanish":"recibir","english":"to receive","categoryId":"actions","type":"verb","image":null},
+  {"id":76,"kichwa":"chawa","spanish":"crudo","english":"raw","categoryId":"food","type":"adjective","image":null},
+  {"id":77,"kichwa":"chawpi puncha mikuna","spanish":"almuerzo","english":"lunch","categoryId":"food","type":"noun","image":null},
+  {"id":78,"kichwa":"chay","spanish":"esa, ese, eso","english":"that","categoryId":"general","type":"pronoun","image":null},
+  {"id":79,"kichwa":"chay shuk ","spanish":"otro u otros","english":"another, others","categoryId":"general","type":"pronoun","image":null},
+  {"id":80,"kichwa":"chay shuk punchakuna","spanish":"otros dias","english":"other days","categoryId":"general","type":"phrase","image":null},
+  {"id":81,"kichwa":"chayachina","spanish":"hacer llegar","english":"to make (someone/something) arrive, deliver","categoryId":"actions","type":"verb","image":null},
+  {"id":82,"kichwa":"chayana","spanish":"llegar","english":"to arrive","categoryId":"actions","type":"verb","image":null},
+  {"id":83,"kichwa":"chaymanta","spanish":"por eso","english":"therefore, because of that","categoryId":"general","type":"connector","image":null},
+  {"id":84,"kichwa":"chaypak","spanish":"para eso","english":"for that","categoryId":"general","type":"connector","image":null},
+  {"id":85,"kichwa":"chaypi","spanish":"alli","english":"there","categoryId":"general","type":"adverb","image":null},
+  {"id":86,"kichwa":"chinpa","spanish":"en/ al frente","english":"in front, facing","categoryId":"general","type":"adverb","image":null},
+  {"id":87,"kichwa":"chiri","spanish":"frio","english":"cold","categoryId":"nature","type":"adjective","image":null},
+  {"id":88,"kichwa":"chishi","spanish":"tarde","english":"afternoon","categoryId":"general","type":"noun","image":null},
+  {"id":89,"kichwa":"chukrichina","spanish":"lastimar, herir","english":"to hurt, injure","categoryId":"actions","type":"verb","image":null},
+  {"id":90,"kichwa":"chumpak","spanish":"invitados, acompañantes","english":"guests, companions","categoryId":"general","type":"noun","image":null},
+  {"id":91,"kichwa":"chunka","spanish":"diez","english":"ten","categoryId":"numbers","type":"number","image":"/images/words/chunka.svg"},
+  {"id":92,"kichwa":"chunkana","spanish":"jugar a las planchas","english":"to play planchas (traditional game)","categoryId":"actions","type":"verb","image":null},
+  {"id":93,"kichwa":"chunpi","spanish":"faja","english":"belt, sash","categoryId":"house","type":"noun","image":"/images/words/chunpi.svg"},
+  {"id":94,"kichwa":"churachina","spanish":"hacer vestir","english":"to dress (someone)","categoryId":"house","type":"verb","image":null},
+  {"id":95,"kichwa":"churakuna","spanish":"vestimenta","english":"clothing","categoryId":"house","type":"noun","image":null},
+  {"id":96,"kichwa":"churana","spanish":"poner","english":"to put","categoryId":"actions","type":"verb","image":null},
+  {"id":97,"kichwa":"churi","spanish":"hija","english":"daughter","categoryId":"general","type":"noun","image":null},
+  {"id":98,"kichwa":"chusku","spanish":"cuatro","english":"four","categoryId":"numbers","type":"number","image":"/images/words/chusku.svg"},
+  {"id":99,"kichwa":"chuya","spanish":"limpio","english":"clean","categoryId":"general","type":"adjective","image":null},
+  {"id":100,"kichwa":"culantro","spanish":"culantro","english":"cilantro","categoryId":"food","type":"noun","image":null},
+  {"id":101,"kichwa":"culis","spanish":"col","english":"cabbage","categoryId":"general","type":"noun","image":null},
+  {"id":102,"kichwa":"cumpana","spanish":"acompañar","english":"to accompany","categoryId":"general","type":"verb","image":null},
+  {"id":103,"kichwa":"fanga","spanish":"papel","english":"paper","categoryId":"general","type":"noun","image":null},
+  {"id":104,"kichwa":"gas","spanish":"gas","english":"gas","categoryId":"general","type":"noun","image":null},
+  {"id":105,"kichwa":"grano","spanish":"grano","english":"grain","categoryId":"general","type":"noun","image":null},
+  {"id":106,"kichwa":"halaw","spanish":"agradable","english":"pleasant","categoryId":"general","type":"adjective","image":null},
+  {"id":107,"kichwa":"hallu","spanish":"lengua","english":"tongue","categoryId":"body","type":"noun","image":null},
+  {"id":108,"kichwa":"hanak","spanish":"arriba","english":"above, up","categoryId":"general","type":"adverb","image":null},
+  {"id":109,"kichwa":"hanan","spanish":"arriba inclinado","english":"tilted upward","categoryId":"general","type":"adverb","image":null},
+  {"id":110,"kichwa":"hanpi wasi","spanish":"centro de salud","english":"health center","categoryId":"house","type":"noun","image":"/images/words/hanpi-wasi.svg"},
+  {"id":111,"kichwa":"hanpik tayta ","spanish":"curandero","english":"healer","categoryId":"general","type":"noun","image":null},
+  {"id":112,"kichwa":"hanpina","spanish":"curar","english":"to heal","categoryId":"actions","type":"verb","image":null},
+  {"id":113,"kichwa":"hatun","spanish":"alto","english":"tall","categoryId":"general","type":"adjective","image":null},
+  {"id":114,"kichwa":"hatun","spanish":"alto, grande","english":"tall, big","categoryId":"general","type":"adjective","image":null},
+  {"id":115,"kichwa":"hatun mama","spanish":"abuela","english":"grandmother","categoryId":"family","type":"noun","image":null},
+  {"id":116,"kichwa":"hatun tayta","spanish":"abuelo","english":"grandfather","categoryId":"family","type":"noun","image":null},
+  {"id":117,"kichwa":"hatun yachana wasi","spanish":"colegio","english":"high school","categoryId":"house","type":"noun","image":null},
+  {"id":118,"kichwa":"hawa pacha","spanish":"cielo","english":"sky","categoryId":"nature","type":"noun","image":"/images/words/hawa-pacha.svg"},
+  {"id":119,"kichwa":"hawa pacha","spanish":"arriba","english":"above, up","categoryId":"general","type":"adverb","image":null},
+  {"id":120,"kichwa":"hunu","spanish":"mullon","english":"heap, pile","categoryId":"general","type":"noun","image":null},
+  {"id":121,"kichwa":"ima","spanish":"porque","english":"because","categoryId":"general","type":"question","image":null},
+  {"id":122,"kichwa":"ima colortak?","spanish":"de que color?","english":"what color?","categoryId":"colors","type":"question","image":null},
+  {"id":123,"kichwa":"ima punchatatak?","spanish":"que dia?","english":"what day?","categoryId":"general","type":"question","image":null},
+  {"id":124,"kichwa":"ima shutitak?","spanish":"que nombre?","english":"what name?","categoryId":"general","type":"question","image":null},
+  {"id":125,"kichwa":"ima tunutatak ?","spanish":"que musica?","english":"what tune/song?","categoryId":"general","type":"question","image":null},
+  {"id":126,"kichwa":"imachik","spanish":"verbo","english":"verb","categoryId":"general","type":"noun","image":null},
+  {"id":127,"kichwa":"imamantak?","spanish":"porque?","english":"why?","categoryId":"general","type":"question","image":null},
+  {"id":128,"kichwa":"imanallatak?","spanish":"como?","english":"how?","categoryId":"general","type":"question","image":null},
+  {"id":129,"kichwa":"imapatak?","spanish":"para que?","english":"for what?","categoryId":"general","type":"question","image":null},
+  {"id":130,"kichwa":"imapitak?","spanish":"en que?","english":"in what?","categoryId":"general","type":"question","image":null},
+  {"id":131,"kichwa":"imatak?","spanish":"que?","english":"what?","categoryId":"general","type":"question","image":null},
+  {"id":132,"kichwa":"imatapash","spanish":"algo","english":"something","categoryId":"general","type":"pronoun","image":null},
+  {"id":133,"kichwa":"imatatak?","spanish":"que?","english":"what?","categoryId":"general","type":"question","image":null},
+  {"id":134,"kichwa":"imawantak?","spanish":"con que?","english":"with what?","categoryId":"general","type":"question","image":null},
+  {"id":135,"kichwa":"inina","spanish":"creer","english":"to believe","categoryId":"actions","type":"verb","image":null},
+  {"id":136,"kichwa":"iñina","spanish":"creer","english":"to believe","categoryId":"actions","type":"verb","image":null},
+  {"id":137,"kichwa":"irki","spanish":"debil","english":"weak","categoryId":"general","type":"adjective","image":null},
+  {"id":138,"kichwa":"ishkay","spanish":"dos","english":"two","categoryId":"numbers","type":"number","image":"/images/words/ishkay.svg"},
+  {"id":139,"kichwa":"ishtirana","spanish":"esterar","english":"to weave a mat (estera)","categoryId":"general","type":"verb","image":null},
+  {"id":140,"kichwa":"iskun","spanish":"nueve","english":"nine","categoryId":"numbers","type":"number","image":"/images/words/iskun.svg"},
+  {"id":141,"kichwa":"jallmana","spanish":"deshierbar","english":"to weed","categoryId":"nature","type":"verb","image":null},
+  {"id":142,"kichwa":"janpik doctora","spanish":"medica","english":"female doctor","categoryId":"general","type":"noun","image":null},
+  {"id":143,"kichwa":"japina","spanish":"pescar","english":"to fish","categoryId":"actions","type":"verb","image":null},
+  {"id":144,"kichwa":"japina","spanish":"cojer","english":"to grab, catch","categoryId":"general","type":"verb","image":null},
+  {"id":145,"kichwa":"japirina","spanish":"encenderse","english":"to catch fire, ignite","categoryId":"general","type":"verb","image":null},
+  {"id":146,"kichwa":"jatarina","spanish":"levantarse","english":"to get up","categoryId":"actions","type":"verb","image":null},
+  {"id":147,"kichwa":"jawapi","spanish":"sobre","english":"on top of, over","categoryId":"general","type":"adverb","image":null},
+  {"id":148,"kichwa":"jichana","spanish":"regar","english":"to water (plants)","categoryId":"actions","type":"verb","image":null},
+  {"id":149,"kichwa":"jirru","spanish":"hierro","english":"iron","categoryId":"general","type":"noun","image":null},
+  {"id":150,"kichwa":"jugo","spanish":"jugo","english":"juice","categoryId":"food","type":"noun","image":null},
+  {"id":151,"kichwa":"kachi ","spanish":"sal","english":"salt","categoryId":"food","type":"noun","image":"/images/words/kachi.svg"},
+  {"id":152,"kichwa":"kallana","spanish":"tiesto, sarten","english":"clay pot, pan","categoryId":"general","type":"noun","image":"/images/words/kallana.svg"},
+  {"id":153,"kichwa":"kallarina","spanish":"empezar","english":"to start","categoryId":"actions","type":"verb","image":null},
+  {"id":154,"kichwa":"kallarina","spanish":"comenzar","english":"to start","categoryId":"actions","type":"verb","image":null},
+  {"id":155,"kichwa":"kallpana","spanish":"correr","english":"to run","categoryId":"actions","type":"verb","image":null},
+  {"id":156,"kichwa":"kaman","spanish":"hasta","english":"until","categoryId":"general","type":"connector","image":null},
+  {"id":157,"kichwa":"kamcha","spanish":"tostado","english":"toasted corn","categoryId":"food","type":"noun","image":null},
+  {"id":158,"kichwa":"kamchana","spanish":"tostar","english":"to toast","categoryId":"food","type":"verb","image":null},
+  {"id":159,"kichwa":"kamchashka","spanish":"tostado","english":"toasted","categoryId":"food","type":"adjective","image":null},
+  {"id":160,"kichwa":"kamuti","spanish":"libro","english":"book","categoryId":"house","type":"noun","image":"/images/words/kamuti.svg"},
+  {"id":161,"kichwa":"kan","spanish":"tu","english":"you","categoryId":"general","type":"pronoun","image":null},
+  {"id":162,"kichwa":"kana","spanish":"ser, estar","english":"to be","categoryId":"general","type":"verb","image":null},
+  {"id":163,"kichwa":"kancha","spanish":"afuera, fuera","english":"outside","categoryId":"general","type":"adverb","image":null},
+  {"id":164,"kichwa":"kancha","spanish":"patio","english":"patio, yard","categoryId":"house","type":"noun","image":null},
+  {"id":165,"kichwa":"kanchis","spanish":"siete","english":"seven","categoryId":"numbers","type":"number","image":"/images/words/kanchis.svg"},
+  {"id":166,"kichwa":"kankuna","spanish":"vosotros, vosotras","english":"you all (plural)","categoryId":"general","type":"pronoun","image":null},
+  {"id":167,"kichwa":"kanllaka","spanish":"solamente tu","english":"only you","categoryId":"general","type":"pronoun","image":null},
+  {"id":168,"kichwa":"kara","spanish":"cueros","english":"hides, leather","categoryId":"general","type":"noun","image":null},
+  {"id":169,"kichwa":"karana","spanish":"compartir","english":"to share","categoryId":"actions","type":"verb","image":null},
+  {"id":170,"kichwa":"karana","spanish":"regalar","english":"to give as a gift","categoryId":"actions","type":"verb","image":null},
+  {"id":171,"kichwa":"kari","spanish":"hombra","english":"man","categoryId":"general","type":"noun","image":null},
+  {"id":172,"kichwa":"kari wawa","spanish":"niño, niña","english":"child, boy/girl","categoryId":"general","type":"noun","image":null},
+  {"id":173,"kichwa":"karipa churakuna","spanish":"ropa de hombre","english":"men's clothing","categoryId":"general","type":"noun","image":null},
+  {"id":174,"kichwa":"karu","spanish":"lejos","english":"far","categoryId":"general","type":"adverb","image":null},
+  {"id":175,"kichwa":"kashpallata","spanish":"","english":null,"categoryId":"general","type":"unclear","image":null},
+  {"id":176,"kichwa":"kasilla","spanish":"quietos","english":"quiet, still","categoryId":"general","type":"adjective","image":null},
+  {"id":177,"kichwa":"kaspana","spanish":"chamuscar","english":"to singe","categoryId":"general","type":"verb","image":null},
+  {"id":178,"kichwa":"kaspi","spanish":"madera, palo","english":"wood, stick","categoryId":"general","type":"noun","image":null},
+  {"id":179,"kichwa":"kaspi","spanish":"palo","english":"stick","categoryId":"general","type":"noun","image":null},
+  {"id":180,"kichwa":"kati","spanish":"seguido","english":"in a row, continuously","categoryId":"general","type":"adverb","image":null},
+  {"id":181,"kichwa":"katina","spanish":"seguir, perseguir","english":"to follow, chase","categoryId":"general","type":"verb","image":null},
+  {"id":182,"kichwa":"katuk warmi","spanish":"vendedora","english":"female vendor","categoryId":"general","type":"noun","image":null},
+  {"id":183,"kichwa":"katuku","spanish":"abuelo, abuela","english":"grandparent","categoryId":"family","type":"noun","image":null},
+  {"id":184,"kichwa":"katuna","spanish":"vender","english":"to sell","categoryId":"general","type":"verb","image":null},
+  {"id":185,"kichwa":"katuna pamba","spanish":"mercado","english":"market","categoryId":"general","type":"noun","image":null},
+  {"id":186,"kichwa":"kawsana","spanish":"vivir","english":"to live","categoryId":"general","type":"verb","image":null},
+  {"id":187,"kichwa":"kay","spanish":"este, esto","english":"this","categoryId":"general","type":"pronoun","image":null},
+  {"id":188,"kichwa":"kayakaman","spanish":"hasta mañana","english":"see you tomorrow","categoryId":"general","type":"phrase","image":null},
+  {"id":189,"kichwa":"kayana","spanish":"llamar","english":"to call","categoryId":"actions","type":"verb","image":null},
+  {"id":190,"kichwa":"kayanti","spanish":"dia siguiente","english":"the next day","categoryId":"general","type":"noun","image":null},
+  {"id":191,"kichwa":"kayka","spanish":"toma!","english":"here, take it!","categoryId":"general","type":"interjection","image":null},
+  {"id":192,"kichwa":"kaynana","spanish":"permanecer","english":"to remain, stay","categoryId":"general","type":"verb","image":null},
+  {"id":193,"kichwa":"kaynana","spanish":"pasar el dia","english":"to spend the day","categoryId":"general","type":"verb","image":null},
+  {"id":194,"kichwa":"kaynanik","spanish":"el otro dia","english":"the other day","categoryId":"general","type":"adverb","image":null},
+  {"id":195,"kichwa":"kaypi","spanish":"aqui","english":"here","categoryId":"general","type":"adverb","image":null},
+  {"id":196,"kichwa":"kichki","spanish":"estrecho","english":"narrow","categoryId":"general","type":"adjective","image":null},
+  {"id":197,"kichwa":"kichuna","spanish":"quitar, arranchar","english":"to remove, snatch","categoryId":"actions","type":"verb","image":null},
+  {"id":198,"kichwa":"kikin","spanish":"usted","english":"you (formal)","categoryId":"general","type":"pronoun","image":null},
+  {"id":199,"kichwa":"kikinkuna","spanish":"ustedes","english":"you all (formal)","categoryId":"general","type":"pronoun","image":null},
+  {"id":200,"kichwa":"killa","spanish":"mes","english":"month","categoryId":"general","type":"noun","image":null},
+  {"id":201,"kichwa":"killkana","spanish":"escribir","english":"to write","categoryId":"general","type":"verb","image":null},
+  {"id":202,"kichwa":"killpana","spanish":"cubrirse","english":"to cover oneself","categoryId":"general","type":"verb","image":null},
+  {"id":203,"kichwa":"killpana","spanish":"cubrir","english":"to cover","categoryId":"general","type":"verb","image":null},
+  {"id":204,"kichwa":"killu","spanish":"amarrillo","english":"yellow","categoryId":"general","type":"adjective","image":null},
+  {"id":205,"kichwa":"killu","spanish":"amarillo","english":"yellow","categoryId":"colors","type":"adjective","image":"/images/words/killu.svg"},
+  {"id":206,"kichwa":"kimsa","spanish":"tres","english":"three","categoryId":"numbers","type":"number","image":"/images/words/kimsa.svg"},
+  {"id":207,"kichwa":"kinkray","spanish":"interseccion","english":"intersection","categoryId":"general","type":"noun","image":null},
+  {"id":208,"kichwa":"kipa","spanish":"leuego, despues","english":"later, afterward","categoryId":"general","type":"adverb","image":null},
+  {"id":209,"kichwa":"kipa churi","spanish":"hijo menor","english":"younger child","categoryId":"family","type":"noun","image":null},
+  {"id":210,"kichwa":"kipi","spanish":"maleta","english":"suitcase","categoryId":"general","type":"noun","image":"/images/words/kipi.svg"},
+  {"id":211,"kichwa":"kishpirina","spanish":"libertad","english":"freedom","categoryId":"general","type":"noun","image":null},
+  {"id":212,"kichwa":"kiwana","spanish":"limpiar hierbas","english":"to clear weeds","categoryId":"actions","type":"verb","image":null},
+  {"id":213,"kichwa":"kiwu","spanish":"hierba","english":"grass, weed","categoryId":"nature","type":"noun","image":"/images/words/kiwu.svg"},
+  {"id":214,"kichwa":"kucha","spanish":"laguna, lago","english":"lake, lagoon","categoryId":"nature","type":"noun","image":"/images/words/kucha.svg"},
+  {"id":215,"kichwa":"kuchi","spanish":"chancho","english":"pig","categoryId":"animals","type":"noun","image":"/images/words/kuchi.svg"},
+  {"id":216,"kichwa":"kuchu","spanish":"rincon","english":"corner","categoryId":"general","type":"noun","image":null},
+  {"id":217,"kichwa":"kuchu","spanish":"cerca","english":"near","categoryId":"general","type":"adverb","image":null},
+  {"id":218,"kichwa":"kuliarana","spanish":"enojarse","english":"to get angry","categoryId":"general","type":"verb","image":null},
+  {"id":219,"kichwa":"kullki","spanish":"dinero","english":"money","categoryId":"general","type":"noun","image":"/images/words/kullki.svg"},
+  {"id":220,"kichwa":"kulta","spanish":"pato","english":"duck","categoryId":"animals","type":"noun","image":"/images/words/kulta.svg"},
+  {"id":221,"kichwa":"kuna","spanish":"dar","english":"to give","categoryId":"general","type":"verb","image":null},
+  {"id":222,"kichwa":"kunan","spanish":"ahora, hoy","english":"now, today","categoryId":"general","type":"adverb","image":null},
+  {"id":223,"kichwa":"kunuchina","spanish":"calentar, recalentar","english":"to warm, reheat","categoryId":"general","type":"verb","image":null},
+  {"id":224,"kichwa":"kunuk","spanish":"caliente","english":"hot","categoryId":"general","type":"adjective","image":null},
+  {"id":225,"kichwa":"kurina","spanish":"importar","english":"to matter","categoryId":"general","type":"verb","image":null},
+  {"id":226,"kichwa":"kusa","spanish":"esposo","english":"husband","categoryId":"family","type":"noun","image":null},
+  {"id":227,"kichwa":"kusa","spanish":"espso","english":"husband","categoryId":"general","type":"noun","image":null},
+  {"id":228,"kichwa":"kusa tukuna","spanish":"enamorado","english":"boyfriend","categoryId":"family","type":"noun","image":null},
+  {"id":229,"kichwa":"kusana","spanish":"asar, freir","english":"to roast, fry","categoryId":"general","type":"verb","image":null},
+  {"id":230,"kichwa":"kusashka aycha","spanish":"carne asada, carne frita","english":"roasted/grilled meat","categoryId":"food","type":"noun","image":null},
+  {"id":231,"kichwa":"kushma","spanish":"chaleco","english":"vest","categoryId":"general","type":"noun","image":"/images/words/kushma.svg"},
+  {"id":232,"kichwa":"kutana","spanish":"moler","english":"to grind","categoryId":"general","type":"verb","image":null},
+  {"id":233,"kichwa":"kutin","spanish":"en cambio","english":"instead, on the other hand","categoryId":"general","type":"connector","image":null},
+  {"id":234,"kichwa":"kutin nipay","spanish":"repetir","english":"to repeat","categoryId":"general","type":"verb","image":null},
+  {"id":235,"kichwa":"kuyana","spanish":"querer","english":"to want, love","categoryId":"general","type":"verb","image":null},
+  {"id":236,"kichwa":"kuytsa","spanish":"joven mujer","english":"young woman","categoryId":"family","type":"noun","image":null},
+  {"id":237,"kichwa":"kuytsa","spanish":"cuy, cobayo","english":"guinea pig","categoryId":"animals","type":"noun","image":null},
+  {"id":238,"kichwa":"ladrillo","spanish":"ladrillo","english":"brick","categoryId":"general","type":"noun","image":null},
+  {"id":239,"kichwa":"lampa","spanish":"pala","english":"shovel","categoryId":"general","type":"noun","image":"/images/words/lampa.svg"},
+  {"id":240,"kichwa":"leche","spanish":"leche","english":"milk","categoryId":"food","type":"noun","image":null},
+  {"id":241,"kichwa":"llachu","spanish":"pico","english":"beak","categoryId":"general","type":"noun","image":null},
+  {"id":242,"kichwa":"llaki","spanish":"triste","english":"sad","categoryId":"general","type":"adjective","image":null},
+  {"id":243,"kichwa":"llakilla","spanish":"triste","english":"sad","categoryId":"general","type":"adjective","image":null},
+  {"id":244,"kichwa":"llakta","spanish":"comundiad, pueblo, ciudad","english":"community, town, city","categoryId":"general","type":"noun","image":null},
+  {"id":245,"kichwa":"llama","spanish":"oveja","english":"sheep","categoryId":"animals","type":"noun","image":null},
+  {"id":246,"kichwa":"llanada","spanish":"llanura","english":"plain (flatland)","categoryId":"general","type":"noun","image":null},
+  {"id":247,"kichwa":"llapishka","spanish":"aplastado","english":"flattened","categoryId":"general","type":"adjective","image":null},
+  {"id":248,"kichwa":"llapishka papa","spanish":"tortilla","english":"flattened potato patty (tortilla)","categoryId":"general","type":"noun","image":null},
+  {"id":249,"kichwa":"llukchana","spanish":"resbalar","english":"to slip","categoryId":"general","type":"verb","image":null},
+  {"id":250,"kichwa":"llukshina","spanish":"salir","english":"to leave, exit","categoryId":"actions","type":"verb","image":null},
+  {"id":251,"kichwa":"llukshina","spanish":"sacar","english":"to take out","categoryId":"actions","type":"verb","image":null},
+  {"id":252,"kichwa":"llukshirka","spanish":"salio","english":"went out, left","categoryId":"general","type":"verb_form","image":null},
+  {"id":253,"kichwa":"llullana","spanish":"mentir","english":"to lie","categoryId":"actions","type":"verb","image":null},
+  {"id":254,"kichwa":"llullu","spanish":"berro","english":"watercress","categoryId":"general","type":"noun","image":null},
+  {"id":255,"kichwa":"llunchina","spanish":"estucar","english":"to plaster (a wall)","categoryId":"general","type":"verb","image":null},
+  {"id":256,"kichwa":"llunchiska","spanish":"estucado","english":"plastered","categoryId":"general","type":"adjective","image":null},
+  {"id":257,"kichwa":"lukru","spanish":"locro","english":"locro (traditional soup)","categoryId":"general","type":"noun","image":null},
+  {"id":258,"kichwa":"lulun","spanish":"huevo","english":"egg","categoryId":"food","type":"noun","image":"/images/words/lulun.svg"},
+  {"id":259,"kichwa":"machana","spanish":"emborracharse","english":"to get drunk","categoryId":"general","type":"verb","image":null},
+  {"id":260,"kichwa":"machana yaku","spanish":"alcochol","english":"alcohol","categoryId":"general","type":"noun","image":null},
+  {"id":261,"kichwa":"machana yaku","spanish":"licor","english":"liquor","categoryId":"general","type":"noun","image":null},
+  {"id":262,"kichwa":"machashka","spanish":"borracho","english":"drunk","categoryId":"general","type":"adjective","image":null},
+  {"id":263,"kichwa":"makanakuna","spanish":"pelearse","english":"to fight","categoryId":"general","type":"verb","image":null},
+  {"id":264,"kichwa":"makanakuna runpa","spanish":"guantes de pelea","english":"boxing gloves","categoryId":"general","type":"noun","image":null},
+  {"id":265,"kichwa":"maki","spanish":"manos","english":"hands","categoryId":"general","type":"noun","image":"/images/words/maki.svg"},
+  {"id":266,"kichwa":"maki watana","spanish":"manilla","english":"bracelet","categoryId":"general","type":"noun","image":null},
+  {"id":267,"kichwa":"mallichiway","spanish":"hazme probar","english":"let me try it","categoryId":"general","type":"phrase","image":null},
+  {"id":268,"kichwa":"mallina","spanish":"probar","english":"to taste, try","categoryId":"general","type":"verb","image":null},
+  {"id":269,"kichwa":"mallki","spanish":"rama","english":"branch","categoryId":"general","type":"noun","image":"/images/words/mallki.svg"},
+  {"id":270,"kichwa":"malta kallana","spanish":"tiesto mediano","english":"medium-sized clay pot","categoryId":"general","type":"noun","image":null},
+  {"id":271,"kichwa":"malta manka","spanish":"olla mediana","english":"medium-sized pot","categoryId":"general","type":"noun","image":null},
+  {"id":272,"kichwa":"mama","spanish":"mama","english":"mom","categoryId":"general","type":"noun","image":null},
+  {"id":273,"kichwa":"mama kallana","spanish":"tiesto grande","english":"large clay pot","categoryId":"general","type":"noun","image":null},
+  {"id":274,"kichwa":"mama manka","spanish":"olla grande","english":"large pot","categoryId":"general","type":"noun","image":null},
+  {"id":275,"kichwa":"mana","spanish":"no","english":"no","categoryId":"general","type":"interjection","image":null},
+  {"id":276,"kichwa":"mana pipash","spanish":"nadie","english":"nobody","categoryId":"general","type":"pronoun","image":null},
+  {"id":277,"kichwa":"mana yachanichu","spanish":"no entiendo","english":"I don't understand","categoryId":"general","type":"phrase","image":null},
+  {"id":278,"kichwa":"mañana","spanish":"pedir","english":"to ask for, request","categoryId":"general","type":"verb","image":null},
+  {"id":279,"kichwa":"mananinar","spanish":"rechazar","english":"to reject","categoryId":"general","type":"verb","image":null},
+  {"id":280,"kichwa":"manka","spanish":"olla","english":"pot","categoryId":"general","type":"noun","image":"/images/words/manka.svg"},
+  {"id":281,"kichwa":"manña ","spanish":"borde","english":"edge, border","categoryId":"general","type":"noun","image":null},
+  {"id":282,"kichwa":"mapa","spanish":"sucio","english":"dirty","categoryId":"general","type":"adjective","image":null},
+  {"id":283,"kichwa":"maquina","spanish":"maquina","english":"machine","categoryId":"general","type":"noun","image":null},
+  {"id":284,"kichwa":"marka","spanish":"provincia","english":"province","categoryId":"general","type":"noun","image":null},
+  {"id":285,"kichwa":"mashi","spanish":"amigo-compañero","english":"friend","categoryId":"general","type":"noun","image":null},
+  {"id":286,"kichwa":"mashkana","spanish":"buscar","english":"to look for","categoryId":"general","type":"verb","image":null},
+  {"id":287,"kichwa":"mashna..tak?","spanish":"cuanto?","english":"how much?","categoryId":"general","type":"question","image":null},
+  {"id":288,"kichwa":"maskana","spanish":"buscar","english":"to look for","categoryId":"general","type":"verb","image":null},
+  {"id":289,"kichwa":"mawka","spanish":"viejo, inanimado","english":"old, inanimate","categoryId":"general","type":"adjective","image":null},
+  {"id":290,"kichwa":"maykan...tak?","spanish":"cual?","english":"which?","categoryId":"general","type":"question","image":null},
+  {"id":291,"kichwa":"maykunatapash","spanish":"por doquier","english":"everywhere","categoryId":"general","type":"adverb","image":null},
+  {"id":292,"kichwa":"maymantatak?","spanish":"de donde?","english":"where from?","categoryId":"general","type":"question","image":null},
+  {"id":293,"kichwa":"maymutsurik","spanish":"importante","english":"important","categoryId":"general","type":"adjective","image":null},
+  {"id":294,"kichwa":"maypipash","spanish":"en doquier","english":"anywhere","categoryId":"general","type":"adverb","image":null},
+  {"id":295,"kichwa":"maypitak?","spanish":"en donde?","english":"where?","categoryId":"general","type":"question","image":null},
+  {"id":296,"kichwa":"maytatak?","spanish":"por donde?","english":"which way?","categoryId":"general","type":"question","image":null},
+  {"id":297,"kichwa":"mayu","spanish":"rio","english":"river","categoryId":"nature","type":"noun","image":"/images/words/mayu.svg"},
+  {"id":298,"kichwa":"mesa","spanish":"mesa","english":"table","categoryId":"general","type":"noun","image":null},
+  {"id":299,"kichwa":"michik kari","spanish":"pastor","english":"shepherd","categoryId":"general","type":"noun","image":null},
+  {"id":300,"kichwa":"michik warmi","spanish":"pastora","english":"female shepherd","categoryId":"general","type":"noun","image":null},
+  {"id":301,"kichwa":"michina","spanish":"pastar","english":"to graze, herd","categoryId":"general","type":"verb","image":null},
+  {"id":302,"kichwa":"mikuna","spanish":"dinero","english":"money","categoryId":"general","type":"noun","image":null},
+  {"id":303,"kichwa":"mikuna","spanish":"comer","english":"to eat","categoryId":"general","type":"verb","image":null},
+  {"id":304,"kichwa":"mikuna uku","spanish":"comedor","english":"dining room","categoryId":"general","type":"noun","image":null},
+  {"id":305,"kichwa":"minishtina","spanish":"necesitar","english":"to need","categoryId":"general","type":"verb","image":null},
+  {"id":306,"kichwa":"minka","spanish":"trabajo comunal","english":"communal work","categoryId":"house","type":"noun","image":null},
+  {"id":307,"kichwa":"mishki","spanish":"tayta galan","english":"handsome fellow","categoryId":"general","type":"unclear","image":null},
+  {"id":308,"kichwa":"mishki","spanish":"sabroso","english":"tasty","categoryId":"general","type":"adjective","image":null},
+  {"id":309,"kichwa":"mishki pacha","spanish":"delicioso","english":"delicious","categoryId":"general","type":"adjective","image":null},
+  {"id":310,"kichwa":"mishu","spanish":"misho","english":"cat","categoryId":"general","type":"noun","image":null},
+  {"id":311,"kichwa":"misi","spanish":"gato","english":"cat","categoryId":"animals","type":"noun","image":"/images/words/misi.svg"},
+  {"id":312,"kichwa":"moleshtana","spanish":"molestar","english":"to bother","categoryId":"actions","type":"verb","image":null},
+  {"id":313,"kichwa":"muchana","spanish":"adorar","english":"to adore, worship","categoryId":"general","type":"verb","image":null},
+  {"id":314,"kichwa":"muchiku","spanish":"sombrero","english":"hat","categoryId":"general","type":"noun","image":"/images/words/muchiku.svg"},
+  {"id":315,"kichwa":"munana","spanish":"desear, querer","english":"to want, desire","categoryId":"general","type":"verb","image":null},
+  {"id":316,"kichwa":"munaywan","spanish":"con gusto","english":"gladly","categoryId":"general","type":"phrase","image":null},
+  {"id":317,"kichwa":"muru","spanish":"grano","english":"grain","categoryId":"general","type":"noun","image":null},
+  {"id":318,"kichwa":"mushuk","spanish":"nuevo","english":"new","categoryId":"general","type":"adjective","image":null},
+  {"id":319,"kichwa":"muspa","spanish":"loco","english":"crazy","categoryId":"general","type":"adjective","image":null},
+  {"id":320,"kichwa":"muti","spanish":"mote","english":"mote (hominy corn)","categoryId":"food","type":"noun","image":"/images/words/muti.svg"},
+  {"id":321,"kichwa":"mutshuska","spanish":"necesitado","english":"needy","categoryId":"general","type":"adjective","image":null},
+  {"id":322,"kichwa":"mutsuna","spanish":"necesitar","english":"to need","categoryId":"general","type":"verb","image":null},
+  {"id":323,"kichwa":"muyu","spanish":"semilla","english":"seed","categoryId":"general","type":"noun","image":null},
+  {"id":324,"kichwa":"muyuna","spanish":"girar","english":"to spin, turn","categoryId":"general","type":"verb","image":null},
+  {"id":325,"kichwa":"muyuna","spanish":"rodear","english":"to go around","categoryId":"general","type":"verb","image":null},
+  {"id":326,"kichwa":"muyuntin","spanish":"alrededor","english":"around","categoryId":"general","type":"adverb","image":null},
+  {"id":327,"kichwa":"muyuntin","spanish":"rodear","english":"to go around","categoryId":"general","type":"verb","image":null},
+  {"id":328,"kichwa":"ña","spanish":"ya!","english":"already!","categoryId":"general","type":"interjection","image":null},
+  {"id":329,"kichwa":"ñan","spanish":"camino","english":"road, path","categoryId":"general","type":"noun","image":"/images/words/nan.svg"},
+  {"id":330,"kichwa":"ñaña","spanish":"hermana-hermana","english":"sister (of a woman)","categoryId":"family","type":"noun","image":null},
+  {"id":331,"kichwa":"nanana","spanish":"doler","english":"to hurt (ache)","categoryId":"general","type":"verb","image":null},
+  {"id":332,"kichwa":"ñanta mañachi","spanish":"prestame el camino","english":"lend me the way","categoryId":"general","type":"phrase","image":null},
+  {"id":333,"kichwa":"ñatak","spanish":"en este momento","english":"right now, at this moment","categoryId":"general","type":"adverb","image":null},
+  {"id":334,"kichwa":"ñawi","spanish":"cara, faz","english":"face","categoryId":"body","type":"noun","image":null},
+  {"id":335,"kichwa":"ñawpa","spanish":"adelante","english":"ahead, before","categoryId":"general","type":"adverb","image":null},
+  {"id":336,"kichwa":"nima","spanish":"cero","english":"zero","categoryId":"general","type":"number","image":null},
+  {"id":337,"kichwa":"nina","spanish":"decir","english":"to say","categoryId":"actions","type":"verb","image":null},
+  {"id":338,"kichwa":"nina japirirka ","spanish":"se encendio","english":"it lit up, ignited","categoryId":"general","type":"verb_form","image":null},
+  {"id":339,"kichwa":"nishpa","spanish":"diciendo","english":"saying","categoryId":"general","type":"verb_form","image":null},
+  {"id":340,"kichwa":"ñuka","spanish":"yo","english":"I","categoryId":"general","type":"pronoun","image":null},
+  {"id":341,"kichwa":"ñukanchik","spanish":"nosostros, nosotras","english":"we","categoryId":"general","type":"pronoun","image":null},
+  {"id":342,"kichwa":"ñukashina","spanish":"como yo","english":"like me","categoryId":"general","type":"phrase","image":null},
+  {"id":343,"kichwa":"ñutuchina","spanish":"pulverizar","english":"to pulverize","categoryId":"general","type":"verb","image":null},
+  {"id":344,"kichwa":"pacha","spanish":"hora","english":"hour, time","categoryId":"general","type":"noun","image":"/images/words/pacha.svg"},
+  {"id":345,"kichwa":"pacha","spanish":"tierra","english":"earth, land","categoryId":"nature","type":"noun","image":null},
+  {"id":346,"kichwa":"pachallina","spanish":"chal corto","english":"short shawl","categoryId":"general","type":"noun","image":null},
+  {"id":347,"kichwa":"pachan pachan","spanish":"tiempo en tiempo","english":"from time to time","categoryId":"general","type":"adverb","image":null},
+  {"id":348,"kichwa":"pakakuna","spanish":"esconderse","english":"to hide","categoryId":"general","type":"verb","image":null},
+  {"id":349,"kichwa":"pakarina","spanish":"amanecerse","english":"to dawn","categoryId":"general","type":"verb","image":null},
+  {"id":350,"kichwa":"pakcha","spanish":"cascada","english":"waterfall","categoryId":"general","type":"noun","image":"/images/words/pakcha.svg"},
+  {"id":351,"kichwa":"pakina","spanish":"romper, quebrar","english":"to break","categoryId":"general","type":"verb","image":null},
+  {"id":352,"kichwa":"paku","spanish":"cafe","english":"coffee","categoryId":"general","type":"noun","image":null},
+  {"id":353,"kichwa":"pakuana","spanish":"","english":null,"categoryId":"general","type":"unclear","image":null},
+  {"id":354,"kichwa":"pallana","spanish":"cosechar","english":"to harvest","categoryId":"nature","type":"verb","image":null},
+  {"id":355,"kichwa":"pana","spanish":"pagar","english":"to pay","categoryId":"actions","type":"verb","image":null},
+  {"id":356,"kichwa":"pani","spanish":"hermano-hermana","english":"sibling (opposite-sex)","categoryId":"family","type":"noun","image":null},
+  {"id":357,"kichwa":"panka","spanish":"pagina","english":"page","categoryId":"general","type":"noun","image":null},
+  {"id":358,"kichwa":"pargati","spanish":"alpargate","english":"sandal (alpargata)","categoryId":"house","type":"noun","image":"/images/words/pargati.svg"},
+  {"id":359,"kichwa":"parkati","spanish":"alpargate","english":"sandal (alpargata)","categoryId":"house","type":"noun","image":"/images/words/pargati.svg"},
+  {"id":360,"kichwa":"parlana","spanish":"conversar","english":"to converse","categoryId":"actions","type":"verb","image":null},
+  {"id":361,"kichwa":"paskana","spanish":"abrir","english":"to open","categoryId":"actions","type":"verb","image":null},
+  {"id":362,"kichwa":"patakunawan wasi","spanish":"edificio con muchos pisos","english":"multi-story building","categoryId":"house","type":"noun","image":"/images/words/patakunawan-wasi.svg"},
+  {"id":363,"kichwa":"patsak","spanish":"cien","english":"hundred","categoryId":"numbers","type":"number","image":"/images/words/patsak.svg"},
+  {"id":364,"kichwa":"pay","spanish":"el, ella","english":"he, she","categoryId":"general","type":"pronoun","image":null},
+  {"id":365,"kichwa":"pay","spanish":"gracias","english":"thank you","categoryId":"greetings","type":"phrase","image":null},
+  {"id":366,"kichwa":"paykuna","spanish":"ellos, ellas","english":"they","categoryId":"general","type":"pronoun","image":null},
+  {"id":367,"kichwa":"pichana","spanish":"limpiar hierbas","english":"to clear weeds","categoryId":"actions","type":"verb","image":null},
+  {"id":368,"kichwa":"pichana","spanish":"limpiar","english":"to clean","categoryId":"actions","type":"verb","image":null},
+  {"id":369,"kichwa":"pichka","spanish":"cinco","english":"five","categoryId":"numbers","type":"number","image":"/images/words/pichka.svg"},
+  {"id":370,"kichwa":"pillurka","spanish":"envolvio","english":"wrapped, enveloped","categoryId":"general","type":"verb_form","image":null},
+  {"id":371,"kichwa":"pimantatak?","spanish":"por quien?","english":"on whose behalf?","categoryId":"general","type":"question","image":null},
+  {"id":372,"kichwa":"piña","spanish":"enojado, enojada","english":"angry","categoryId":"general","type":"adjective","image":null},
+  {"id":373,"kichwa":"piñachina","spanish":"hacer enojar","english":"to make (someone) angry","categoryId":"actions","type":"verb","image":null},
+  {"id":374,"kichwa":"pintu","spanish":"tela","english":"fabric","categoryId":"house","type":"noun","image":"/images/words/pintu.svg"},
+  {"id":375,"kichwa":"pipash","spanish":"alguien","english":"someone","categoryId":"general","type":"pronoun","image":null},
+  {"id":376,"kichwa":"pishku","spanish":"pajaro","english":"bird","categoryId":"animals","type":"noun","image":"/images/words/pishku.svg"},
+  {"id":377,"kichwa":"pitak?","spanish":"quien?","english":"who?","categoryId":"general","type":"question","image":null},
+  {"id":378,"kichwa":"pitatak?","spanish":"a quien?","english":"to whom?","categoryId":"general","type":"question","image":null},
+  {"id":379,"kichwa":"piwantak?","spanish":"con quien?","english":"with whom?","categoryId":"general","type":"question","image":null},
+  {"id":380,"kichwa":"plituna","spanish":"molestar","english":"to bother","categoryId":"actions","type":"verb","image":null},
+  {"id":381,"kichwa":"puka","spanish":"rojo","english":"red","categoryId":"colors","type":"adjective","image":"/images/words/puka.svg"},
+  {"id":382,"kichwa":"pukllana","spanish":"jugar","english":"to play","categoryId":"actions","type":"verb","image":null},
+  {"id":383,"kichwa":"pukru","spanish":"loma","english":"hill","categoryId":"nature","type":"noun","image":"/images/words/pukru.svg"},
+  {"id":384,"kichwa":"puku","spanish":"plato","english":"plate","categoryId":"general","type":"noun","image":"/images/words/puku.svg"},
+  {"id":385,"kichwa":"pukuna","spanish":"madurar, soplar","english":"to ripen, blow","categoryId":"food","type":"verb","image":null},
+  {"id":386,"kichwa":"pukuna","spanish":"madurar, fermentarse","english":"to ripen, ferment","categoryId":"food","type":"verb","image":null},
+  {"id":387,"kichwa":"pukushka","spanish":"madurado","english":"ripened","categoryId":"general","type":"adjective","image":null},
+  {"id":388,"kichwa":"pukyu","spanish":"vertiente","english":"spring (water source)","categoryId":"nature","type":"noun","image":null},
+  {"id":389,"kichwa":"puncha","spanish":"dialogo","english":"story, dialogue","categoryId":"general","type":"noun","image":null},
+  {"id":390,"kichwa":"puñuna","spanish":"dormir","english":"to sleep","categoryId":"actions","type":"verb","image":"/images/words/pununa.svg"},
+  {"id":391,"kichwa":"puñuna uku","spanish":"dormitorio","english":"bedroom","categoryId":"house","type":"noun","image":"/images/words/pununa-uku.svg"},
+  {"id":392,"kichwa":"purina","spanish":"andar","english":"to walk","categoryId":"actions","type":"verb","image":null},
+  {"id":393,"kichwa":"purishpa","spanish":"caminando","english":"walking","categoryId":"general","type":"verb_form","image":null},
+  {"id":394,"kichwa":"pusak","spanish":"ocho","english":"eight","categoryId":"numbers","type":"number","image":"/images/words/pusak.svg"},
+  {"id":395,"kichwa":"pushak","spanish":"presidente","english":"president","categoryId":"general","type":"noun","image":null},
+  {"id":396,"kichwa":"pushana","spanish":"llevar","english":"to carry, take","categoryId":"actions","type":"verb","image":null},
+  {"id":397,"kichwa":"pusharkakuna","spanish":"llevaron","english":"they carried","categoryId":"general","type":"verb_form","image":null},
+  {"id":398,"kichwa":"pushtu","spanish":"sector","english":"sector","categoryId":"house","type":"noun","image":null},
+  {"id":399,"kichwa":"pushtupi","spanish":"en el sector","english":"in the sector","categoryId":"house","type":"phrase","image":null},
+  {"id":400,"kichwa":"pusu","spanish":"plomo","english":"gray, lead-colored","categoryId":"colors","type":"adjective","image":"/images/words/pusu.svg"},
+  {"id":401,"kichwa":"putsuku yaku","spanish":"cerveza","english":"beer","categoryId":"food","type":"noun","image":"/images/words/putsuku-yaku.svg"},
+  {"id":402,"kichwa":"puyo","spanish":"niebla","english":"fog","categoryId":"nature","type":"noun","image":null},
+  {"id":403,"kichwa":"rakina","spanish":"repartir","english":"to distribute","categoryId":"actions","type":"verb","image":null},
+  {"id":404,"kichwa":"raku","spanish":"grueso","english":"thick","categoryId":"general","type":"adjective","image":null},
+  {"id":405,"kichwa":"ranti","spanish":"comprar","english":"to buy","categoryId":"actions","type":"verb","image":null},
+  {"id":406,"kichwa":"rantina","spanish":"comprar","english":"to buy","categoryId":"actions","type":"verb","image":null},
+  {"id":407,"kichwa":"rasu","spanish":"nieve","english":"snow","categoryId":"nature","type":"noun","image":"/images/words/rasu.svg"},
+  {"id":408,"kichwa":"rikchari","spanish":"despiertate","english":"wake up!","categoryId":"general","type":"verb_form","image":null},
+  {"id":409,"kichwa":"rikra","spanish":"brazo","english":"arm","categoryId":"body","type":"noun","image":"/images/words/rikra.svg"},
+  {"id":410,"kichwa":"riksik","spanish":"amigo conocido","english":"acquaintance, friend","categoryId":"general","type":"noun","image":null},
+  {"id":411,"kichwa":"riksina","spanish":"conocer","english":"to know, meet","categoryId":"general","type":"verb","image":null},
+  {"id":412,"kichwa":"riksishka","spanish":"amigo nuevo","english":"new friend","categoryId":"general","type":"noun","image":null},
+  {"id":413,"kichwa":"riksishka","spanish":"amigo, amiga","english":"friend","categoryId":"general","type":"noun","image":null},
+  {"id":414,"kichwa":"rikuchiway","spanish":"muestrame","english":"show me","categoryId":"general","type":"verb_form","image":null},
+  {"id":415,"kichwa":"rikuna","spanish":"ver, mirar","english":"to see, look","categoryId":"actions","type":"verb","image":null},
+  {"id":416,"kichwa":"rimanakuy","spanish":"dialogo","english":"dialogue","categoryId":"general","type":"noun","image":null},
+  {"id":417,"kichwa":"rimashka katina","spanish":"seguir hablando","english":"to keep talking","categoryId":"general","type":"phrase","image":null},
+  {"id":418,"kichwa":"rina","spanish":"ir","english":"to go","categoryId":"general","type":"verb","image":null},
+  {"id":419,"kichwa":"rinri","spanish":"oreja","english":"ear","categoryId":"body","type":"noun","image":"/images/words/rinri.svg"},
+  {"id":420,"kichwa":"ruka","spanish":"dedo","english":"finger","categoryId":"body","type":"noun","image":"/images/words/ruka.svg"},
+  {"id":421,"kichwa":"ruku","spanish":"viejo","english":"old (person)","categoryId":"general","type":"adjective","image":null},
+  {"id":422,"kichwa":"rumi","spanish":"piedra","english":"stone","categoryId":"nature","type":"noun","image":"/images/words/rumi.svg"},
+  {"id":423,"kichwa":"rumi","spanish":"rumi","english":"stone","categoryId":"general","type":"noun","image":null},
+  {"id":424,"kichwa":"rumilla pamba","spanish":"pedregroso","english":"rocky ground","categoryId":"general","type":"adjective","image":null},
+  {"id":425,"kichwa":"rumpa","spanish":"pelotas, canicas","english":"marbles, balls","categoryId":"general","type":"noun","image":"/images/words/rumpa.svg"},
+  {"id":426,"kichwa":"runpa","spanish":"guantes","english":"gloves","categoryId":"general","type":"noun","image":"/images/words/runpa.svg"},
+  {"id":427,"kichwa":"rurana","spanish":"deber","english":"to owe, must","categoryId":"general","type":"verb","image":null},
+  {"id":428,"kichwa":"rurana","spanish":"aplicar","english":"to apply","categoryId":"general","type":"verb","image":null},
+  {"id":429,"kichwa":"rurana","spanish":"hacer","english":"to do, make","categoryId":"general","type":"verb","image":null},
+  {"id":430,"kichwa":"ruwana","spanish":"poncho","english":"poncho","categoryId":"house","type":"noun","image":"/images/words/ruwana.svg"},
+  {"id":431,"kichwa":"sacha kuchi","spanish":"cerdo salvaje","english":"wild pig","categoryId":"animals","type":"noun","image":null},
+  {"id":432,"kichwa":"sakina","spanish":"dejar","english":"to leave (something)","categoryId":"actions","type":"verb","image":null},
+  {"id":433,"kichwa":"sakina","spanish":"extraer, sacar","english":"to extract, take out","categoryId":"actions","type":"verb","image":null},
+  {"id":434,"kichwa":"sakirina","spanish":"quedarse","english":"to stay, remain","categoryId":"actions","type":"verb","image":null},
+  {"id":435,"kichwa":"sakiway","spanish":"me deje","english":"I left (something) behind","categoryId":"general","type":"verb_form","image":null},
+  {"id":436,"kichwa":"samana","spanish":"descansar","english":"to rest","categoryId":"actions","type":"verb","image":null},
+  {"id":437,"kichwa":"samarina uku","spanish":"sala","english":"living room","categoryId":"house","type":"noun","image":"/images/words/samarina-uku.svg"},
+  {"id":438,"kichwa":"sara chakra","spanish":"sementeria maiz","english":"cornfield","categoryId":"nature","type":"noun","image":"/images/words/sara-chakra.svg"},
+  {"id":439,"kichwa":"sara panka","spanish":"hojas de maiz","english":"corn husks/leaves","categoryId":"nature","type":"noun","image":null},
+  {"id":440,"kichwa":"sarantanu","spanish":"de varios colores","english":"multicolored","categoryId":"colors","type":"adjective","image":null},
+  {"id":441,"kichwa":"sarcillo","spanish":"arete","english":"earring","categoryId":"house","type":"noun","image":null},
+  {"id":442,"kichwa":"shamuna","spanish":"venir","english":"to come","categoryId":"general","type":"verb","image":null},
+  {"id":443,"kichwa":"shamupasha","spanish":"me permite venir","english":"allow me to come","categoryId":"general","type":"phrase","image":null},
+  {"id":444,"kichwa":"shamupaylla","spanish":"venga no mas","english":"come on in","categoryId":"general","type":"phrase","image":null},
+  {"id":445,"kichwa":"shayachina","spanish":"hacer parar","english":"to make (someone) stand up","categoryId":"actions","type":"verb","image":null},
+  {"id":446,"kichwa":"shayana","spanish":"para","english":"to stop","categoryId":"general","type":"verb","image":null},
+  {"id":447,"kichwa":"shaykuna","spanish":"cansarse","english":"to get tired","categoryId":"general","type":"verb","image":null},
+  {"id":448,"kichwa":"shaykushka","spanish":"cansado, cansada, estresado","english":"tired, stressed","categoryId":"general","type":"adjective","image":null},
+  {"id":449,"kichwa":"shikra","spanish":"mochila","english":"backpack","categoryId":"house","type":"noun","image":"/images/words/shikra.svg"},
+  {"id":450,"kichwa":"shila","spanish":"vaso","english":"cup, glass","categoryId":"general","type":"noun","image":"/images/words/shila.svg"},
+  {"id":451,"kichwa":"shilla","spanish":"vaso","english":"cup, glass","categoryId":"general","type":"noun","image":"/images/words/shila.svg"},
+  {"id":452,"kichwa":"shimi","spanish":"lengua","english":"tongue","categoryId":"body","type":"noun","image":null},
+  {"id":453,"kichwa":"shina shinalla","spanish":"mas o menos","english":"more or less","categoryId":"general","type":"adverb","image":null},
+  {"id":454,"kichwa":"shinallatak","spanish":"asi mismo","english":"likewise","categoryId":"general","type":"adverb","image":null},
+  {"id":455,"kichwa":"shinapash","spanish":"sin embargo, pero","english":"however, but","categoryId":"general","type":"connector","image":null},
+  {"id":456,"kichwa":"shitana","spanish":"botar, arrojar","english":"to throw away","categoryId":"actions","type":"verb","image":null},
+  {"id":457,"kichwa":"shitona","spanish":"botar","english":"to throw away","categoryId":"actions","type":"verb","image":null},
+  {"id":458,"kichwa":"shuk","spanish":"uno","english":"one","categoryId":"numbers","type":"number","image":"/images/words/shuk.svg"},
+  {"id":459,"kichwa":"shunku","spanish":"corazon","english":"heart","categoryId":"body","type":"noun","image":"/images/words/shunku.svg"},
+  {"id":460,"kichwa":"shunkuna","spanish":"desayuno","english":"breakfast","categoryId":"food","type":"noun","image":null},
+  {"id":461,"kichwa":"shunsho","spanish":"idiota","english":"idiot","categoryId":"general","type":"noun","image":null},
+  {"id":462,"kichwa":"shuti","spanish":"nombre","english":"name","categoryId":"general","type":"noun","image":null},
+  {"id":463,"kichwa":"shutichikuna","spanish":"pronombres","english":"pronouns","categoryId":"general","type":"noun","image":null},
+  {"id":464,"kichwa":"shuwak","spanish":"ladron","english":"thief","categoryId":"general","type":"noun","image":null},
+  {"id":465,"kichwa":"shuyana","spanish":"esperar","english":"to wait","categoryId":"actions","type":"verb","image":null},
+  {"id":466,"kichwa":"sirana","spanish":"coser","english":"to sew","categoryId":"actions","type":"verb","image":null},
+  {"id":467,"kichwa":"sirina","spanish":"acostarse","english":"to lie down","categoryId":"actions","type":"verb","image":null},
+  {"id":468,"kichwa":"sisa","spanish":"flor","english":"flower","categoryId":"nature","type":"noun","image":"/images/words/sisa.svg"},
+  {"id":469,"kichwa":"soltera","spanish":"soltera","english":"single (unmarried woman)","categoryId":"family","type":"adjective","image":null},
+  {"id":470,"kichwa":"sukta","spanish":"seis","english":"six","categoryId":"numbers","type":"number","image":"/images/words/sukta.svg"},
+  {"id":471,"kichwa":"sumak","spanish":"excelente","english":"excellent","categoryId":"general","type":"adjective","image":null},
+  {"id":472,"kichwa":"surkuna","spanish":"sacar","english":"to take out","categoryId":"actions","type":"verb","image":null},
+  {"id":473,"kichwa":"tabacu","spanish":"tabaco, cigarrillo","english":"tobacco, cigarette","categoryId":"general","type":"noun","image":null},
+  {"id":474,"kichwa":"taki","spanish":"musica","english":"music","categoryId":"general","type":"noun","image":"/images/words/taki.svg"},
+  {"id":475,"kichwa":"takina","spanish":"hacer musica","english":"to make music","categoryId":"general","type":"verb","image":null},
+  {"id":476,"kichwa":"takshak kari","spanish":"lavandero","english":"male launderer","categoryId":"general","type":"noun","image":null},
+  {"id":477,"kichwa":"takshak warmi","spanish":"lavandera","english":"female launderer","categoryId":"general","type":"noun","image":null},
+  {"id":478,"kichwa":"takshana","spanish":"lavar","english":"to wash","categoryId":"actions","type":"verb","image":null},
+  {"id":479,"kichwa":"tamiana","spanish":"llover","english":"to rain","categoryId":"general","type":"verb","image":"/images/words/tamiana.svg"},
+  {"id":480,"kichwa":"tanta","spanish":"pan","english":"bread","categoryId":"food","type":"noun","image":"/images/words/tanta.svg"},
+  {"id":481,"kichwa":"tantanakuna","spanish":"reunirse","english":"to gather, meet","categoryId":"general","type":"verb","image":null},
+  {"id":482,"kichwa":"tantanakuy","spanish":"reunion","english":"meeting, gathering","categoryId":"general","type":"noun","image":null},
+  {"id":483,"kichwa":"tarina","spanish":"encontrar","english":"to find","categoryId":"actions","type":"verb","image":null},
+  {"id":484,"kichwa":"tarishka","spanish":"encontrado","english":"found","categoryId":"general","type":"adjective","image":null},
+  {"id":485,"kichwa":"tarpuk warmi","spanish":"agricultora","english":"female farmer","categoryId":"general","type":"noun","image":null},
+  {"id":486,"kichwa":"tarpuna","spanish":"sembrar","english":"to plant, sow","categoryId":"nature","type":"verb","image":null},
+  {"id":487,"kichwa":"tarpuy","spanish":"siembra","english":"planting, sowing","categoryId":"nature","type":"noun","image":null},
+  {"id":488,"kichwa":"taspurshka","spanish":"sembrio","english":"sown field","categoryId":"general","type":"noun","image":null},
+  {"id":489,"kichwa":"tawka","spanish":"varios","english":"several","categoryId":"general","type":"adjective","image":null},
+  {"id":490,"kichwa":"tawka","spanish":"muchos","english":"many","categoryId":"general","type":"adjective","image":null},
+  {"id":491,"kichwa":"tawri","spanish":"chochos","english":"lupini beans (chochos)","categoryId":"food","type":"noun","image":null},
+  {"id":492,"kichwa":"tayta","spanish":"señor, papa","english":"mister, father","categoryId":"general","type":"noun","image":null},
+  {"id":493,"kichwa":"tayta cura","spanish":"papa cura","english":"priest","categoryId":"general","type":"noun","image":null},
+  {"id":494,"kichwa":"tayta yaya","spanish":"padre biologico","english":"biological father","categoryId":"family","type":"noun","image":null},
+  {"id":495,"kichwa":"telar","spanish":"telar","english":"loom","categoryId":"house","type":"noun","image":null},
+  {"id":496,"kichwa":"tikrana","spanish":"regresar, volver","english":"to return, go back","categoryId":"general","type":"verb","image":null},
+  {"id":497,"kichwa":"tinpuna","spanish":"hervir","english":"to boil","categoryId":"food","type":"verb","image":null},
+  {"id":498,"kichwa":"tio","spanish":"señor","english":"mister","categoryId":"general","type":"noun","image":null},
+  {"id":499,"kichwa":"tiyana","spanish":"haber, existir","english":"to exist, be there","categoryId":"general","type":"verb","image":null},
+  {"id":500,"kichwa":"tiyarina","spanish":"silla, silleta","english":"chair, seat","categoryId":"general","type":"noun","image":"/images/words/tiyarina.svg"},
+  {"id":501,"kichwa":"tiyarina","spanish":"sentarse","english":"to sit down","categoryId":"actions","type":"verb","image":null},
+  {"id":502,"kichwa":"trabajana","spanish":"trabajar","english":"to work","categoryId":"actions","type":"verb","image":null},
+  {"id":503,"kichwa":"tukuna","spanish":"hacerse","english":"to become","categoryId":"general","type":"verb","image":null},
+  {"id":504,"kichwa":"tukuy","spanish":"todos","english":"everyone, all","categoryId":"general","type":"pronoun","image":null},
+  {"id":505,"kichwa":"tukuylla","spanish":"todos","english":"everyone, all","categoryId":"general","type":"pronoun","image":null},
+  {"id":506,"kichwa":"tullpa","spanish":"fogon","english":"hearth, fireplace","categoryId":"general","type":"noun","image":"/images/words/tullpa.svg"},
+  {"id":507,"kichwa":"tullpuna ","spanish":"colorear","english":"to color","categoryId":"colors","type":"verb","image":null},
+  {"id":508,"kichwa":"tullpuyuk","spanish":"colorido","english":"colorful","categoryId":"colors","type":"adjective","image":null},
+  {"id":509,"kichwa":"tullu","spanish":"flaco","english":"skinny","categoryId":"body","type":"adjective","image":null},
+  {"id":510,"kichwa":"tunu","spanish":"musica","english":"music","categoryId":"general","type":"noun","image":"/images/words/taki.svg"},
+  {"id":511,"kichwa":"tupana","spanish":"encontrarse","english":"to meet, find each other","categoryId":"general","type":"verb","image":null},
+  {"id":512,"kichwa":"turi","spanish":"hermana-hermano","english":"sibling (opposite-sex)","categoryId":"family","type":"noun","image":null},
+  {"id":513,"kichwa":"turu","spanish":"lodo","english":"mud","categoryId":"nature","type":"noun","image":null},
+  {"id":514,"kichwa":"tushuna","spanish":"bailar","english":"to dance","categoryId":"actions","type":"verb","image":null},
+  {"id":515,"kichwa":"tuta mikuna","spanish":"cena","english":"dinner","categoryId":"food","type":"noun","image":null},
+  {"id":516,"kichwa":"tutamanta","spanish":"la mañana","english":"the morning","categoryId":"general","type":"noun","image":null},
+  {"id":517,"kichwa":"tyarina","spanish":"sentarse","english":"to sit down","categoryId":"actions","type":"verb","image":null},
+  {"id":518,"kichwa":"ucha","spanish":"pronto","english":"soon","categoryId":"general","type":"adverb","image":null},
+  {"id":519,"kichwa":"uchilla","spanish":"pequeño","english":"small","categoryId":"general","type":"adjective","image":null},
+  {"id":520,"kichwa":"uchilla pacha","spanish":"minuto","english":"minute","categoryId":"general","type":"noun","image":null},
+  {"id":521,"kichwa":"ukllana","spanish":"abrazar","english":"to hug","categoryId":"actions","type":"verb","image":null},
+  {"id":522,"kichwa":"uksha","spanish":"pajaro","english":"bird","categoryId":"animals","type":"noun","image":null},
+  {"id":523,"kichwa":"uksha","spanish":"paja","english":"straw","categoryId":"nature","type":"noun","image":null},
+  {"id":524,"kichwa":"uku","spanish":"adentro, dentro","english":"inside","categoryId":"general","type":"adverb","image":null},
+  {"id":525,"kichwa":"uku","spanish":"cuarto","english":"room","categoryId":"house","type":"noun","image":null},
+  {"id":526,"kichwa":"uku","spanish":"cuarto, habitacion","english":"room","categoryId":"house","type":"noun","image":null},
+  {"id":527,"kichwa":"uku pacha","spanish":"infierno","english":"hell","categoryId":"general","type":"noun","image":null},
+  {"id":528,"kichwa":"ukucha","spanish":"raton","english":"mouse","categoryId":"animals","type":"noun","image":"/images/words/ukucha.svg"},
+  {"id":529,"kichwa":"ullana","spanish":"oir","english":"to hear","categoryId":"general","type":"verb","image":null},
+  {"id":530,"kichwa":"uma","spanish":"cabeza","english":"head","categoryId":"body","type":"noun","image":"/images/words/uma.svg"},
+  {"id":531,"kichwa":"uma pachallina","spanish":"tla para cubrirse la cabeza","english":"head covering, shawl","categoryId":"body","type":"noun","image":null},
+  {"id":532,"kichwa":"umana","spanish":"mentir","english":"to lie","categoryId":"actions","type":"verb","image":null},
+  {"id":533,"kichwa":"unkuna","spanish":"enfermarse","english":"to get sick","categoryId":"general","type":"verb","image":null},
+  {"id":534,"kichwa":"upalla","spanish":"callado","english":"quiet","categoryId":"general","type":"adjective","image":null},
+  {"id":535,"kichwa":"upallana","spanish":"callar","english":"to silence","categoryId":"actions","type":"verb","image":null},
+  {"id":536,"kichwa":"upyana","spanish":"beber","english":"to drink","categoryId":"general","type":"verb","image":null},
+  {"id":537,"kichwa":"ura","spanish":"abajo","english":"below","categoryId":"general","type":"adverb","image":null},
+  {"id":538,"kichwa":"urku","spanish":"montaña, monte","english":"mountain","categoryId":"nature","type":"noun","image":"/images/words/urku.svg"},
+  {"id":539,"kichwa":"urpi","spanish":"tortola","english":"turtledove","categoryId":"animals","type":"noun","image":"/images/words/urpi.svg"},
+  {"id":540,"kichwa":"usa","spanish":"piojo","english":"louse","categoryId":"animals","type":"noun","image":null},
+  {"id":541,"kichwa":"ushana","spanish":"poder","english":"to be able to, can","categoryId":"actions","type":"verb","image":null},
+  {"id":542,"kichwa":"ushushi","spanish":"hijo","english":"son","categoryId":"general","type":"noun","image":null},
+  {"id":543,"kichwa":"ushuta","spanish":"calzado","english":"footwear, shoes","categoryId":"house","type":"noun","image":null},
+  {"id":544,"kichwa":"utiya","spanish":"rapido","english":"fast","categoryId":"general","type":"adverb","image":null},
+  {"id":545,"kichwa":"utya","spanish":"pronto","english":"soon","categoryId":"general","type":"adverb","image":null},
+  {"id":546,"kichwa":"uyana","spanish":"escuchar","english":"to listen","categoryId":"actions","type":"verb","image":null},
+  {"id":547,"kichwa":"uyay","spanish":"atento","english":"attentive","categoryId":"general","type":"adjective","image":null},
+  {"id":548,"kichwa":"valina","spanish":"valer, costar","english":"to be worth, cost","categoryId":"actions","type":"verb","image":null},
+  {"id":549,"kichwa":"wachuna","spanish":"formar surcos","english":"to form furrows","categoryId":"general","type":"verb","image":null},
+  {"id":550,"kichwa":"wakana","spanish":"llorar","english":"to cry","categoryId":"actions","type":"verb","image":"/images/words/wakana.svg"},
+  {"id":551,"kichwa":"wakaychina","spanish":"guardar","english":"to keep, save","categoryId":"actions","type":"verb","image":null},
+  {"id":552,"kichwa":"wakcha","spanish":"pobre","english":"poor","categoryId":"general","type":"adjective","image":null},
+  {"id":553,"kichwa":"wakin","spanish":"alguno","english":"some","categoryId":"general","type":"adjective","image":null},
+  {"id":554,"kichwa":"wakin","spanish":"algun","english":"some","categoryId":"general","type":"adjective","image":null},
+  {"id":555,"kichwa":"wakinpi","spanish":"rara vez","english":"rarely","categoryId":"general","type":"adverb","image":null},
+  {"id":556,"kichwa":"waklli","spanish":"dañado","english":"damaged","categoryId":"general","type":"adjective","image":null},
+  {"id":557,"kichwa":"wakllina","spanish":"dañarse","english":"to get damaged","categoryId":"general","type":"verb","image":null},
+  {"id":558,"kichwa":"wakra","spanish":"toro","english":"bull","categoryId":"animals","type":"noun","image":"/images/words/wakra.svg"},
+  {"id":559,"kichwa":"wallka","spanish":"collar","english":"necklace","categoryId":"house","type":"noun","image":"/images/words/wallka.svg"},
+  {"id":560,"kichwa":"wampra","spanish":"joven hombre","english":"young man","categoryId":"family","type":"noun","image":null},
+  {"id":561,"kichwa":"wankipi","spanish":"a veces","english":"sometimes","categoryId":"general","type":"adverb","image":null},
+  {"id":562,"kichwa":"wañuchina","spanish":"hacer apagar","english":"to turn off (something)","categoryId":"actions","type":"verb","image":null},
+  {"id":563,"kichwa":"wanuna","spanish":"abonar","english":"to fertilize (soil)","categoryId":"nature","type":"verb","image":null},
+  {"id":564,"kichwa":"wañushka","spanish":"muerto","english":"dead","categoryId":"general","type":"adjective","image":null},
+  {"id":565,"kichwa":"waranka","spanish":"mil","english":"thousand","categoryId":"numbers","type":"number","image":"/images/words/waranka.svg"},
+  {"id":566,"kichwa":"warmi","spanish":"mujer","english":"woman","categoryId":"general","type":"noun","image":null},
+  {"id":567,"kichwa":"warmi","spanish":"esposa","english":"wife","categoryId":"family","type":"noun","image":null},
+  {"id":568,"kichwa":"warmi tukuna","spanish":"enamorada","english":"girlfriend","categoryId":"family","type":"noun","image":null},
+  {"id":569,"kichwa":"warmi wawa","spanish":"niña","english":"girl","categoryId":"general","type":"noun","image":null},
+  {"id":570,"kichwa":"warmikunayuk","spanish":"dueño de mujeres","english":"owner of (several) women","categoryId":"general","type":"noun","image":null},
+  {"id":571,"kichwa":"warmipa churakuna","spanish":"ropa de mujer","english":"women's clothing","categoryId":"general","type":"noun","image":null},
+  {"id":572,"kichwa":"warmiyuk","spanish":"dueño de una warmi","english":"owner of a woman","categoryId":"general","type":"noun","image":null},
+  {"id":573,"kichwa":"washa","spanish":"atras, tras","english":"behind","categoryId":"general","type":"adverb","image":null},
+  {"id":574,"kichwa":"wasi","spanish":"casado","english":"married","categoryId":"family","type":"noun","image":null},
+  {"id":575,"kichwa":"wasichina ","spanish":"construir casa","english":"to build a house","categoryId":"house","type":"verb","image":null},
+  {"id":576,"kichwa":"wasiyuk","spanish":"dueño de casa","english":"house owner","categoryId":"house","type":"noun","image":null},
+  {"id":577,"kichwa":"wata","spanish":"año","english":"year","categoryId":"general","type":"noun","image":null},
+  {"id":578,"kichwa":"watarka","spanish":"amarro","english":"tied, moored","categoryId":"general","type":"verb_form","image":null},
+  {"id":579,"kichwa":"wawa","spanish":"niño, niña","english":"child, boy/girl","categoryId":"general","type":"noun","image":"/images/words/wawa.svg"},
+  {"id":580,"kichwa":"wawa kallana","spanish":"tiesto pequeño","english":"small clay pot","categoryId":"general","type":"noun","image":null},
+  {"id":581,"kichwa":"wawa manka","spanish":"olla pequeña","english":"small pot","categoryId":"general","type":"noun","image":null},
+  {"id":582,"kichwa":"wawa pacha","spanish":"segundo","english":"second (unit of time)","categoryId":"general","type":"noun","image":null},
+  {"id":583,"kichwa":"wawa unkuchik","spanish":"partera","english":"midwife","categoryId":"general","type":"noun","image":null},
+  {"id":584,"kichwa":"wawki","spanish":"hermano-hermano","english":"brother (of a man)","categoryId":"family","type":"noun","image":null},
+  {"id":585,"kichwa":"waylla","spanish":"verde","english":"green","categoryId":"colors","type":"adjective","image":"/images/words/waylla.svg"},
+  {"id":586,"kichwa":"wayra","spanish":"viento","english":"wind","categoryId":"nature","type":"noun","image":"/images/words/wayra.svg"},
+  {"id":587,"kichwa":"wichayman","spanish":"hacia arriba","english":"upward","categoryId":"general","type":"adverb","image":null},
+  {"id":588,"kichwa":"willana","spanish":"avisar","english":"to inform, notify","categoryId":"actions","type":"verb","image":null},
+  {"id":589,"kichwa":"wira","spanish":"manteca","english":"lard","categoryId":"food","type":"noun","image":null},
+  {"id":590,"kichwa":"wirwila","spanish":"guitarra","english":"guitar","categoryId":"general","type":"noun","image":"/images/words/wirwila.svg"},
+  {"id":591,"kichwa":"wisha","spanish":"cucharon","english":"ladle","categoryId":"general","type":"noun","image":"/images/words/wisha.svg"},
+  {"id":592,"kichwa":"yachachik","spanish":"profesor","english":"teacher","categoryId":"general","type":"noun","image":null},
+  {"id":593,"kichwa":"yachachina","spanish":"enseñar","english":"to teach","categoryId":"actions","type":"verb","image":null},
+  {"id":594,"kichwa":"yachakuk","spanish":"estudiante","english":"student","categoryId":"general","type":"noun","image":null},
+  {"id":595,"kichwa":"yachakuna","spanish":"aprender","english":"to learn","categoryId":"actions","type":"verb","image":null},
+  {"id":596,"kichwa":"yachana wasi","spanish":"escuela","english":"school","categoryId":"house","type":"noun","image":"/images/words/yachana-wasi.svg"},
+  {"id":597,"kichwa":"yacharina","spanish":"acostumbrarse, enseñarse","english":"to get used to","categoryId":"general","type":"verb","image":null},
+  {"id":598,"kichwa":"yaku","spanish":"agua","english":"water","categoryId":"general","type":"noun","image":"/images/words/yaku.svg"},
+  {"id":599,"kichwa":"yaku wira","spanish":"aceite","english":"oil","categoryId":"food","type":"noun","image":"/images/words/yaku-wira.svg"},
+  {"id":600,"kichwa":"yallina","spanish":"pasarse","english":"to pass, elapse","categoryId":"general","type":"verb","image":null},
+  {"id":601,"kichwa":"yana shina","spanish":"parecido al negro","english":"black-ish","categoryId":"colors","type":"adjective","image":null},
+  {"id":602,"kichwa":"yana shina","spanish":"negro","english":"black","categoryId":"colors","type":"adjective","image":null},
+  {"id":603,"kichwa":"yanapana","spanish":"ayudar","english":"to help","categoryId":"actions","type":"verb","image":null},
+  {"id":604,"kichwa":"yanta","spanish":"leña","english":"firewood","categoryId":"general","type":"noun","image":"/images/words/yanta.svg"},
+  {"id":605,"kichwa":"yanuk kari","spanish":"cocinero","english":"male cook","categoryId":"food","type":"noun","image":null},
+  {"id":606,"kichwa":"yanuk warmi","spanish":"cocinera","english":"female cook","categoryId":"food","type":"noun","image":null},
+  {"id":607,"kichwa":"yanuna ","spanish":"cocinar","english":"to cook","categoryId":"food","type":"verb","image":null},
+  {"id":608,"kichwa":"yanuna ","spanish":"cocina","english":"kitchen","categoryId":"general","type":"noun","image":null},
+  {"id":609,"kichwa":"yanuna uku","spanish":"cocina","english":"kitchen","categoryId":"general","type":"noun","image":"/images/words/yanuna-uku.svg"},
+  {"id":610,"kichwa":"yapuna","spanish":"harar","english":"to plow","categoryId":"general","type":"verb","image":null},
+  {"id":611,"kichwa":"yaykuna","spanish":"entrar","english":"to enter","categoryId":"actions","type":"verb","image":null},
+  {"id":612,"kichwa":"yupaychini","spanish":"gracias","english":"thank you","categoryId":"greetings","type":"phrase","image":null},
+  {"id":613,"kichwa":"yura","spanish":"planta o matorral","english":"plant, shrub","categoryId":"nature","type":"noun","image":"/images/words/yura.svg"},
+  {"id":614,"kichwa":"yurak","spanish":"blanco","english":"white","categoryId":"colors","type":"adjective","image":"/images/words/yurak.svg"},
+  {"id":615,"kichwa":"yuyana","spanish":"intentar","english":"to try, attempt","categoryId":"actions","type":"verb","image":null},
+  {"id":616,"kichwa":"winkulak","spanish":"col","english":"cabbage","categoryId":"general","type":"noun","image":null},
+  {"id":617,"kichwa":"nanana","spanish":"dolor","english":"pain","categoryId":"general","type":"noun","image":null},
+  {"id":618,"kichwa":"ashnana","spanish":"oler","english":"to smell","categoryId":"actions","type":"verb","image":null},
+  {"id":619,"kichwa":"mayllana","spanish":"lavar(excepto ropa)","english":"to wash (except clothes)","categoryId":"actions","type":"verb","image":null},
+  {"id":620,"kichwa":"akllana","spanish":"escojer","english":"to choose","categoryId":"general","type":"verb","image":null},
+  {"id":621,"kichwa":"mana kullkita kurin","spanish":"gratis","english":"free (no cost)","categoryId":"general","type":"adjective","image":null},
+  {"id":622,"kichwa":"chaytallatak","spanish":"lo mismo","english":"the same thing","categoryId":"general","type":"phrase","image":null},
+  {"id":623,"kichwa":"junka","spanish":"semana","english":"week","categoryId":"general","type":"noun","image":null},
+  {"id":624,"kichwa":"imashtawan","spanish":"que mas?","english":"what else?","categoryId":"general","type":"question","image":null},
+  {"id":625,"kichwa":"chapuna","spanish":"revolver","english":"to stir","categoryId":"general","type":"verb","image":null},
+  {"id":626,"kichwa":"sapi","spanish":"raiz","english":"root","categoryId":"nature","type":"noun","image":"/images/words/sapi.svg"},
+  {"id":627,"kichwa":"hawa","spanish":"arriba","english":"above, up","categoryId":"general","type":"adverb","image":null},
+  {"id":628,"kichwa":"yalli alli","spanish":"pasa bien","english":"have a good time","categoryId":"general","type":"phrase","image":null},
+  {"id":629,"kichwa":"taripay","spanish":"investigacion","english":"research","categoryId":"general","type":"noun","image":null},
+  {"id":630,"kichwa":"wachachik","spanish":"partera","english":"midwife","categoryId":"general","type":"noun","image":null},
+  {"id":631,"kichwa":"arawi","spanish":"poema","english":"poem","categoryId":"general","type":"noun","image":null},
+  {"id":632,"kichwa":"chinkachina","spanish":"perder","english":"to lose","categoryId":"actions","type":"verb","image":null},
+  {"id":633,"kichwa":"yanka","spanish":"envano","english":"in vain","categoryId":"general","type":"adverb","image":null},
+  {"id":634,"kichwa":"puyu","spanish":"nube","english":"cloud","categoryId":"nature","type":"noun","image":"/images/words/puyu.svg"},
+  {"id":635,"kichwa":"uyllana","spanish":"aviso","english":"warning, notice","categoryId":"general","type":"noun","image":null},
+  {"id":636,"kichwa":"wiñana","spanish":"crecer","english":"to grow","categoryId":"actions","type":"verb","image":null},
+  {"id":637,"kichwa":"kara","spanish":"cuero","english":"leather, hide","categoryId":"general","type":"noun","image":null},
+  {"id":638,"kichwa":"mañana","spanish":"pedido, ceremonia","english":"request, ceremony","categoryId":"general","type":"noun","image":null},
+  {"id":639,"kichwa":"kunkana","spanish":"olvidar","english":"to forget","categoryId":"general","type":"verb","image":null},
+  {"id":640,"kichwa":"ninanta","spanish":"demasiado","english":"too much","categoryId":"general","type":"adverb","image":null},
+  {"id":641,"kichwa":"paktachispa","spanish":"hacer alcanzar, hacer unir","english":"to make reach, make unite","categoryId":"general","type":"verb","image":null},
+  {"id":642,"kichwa":"paktana","spanish":"unir, alcanzar","english":"to unite, reach","categoryId":"general","type":"verb","image":null},
+  {"id":643,"kichwa":"kuyana","spanish":"amando","english":"loving","categoryId":"general","type":"verb_form","image":null},
+  {"id":644,"kichwa":"tipina","spanish":"cosechar sara","english":"to harvest corn","categoryId":"nature","type":"verb","image":null},
+  {"id":645,"kichwa":"chayamuna","spanish":"llegar","english":"to arrive","categoryId":"actions","type":"verb","image":null},
+  {"id":646,"kichwa":"yala","spanish":"igual que shina","english":"same as \"shina\" (like, as)","categoryId":"general","type":"connector","image":null},
+  {"id":647,"kichwa":"shina","spanish":"por ejemplo","english":"for example","categoryId":"general","type":"connector","image":null},
+  {"id":648,"kichwa":"llamkay uku","spanish":"oficina","english":"office","categoryId":"house","type":"noun","image":null},
+  {"id":649,"kichwa":"shinchitapacha","spanish":"fuertisimo","english":"very strong","categoryId":"general","type":"adverb","image":null},
+  {"id":650,"kichwa":"puchka","spanish":"hilar","english":"to spin thread","categoryId":"house","type":"verb","image":null},
+  {"id":651,"kichwa":"kururu","spanish":"cono de hilo","english":"spool of thread","categoryId":"general","type":"noun","image":"/images/words/kururu.svg"},
+  {"id":652,"kichwa":"awllina","spanish":"extramar, hurdir","english":"to spin, weave (thread)","categoryId":"general","type":"verb","image":null},
+  {"id":653,"kichwa":"kawa","spanish":"balsa de madera para tejer hilo","english":"wooden raft for weaving thread","categoryId":"house","type":"noun","image":null},
+  {"id":654,"kichwa":"kawpuna","spanish":"desenredar hilo","english":"to untangle thread","categoryId":"general","type":"verb","image":null},
+  {"id":655,"kichwa":"kawpuk","spanish":"el que desenreda","english":"the one who untangles","categoryId":"general","type":"noun","image":null},
+  {"id":656,"kichwa":"pilluna","spanish":"envolver","english":"to wrap","categoryId":"actions","type":"verb","image":null},
+  {"id":657,"kichwa":"aswana kaspi","spanish":"palo para tejer","english":"stick for weaving","categoryId":"house","type":"noun","image":null},
+  {"id":658,"kichwa":"illana","spanish":"no habe, no existir","english":"to not exist, not have","categoryId":"general","type":"verb","image":null},
+  {"id":659,"kichwa":"illarka","spanish":"no hubo","english":"there wasn't","categoryId":"general","type":"verb_form","image":null},
+  {"id":660,"kichwa":"tukuchina","spanish":"terminar","english":"to finish","categoryId":"actions","type":"verb","image":null},
+  {"id":661,"kichwa":"tukuna","spanish":"transformarse","english":"to transform","categoryId":"general","type":"verb","image":null},
+  {"id":662,"kichwa":"apachina","spanish":"cargar","english":"to carry","categoryId":"actions","type":"verb","image":null},
+  {"id":663,"kichwa":"aparina","spanish":"cargar","english":"to carry","categoryId":"actions","type":"verb","image":null},
+  {"id":664,"kichwa":"larka","spanish":"sequia","english":"drought","categoryId":"general","type":"noun","image":null},
+  {"id":665,"kichwa":"awanakaspi","spanish":"madera para tejer","english":"wood for weaving","categoryId":"house","type":"noun","image":null},
+  {"id":666,"kichwa":"manchaklla","spanish":"temerosamente","english":"fearfully","categoryId":"general","type":"adverb","image":null},
+  {"id":667,"kichwa":"manchana","spanish":"asustar","english":"to scare","categoryId":"general","type":"verb","image":null},
+  {"id":668,"kichwa":"manchak","spanish":"el que teme","english":"the one who fears","categoryId":"general","type":"noun","image":null},
+  {"id":669,"kichwa":"jananik","spanish":"subida inclinada","english":"steep uphill","categoryId":"general","type":"noun","image":null},
+  {"id":670,"kichwa":"uranik","spanish":"hacia abajo en digonal","english":"downward, diagonally","categoryId":"general","type":"adverb","image":null},
+  {"id":671,"kichwa":"washanik","spanish":"hacia atras","english":"backward","categoryId":"general","type":"adverb","image":null},
+  {"id":672,"kichwa":"rikurina","spanish":"aparecerse, verse","english":"to appear, be seen","categoryId":"general","type":"verb","image":null},
+  {"id":673,"kichwa":"shuktak shina","spanish":"como otro(diferente)","english":"like another (different)","categoryId":"general","type":"phrase","image":null},
+  {"id":674,"kichwa":"millma","spanish":"lana","english":"wool","categoryId":"general","type":"noun","image":null},
+  {"id":675,"kichwa":"paypak","spanish":"para el","english":"for him","categoryId":"general","type":"phrase","image":null},
+  {"id":676,"kichwa":"chinkana","spanish":"perder","english":"to lose","categoryId":"actions","type":"verb","image":null},
+  {"id":677,"kichwa":"rikunakuna","spanish":"vistas, paisajes","english":"views, landscapes","categoryId":"general","type":"noun","image":null},
+  {"id":678,"kichwa":"chinkarina","spanish":"perderse","english":"to get lost","categoryId":"actions","type":"verb","image":null},
+  {"id":679,"kichwa":"llapina","spanish":"aplastar","english":"to crush, flatten","categoryId":"general","type":"verb","image":null},
+  {"id":680,"kichwa":"kayta chayta","spanish":"por aqui, por alla","english":"here and there","categoryId":"general","type":"adverb","image":null},
+  {"id":681,"kichwa":"machalla","spanish":"medio ebrio","english":"half drunk","categoryId":"general","type":"adjective","image":null},
+  {"id":682,"kichwa":"shayana","spanish":"detenerse","english":"to stop","categoryId":"general","type":"verb","image":null},
+  {"id":683,"kichwa":"kachana","spanish":"mandar","english":"to send","categoryId":"actions","type":"verb","image":null},
+  {"id":684,"kichwa":"mashkakrishpa","spanish":"yendo a buscar","english":"going to look for","categoryId":"general","type":"verb_form","image":null},
+  {"id":685,"kichwa":"kipikunantin","spanish":"conjuntamente con las maletas","english":"along with the suitcases","categoryId":"general","type":"phrase","image":null},
+  {"id":686,"kichwa":"iñina","spanish":"creencia","english":"belief","categoryId":"general","type":"noun","image":null},
+  {"id":687,"kichwa":"llullu","spanish":"tierno","english":"tender, soft","categoryId":"general","type":"adjective","image":null},
+  {"id":688,"kichwa":"junta","spanish":"llena","english":"full","categoryId":"general","type":"adjective","image":null},
+  {"id":689,"kichwa":"pura killa","spanish":"luna llena","english":"full moon","categoryId":"general","type":"noun","image":"/images/words/pura-killa.svg"},
+  {"id":690,"kichwa":"ismuna","spanish":"podrir","english":"to rot","categoryId":"general","type":"verb","image":null},
+  {"id":691,"kichwa":"wasichina ","spanish":"construir","english":"to build","categoryId":"house","type":"verb","image":null},
+  {"id":692,"kichwa":"wirayana","spanish":"engordar","english":"to gain weight","categoryId":"general","type":"verb","image":null},
+  {"id":693,"kichwa":"surkuna","spanish":"sacar, cortar","english":"to take out, cut","categoryId":"actions","type":"verb","image":null},
+  {"id":694,"kichwa":"tukurina","spanish":"termino(algo interno)","english":"ending (something internal)","categoryId":"general","type":"noun","image":null},
+  {"id":695,"kichwa":"utka","spanish":"rapido","english":"fast","categoryId":"general","type":"adverb","image":null},
+  {"id":696,"kichwa":"pukuna","spanish":"madurar","english":"to ripen","categoryId":"food","type":"verb","image":null},
+  {"id":697,"kichwa":"imatapash","spanish":"cualquier cosa","english":"anything","categoryId":"general","type":"pronoun","image":null},
+  {"id":698,"kichwa":"wallinku","spanish":"conejo","english":"rabbit","categoryId":"animals","type":"noun","image":"/images/words/wallinku.svg"},
+  {"id":699,"kichwa":"tukuna","spanish":"hacerse volverse","english":"to become","categoryId":"general","type":"verb","image":null},
+  {"id":700,"kichwa":"tunkuri","spanish":"garganta, cuello","english":"throat, neck","categoryId":"body","type":"noun","image":null},
+  {"id":701,"kichwa":"kashtuna","spanish":"mandibula","english":"jaw","categoryId":"general","type":"noun","image":null},
+  {"id":702,"kichwa":"chukchuna","spanish":"temblor","english":"tremor, shiver","categoryId":"general","type":"noun","image":null},
+  {"id":703,"kichwa":"amuklla","spanish":"sabe no mas","english":"knows without being told","categoryId":"general","type":"phrase","image":null}
 ]

@@ -1,15 +1,18 @@
+// Applies pending migrations (db/migrations/*.sql, in file-name order), each
+// in its own transaction, recording applied ones in schema_migrations.
+//
+//   npm run db:migrate   (from apps/backend)
 import { readdirSync, readFileSync } from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 import pg from "pg";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const MIGRATIONS_DIR = path.join(__dirname, "migrations");
+export const MIGRATIONS_DIR = path.join(__dirname, "migrations");
 
-async function main() {
-  const client = new pg.Client({ connectionString: process.env.DATABASE_URL });
-  await client.connect();
-
+// `upTo` (a file name) stops after that migration; tests use it to set up a
+// database as it was before a later migration. Returns the files applied.
+export async function migrate(client, { dir = MIGRATIONS_DIR, upTo, log = () => {} } = {}) {
   await client.query(`
     CREATE TABLE IF NOT EXISTS schema_migrations (
       filename    TEXT PRIMARY KEY,
@@ -17,22 +20,21 @@ async function main() {
     );
   `);
 
-  const files = readdirSync(MIGRATIONS_DIR)
+  const files = readdirSync(dir)
     .filter((f) => f.endsWith(".sql"))
-    .sort();
+    .sort()
+    .filter((f) => !upTo || f <= upTo);
 
+  const applied = [];
   for (const file of files) {
-    const { rows } = await client.query(
-      "SELECT 1 FROM schema_migrations WHERE filename = $1",
-      [file]
-    );
+    const { rows } = await client.query("SELECT 1 FROM schema_migrations WHERE filename = $1", [file]);
     if (rows.length > 0) {
-      console.log(`[migrate] skip ${file} (already applied)`);
+      log(`[migrate] skip ${file} (already applied)`);
       continue;
     }
 
-    const sql = readFileSync(path.join(MIGRATIONS_DIR, file), "utf-8");
-    console.log(`[migrate] applying ${file}`);
+    const sql = readFileSync(path.join(dir, file), "utf-8");
+    log(`[migrate] applying ${file}`);
     await client.query("BEGIN");
     try {
       await client.query(sql);
@@ -40,15 +42,23 @@ async function main() {
       await client.query("COMMIT");
     } catch (err) {
       await client.query("ROLLBACK");
-      throw err;
+      throw new Error(`Migration ${file} failed: ${err.message}`, { cause: err });
     }
+    applied.push(file);
   }
-
-  await client.end();
-  console.log("[migrate] done");
+  return applied;
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  const client = new pg.Client({ connectionString: process.env.DATABASE_URL });
+  try {
+    await client.connect();
+    await migrate(client, { log: console.log });
+    console.log("[migrate] done");
+  } catch (err) {
+    console.error(err);
+    process.exitCode = 1;
+  } finally {
+    await client.end();
+  }
+}

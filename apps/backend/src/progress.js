@@ -11,6 +11,11 @@ export const PROGRESS_KINDS = ["learnedWords", "learnedPuzzles", "completedLesso
 export const MAX_ITEMS_PER_REQUEST = 5000;
 export const MAX_ITEM_LENGTH = 200;
 
+// learnedWords holds word ids (words.id, as strings). Older clients sent
+// "kichwa|spanish" keys; those are rejected so a stale browser can't write
+// keys that no longer match any word (see migration 0006).
+const ITEM_PATTERNS = { learnedWords: /^[1-9][0-9]*$/ };
+
 export const emptyProgress = () =>
   Object.fromEntries(PROGRESS_KINDS.map((kind) => [kind, []]));
 
@@ -35,6 +40,9 @@ export function parseProgressBody(body) {
     for (const item of items) {
       if (typeof item !== "string" || item.length === 0 || item.length > MAX_ITEM_LENGTH) {
         return { error: `${kind} items must be non-empty strings of at most ${MAX_ITEM_LENGTH} characters` };
+      }
+      if (ITEM_PATTERNS[kind] && !ITEM_PATTERNS[kind].test(item)) {
+        return { error: `${kind} items must be word ids` };
       }
     }
     total += items.length;
