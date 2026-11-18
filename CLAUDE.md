@@ -85,7 +85,7 @@ Schema and scripts live in `apps/backend/db/`:
 
 Coverage: 703/703 words have both `es`/`en`, all 11 categories have both, all 30 puzzles have both. Two words (ids 175, 353) have no Spanish gloss at all, so no English either — left absent rather than faked. New words continue after id 703 (the sequence is advanced by bootstrap).
 
-Local dev needs `DATABASE_URL` in `apps/backend/.env` (git-ignored; see `.env.example`) pointing at a local Postgres database. `npm run start` / `npm run dev` load it automatically via `--env-file-if-exists`. On Heroku, `DATABASE_URL` is a real env var from the Postgres addon — no `.env` file involved.
+Local dev needs `DATABASE_URL` in `apps/backend/.env` (git-ignored; see `.env.example`) pointing at a local Postgres database. `npm run start` / `npm run dev` load it automatically via `--env-file-if-exists`. In production (Supabase Postgres, see `hosting-plan.md`), `DATABASE_URL` is a real env var on the API host — no `.env` file involved.
 
 ### Web App (`apps/web`)
 
@@ -130,6 +130,10 @@ No base language selector here yet (web has one — see Web App section). Quiz/f
 - `src/strings.ts` — `uiStrings`, centralized UI copy keyed by base language (`uiStrings.es`/`uiStrings.en`), so screens don't mix languages into their own instruction text.
 
 Categories are fetched from `/v1/categories` by both apps (web via `fetchCategories()` in `apps/web/src/lib/data.ts`; native via `loadCategoriesData()` in `apps/native/src/utils/dataLoader.ts`, which falls back to the bundled `data/categories.json` when offline, same two-tier pattern as vocabulary/puzzles). There is exactly one categories source now — no duplicate files to keep in sync.
+
+## Hosting
+
+Off Heroku since 2026-11-18 (`Procfile` and the `heroku-postbuild`/root `start` scripts removed). Web: Vercel (Root Directory `apps/web`, auto-deploys on push to `main`), domain `rimanashun.logicielsmm.com` (CNAME at Squarespace Domains). Postgres: Supabase (us-west-2, Session pooler; `DATABASE_URL` needs `?sslmode=require&uselibpqcompat=true`, see `apps/backend/.env.example`). API: Render free web service (Oregon, `https://rimanashun.onrender.com`, build `npm ci --workspace apps/backend`, start `npm run backend`, auto-deploys from `main`; sleeps after 15 min idle). Web's `NEXT_PUBLIC_API_URL` points to it. To run db scripts against production: `node --env-file=.env.supabase db/<script>.js` from `apps/backend` (git-ignored file). Plan and remaining steps: `hosting-plan.md`.
 
 ## Task Tracking
 

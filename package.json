@@ -14,9 +14,7 @@
     "test": "turbo run test",
     "web": "npm --workspace apps/web run dev",
     "native": "npm --workspace apps/native run start",
-    "backend": "npm --workspace apps/backend run start",
-    "heroku-postbuild": "npm --workspace apps/web run build",
-    "start": "npm --workspace apps/web run start"
+    "backend": "npm --workspace apps/backend run start"
   },
   "engines": {
     "node": "20.x"
